@@ -1,3 +1,4 @@
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -6,6 +7,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
+
 import java.time.Duration;
 import java.util.UUID;
 public class BaseTest {
@@ -14,7 +17,12 @@ public class BaseTest {
     public WebDriver driver = null;
     public String url = "https://qa.koel.app/";
     //TestNG decorators to be run for each test
-   // default configuration setup before each test
+
+    @BeforeSuite
+    void setupClass() {
+        WebDriverManager.chromedriver().setup();
+    }
+    // default configuration setup before each test
     @BeforeMethod
     public void launchBrowser() {
         //Added ChromeOptions argument below to fix websocket error
