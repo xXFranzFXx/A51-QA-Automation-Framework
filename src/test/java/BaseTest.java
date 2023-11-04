@@ -8,6 +8,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
 
 import java.time.Duration;
 import java.util.UUID;
@@ -15,7 +16,7 @@ public class BaseTest {
 
     //constant variables used by helper methods
     public WebDriver driver = null;
-    public String url = "https://qa.koel.app/";
+    public String url;
     //TestNG decorators to be run for each test
 
     @BeforeSuite
@@ -24,12 +25,16 @@ public class BaseTest {
     }
     // default configuration setup before each test
     @BeforeMethod
-    public void launchBrowser() {
+    //use parameter for baseURL  from TestNG config file
+    @Parameters({"baseURL"})
+    public void launchBrowser(String baseURL) {
         //Added ChromeOptions argument below to fix websocket error
         ChromeOptions options = new ChromeOptions();
         options.addArguments(new String[]{"--remote-allow-origins=*"});
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10L));
+        url = baseURL;
+        navigateToLoginPage();
     }
     //close the browser after successful test
     @AfterMethod

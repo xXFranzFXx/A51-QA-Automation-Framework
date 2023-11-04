@@ -4,6 +4,7 @@
 <suite name="TestNG">
 
     <test name="Example Test" preserve-order="false">
+        <parameter name="baseUrl" value="https://qa.koel.app/"/>
         <classes>
 <!--            <class name="LoginTests"/>-->
 <!--            <class name="BaseTest"/>-->
@@ -14,7 +15,12 @@
             </class>
             <class name="Homework18">
                 <methods>
-                    <include name="playSong"/>
+                    <exclude name="playSong"/>
+                </methods>
+            </class>
+            <class name="Homework19">
+                <methods>
+                    <include name="deletePlaylist"/>
                 </methods>
             </class>
         </classes>
