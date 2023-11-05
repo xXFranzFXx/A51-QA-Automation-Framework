@@ -30,7 +30,7 @@ public class BaseTest {
     public void launchBrowser(String baseURL) {
         //Added ChromeOptions argument below to fix websocket error
         ChromeOptions options = new ChromeOptions();
-        options.addArguments(new String[]{"--remote-allow-origins=*"});
+        options.addArguments(new String[]{"--remote-allow-origins=*", "--disable-notifications", "--start-maximized"});
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10L));
         url = baseURL;
