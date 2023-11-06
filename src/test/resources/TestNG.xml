@@ -25,7 +25,12 @@
             </class>
             <class name="Homework20">
                 <methods>
-                    <include name="deletePlaylist"/>
+                    <exclude name="deletePlaylist"/>
+                </methods>
+            </class>
+            <class name="Homework21">
+                <methods>
+                    <include name="renamePlaylist"/>
                 </methods>
             </class>
         </classes>
