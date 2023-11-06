@@ -20,6 +20,11 @@
             </class>
             <class name="Homework19">
                 <methods>
+                    <exclude name="deletePlaylist"/>
+                </methods>
+            </class>
+            <class name="Homework20">
+                <methods>
                     <include name="deletePlaylist"/>
                 </methods>
             </class>

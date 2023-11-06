@@ -50,7 +50,7 @@ public class Homework19 extends BaseTest{
     }
     //click on new playlist button
     private void clickNewPlaylistBtn() {
-        WebElement addPlaylistBtn = driver.findElement(By.cssSelector("i[data-testid='sidebar-create-playlist-btn']"));
+        WebElement addPlaylistBtn = driver.findElement(By.cssSelector("li[data-testid='sidebar-create-playlist-btn']"));
         addPlaylistBtn.click();
     }
     //create empty playlist
