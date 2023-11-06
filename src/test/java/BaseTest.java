@@ -56,7 +56,6 @@ public class BaseTest {
     }
     //locates email input field and enters email address provided
     public void provideEmail(String email) {
-//        WebElement emailField = driver.findElement(By.cssSelector("input[type='email']"));
         WebElement emailField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("input[type='email']")));
 
         emailField.clear();
@@ -64,35 +63,29 @@ public class BaseTest {
     }
     //locates password input field and enters provided password
     public void providePassword(String password) {
-//        WebElement passwordField = driver.findElement(By.cssSelector("input[type='password']"));
         WebElement passwordField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("input[type='password']")));
         passwordField.clear();
         passwordField.sendKeys(password);
     }
     //click submit button
     public void clickSubmit() {
-//        WebElement submit = driver.findElement(By.cssSelector("button[type='submit']"));
         WebElement submit = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[type='submit']")));
         submit.click();
     }
     public void clickAvatarIcon() {
-//        WebElement avatarIcon = driver.findElement(By.cssSelector("img.avatar"));
         WebElement avatarIcon = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("img.avatar")));
         avatarIcon.click();
     }
     public void provideCurrentPassword(String password) {
-//        WebElement currentPassword = driver.findElement(By.cssSelector("[name='current_password']"));
         WebElement currentPassword = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[name='current_password']")));
         currentPassword.clear();
         currentPassword.sendKeys(password);
     }
     public void clickSaveButton() {
-//        WebElement saveButton = driver.findElement(By.cssSelector("button.btn-submit"));
         WebElement saveButton = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button.btn-submit")));
         saveButton.click();
     }
     public void provideProfileName(String randomName) {
-//        WebElement profileName = driver.findElement(By.cssSelector("[name='name']"));
         WebElement profileName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[name='name']")));
         profileName.clear();
         profileName.sendKeys(randomName);

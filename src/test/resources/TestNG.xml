@@ -30,7 +30,12 @@
             </class>
             <class name="Homework21">
                 <methods>
-                    <include name="renamePlaylist"/>
+                    <exclude name="renamePlaylist"/>
+                </methods>
+            </class>
+            <class name="Homework22">
+                <methods>
+                    <include name="loginValidEmailPasswordTest"/>
                 </methods>
             </class>
         </classes>
