@@ -24,7 +24,7 @@ public class BasePage {
     }
 
     //reusable methods, inherited by other pages
-    
+
     public WebElement findElement(By locator) {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
