@@ -8,11 +8,9 @@ import org.testng.annotations.Test;
 public class Homework20 extends BaseTest{
     @Test
     public void deletePlaylist() {
-        //Unique playlist name
-        String uniquePlaylist = "1-HW19-Playlist";
-
+        String newPlaylistName = "playlist";
         //verification message when selected playlist is deleted
-        String deletePlaylistMsg = "Deleted playlist \"1-HW19-Playlist.\"";
+        String deletePlaylistMsg = "Deleted playlist \"playlist.\"";
 
         //navigate to login page
         //instead of using navigateToLoginPage method we will let the @Parameters decorator handle it
@@ -25,7 +23,7 @@ public class Homework20 extends BaseTest{
 //        Thread.sleep(2000);
 
         //create an empty playlist*
-        createEmptyPlaylist(uniquePlaylist);
+//        createEmptyPlaylist(uniquePlaylist);
 //        Thread.sleep(4000);
 
         //open existing playlist*
@@ -39,7 +37,7 @@ public class Homework20 extends BaseTest{
 
         //Assertions: compare notification message with expected message*
         Assert.assertEquals(deletePlaylistMsg,getDeletedPlaylistMsg());
-        
+
     }
 
     //helper methods*
@@ -51,8 +49,8 @@ public class Homework20 extends BaseTest{
     }
     //click on new playlist button
     private void clickNewPlaylistBtn() {
-//        WebElement addPlaylistBtn = driver.findElement(By.cssSelector("li[data-testid='sidebar-create-playlist-btn']"));
-        WebElement addPlaylistBtn =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("li[data-testid='sidebar-create-playlist-btn']")));
+//        WebElement addPlaylistBtn = driver.findElement(By.cssSelector("i[data-testid='sidebar-create-playlist-btn']"));
+        WebElement addPlaylistBtn =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("i[data-testid='sidebar-create-playlist-btn']")));
         addPlaylistBtn.click();
     }
     //create empty playlist
@@ -75,7 +73,7 @@ public class Homework20 extends BaseTest{
     //delete playlist
     private void clickDeletePlaylistButton() {
 //        WebElement deletePlaylist = driver.findElement(By.cssSelector(".btn-delete-playlist"));
-        WebElement deletePlaylist = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".btn-delete-playlist")));
+        WebElement deletePlaylist = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[title='Delete this playlist']")));
         deletePlaylist.click();
     }
 
