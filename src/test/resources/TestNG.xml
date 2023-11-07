@@ -35,6 +35,11 @@
             </class>
             <class name="Homework22">
                 <methods>
+                    <exclude name="loginValidEmailPasswordTest"/>
+                </methods>
+            </class>
+            <class name="Homework23">
+                <methods>
                     <include name="loginValidEmailPasswordTest"/>
                 </methods>
             </class>
