@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 public class Homework20 extends BaseTest{
     @Test
     public void deletePlaylist() {
-        String newPlaylistName = "playlist";
+//        String newPlaylistName = "playlist";
         //verification message when selected playlist is deleted
         String deletePlaylistMsg = "Deleted playlist \"playlist.\"";
 
