@@ -38,7 +38,7 @@
                     <exclude name="loginValidEmailPasswordTest"/>
                 </methods>
             </class>
-            <class name="Homework23">
+            <class name="Homework24">
                 <methods>
                     <include name="loginValidEmailPasswordTest"/>
                 </methods>
