@@ -105,13 +105,17 @@ public class BaseTest {
     //close the browser after successful test
     @AfterMethod
     public void closeBrowser() {
+        //close the current instance and remove it from grid testing
         threadDriver.get().close();
         threadDriver.remove();
     }
 
-    //reusable helper methods
 
 
+
+    /**
+     * Helper methods start here
+     */
     //navigates to login page
     public void navigateToLogin(String baseURL) {
         getDriver().get(baseURL);
@@ -160,5 +164,9 @@ public class BaseTest {
         WebElement avatarIcon = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("img[class='avatar']")));
         Assert.assertTrue(avatarIcon.isDisplayed());
     }
+
+    /**
+     * Helper Methods end here
+     */
 
 }

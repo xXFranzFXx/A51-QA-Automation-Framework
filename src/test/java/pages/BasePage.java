@@ -23,10 +23,10 @@ public class BasePage {
     //constructor method
     public BasePage(WebDriver givenDriver) {
         driver = givenDriver;
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10L));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(timeSeconds));
 //        actions = new Actions(driver);
         PageFactory.initElements(driver, this);
-        PageFactory.initElements(new AjaxElementLocatorFactory(driver, timeSeconds), this);
+//        PageFactory.initElements(new AjaxElementLocatorFactory(driver, timeSeconds), this);
     }
 
     //reusable methods, inherited by other pages
