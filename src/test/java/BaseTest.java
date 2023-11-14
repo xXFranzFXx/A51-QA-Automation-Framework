@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -30,49 +31,43 @@ public class BaseTest {
     public  WebDriverWait wait;
     public Actions action;
     public String url;
+
+    //stores an instance of WebDriver for each thread during tests execution
     private final ThreadLocal <WebDriver> threadDriver = new ThreadLocal<>();
-    //TestNG decorators to be run for each test
 
-
-    @BeforeSuite
-    public void setupClass() {
-//        WebDriverManager.chromedriver().setup();
-//        WebDriverManager.firefoxdriver().setup();
+    //return the current instance of WebDriver associated with the current thread.
+    public WebDriver getDriver() {
+        return threadDriver.get();
     }
+
+
     @BeforeMethod
     //use parameter for baseURL  from TestNG config file
     @Parameters({"baseURL"})
-//    public void launchBrowser(String baseURL) throws MalformedURLException {
-//        driver = pickBrowser(System.getProperty("browser"));
-//        wait = new WebDriverWait(driver, Duration.ofSeconds(10L));
-//        action = new Actions(driver);
-//        url = baseURL;
-//        navigateToLoginPage();
-//    }
     public void setupBrowser(String baseURL) throws MalformedURLException {
         threadDriver.set(pickBrowser(System.getProperty("browser")));
         getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10L));
         navigateToLogin(baseURL);
     }
-    public WebDriver getDriver() {
-        return threadDriver.get();
-    }
+
     public WebDriver pickBrowser(String browser) throws MalformedURLException {
         DesiredCapabilities caps = new DesiredCapabilities();
         String gridURL = "http://192.168.0.15:4444";
         switch (browser) {
             case "firefox":
                 WebDriverManager.firefoxdriver().setup();
-                return driver = new FirefoxDriver();
+                FirefoxOptions optionsFirefox = new FirefoxOptions();
+                optionsFirefox.addArguments("-private");
+                return driver = new FirefoxDriver(optionsFirefox);
             //gradle clean test -Dbrowser=MicrosoftEdge
             case "MicrosoftEdge":
-                WebDriverManager.chromedriver().setup();
+                WebDriverManager.edgedriver().setup();
                 EdgeOptions edgeOptions = new EdgeOptions();
-                edgeOptions.addArguments(new String[]{"--remote-allow-origins=*", "--disable-notifications", "--start-maximized"});
+//                edgeOptions.addArguments(new String[]{"--remote-allow-origins=*", "--disable-notifications", "--start-maximized"});
                 return driver = new EdgeDriver();
             //gradle clean test -Dbrowser=grid-edge
             case "grid-edge":
-                caps.setCapability("browser", "MicrosoftEdge");
+                caps.setCapability("browserName", "MicrosoftEdge");
                 return driver = new RemoteWebDriver(URI.create(gridURL).toURL(),caps);
             //gradle clean test -Dbrowser=grid-firefox
             case "grid-firefox":
@@ -99,26 +94,23 @@ public class BaseTest {
         String hub = "@hub.lambdatest.com/wd/hub";
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("platform", "windows 10");
-        caps.setCapability("browserName", "windows 10");
-        caps.setCapability("platform", "Chrome");
+        caps.setCapability("browserName", "Chrome");
         caps.setCapability("version", "120.0");
         caps.setCapability("resolution", "1024X768");
         caps.setCapability("build", "TestNG with Java");
-        caps.setCapability("name", BaseTest.class.getName());
+        caps.setCapability("name", BaseTest.class.getName()); //or this.getClass().getName()
         caps.setCapability("plugin", "java-testNG");
-        return new RemoteWebDriver(new URL("https://" +username+ ":" +authKey + hub), caps);
+        return new RemoteWebDriver(new URL("https://" + username + ":" + authKey + hub), caps);
     }
     //close the browser after successful test
     @AfterMethod
     public void closeBrowser() {
-        driver.quit();
+        threadDriver.get().close();
+        threadDriver.remove();
     }
 
     //reusable helper methods
 
-    public void navigateToLoginPage() {  //used in homework 17 and 18, uncomment line 49 if using this
-        driver.get(url);
-    }
 
     //navigates to login page
     public void navigateToLogin(String baseURL) {

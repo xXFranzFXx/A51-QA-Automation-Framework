@@ -10,9 +10,9 @@ public class Homework25 extends BaseTest {
         LoginPage loginPage = new LoginPage(getDriver());
         HomePage homePage = new HomePage(getDriver());
 
-        loginPage.provideEmail("fake@fakeaccount.com");
-        loginPage.providePassword("te$t$tudent");
-        loginPage.clickSubmitBtn();
+        loginPage.provideEmail("fake@fakeaccount.com")
+                .providePassword("te$t$tudent")
+                .clickSubmitBtn();
 
         Assert.assertTrue(homePage.getUserAvatar().isDisplayed());
 
