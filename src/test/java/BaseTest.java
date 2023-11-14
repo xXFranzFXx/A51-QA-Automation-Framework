@@ -27,26 +27,35 @@ public class BaseTest {
 
     //constant variables used by helper methods
     public WebDriver driver;
-    public WebDriverWait wait;
+    public  WebDriverWait wait;
     public Actions action;
     public String url;
+    private final ThreadLocal <WebDriver> threadDriver = new ThreadLocal<>();
     //TestNG decorators to be run for each test
 
-//    @BeforeSuite
-//    void setupClass() {
-////        WebDriverManager.chromedriver().setup();
-////        WebDriverManager.firefoxdriver().setup();
-//    }
+
+    @BeforeSuite
+    public void setupClass() {
+//        WebDriverManager.chromedriver().setup();
+//        WebDriverManager.firefoxdriver().setup();
+    }
     @BeforeMethod
     //use parameter for baseURL  from TestNG config file
     @Parameters({"baseURL"})
-    public void launchBrowser(String baseURL) throws MalformedURLException {
-        driver = pickBrowser(System.getProperty("browser"));
-
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10L));
-        action = new Actions(driver);
-        url = baseURL;
-        navigateToLoginPage();
+//    public void launchBrowser(String baseURL) throws MalformedURLException {
+//        driver = pickBrowser(System.getProperty("browser"));
+//        wait = new WebDriverWait(driver, Duration.ofSeconds(10L));
+//        action = new Actions(driver);
+//        url = baseURL;
+//        navigateToLoginPage();
+//    }
+    public void setupBrowser(String baseURL) throws MalformedURLException {
+        threadDriver.set(pickBrowser(System.getProperty("browser")));
+        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10L));
+        navigateToLogin(baseURL);
+    }
+    public WebDriver getDriver() {
+        return threadDriver.get();
     }
     public WebDriver pickBrowser(String browser) throws MalformedURLException {
         DesiredCapabilities caps = new DesiredCapabilities();
@@ -95,7 +104,7 @@ public class BaseTest {
         caps.setCapability("version", "120.0");
         caps.setCapability("resolution", "1024X768");
         caps.setCapability("build", "TestNG with Java");
-        caps.setCapability("name", this.getClass().getName());
+        caps.setCapability("name", BaseTest.class.getName());
         caps.setCapability("plugin", "java-testNG");
         return new RemoteWebDriver(new URL("https://" +username+ ":" +authKey + hub), caps);
     }
@@ -106,9 +115,14 @@ public class BaseTest {
     }
 
     //reusable helper methods
-    //navigates to login page
-    public void navigateToLoginPage() {
+
+    public void navigateToLoginPage() {  //used in homework 17 and 18, uncomment line 49 if using this
         driver.get(url);
+    }
+
+    //navigates to login page
+    public void navigateToLogin(String baseURL) {
+        getDriver().get(baseURL);
     }
     //locates email input field and enters email address provided
     public void provideEmail(String email) {
