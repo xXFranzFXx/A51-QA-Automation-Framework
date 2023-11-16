@@ -115,6 +115,7 @@ public class BaseTest {
 
     /**
      * Helper methods start here
+     * need to be refactored and placed into appropriate POM
      */
     //navigates to login page
     public void navigateToLogin(String baseURL) {

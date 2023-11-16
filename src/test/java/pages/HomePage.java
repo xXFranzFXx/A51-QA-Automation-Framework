@@ -1,6 +1,5 @@
 package pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,7 +12,7 @@ public class HomePage extends BasePage {
         super(givenDriver);
     }
 
-    public WebElement getUserAvatar () {
-         return wait.until(ExpectedConditions.visibilityOf(userAvatarIcon));
+    public boolean getUserAvatar () {
+        return userAvatarIcon.isEnabled();
     }
 }
