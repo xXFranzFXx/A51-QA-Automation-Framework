@@ -6,10 +6,7 @@
     <test name="Example Test" preserve-order="false">
         <parameter name="baseURL" value="https://qa.koel.app/"/>
         <classes>
-            <class name="Homework25">
-            <methods>
-                <include name="loginValidEmailPasswordTest"/>
-            </methods>
+            <class name="CucumberRunner">
         </class>
         </classes>
     </test>
