@@ -1,8 +1,10 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
 
 public class LoginPage extends BasePage{
     //locators
@@ -29,5 +31,9 @@ public class LoginPage extends BasePage{
     public LoginPage providePassword(String password) {
        passwordField.sendKeys(password);
        return this;
+    }
+    public void  getRegistrationLink() {
+        WebElement registrationLink = driver.findElement(By.linkText("Registration / Forgot password"));
+        Assert.assertTrue(registrationLink.isDisplayed());
     }
 }
