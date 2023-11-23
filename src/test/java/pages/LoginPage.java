@@ -32,6 +32,11 @@ public class LoginPage extends BasePage{
        passwordField.sendKeys(password);
        return this;
     }
+    public void loginValidCredentials() {
+        provideEmail("fake@fakeaccount.com");
+        providePassword("te$t$tudent");
+        clickSubmitBtn();
+    }
     public void  getRegistrationLink() {
         WebElement registrationLink = driver.findElement(By.linkText("Registration / Forgot password"));
         Assert.assertTrue(registrationLink.isDisplayed());
