@@ -29,6 +29,8 @@ public class HomePage extends BasePage {
     private WebElement allSongs;
     @FindBy(css =  "[data-testid='playlist-context-menu-create-simple']")
     private WebElement selectCreateNewPlaylist;
+    @FindBy(xpath = "//*[@id=\"searchForm\"]/input")
+    private WebElement searchSongInput;
     public HomePage(WebDriver givenDriver) {
         super(givenDriver);
     }
@@ -42,6 +44,11 @@ public class HomePage extends BasePage {
     }
     public HomePage deletePlaylist() {
         deletePlaylistBtn.click();
+        return this;
+    }
+    public HomePage searchSong(String song) {
+        searchSongInput.clear();
+        searchSongInput.sendKeys(song);
         return this;
     }
     public boolean notificationMsg() {
