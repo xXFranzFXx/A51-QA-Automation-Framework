@@ -2,6 +2,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.LoginPage;
@@ -42,6 +43,22 @@ public class LoginTests extends BaseTest {
                 .clickSubmitBtn();
         loginPage.getRegistrationLink();
     }
-
-
+    @Test(dataProvider = "LoginData")
+    public void loginWithLoginData(String email, String password) {
+        loginPage.provideEmail(email)
+                .providePassword(password)
+                .clickSubmitBtn();
+        Assert.assertTrue(homePage.getUserAvatar());
+    }
+    @Test(dataProvider = "excel-data")
+    public void loginWithExcelData(String email, String password){
+        try{
+            loginPage.provideEmail(email)
+                    .providePassword(password)
+                            .clickSubmitBtn();
+            Assert.assertTrue(homePage.getUserAvatar());
+        } catch(Exception e){
+            Reporter.log("Unable to login with Excel Data for an unknown reason." +e);
+        }
+    }
 }

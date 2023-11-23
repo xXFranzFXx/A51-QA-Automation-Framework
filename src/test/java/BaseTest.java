@@ -14,10 +14,14 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Parameters;
+import org.testng.annotations.*;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFCell;
 
 import java.net.MalformedURLException;
 import java.net.URI;
@@ -113,45 +117,13 @@ public class BaseTest {
 
 
 
-    /**
-     * Helper methods start here
-     * need to be refactored and placed into appropriate POM
-     */
+
     //navigates to login page
     public void navigateToLogin(String baseURL) {
         getDriver().get(baseURL);
     }
     //locates email input field and enters email address provided
-    public void provideEmail(String email) {
-        WebElement emailField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("input[type='email']")));
 
-        emailField.clear();
-        emailField.sendKeys(email);
-    }
-    //locates password input field and enters provided password
-    public void providePassword(String password) {
-        WebElement passwordField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("input[type='password']")));
-        passwordField.clear();
-        passwordField.sendKeys(password);
-    }
-    //click submit button
-    public void clickSubmit() {
-        WebElement submit = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[type='submit']")));
-        submit.click();
-    }
-    public void clickAvatarIcon() {
-        WebElement avatarIcon = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("img.avatar")));
-        avatarIcon.click();
-    }
-    public void provideCurrentPassword(String password) {
-        WebElement currentPassword = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[name='current_password']")));
-        currentPassword.clear();
-        currentPassword.sendKeys(password);
-    }
-    public void clickSaveButton() {
-        WebElement saveButton = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button.btn-submit")));
-        saveButton.click();
-    }
     public void provideProfileName(String randomName) {
         WebElement profileName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[name='name']")));
         profileName.clear();
@@ -160,14 +132,53 @@ public class BaseTest {
     public String generateRandomName() {
         return UUID.randomUUID().toString().replace("-", "");
     }
-    public void isAvatarDisplayed() {
-//        WebElement avatarIcon = driver.findElement(By.cssSelector("img[class='avatar']"));
-        WebElement avatarIcon = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("img[class='avatar']")));
-        Assert.assertTrue(avatarIcon.isDisplayed());
+
+    // Data providers start
+    @DataProvider(name="LoginData")
+    public Object[][] getDataFromDataProvider(){
+        return new Object[][]{
+                {"demo@class.com", "te$t$tudent"},
+                {"invalidemail@class.com", "te$t$tudent"},
+                {"demo@class.com", "InvalidPassword"},
+                {"",""}
+        };
     }
 
-    /**
-     * Helper Methods end here
-     */
+    @DataProvider(name="excel-data")
+    public Object[][] excelDP() throws IOException {
+        Object [][] arrObj;
+        arrObj = getExcelData("./src/test/resources/assets/test.xlsx", "Sheet1");
+        return arrObj;
+    }
+    // Data providers end
+
+    //helper method for fetching data from excel sheet
+    public String [][] getExcelData(String fileName, String sheetName) {
+        String [][] data = null;
+        try {
+            FileInputStream fileInputStream = new FileInputStream(fileName);
+            XSSFWorkbook wb = new XSSFWorkbook(fileInputStream);
+            XSSFSheet sheet = wb.getSheet(sheetName);
+            XSSFRow row = sheet.getRow(0);
+
+            int numOfRows = sheet.getPhysicalNumberOfRows();
+            int numOfColumns = row.getLastCellNum();
+
+            XSSFCell cell;
+
+            data = new String[numOfRows-1][numOfColumns];
+            for(int i = 1; i < numOfRows; i++) {
+                for(int j = 0; j < numOfColumns; j++) {
+                    row = sheet.getRow(i);
+                    cell = row.getCell(j);
+                    data  [i-1][j] =  cell.getStringCellValue();
+                }
+            }
+
+        } catch (Exception e) {
+            System.out.println("Something went terribly wrong." + e);
+        }
+        return data;
+    }
 
 }

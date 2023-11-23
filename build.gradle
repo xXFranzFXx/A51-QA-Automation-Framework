@@ -14,6 +14,9 @@ dependencies {
     implementation 'org.seleniumhq.selenium:selenium-java:4.5.0'
     testImplementation 'io.github.bonigarcia:webdrivermanager:5.4.1'
 
+    implementation 'org.apache.poi:poi-ooxml:5.2.3'
+    implementation 'org.apache.logging.log4j:log4j-api:2.21.0'
+
     implementation 'io.cucumber:cucumber-testng:7.9.0'
     implementation 'io.cucumber:cucumber-core:7.9.0'
     implementation 'io.cucumber:cucumber-java:7.9.0'
@@ -23,6 +26,7 @@ dependencies {
 
 test {
     useTestNG() {
+        //uncomment for Jenkins
 //        suites "src/test/resources/${suite}.xml"
         suites "src/test/resources/TestNG.xml"
         systemProperty "browser", System.getProperty("browser")
