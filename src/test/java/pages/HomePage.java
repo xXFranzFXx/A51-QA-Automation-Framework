@@ -31,6 +31,9 @@ public class HomePage extends BasePage {
     private WebElement selectCreateNewPlaylist;
     @FindBy(xpath = "//*[@id=\"searchForm\"]/input")
     private WebElement searchSongInput;
+    //play button used for hoverplay method
+    @FindBy(css = "[data-testid='play-btn']")
+    private WebElement play;
     public HomePage(WebDriver givenDriver) {
         super(givenDriver);
     }
@@ -55,4 +58,9 @@ public class HomePage extends BasePage {
         findElement(successNotification);
         return successNotification.isDisplayed();
     }
+    public HomePage hoverplay() {
+        actions.moveToElement(play).perform();
+        return this;
+    }
+
 }
