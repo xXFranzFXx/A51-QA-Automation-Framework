@@ -14,6 +14,10 @@ public class LoginPage extends BasePage{
     private WebElement emailField;
     @FindBy(css = "[type='password']")
     private WebElement passwordField;
+    @FindBy(xpath = "//a[@href='registration']")
+    private WebElement registrationLink;
+    @FindBy(css = ".fa-sign-out")
+    private WebElement logoutBtn;
     //constructor method
     public LoginPage(WebDriver givenDriver) {
         super(givenDriver);
@@ -37,8 +41,11 @@ public class LoginPage extends BasePage{
         providePassword("te$t$tudent");
         clickSubmitBtn();
     }
-    public void  getRegistrationLink() {
-        WebElement registrationLink = driver.findElement(By.linkText("Registration / Forgot password"));
-        Assert.assertTrue(registrationLink.isDisplayed());
+    public LoginPage clickLogOutBtn() {
+        logoutBtn.click();
+        return this;
+    }
+    public WebElement getRegistrationLink() {
+        return registrationLink;
     }
 }
