@@ -58,7 +58,7 @@ public class LoginTests extends BaseTest {
                             .clickSubmitBtn();
             Assert.assertTrue(homePage.getUserAvatar());
         } catch(Exception e){
-            Reporter.log("Unable to login with Excel Data for an unknown reason." +e);
+            Reporter.log("Unable to login with Excel Data for an unknown reason." + e);
         }
     }
 }

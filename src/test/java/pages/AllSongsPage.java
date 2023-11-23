@@ -6,11 +6,11 @@ import org.openqa.selenium.support.FindBy;
 
 public class AllSongsPage extends BasePage{
     @FindBy(css = ".all-songs tr.song-item:nth-child(1)")
-    WebElement firstSongElement;
+    private WebElement firstSongElement;
     @FindBy(css = "li.playback")
-    WebElement choosePlay;
+    private WebElement choosePlay;
     @FindBy(css = "[data-testid='sound-bar-play']")
-    WebElement soundBarVisualizer;
+    private WebElement soundBarVisualizer;
 
     public AllSongsPage(WebDriver givenDriver) {
         super(givenDriver);
