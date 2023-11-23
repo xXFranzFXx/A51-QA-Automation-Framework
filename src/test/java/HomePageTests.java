@@ -1,3 +1,4 @@
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.LoginPage;
@@ -10,4 +11,11 @@ public class HomePageTests extends BaseTest{
         loginPage.loginValidCredentials();
 
     }
+    @Test
+    public void hoverOverPlayBtn() throws InterruptedException {
+        loginPage.loginValidCredentials();
+        Assert.assertTrue(homePage.hoverPlay());
+    }
+
+
 }

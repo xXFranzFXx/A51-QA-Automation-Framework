@@ -58,9 +58,11 @@ public class HomePage extends BasePage {
         findElement(successNotification);
         return successNotification.isDisplayed();
     }
-    public HomePage hoverplay() {
+    public boolean hoverPlay() throws InterruptedException{
+        findElement(play);
         actions.moveToElement(play).perform();
-        return this;
+        return play.isDisplayed();
+
     }
 
 }
