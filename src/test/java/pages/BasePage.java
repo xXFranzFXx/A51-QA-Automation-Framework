@@ -41,7 +41,8 @@ public class BasePage {
     protected List<WebElement> findElements(By locator) {
 //        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 //        List<WebElement> elements = driver.findElements(locator);
-        List<WebElement> elements = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
+        List<WebElement> elements;
+        elements = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
         return elements;
     }
     protected void contextClick(WebElement webElement) {

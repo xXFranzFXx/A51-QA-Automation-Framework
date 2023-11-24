@@ -124,14 +124,6 @@ public class BaseTest {
     }
     //locates email input field and enters email address provided
 
-    public void provideProfileName(String randomName) {
-        WebElement profileName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[name='name']")));
-        profileName.clear();
-        profileName.sendKeys(randomName);
-    }
-    public String generateRandomName() {
-        return UUID.randomUUID().toString().replace("-", "");
-    }
 
     // Data providers start
     @DataProvider(name="LoginData")

@@ -73,6 +73,7 @@ public class HomePage extends BasePage {
     public int countSongs() {
        return findElements(songTitle).size();
     }
+
     public void choosePlaylistByName(String playlistName){
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(text(),'"+playlistName+"')]"))).click();
     }

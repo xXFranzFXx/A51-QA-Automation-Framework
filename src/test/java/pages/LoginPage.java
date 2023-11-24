@@ -36,10 +36,11 @@ public class LoginPage extends BasePage{
        passwordField.sendKeys(password);
        return this;
     }
-    public void loginValidCredentials() {
+    public LoginPage loginValidCredentials() {
         provideEmail("fake@fakeaccount.com");
         providePassword("te$t$tudent");
         clickSubmitBtn();
+        return this;
     }
     public LoginPage clickLogOutBtn() {
         logoutBtn.click();
