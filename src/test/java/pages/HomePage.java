@@ -1,17 +1,20 @@
 package pages;
 
+import org.checkerframework.checker.units.qual.C;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class HomePage extends BasePage {
+
     //user avatar icon element
     @FindBy(css = "img.avatar")
     private WebElement userAvatarIcon;
     //first created playlist
     @FindBy(css = ".playlist:nth-child(3)")
-    private WebElement firstPlaylist;
+    private By firstPlaylist;
     //playlist name input field, accessed when creating a new playlist
     @FindBy(css = "input[name='name']")
     private WebElement playlistInputField;
@@ -20,7 +23,7 @@ public class HomePage extends BasePage {
     private WebElement addNewPlaylistIcon;
     //delete playlist button
     @FindBy(css = ".btn-delete-playlist")
-    private WebElement deletePlaylistBtn;
+    private By deletePlaylistBtn;
     //notification message
     @FindBy(css =".show-success")
     private WebElement successNotification;
@@ -34,6 +37,9 @@ public class HomePage extends BasePage {
     //play button used for hoverplay method
     @FindBy(css = "[data-testid='play-btn']")
     private WebElement play;
+    @FindBy(css = "section#playlistWrapper td.title")
+    private By songTitle;
+
     public HomePage(WebDriver givenDriver) {
         super(givenDriver);
     }
@@ -42,11 +48,11 @@ public class HomePage extends BasePage {
         return userAvatarIcon.isEnabled();
     }
     public HomePage chooseFirstPlaylist() {
-        firstPlaylist.click();
+        click(firstPlaylist);
         return this;
     }
     public HomePage deletePlaylist() {
-        deletePlaylistBtn.click();
+        click(deletePlaylistBtn);
         return this;
     }
     public HomePage searchSong(String song) {
@@ -63,6 +69,12 @@ public class HomePage extends BasePage {
         actions.moveToElement(play).perform();
         return play.isDisplayed();
 
+    }
+    public int countSongs() {
+       return findElements(songTitle).size();
+    }
+    public void choosePlaylistByName(String playlistName){
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(text(),'"+playlistName+"')]"))).click();
     }
 
 }

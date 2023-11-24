@@ -6,6 +6,11 @@
     <test name="Jenkins" preserve-order="false">
         <parameter name="baseURL" value="https://qa.koel.app/"/>
         <classes>
+            <class name="LoginTests">
+                <methods>
+                    <include name="loginSuccessTest"/>
+                </methods>
+            </class>
 
         </classes>
     </test>

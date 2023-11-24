@@ -6,9 +6,9 @@ import org.openqa.selenium.support.FindBy;
 
 public class AllSongsPage extends BasePage{
     @FindBy(css = ".all-songs tr.song-item:nth-child(1)")
-    private WebElement firstSongElement;
+    private WebElement firstSongElementLocator;
     @FindBy(css = "li.playback")
-    private WebElement choosePlay;
+    private WebElement choosePlayLocator;
     @FindBy(css = "[data-testid='sound-bar-play']")
     private WebElement soundBarVisualizer;
 
@@ -22,12 +22,12 @@ public class AllSongsPage extends BasePage{
     }
 
     public AllSongsPage contextClickFirstSong() {
-        contextClick(firstSongElement);
+        contextClick(firstSongElementLocator);
         return this;
     }
 
     public AllSongsPage choosePlayOption() {
-        click(choosePlay);
+        choosePlayLocator.click();
         return this;
     }
 

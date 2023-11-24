@@ -5,11 +5,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.List;
 
 //POM
 public class BasePage {
@@ -35,8 +35,14 @@ public class BasePage {
         return wait.until(ExpectedConditions.visibilityOf(webElement));
     }
 
-    protected void click(WebElement webElement) {
-        wait.until(ExpectedConditions.elementToBeClickable(webElement)).click();
+    protected void click(By locator) {
+        wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
+    }
+    protected List<WebElement> findElements(By locator) {
+//        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+//        List<WebElement> elements = driver.findElements(locator);
+        List<WebElement> elements = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
+        return elements;
     }
     protected void contextClick(WebElement webElement) {
         actions.contextClick(findElement(webElement)).perform();
