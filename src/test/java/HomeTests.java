@@ -9,6 +9,12 @@ public class HomeTests extends BaseTest{
     @Test
     public void addSongToPlaylist() {
         loginPage.loginValidCredentials();
+        homePage.searchSong("dark")
+                .clickViewAllButton()
+                .clickFirstSearchResult()
+                .clickGreenAddToBtn()
+                .clickFirstSearchResult();
+        Assert.assertTrue(homePage.notificationMsg());
 
     }
     @Test

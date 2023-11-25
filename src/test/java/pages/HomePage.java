@@ -13,12 +13,15 @@ public class HomePage extends BasePage {
     //user avatar icon element
     @FindBy(css = "img.avatar")
     private WebElement userAvatarIcon;
+
     //first created playlist
     @FindBy(css = ".playlist:nth-child(3)")
     private By firstPlaylist;
+
     //playlist name input field, accessed when creating a new playlist
     @FindBy(css = "input[name='name']")
     private WebElement playlistInputField;
+
     //"plus" icon for creating new playlist
     @FindBy(css = ".fa-plus-circle")
     private WebElement addNewPlaylistIcon;
@@ -37,12 +40,29 @@ public class HomePage extends BasePage {
     private WebElement selectCreateNewPlaylist;
     @FindBy(xpath = "//*[@id=\"searchForm\"]/input")
     private WebElement searchSongInput;
+
     //play button used for hoverplay method
     @FindBy(css = "[data-testid='play-btn']")
     private WebElement play;
     @FindBy(css = "section#playlistWrapper td.title")
     private By songTitle;
+    @FindBy(css = "button[data-test='view-all-songs-btn']")
+    private By viewAllBtnLocator;
 
+    //AddTo dropdown menu choice in the context menu when right-clicking a song
+    @FindBy(xpath = "//*[@id=\"app\"]/nav/ul/li[4]")
+    private WebElement addToLocator;
+
+    //first playlist on "AddTo" dropdown menu
+    @FindBy(xpath = "//*[@id=\"app\"]/nav/ul/li[4]/ul/li[7]")
+    private WebElement playlistLocator;
+
+    @FindBy(xpath = "//*[@id=\"songResultsWrapper\"]/header/div[3]/span/button[2]")
+    private By greenAddToBtn;
+
+    //first song returned from search
+    @FindBy(xpath = "//*[@id=\"songResultsWrapper\"]/div/div/div[1]/table/tr[1]")
+    private By firstSongResult;
 
     public HomePage(WebDriver givenDriver) {
         super(givenDriver);
@@ -60,6 +80,7 @@ public class HomePage extends BasePage {
         return this;
     }
     public HomePage searchSong(String song) {
+
         searchSongInput.clear();
         searchSongInput.sendKeys(song);
         return this;
@@ -96,6 +117,18 @@ public class HomePage extends BasePage {
     }
     public HomePage contextClickFirstSong() {
         contextClick(firstSongLocator);
+        return this;
+    }
+    public HomePage clickViewAllButton() {
+        click(viewAllBtnLocator);
+        return this;
+    }
+    public HomePage clickFirstSearchResult() {
+        click(firstSongResult);
+        return this;
+    }
+    public HomePage clickGreenAddToBtn() {
+        click(greenAddToBtn);
         return this;
     }
 
