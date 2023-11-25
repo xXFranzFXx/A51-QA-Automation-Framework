@@ -12,9 +12,9 @@ public class AllSongsPage extends BasePage{
     @FindBy(css = ".all-songs tr.song-item:nth-child(1)")
     private WebElement firstSongElementLocator;
     @FindBy(css = "li.playback")
-    private WebElement choosePlayLocator;
-    @FindBy(css = "[data-testid='sound-bar-play']")
-    private WebElement soundBarVisualizer;
+    private WebElement choosePlayAllLocator;
+//    @FindBy(css = "[data-testid='sound-bar-play']")
+//    private WebElement soundBarVisualizer;
     @FindBy(xpath = "//*[@id=\"sidebar\"]/section[1]/ul/li[3]/a")
     private By allSongsLocator;
 
@@ -22,9 +22,8 @@ public class AllSongsPage extends BasePage{
         super(givenDriver);
     }
 
-    public boolean isSongPlaying() {
-        findElement(soundBarVisualizer);
-        return soundBarVisualizer.isDisplayed();
+    public boolean checkSongPlaying() {
+        return isSongPlaying();
     }
     public AllSongsPage navigateToAllSongs() {
         click(allSongsLocator);
@@ -41,9 +40,8 @@ public class AllSongsPage extends BasePage{
         return this;
     }
 
-    public AllSongsPage choosePlayOption() {
-       choosePlayLocator.click();
-       return this;
+    public void choosePlayOption() {
+       choosePlayAllLocator.click();
     }
 
 }

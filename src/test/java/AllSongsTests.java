@@ -15,6 +15,6 @@ public class AllSongsTests extends BaseTest{
                 .checkHeaderTitle()
                 .contextClickFirstSong()
                 .choosePlayOption();
-        Assert.assertTrue(allSongsPage.isSongPlaying());
+        Assert.assertTrue(allSongsPage.checkSongPlaying());
     }
 }

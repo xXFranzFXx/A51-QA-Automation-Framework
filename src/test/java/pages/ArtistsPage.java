@@ -13,13 +13,13 @@ public class ArtistsPage extends BasePage{
     private WebElement shuffleLocator;
     @FindBy(xpath = "//img[@alt='Sound bars']")
     private WebElement soundBarLocator;
-    @FindBy(xpath = "//a[contains(text(), 'Artists']")
+    @FindBy(xpath = "//*[@id=\"sidebar\"]/section[1]/ul/li[5]/a")
     private By artistsSideMenuLocator;
     @FindBy(xpath = "//h1[text()[normalize-space()='Artists']]")
     private WebElement artistsPageTitleLocator;
     //finds the link to any album on the artists page
-    @FindBy(xpath = "//a[contains(text(), 'Play all songs by the artist')]")
-    private WebElement artistAlbumLocator;
+    @FindBy(xpath = "//*[@id=\"artistsWrapper\"]/div/article[1]/span/span/a")
+    private WebElement firstArtistAlbumLocator;
     public ArtistsPage(WebDriver givenDriver) {
         super(givenDriver);
     }
@@ -34,7 +34,7 @@ public class ArtistsPage extends BasePage{
         return soundBarLocator.isDisplayed();
     }
     public ArtistsPage rightClickAlbum() {
-        contextClick(artistAlbumLocator);
+        contextClick(firstArtistAlbumLocator);
         return this;
     }
     public void selectPlayAll() {

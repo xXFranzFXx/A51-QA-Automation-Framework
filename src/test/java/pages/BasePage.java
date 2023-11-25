@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -19,7 +20,8 @@ public class BasePage {
     protected Actions actions;
 
     private int timeSeconds = 10;
-
+    @FindBy(css = "[data-testid='sound-bar-play']")
+    private WebElement soundBarVisualizer;
     //constructor method
     public BasePage(WebDriver givenDriver) {
         driver = givenDriver;
@@ -50,5 +52,9 @@ public class BasePage {
     }
     protected void doubleClick(WebElement webElement) {
         actions.doubleClick(findElement(webElement)).perform();
+    }
+    public boolean isSongPlaying() {
+        findElement(soundBarVisualizer);
+        return soundBarVisualizer.isDisplayed();
     }
 }
