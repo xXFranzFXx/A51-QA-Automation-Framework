@@ -42,8 +42,7 @@ public class HomePage extends BasePage {
     private WebElement play;
     @FindBy(css = "section#playlistWrapper td.title")
     private By songTitle;
-    @FindBy(xpath = "//*[@id=\"sidebar\"]/section[1]/ul/li[3]/a")
-    private By allSongsLocator;
+
 
     public HomePage(WebDriver givenDriver) {
         super(givenDriver);
@@ -99,9 +98,6 @@ public class HomePage extends BasePage {
         contextClick(firstSongLocator);
         return this;
     }
-    public HomePage navigateToAllSongs() {
-        click(allSongsLocator);
-        return this;
-    }
+
 
 }

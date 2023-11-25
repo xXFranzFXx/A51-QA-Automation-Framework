@@ -4,9 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-
-import java.util.UUID;
 
 public class ProfilePage extends BasePage{
     @FindBy(css = "img.avatar")
@@ -34,10 +31,9 @@ public class ProfilePage extends BasePage{
         click(avatar);
         return this;
     }
-    public ProfilePage clickSave() {
+    public void clickSave() {
         //type cast saveButton to By
         click((By) saveButton);
-        return this;
     }
     public ProfilePage getProfileName() {
         actualProfileName.getText();

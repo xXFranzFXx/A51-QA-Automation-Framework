@@ -15,10 +15,14 @@ public class AlbumsPage extends BasePage{
     //element to shuffle all current songs playing in the album
     @FindBy(css = "li[data-test='shuffle']")
     WebElement shuffleSongs;
+    @FindBy(xpath = "//*[@id=\"albumsWrapper\"]/div/article[1]/span/span/a")
+    WebElement firstAlbum;
 
 
 
     public AlbumsPage(WebDriver givenDriver) {
+
         super(givenDriver);
     }
+
 }

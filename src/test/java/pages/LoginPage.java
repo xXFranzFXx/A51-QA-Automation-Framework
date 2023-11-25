@@ -1,10 +1,8 @@
 package pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.testng.Assert;
 
 public class LoginPage extends BasePage{
     //locators
@@ -23,9 +21,8 @@ public class LoginPage extends BasePage{
         super(givenDriver);
     }
 
-    public LoginPage clickSubmitBtn() {
+    public void clickSubmitBtn() {
        submitButtonLocator.click();
-       return this;
     }
 
     public LoginPage provideEmail(String email) {
@@ -36,17 +33,15 @@ public class LoginPage extends BasePage{
        passwordField.sendKeys(password);
        return this;
     }
-    public LoginPage loginValidCredentials() {
+    public void loginValidCredentials() {
         provideEmail("fake@fakeaccount.com");
         providePassword("te$t$tudent");
         clickSubmitBtn();
-        return this;
     }
     public LoginPage clickLogOutBtn() {
         logoutBtn.click();
         return this;
     }
-    public WebElement getRegistrationLink() {
-        return registrationLink;
+    public void getRegistrationLink() {
     }
 }

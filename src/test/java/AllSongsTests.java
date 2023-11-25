@@ -6,14 +6,14 @@ import pages.LoginPage;
 
 public class AllSongsTests extends BaseTest{
     LoginPage loginPage = new LoginPage(getDriver());
-    HomePage homePage = new HomePage(getDriver());
     AllSongsPage allSongsPage = new AllSongsPage(getDriver());
 
     @Test
     public void playFirstSong() {
         loginPage.loginValidCredentials();
-        homePage.navigateToAllSongs();
-        allSongsPage.contextClickFirstSong()
+        allSongsPage.navigateToAllSongs()
+                .checkHeaderTitle()
+                .contextClickFirstSong()
                 .choosePlayOption();
         Assert.assertTrue(allSongsPage.isSongPlaying());
     }

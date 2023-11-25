@@ -16,9 +16,4 @@ public class HomeTests extends BaseTest{
         loginPage.loginValidCredentials();
         Assert.assertTrue(homePage.hoverPlay());
     }
-
-
-
-
-
 }
