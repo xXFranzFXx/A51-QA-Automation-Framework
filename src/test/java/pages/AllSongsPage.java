@@ -12,6 +12,7 @@ public class AllSongsPage extends BasePage{
     @FindBy(css = "[data-testid='sound-bar-play']")
     private WebElement soundBarVisualizer;
 
+
     public AllSongsPage(WebDriver givenDriver) {
         super(givenDriver);
     }
@@ -27,8 +28,8 @@ public class AllSongsPage extends BasePage{
     }
 
     public AllSongsPage choosePlayOption() {
-        choosePlayLocator.click();
-        return this;
+       choosePlayLocator.click();
+       return this;
     }
 
 }

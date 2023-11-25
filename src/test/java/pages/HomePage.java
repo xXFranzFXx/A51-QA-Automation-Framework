@@ -2,6 +2,7 @@ package pages;
 
 import org.checkerframework.checker.units.qual.C;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -25,6 +26,8 @@ public class HomePage extends BasePage {
     @FindBy(css = ".btn-delete-playlist")
     private By deletePlaylistBtn;
     //notification message
+    @FindBy(css = ".all-songs tr.song-item:nth-child(1)")
+    private WebElement firstSongLocator;
     @FindBy(css =".show-success")
     private WebElement successNotification;
     //block containing all songs
@@ -39,6 +42,8 @@ public class HomePage extends BasePage {
     private WebElement play;
     @FindBy(css = "section#playlistWrapper td.title")
     private By songTitle;
+    @FindBy(xpath = "//*[@id=\"sidebar\"]/section[1]/ul/li[3]/a")
+    private By allSongsLocator;
 
     public HomePage(WebDriver givenDriver) {
         super(givenDriver);
@@ -74,8 +79,29 @@ public class HomePage extends BasePage {
        return findElements(songTitle).size();
     }
 
-    public void choosePlaylistByName(String playlistName){
+    public HomePage choosePlaylistByName(String playlistName){
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(text(),'"+playlistName+"')]"))).click();
+        return this;
+    }
+
+    public HomePage doubleClickFirstPlaylist() {
+        doubleClick((WebElement) firstPlaylist);
+        return this;
+    }
+    public HomePage enterNewPlaylistName(String newPlaylistName) {
+        findElement(playlistInputField);
+        playlistInputField.sendKeys(Keys.chord(Keys.CONTROL, "A", Keys.BACK_SPACE));
+        playlistInputField.sendKeys(newPlaylistName);
+        playlistInputField.sendKeys(Keys.ENTER);
+        return this;
+    }
+    public HomePage contextClickFirstSong() {
+        contextClick(firstSongLocator);
+        return this;
+    }
+    public HomePage navigateToAllSongs() {
+        click(allSongsLocator);
+        return this;
     }
 
 }
