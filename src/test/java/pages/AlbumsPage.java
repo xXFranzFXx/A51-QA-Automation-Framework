@@ -14,13 +14,13 @@ public class AlbumsPage extends BasePage{
 
     //element to play all songs in an album
     @FindBy(xpath = "//li[text()='Play All']")
-    WebElement playAll;
+    private WebElement playAll;
 
     //element to shuffle all current songs playing in the album
     @FindBy(css = "li[data-test='shuffle']")
-    WebElement shuffleSongs;
+    private WebElement shuffleSongs;
     @FindBy(xpath = "//*[@id=\"albumsWrapper\"]/div/article[1]/span/span/a")
-    WebElement firstAlbumLocator;
+    private WebElement firstAlbumLocator;
     @FindBy(xpath = "//h1[text()[normalize-space()='Albums']]")
     private WebElement albumsPageTitleLocator;
 
