@@ -64,6 +64,47 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//*[@id=\"songResultsWrapper\"]/div/div/div[1]/table/tr[1]")
     private By firstSongResult;
 
+    /**
+     * Search results components start
+     */
+    @FindBy(xpath = "//*[@id=\"searchExcerptsWrapper\"]/div/div/section[1]/ul/article/span[2]/span[1]/text()")
+    private WebElement searchResultSongText;
+    @FindBy(xpath = "//*[@id=\"searchExcerptsWrapper\"]/div/div/section[1]/ul/article/span[2]/span[1]/span/a/text()")
+    private WebElement searchResultArtistText;
+    /**
+     * Search results components end
+     */
+
+    /**
+     * INFO panel components start
+     */
+    @FindBy(css = "[data-testid='extra-panel']")
+    private WebElement infoPanel;
+    @FindBy(css = "[data-testid='toggle-extra-panel-btn]")
+    private WebElement infoButton;
+    @FindBy(css = ".control.text-uppercase.active")
+    private WebElement infoButtonActive;
+    @FindBy(xpath = "//*[@id='extraTabLyrics']")
+    private WebElement lyricsTab;
+    @FindBy(xpath = "//*[@id='extraTabArtist']")
+    private WebElement artistTab;
+    @FindBy(xpath = "//*[@id=extraTabAlbum']")
+    private WebElement albumTab;
+    @FindBy(xpath = "//*[@id='extraPanelAlbum']/article/main/span/a")
+    private WebElement albumTabCoverFinder;
+    @FindBy(xpath = "//*[@id=\"extraPanelAlbum\"]/article/main/span/a/text()")
+    private WebElement albumTabCoverPlayBtnText;
+    @FindBy(xpath = "//*[@id='extraPanelArtist']/article/h1/span/text()")
+    private WebElement artistTabInfoText;
+    @FindBy(xpath = "//*[@id=\"extraPanelArtist\"]/article/h1/button")
+    private WebElement artistTabShuffleBtn;
+    @FindBy(xpath = "//*[@id=\"lyrics\"]/div/p/span/text()")
+    private WebElement lyricsTabInfoText;
+
+
+    /**
+     * INFO panel components end
+     */
     public HomePage(WebDriver givenDriver) {
         super(givenDriver);
     }
