@@ -15,6 +15,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+
+
 import java.time.Duration;
 
 public class LoginStepDefinitions {
@@ -39,6 +41,7 @@ public class LoginStepDefinitions {
     @Given("I open Login Page")
     public void iOpenLoginPage() {
         driver.get("https://qa.koel.app/");
+
     }
 
     @When("I enter email {string}")

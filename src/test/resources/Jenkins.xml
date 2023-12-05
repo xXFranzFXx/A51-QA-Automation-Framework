@@ -9,6 +9,7 @@
             <class name="LoginTests">
                 <methods>
                     <include name="loginSuccessTest"/>
+                    <include name="loginWrongPasswordTest"/>
                 </methods>
             </class>
 

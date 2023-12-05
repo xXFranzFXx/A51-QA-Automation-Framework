@@ -5,8 +5,9 @@ import pages.HomePage;
 import pages.LoginPage;
 
 public class LoginTests extends BaseTest {
-    LoginPage loginPage =  new LoginPage(getDriver());
     HomePage homePage = new HomePage(getDriver());
+    LoginPage loginPage =  new LoginPage(getDriver());
+
     @Test
     public void loginSuccessTest() {
         loginPage.provideEmail("fake@fakeaccount.com")
