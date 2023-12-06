@@ -4,11 +4,12 @@ import pages.ArtistsPage;
 import pages.LoginPage;
 
 public class ArtistsTests extends BaseTest{
-    LoginPage loginPage = new LoginPage(getDriver());
-    ArtistsPage artistsPage = new ArtistsPage(getDriver());
+
 
     @Test
     public void playAllSongsByArtist () {
+        LoginPage loginPage = new LoginPage(getDriver());
+        ArtistsPage artistsPage = new ArtistsPage(getDriver());
         loginPage.loginValidCredentials();
         artistsPage.navigateToArtists()
                 .rightClickAlbum()
