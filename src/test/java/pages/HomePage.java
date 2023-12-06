@@ -69,6 +69,9 @@ public class HomePage extends BasePage {
      */
     @FindBy(xpath = "//*[@id=\"searchExcerptsWrapper\"]/div/div/section[1]/ul/article/span[2]/span[1]/text()")
     private WebElement searchResultSongText;
+    @FindBy(xpath = "//*[@id=\"searchExcerptsWrapper\"]/div/div/section[1]/ul/article/span[2]/span[1]")
+    private WebElement searchResultSongLocator;
+
     @FindBy(xpath = "//*[@id=\"searchExcerptsWrapper\"]/div/div/section[1]/ul/article/span[2]/span[1]/span/a/text()")
     private WebElement searchResultArtistText;
     /**
@@ -100,6 +103,8 @@ public class HomePage extends BasePage {
     private WebElement artistTabShuffleBtn;
     @FindBy(xpath = "//*[@id=\"lyrics\"]/div/p/span/text()")
     private WebElement lyricsTabInfoText;
+    @FindBy(xpath = "//*[@id=\"lyrics\"]/div/p/span")
+    private WebElement lyricsTabInfo;
 
 
     /**
@@ -173,5 +178,55 @@ public class HomePage extends BasePage {
         return this;
     }
 
+    public HomePage clickInfoButton() {
+        if(infoButtonActive.isDisplayed()) {
+            return this;
+        }
+        else {
+            infoButton.click();
+            return this;
+        }
+    }
+    public HomePage clickAlbumTab() {
+        albumTab.click();
+        return this;
+    }
+    public HomePage clickArtistTab() {
+        artistTab.click();
+        return this;
+    }
+    public HomePage clickLyricsTab() {
+        lyricsTab.click();
+        return this;
+    }
+
+   public HomePage doubleClickFirstSearchResult() {
+        actions.doubleClick(searchResultSongText).perform();
+        return this;
+   }
+   public boolean isInfoPanelVisible() {
+        return infoPanel.isDisplayed();
+   }
+   public boolean isInfoActiveVisible() {
+        return infoButtonActive.isDisplayed();
+   }
+
+   public HomePage getLyricsText() {
+        lyricsTabInfo.getText();
+        return this;
+   }
+   public HomePage getSearchResultSongText() {
+        searchResultSongLocator.getText();
+        return this;
+   }
+
+   public HomePage getArtistTabText() {
+        artistTabInfoText.getText();
+        return this;
+   }
+   public HomePage getAlbumTabText() {
+        albumTabCoverPlayBtnText.getText();
+        return this;
+   }
 
 }
