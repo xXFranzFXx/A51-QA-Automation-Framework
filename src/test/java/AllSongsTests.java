@@ -5,11 +5,12 @@ import pages.HomePage;
 import pages.LoginPage;
 
 public class AllSongsTests extends BaseTest{
-    LoginPage loginPage = new LoginPage(getDriver());
-    AllSongsPage allSongsPage = new AllSongsPage(getDriver());
+
 
     @Test
     public void playFirstSong() {
+        LoginPage loginPage = new LoginPage(getDriver());
+        AllSongsPage allSongsPage = new AllSongsPage(getDriver());
         loginPage.loginValidCredentials();
         allSongsPage.navigateToAllSongs()
                 .checkHeaderTitle()

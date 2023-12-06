@@ -6,8 +6,11 @@
     <test name="Regression Tests" preserve-order="false">
         <parameter name="baseURL" value="https://qa.koel.app/"/>
         <classes>
-            <class name="HomeTests">
-            </class>
+            <class name="HomeTests"/>
+            <class name="ProfileTests"/>
+            <class name="AllSongsTests"/>
+            <class name="AlbumsTests"/>
+            <class name="ArtistsTests"/>
         </classes>
     </test>
 </suite>

@@ -4,10 +4,11 @@ import pages.AlbumsPage;
 import pages.LoginPage;
 
 public class AlbumsTests extends BaseTest{
-    LoginPage loginPage = new LoginPage(getDriver());
-    AlbumsPage albumsPage = new AlbumsPage(getDriver());
+
     @Test
     public void playFirstAlbumSongs() {
+        LoginPage loginPage = new LoginPage(getDriver());
+        AlbumsPage albumsPage = new AlbumsPage(getDriver());
         loginPage.loginValidCredentials();
         albumsPage.navigateToAlbums()
                 .rightClickAlbum()

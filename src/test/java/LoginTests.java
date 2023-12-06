@@ -5,11 +5,12 @@ import pages.HomePage;
 import pages.LoginPage;
 
 public class LoginTests extends BaseTest {
-    HomePage homePage = new HomePage(getDriver());
-    LoginPage loginPage =  new LoginPage(getDriver());
+
 
     @Test
     public void loginSuccessTest() {
+        HomePage homePage = new HomePage(getDriver());
+        LoginPage loginPage =  new LoginPage(getDriver());
         loginPage.provideEmail("fake@fakeaccount.com")
                 .providePassword("te$t$tudent")
                 .clickSubmitBtn();
@@ -18,6 +19,8 @@ public class LoginTests extends BaseTest {
 
     @Test
     public void loginWrongPasswordTest() {
+        HomePage homePage = new HomePage(getDriver());
+        LoginPage loginPage =  new LoginPage(getDriver());
         loginPage.provideEmail("fake@fakeaccount.com")
                 .providePassword("wrongPassword")
                 .clickSubmitBtn();
@@ -26,6 +29,8 @@ public class LoginTests extends BaseTest {
 
     @Test
     public void loginWrongEmailTest() {
+        HomePage homePage = new HomePage(getDriver());
+        LoginPage loginPage =  new LoginPage(getDriver());
         loginPage.provideEmail("wrong@wrong.mail")
                 .providePassword("te$t$tudent")
                 .clickSubmitBtn();
@@ -34,6 +39,8 @@ public class LoginTests extends BaseTest {
 
     @Test
     public void loginEmptyPasswordTest() {
+        HomePage homePage = new HomePage(getDriver());
+        LoginPage loginPage =  new LoginPage(getDriver());
         loginPage.provideEmail("fake@fakeaccount.com")
                 .providePassword("")
                 .clickSubmitBtn();
@@ -41,6 +48,8 @@ public class LoginTests extends BaseTest {
     }
     @Test(dataProvider = "LoginData")
     public void loginWithLoginData(String email, String password) {
+        HomePage homePage = new HomePage(getDriver());
+        LoginPage loginPage =  new LoginPage(getDriver());
         loginPage.provideEmail(email)
                 .providePassword(password)
                 .clickSubmitBtn();
@@ -48,6 +57,8 @@ public class LoginTests extends BaseTest {
     }
     @Test(dataProvider = "excel-data")
     public void loginWithExcelData(String email, String password){
+        HomePage homePage = new HomePage(getDriver());
+        LoginPage loginPage =  new LoginPage(getDriver());
         try{
             loginPage.provideEmail(email)
                     .providePassword(password)
