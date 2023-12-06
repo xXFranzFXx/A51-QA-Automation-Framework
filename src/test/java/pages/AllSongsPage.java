@@ -16,7 +16,7 @@ public class AllSongsPage extends BasePage{
 //    @FindBy(css = "[data-testid='sound-bar-play']")
 //    private WebElement soundBarVisualizer;
     @FindBy(xpath = "//*[@id=\"sidebar\"]/section[1]/ul/li[3]/a")
-    private By allSongsLocator;
+    private WebElement allSongsLocator;
 
     public AllSongsPage(WebDriver givenDriver) {
         super(givenDriver);
@@ -26,7 +26,7 @@ public class AllSongsPage extends BasePage{
         return isSongPlaying();
     }
     public AllSongsPage navigateToAllSongs() {
-        click(allSongsLocator);
+        allSongsLocator.click();
         return this;
     }
     public AllSongsPage checkHeaderTitle() {

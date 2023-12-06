@@ -5,11 +5,12 @@ import pages.HomePage;
 import pages.LoginPage;
 
 public class LoginTests extends BaseTest {
-    HomePage homePage = new HomePage(getDriver());
-    LoginPage loginPage =  new LoginPage(getDriver());
+
 
     @Test
     public void loginSuccessTest() {
+        HomePage homePage = new HomePage(getDriver());
+        LoginPage loginPage =  new LoginPage(getDriver());
         loginPage.provideEmail("fake@fakeaccount.com")
                 .providePassword("te$t$tudent")
                 .clickSubmitBtn();
@@ -18,6 +19,8 @@ public class LoginTests extends BaseTest {
 
     @Test
     public void loginWrongPasswordTest() {
+        HomePage homePage = new HomePage(getDriver());
+        LoginPage loginPage =  new LoginPage(getDriver());
         loginPage.provideEmail("fake@fakeaccount.com")
                 .providePassword("wrongPassword")
                 .clickSubmitBtn();
@@ -26,6 +29,8 @@ public class LoginTests extends BaseTest {
 
     @Test
     public void loginWrongEmailTest() {
+        HomePage homePage = new HomePage(getDriver());
+        LoginPage loginPage =  new LoginPage(getDriver());
         loginPage.provideEmail("wrong@wrong.mail")
                 .providePassword("te$t$tudent")
                 .clickSubmitBtn();
@@ -34,6 +39,8 @@ public class LoginTests extends BaseTest {
 
     @Test
     public void loginEmptyPasswordTest() {
+        HomePage homePage = new HomePage(getDriver());
+        LoginPage loginPage =  new LoginPage(getDriver());
         loginPage.provideEmail("fake@fakeaccount.com")
                 .providePassword("")
                 .clickSubmitBtn();

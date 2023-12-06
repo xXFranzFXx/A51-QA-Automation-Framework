@@ -6,9 +6,9 @@
     <test name="Sprint-9" preserve-order="false">
         <parameter name="baseURL" value="https://qa.koel.app/"/>
         <classes>
-            <class name="HomeTests">
+            <class name="AllSongsTests"/>
+            <class name="LoginTests"/>
 
-            </class>
 
         </classes>
     </test>

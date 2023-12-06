@@ -6,11 +6,12 @@ import pages.ProfilePage;
 import java.util.UUID;
 
 public class ProfileTests extends BaseTest {
-    ProfilePage profilePage = new ProfilePage(getDriver());
-    LoginPage loginPage = new LoginPage(getDriver());
+
 
     @Test
     public void changeProfileName()  throws InterruptedException {
+        ProfilePage profilePage = new ProfilePage(getDriver());
+        LoginPage loginPage = new LoginPage(getDriver());
         String randomNm = generateRandomName();
         String profileName = profilePage.getProfileName().toString();
 

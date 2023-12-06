@@ -24,33 +24,43 @@ public class HomeTests extends BaseTest{
 //        loginPage.loginValidCredentials();
 //        Assert.assertTrue(homePage.hoverPlay());
 //    }
-    @Test
-    //checks visibility/invisibility of info panel by clicking INFO button
-    public void checkInfoPanelVisible () {
-        LoginPage loginPage = new LoginPage(getDriver());
-        HomePage homePage = new HomePage(getDriver());
-       loginPage.loginValidCredentials();
-       if (homePage.isInfoPanelVisible()){
-           homePage.clickInfoButton();
-           Assert.assertFalse(homePage.isInfoPanelVisible());
-       } else {
-           homePage.clickInfoButton();
-           Assert.assertTrue(homePage.isInfoPanelVisible());
-       }
-    }
 //    @Test
-//    public void checkLyricsInfoPanelTab() {
+//    //checks visibility/invisibility of info panel by clicking INFO button
+//    public void checkInfoPanelVisibility() {
 //        LoginPage loginPage = new LoginPage(getDriver());
 //        HomePage homePage = new HomePage(getDriver());
 //        loginPage.loginValidCredentials();
 //
-//        homePage.searchSong(searchArtist)
-//                .doubleClickFirstSearchResult()
-//                .clickInfoButton()
-//                .clickLyricsTab();
-//        String lyricsInfoText = "No lyrics available. Are you listening to Bach?";
-//        Assert.assertEquals(homePage.getLyricsText().toString(), lyricsInfoText);
+//       homePage.clickInfoButton();
+//       Assert.assertFalse(homePage.isInfoPanelTabsInvisible());
+//
 //    }
+    @Test
+    public void checkInfoPanelInvisibility() {
+        LoginPage loginPage = new LoginPage(getDriver());
+        HomePage homePage = new HomePage(getDriver());
+        loginPage.loginValidCredentials();
+
+        homePage.clickInfoBtnActive();
+        Assert.assertTrue(homePage.isInfoPanelTabsInvisible());
+
+    }
+
+
+
+    @Test
+    public void checkLyricsInfoPanelTab() {
+        LoginPage loginPage = new LoginPage(getDriver());
+        HomePage homePage = new HomePage(getDriver());
+        loginPage.loginValidCredentials();
+
+        homePage.searchSong(searchArtist)
+                .doubleClickFirstSearchResult()
+                .clickInfoButton()
+                .clickLyricsTab();
+        String lyricsInfoText = "No lyrics available. Are you listening to Bach?";
+        Assert.assertEquals(homePage.getLyricsText().toString(), lyricsInfoText);
+    }
 //    @Test
 //    public void checkArtistInfoPanelTab() {
 //        LoginPage loginPage = new LoginPage(getDriver());

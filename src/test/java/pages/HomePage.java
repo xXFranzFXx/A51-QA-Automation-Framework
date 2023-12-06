@@ -1,12 +1,12 @@
 package pages;
 
-import org.checkerframework.checker.units.qual.C;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.Assert;
 
 public class HomePage extends BasePage {
 
@@ -85,7 +85,7 @@ public class HomePage extends BasePage {
     private WebElement infoPanel;
     @FindBy(css = "[data-testid='toggle-extra-panel-btn]")
     private WebElement infoButton;
-    @FindBy(css = ".control.text-uppercase.active")
+    @FindBy(xpath = "//*[@id=\"mainFooter\"]/div[2]/div[2]/div/button[1]")
     private WebElement infoButtonActive;
     @FindBy(xpath = "//*[@id='extraTabLyrics']")
     private WebElement lyricsTab;
@@ -105,6 +105,10 @@ public class HomePage extends BasePage {
     private WebElement lyricsTabInfoText;
     @FindBy(xpath = "//*[@id=\"lyrics\"]/div/p/span")
     private WebElement lyricsTabInfo;
+
+    @FindBy(xpath = "//*[@id=\"extra\"]/div/div[1]")
+    private WebElement infoPanelTabsGroupLocator;
+
 
 
     /**
@@ -179,16 +183,13 @@ public class HomePage extends BasePage {
     }
 
     public HomePage clickInfoButton() {
-        if(infoButtonActive.isDisplayed()) {
-            return this;
-        }
-        else {
-            infoButton.click();
-            return this;
-        }
+       infoButtonActive.click();
+       return this;
     }
     public HomePage clickAlbumTab() {
-        albumTab.click();
+//        albumTab.click();
+        wait.until(ExpectedConditions.elementToBeClickable(albumTab)).click();
+
         return this;
     }
     public HomePage clickArtistTab() {
@@ -205,14 +206,20 @@ public class HomePage extends BasePage {
         return this;
    }
    public boolean isInfoPanelVisible() {
-        return infoPanel.isDisplayed();
+       return findElement(infoPanel) != null;
    }
-   public boolean isInfoActiveVisible() {
-        return infoButtonActive.isDisplayed();
-   }
-
+//   public boolean isInfoActiveVisible() {
+//       return wait.until(ExpectedConditions.visibilityOf();
+//
+//   }
+  public boolean isInfoPanelTabsInvisible() {
+      return wait.until(ExpectedConditions.invisibilityOf(infoPanelTabsGroupLocator));
+  }
+//    public boolean isInfoPanelTabsVisible() {
+//        Boolean bool  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"extra\"]/div/div[1]")));
+//    }
    public HomePage getLyricsText() {
-        lyricsTabInfo.getText();
+        lyricsTabInfoText.getText();
         return this;
    }
    public HomePage getSearchResultSongText() {
@@ -227,6 +234,16 @@ public class HomePage extends BasePage {
    public HomePage getAlbumTabText() {
         albumTabCoverPlayBtnText.getText();
         return this;
+   }
+   public boolean checkAlbumTabText() {
+        findElement(albumTabCoverFinder);
+//       Assert.assertTrue(albumTabCoverFinder.isDisplayed());
+       return albumTabCoverFinder.isDisplayed();
+   }
+   public HomePage clickInfoBtnActive() {
+       wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("[data-testid='toggle-extra-panel-btn]")));
+       wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".control.text-uppercase.active"))).click();
+       return this;
    }
 
 }
