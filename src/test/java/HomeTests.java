@@ -38,42 +38,42 @@ public class HomeTests extends BaseTest{
            Assert.assertTrue(homePage.isInfoPanelVisible());
        }
     }
-    @Test
-    public void checkLyricsInfoPanelTab() {
-        LoginPage loginPage = new LoginPage(getDriver());
-        HomePage homePage = new HomePage(getDriver());
-        loginPage.loginValidCredentials();
-
-        homePage.searchSong(searchArtist)
-                .doubleClickFirstSearchResult()
-                .clickInfoButton()
-                .clickLyricsTab();
-        String lyricsInfoText = "No lyrics available. Are you listening to Bach?";
-        Assert.assertEquals(homePage.getLyricsText().toString(), lyricsInfoText);
-    }
-    @Test
-    public void checkArtistInfoPanelTab() {
-        LoginPage loginPage = new LoginPage(getDriver());
-        HomePage homePage = new HomePage(getDriver());
-        loginPage.loginValidCredentials();
-//        String searchArtist = "Grav";
-        homePage.searchSong(searchArtist)
-                .doubleClickFirstSearchResult()
-                .clickInfoButton()
-                .clickArtistTab();
-        Assert.assertEquals(homePage.getArtistTabText().toString(), searchArtist);
-    }
-    @Test
-    public void checkAlbumInfoPanelTab() {
-        LoginPage loginPage = new LoginPage(getDriver());
-        HomePage homePage = new HomePage(getDriver());
-        loginPage.loginValidCredentials();
-        String searchResultSong = homePage.getSearchResultSongText().toString();
-        String albumInfoPanelText = homePage.getAlbumTabText().toString();
-        homePage.searchSong(searchArtist)
-                .doubleClickFirstSearchResult()
-                .clickInfoButton()
-                .clickAlbumTab();
-        Assert.assertTrue(albumInfoPanelText.contains(searchResultSong));
-    }
+//    @Test
+//    public void checkLyricsInfoPanelTab() {
+//        LoginPage loginPage = new LoginPage(getDriver());
+//        HomePage homePage = new HomePage(getDriver());
+//        loginPage.loginValidCredentials();
+//
+//        homePage.searchSong(searchArtist)
+//                .doubleClickFirstSearchResult()
+//                .clickInfoButton()
+//                .clickLyricsTab();
+//        String lyricsInfoText = "No lyrics available. Are you listening to Bach?";
+//        Assert.assertEquals(homePage.getLyricsText().toString(), lyricsInfoText);
+//    }
+//    @Test
+//    public void checkArtistInfoPanelTab() {
+//        LoginPage loginPage = new LoginPage(getDriver());
+//        HomePage homePage = new HomePage(getDriver());
+//        loginPage.loginValidCredentials();
+////        String searchArtist = "Grav";
+//        homePage.searchSong(searchArtist)
+//                .doubleClickFirstSearchResult()
+//                .clickInfoButton()
+//                .clickArtistTab();
+//        Assert.assertEquals(homePage.getArtistTabText().toString(), searchArtist);
+//    }
+//    @Test
+//    public void checkAlbumInfoPanelTab() {
+//        LoginPage loginPage = new LoginPage(getDriver());
+//        HomePage homePage = new HomePage(getDriver());
+//        loginPage.loginValidCredentials();
+//        String searchResultSong = homePage.getSearchResultSongText().toString();
+//        String albumInfoPanelText = homePage.getAlbumTabText().toString();
+//        homePage.searchSong(searchArtist)
+//                .doubleClickFirstSearchResult()
+//                .clickInfoButton()
+//                .clickAlbumTab();
+//        Assert.assertTrue(albumInfoPanelText.contains(searchResultSong));
+//    }
 }

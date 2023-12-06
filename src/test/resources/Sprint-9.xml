@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="Jenkins" parallel="methods" thread-count="2">
+<suite name="Sprint-9" parallel="methods" thread-count="2">
 
-    <test name="Jenkins" preserve-order="true">
+    <test name="Sprint-9" preserve-order="false">
         <parameter name="baseURL" value="https://qa.koel.app/"/>
         <classes>
             <class name="HomeTests">
