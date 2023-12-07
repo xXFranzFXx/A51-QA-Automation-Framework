@@ -72,7 +72,7 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//*[@id=\"searchExcerptsWrapper\"]/div/div/section[1]/ul/article/span[2]/span[1]")
     private WebElement searchResultSongLocator;
 
-    @FindBy(xpath = "//*[@id=\"searchExcerptsWrapper\"]/div/div/section[1]/ul/article/span[2]/span[1]/span/a/text()")
+    @FindBy(xpath = "//*[@id=\"searchExcerptsWrapper\"]/div/div/section[1]/ul/article/span[2]/span[1]/span/a")
     private WebElement searchResultArtistText;
     /**
      * Search results components end
@@ -83,11 +83,13 @@ public class HomePage extends BasePage {
      */
     @FindBy(css = "[data-testid='extra-panel']")
     private WebElement infoPanel;
-    @FindBy(css = "[data-testid='toggle-extra-panel-btn]")
+//    @FindBy(css = "[data-testid='toggle-extra-panel-btn]")
+//    private WebElement infoButton;
+    @FindBy(css = "button[title='View song information']")
     private WebElement infoButton;
     @FindBy(xpath = "//*[@id=\"mainFooter\"]/div[2]/div[2]/div/button[1]")
     private WebElement infoButtonActive;
-    @FindBy(xpath = "//*[@id='extraTabLyrics']")
+    @FindBy(xpath = "//button[contains(text(), 'Lyrics')]")
     private WebElement lyricsTab;
     @FindBy(xpath = "//*[@id='extraTabArtist']")
     private WebElement artistTab;
@@ -103,21 +105,30 @@ public class HomePage extends BasePage {
     private WebElement artistTabShuffleBtn;
     @FindBy(xpath = "//*[@id=\"lyrics\"]/div/p/span/text()")
     private WebElement lyricsTabInfoText;
-    @FindBy(xpath = "//*[@id=\"lyrics\"]/div/p/span")
-    private WebElement lyricsTabInfo;
 
-    @FindBy(xpath = "//*[@id=\"extra\"]/div/div[1]")
+
+
+    @FindBy(css = "section#extra .tabs")
     private WebElement infoPanelTabsGroupLocator;
-
-
-
+    private final By searchResultThumbnail = By.cssSelector("section[data-testid=\"song-excerpts\"] span.cover:nth-child(1)");
+    private final By lyricsTabLocator = By.cssSelector("#extraTabLyrics");
+    private final By lyricsTabInfo = By.cssSelector(".none span");
+    private final By artisTabLocator = By.cssSelector("#extraTabArtist");
+    private final By artistTabInfo = By.cssSelector("[data-test='artist-info'] h1.name span");
+    private final By albumTabLocator = By.cssSelector("#extraTabAlbum");
+    private final By albumTabInfo = By.cssSelector("main span a.control.control-play");
+    private final By albumTabShuffleBtn = By.cssSelector("article[data-test=\"album-info\"] .fa-random");
+    private final By currentQueueHeader = By.cssSelector("#queueWrapper .heading-wrapper h1");
+    private final By currentQueueLocator = By.xpath("//h1[text()[normalize-space()=' Current Queue ']]");
+    @FindBy(xpath = "//h1[text()[normalize-space()=' Current Queue ']]")
+    private WebElement currentQueueText;
     /**
      * INFO panel components end
      */
     public HomePage(WebDriver givenDriver) {
         super(givenDriver);
     }
-
+    String strUrl = driver.getCurrentUrl();
     public boolean getUserAvatar () {
         return userAvatarIcon.isEnabled();
     }
@@ -186,19 +197,40 @@ public class HomePage extends BasePage {
        infoButtonActive.click();
        return this;
     }
-    public HomePage clickAlbumTab() {
-//        albumTab.click();
-        wait.until(ExpectedConditions.elementToBeClickable(albumTab)).click();
+    public String clickLyricsTab() {
+        click(lyricsTabLocator);
+        WebElement lyricsInfoText = wait.until(ExpectedConditions.presenceOfElementLocated(lyricsTabInfo));
+        return lyricsInfoText.getText();
+    }
+    public String clickArtistTab() {
+        click(artisTabLocator);
+        WebElement artistInfoText = wait.until(ExpectedConditions.presenceOfElementLocated(artistTabInfo));
+        return artistInfoText.getText();
+    }
+    public String clickAlbumTab() {
+        if(isInfoPanelVisible()){
+            click(albumTabLocator);
+        } else {
+            clickInfoButton();
+        }
+//        click(albumTabLocator);
+        WebElement albumInfoText = wait.until(ExpectedConditions.presenceOfElementLocated(albumTabInfo));
+        return albumInfoText.getText();
+    }
+    public HomePage checkHeaderTitle() {
+        WebElement headerTitle = wait.until(ExpectedConditions.presenceOfElementLocated(currentQueueHeader));
+        Assert.assertTrue(headerTitle.isDisplayed());
+        return this;
+    }
+    public HomePage clickAlbumTabShuffleBtn () {
+       click(albumTabShuffleBtn);
 
-        return this;
+       return this;
     }
-    public HomePage clickArtistTab() {
-        artistTab.click();
-        return this;
-    }
-    public HomePage clickLyricsTab() {
-        lyricsTab.click();
-        return this;
+    public Boolean checkQueueTitle() {
+       String url ="https://qa.koel.app/#!/queue";
+       String currentUrl = driver.getCurrentUrl();
+       return url.equals(currentUrl);
     }
 
    public HomePage doubleClickFirstSearchResult() {
@@ -208,20 +240,11 @@ public class HomePage extends BasePage {
    public boolean isInfoPanelVisible() {
        return findElement(infoPanel) != null;
    }
-//   public boolean isInfoActiveVisible() {
-//       return wait.until(ExpectedConditions.visibilityOf();
-//
-//   }
+
   public boolean isInfoPanelTabsInvisible() {
       return wait.until(ExpectedConditions.invisibilityOf(infoPanelTabsGroupLocator));
   }
-//    public boolean isInfoPanelTabsVisible() {
-//        Boolean bool  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"extra\"]/div/div[1]")));
-//    }
-   public HomePage getLyricsText() {
-        lyricsTabInfoText.getText();
-        return this;
-   }
+
    public HomePage getSearchResultSongText() {
         searchResultSongLocator.getText();
         return this;
@@ -232,6 +255,7 @@ public class HomePage extends BasePage {
         return this;
    }
    public HomePage getAlbumTabText() {
+
         albumTabCoverPlayBtnText.getText();
         return this;
    }
@@ -245,5 +269,9 @@ public class HomePage extends BasePage {
        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".control.text-uppercase.active"))).click();
        return this;
    }
-
+  public HomePage clickSearchResultThumbnail() {
+        WebElement thumbnail = wait.until(ExpectedConditions.visibilityOfElementLocated(searchResultThumbnail));
+        thumbnail.click();
+        return this;
+  }
 }
