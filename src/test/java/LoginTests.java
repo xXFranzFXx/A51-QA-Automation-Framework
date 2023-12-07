@@ -19,10 +19,10 @@ import pages.RegistrationPage;
  * 7. User should not be able to log in with empty 'Email Address' and 'Password fields'
  */
 public class LoginTests extends BaseTest {
-    private String registerEmail = "new.testaccounttestpro.io";
-    private String updatedEmail = "updated.email@testpro.io";
-    private String defaultPassword = "te$t$tudent";
-    private String updatedPassword = "te$t$tudent2";
+    private final String registerEmail = "franz.fernando+1@testpro.io";
+    private final String updatedEmail = "updated.email@testpro.io";
+    private final String defaultPassword = "jcBAMmQV";
+    private final String updatedPassword = "te$t$tudent2";
 //    @Test
     public void registerNewAccount(){
         HomePage homePage = new HomePage(getDriver());
@@ -33,18 +33,19 @@ public class LoginTests extends BaseTest {
         registrationPage.registerNewAccount(registerEmail);
         Assert.assertTrue(registrationPage.getConfirmationMsg());
     }
-//    @Test
+    //logs in with newly created account
+    @Test
     public void loginWithNewAccount() {
         HomePage homePage = new HomePage(getDriver());
         LoginPage loginPage =  new LoginPage(getDriver());
         loginPage.provideEmail(registerEmail)
-                .providePassword("te$t$tudent")
+                .providePassword(defaultPassword)
                 .clickSubmitBtn();
         Assert.assertTrue(homePage.getUserAvatar());
     }
 
     //logs in with newlyCreatedAccount, updates the email, logs out and tries to log back in with old email
-//    @Test
+    @Test
     public void loginAndUpdateNewAccount() {
         ProfilePage profilePage = new ProfilePage(getDriver());
         HomePage homePage = new HomePage(getDriver());
@@ -52,6 +53,7 @@ public class LoginTests extends BaseTest {
         loginPage.provideEmail(registerEmail)
                 .providePassword(defaultPassword)
                 .clickSubmitBtn();
+
         profilePage.clickAvatar()
                 .provideNewEmail(updatedEmail)
                 .provideCurrentPassword(defaultPassword)
@@ -60,8 +62,26 @@ public class LoginTests extends BaseTest {
         loginPage.provideEmail(registerEmail)
                 .providePassword(defaultPassword)
                 .clickSubmitBtn();
-        Assert.assertFalse(homePage.getUserAvatar());
-
+        Assert.assertTrue(loginPage.getRegistrationLink());
+    }
+    //logs in with the updated email and updates the password, logs out, and attempts to log in with old password
+    @Test
+    public void loginWithUpdatedEmailAndUpdatePwd() {
+        ProfilePage profilePage = new ProfilePage(getDriver());
+        HomePage homePage = new HomePage(getDriver());
+        LoginPage loginPage =  new LoginPage(getDriver());
+        loginPage.provideEmail(updatedEmail)
+                .providePassword(defaultPassword)
+                .clickSubmitBtn();
+        profilePage.clickAvatar()
+                .provideNewPassword(updatedPassword)
+                .provideCurrentPassword(defaultPassword)
+                .clickSaveButton()
+                .clickLogout();
+        loginPage.provideEmail(updatedEmail)
+                .providePassword(defaultPassword)
+                .clickSubmitBtn();
+        Assert.assertTrue(loginPage.getRegistrationLink());
     }
 
     @Test
