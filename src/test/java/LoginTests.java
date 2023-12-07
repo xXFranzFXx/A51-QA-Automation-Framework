@@ -3,6 +3,8 @@ import org.testng.Reporter;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.LoginPage;
+import pages.ProfilePage;
+import pages.RegistrationPage;
 
 /**
  * Story:
@@ -17,7 +19,50 @@ import pages.LoginPage;
  * 7. User should not be able to log in with empty 'Email Address' and 'Password fields'
  */
 public class LoginTests extends BaseTest {
+    private String registerEmail = "new.testaccounttestpro.io";
+    private String updatedEmail = "updated.email@testpro.io";
+    private String defaultPassword = "te$t$tudent";
+    private String updatedPassword = "te$t$tudent2";
+//    @Test
+    public void registerNewAccount(){
+        HomePage homePage = new HomePage(getDriver());
+        LoginPage loginPage =  new LoginPage(getDriver());
+        RegistrationPage registrationPage = new RegistrationPage(getDriver());
 
+        loginPage.clickRegistrationLink();
+        registrationPage.registerNewAccount(registerEmail);
+        Assert.assertTrue(registrationPage.getConfirmationMsg());
+    }
+//    @Test
+    public void loginWithNewAccount() {
+        HomePage homePage = new HomePage(getDriver());
+        LoginPage loginPage =  new LoginPage(getDriver());
+        loginPage.provideEmail(registerEmail)
+                .providePassword("te$t$tudent")
+                .clickSubmitBtn();
+        Assert.assertTrue(homePage.getUserAvatar());
+    }
+
+    //logs in with newlyCreatedAccount, updates the email, logs out and tries to log back in with old email
+//    @Test
+    public void loginAndUpdateNewAccount() {
+        ProfilePage profilePage = new ProfilePage(getDriver());
+        HomePage homePage = new HomePage(getDriver());
+        LoginPage loginPage =  new LoginPage(getDriver());
+        loginPage.provideEmail(registerEmail)
+                .providePassword(defaultPassword)
+                .clickSubmitBtn();
+        profilePage.clickAvatar()
+                .provideNewEmail(updatedEmail)
+                .provideCurrentPassword(defaultPassword)
+                .clickSaveButton()
+                .clickLogout();
+        loginPage.provideEmail(registerEmail)
+                .providePassword(defaultPassword)
+                .clickSubmitBtn();
+        Assert.assertFalse(homePage.getUserAvatar());
+
+    }
 
     @Test
     public void loginSuccessTest() {
@@ -59,21 +104,25 @@ public class LoginTests extends BaseTest {
         Assert.assertTrue(loginPage.getRegistrationLink());
     }
 //    @Test(dataProvider = "LoginData")
-//    public void loginWithLoginData(String email, String password) {
-//        loginPage.provideEmail(email)
-//                .providePassword(password)
-//                .clickSubmitBtn();
-//        Assert.assertTrue(homePage.getUserAvatar());
-//    }
+    public void loginWithLoginData(String email, String password) {
+        HomePage homePage = new HomePage(getDriver());
+        LoginPage loginPage =  new LoginPage(getDriver());
+        loginPage.provideEmail(email)
+                .providePassword(password)
+                .clickSubmitBtn();
+        Assert.assertTrue(homePage.getUserAvatar());
+    }
 //    @Test(dataProvider = "excel-data")
-//    public void loginWithExcelData(String email, String password){
-//        try{
-//            loginPage.provideEmail(email)
-//                    .providePassword(password)
-//                            .clickSubmitBtn();
-//            Assert.assertTrue(homePage.getUserAvatar());
-//        } catch(Exception e){
-//            Reporter.log("Unable to login with Excel Data for an unknown reason." + e);
-//        }
-//    }
+    public void loginWithExcelData(String email, String password){
+        HomePage homePage = new HomePage(getDriver());
+        LoginPage loginPage =  new LoginPage(getDriver());
+        try{
+            loginPage.provideEmail(email)
+                    .providePassword(password)
+                            .clickSubmitBtn();
+            Assert.assertTrue(homePage.getUserAvatar());
+        } catch(Exception e){
+            Reporter.log("Unable to login with Excel Data for an unknown reason." + e);
+        }
+    }
 }

@@ -19,6 +19,8 @@ public class ProfilePage extends BasePage{
     private WebElement currentPassword;
     @FindBy(css = "[name='new_password']")
     private WebElement newPassword;
+    @FindBy(css ="[name='email']")
+    private WebElement newEmail;
     @FindBy(xpath = "//*[@data-testid=\"view-profile-link\"] /span")
     private WebElement actualProfileName;
 
@@ -46,7 +48,16 @@ public class ProfilePage extends BasePage{
     public String getProfileName() {
        return findElement(actualProfileName).getText();
     }
-
+    public ProfilePage provideNewEmail(String updatedEmail) {
+        WebElement emailInput = wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#inputProfileEmail")));
+        emailInput.clear();
+        emailInput.sendKeys(updatedEmail);
+        return this;
+    }
+    public ProfilePage clickSaveButton() {
+       findElement(saveButton).click();
+       return this;
+    }
     public ProfilePage provideCurrentPassword(String password) {
         WebElement currentPassword = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#inputProfileCurrentPassword")));
         currentPassword.clear();

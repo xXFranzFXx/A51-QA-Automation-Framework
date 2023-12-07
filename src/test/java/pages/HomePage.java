@@ -236,10 +236,9 @@ public class HomePage extends BasePage {
         Assert.assertTrue(headerTitle.isDisplayed());
         return this;
     }
-    public HomePage clickAlbumTabShuffleBtn () {
+    public void clickAlbumTabShuffleBtn () {
        click(albumTabShuffleBtn);
 
-       return this;
     }
     public Boolean checkQueueTitle() {
        String url ="https://qa.koel.app/#!/queue";

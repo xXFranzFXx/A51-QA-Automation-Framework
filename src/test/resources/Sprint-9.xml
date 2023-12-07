@@ -8,6 +8,7 @@
         <classes>
             <class name="InfoPanelTests"/>
             <class name="LogoutTests"/>
+<!--            <class name="LoginTests"/>-->
         </classes>
     </test>
 </suite>

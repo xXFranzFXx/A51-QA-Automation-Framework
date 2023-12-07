@@ -43,6 +43,9 @@ public class LoginPage extends BasePage{
         logoutBtn.click();
         return this;
     }
+    public void clickRegistrationLink() {
+        registrationLinkLocator.click();
+    }
     public Boolean getRegistrationLink() {
      WebElement registrationLink =  wait.until(ExpectedConditions.visibilityOf(registrationLinkLocator));
      return registrationLink.isDisplayed();
