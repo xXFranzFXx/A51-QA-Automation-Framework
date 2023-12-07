@@ -83,8 +83,10 @@ public class HomePage extends BasePage {
      */
     @FindBy(css = "[data-testid='extra-panel']")
     private WebElement infoPanel;
-//    @FindBy(css = "[data-testid='toggle-extra-panel-btn]")
-//    private WebElement infoButton;
+
+    @FindBy(css = "#extra.text-secondary.showing")
+    private WebElement infoPanelShowing;
+
     @FindBy(css = "button[title='View song information']")
     private WebElement infoButton;
     @FindBy(xpath = "//*[@id=\"mainFooter\"]/div[2]/div[2]/div/button[1]")
@@ -193,8 +195,21 @@ public class HomePage extends BasePage {
     }
 
     public HomePage clickInfoButton() {
-       infoButtonActive.click();
+     infoButton.click();
        return this;
+    }
+    //click the info button and check for info panel visibility, click again if invisible this verifies it disappears when clicked
+    //if the first click turns on visibility, click again to make it invisible, and negative assert visibility of info panel this verifies that the info button toggles the visibility.
+
+    public Boolean checkVisibility() {
+       clickInfoBtnActive();
+        if(!lyricsTab.isDisplayed()) {
+         clickInfoButton();
+         return lyricsTab.isDisplayed();
+        } else {
+          clickInfoButton();
+            return !lyricsTab.isDisplayed();
+        }
     }
     public String clickLyricsTab() {
         click(lyricsTabLocator);
@@ -207,7 +222,7 @@ public class HomePage extends BasePage {
         return artistInfoText.getText();
     }
     public String clickAlbumTab() {
-        if(isInfoPanelVisible()){
+        if(isInfoPanelVisible().isDisplayed()){
             click(albumTabLocator);
         } else {
             clickInfoButton();
@@ -236,8 +251,8 @@ public class HomePage extends BasePage {
         actions.doubleClick(searchResultSongText).perform();
         return this;
    }
-   public boolean isInfoPanelVisible() {
-       return findElement(infoPanel) != null;
+   public WebElement isInfoPanelVisible() {
+        return findElement(infoPanelShowing);
    }
 
   public boolean isInfoPanelTabsInvisible() {
@@ -263,10 +278,9 @@ public class HomePage extends BasePage {
 //       Assert.assertTrue(albumTabCoverFinder.isDisplayed());
        return albumTabCoverFinder.isDisplayed();
    }
-   public HomePage clickInfoBtnActive() {
+   public void clickInfoBtnActive() {
        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("[data-testid='toggle-extra-panel-btn]")));
        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".control.text-uppercase.active"))).click();
-       return this;
    }
   public HomePage clickSearchResultThumbnail() {
         WebElement thumbnail = wait.until(ExpectedConditions.visibilityOfElementLocated(searchResultThumbnail));

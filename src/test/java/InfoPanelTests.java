@@ -19,52 +19,14 @@ public class InfoPanelTests extends BaseTest {
     private final String searchArtist = "Grav";
 
     @Test
-    //checks visibility/invisibility of info panel by clicking INFO button (Acceptance criteria 5)
-    public void checkInfoPanelDisappears() {
+    //checks visibility/invisibility of info panel by clicking INFO button (Acceptance criteria 4,5)
+    public void toggleInfoPanel() {
         LoginPage loginPage = new LoginPage(getDriver());
         HomePage homePage = new HomePage(getDriver());
         loginPage.loginValidCredentials();
-        homePage.clickInfoBtnActive();
-        Assert.assertTrue(homePage.isInfoPanelTabsInvisible());
+        Assert.assertTrue(homePage.checkVisibility());
 
     }
-
-    //(Acceptance criteria 4)
-    @Test
-    public void checkInfoPanelIsVisible() {
-        LoginPage loginPage = new LoginPage(getDriver());
-        HomePage homePage = new HomePage(getDriver());
-        loginPage.loginValidCredentials();
-        Assert.assertTrue(homePage.isInfoPanelVisible());
-
-    }
-
-    @Test
-    //click each tab and verify correct info is displayed in info panel then press the shuffle button (Acceptance critera 1,2,3)
-    public void checkInfoPanelTabs() {
-        LoginPage loginPage = new LoginPage(getDriver());
-        HomePage homePage = new HomePage(getDriver());
-        loginPage.loginValidCredentials();
-        String lyricsInfoText = "No lyrics available. Are you listening to Bach?";
-        String albumInfoText = "Play all songs in the album Dark Days EP";
-
-        homePage.searchSong(searchArtist)
-                .clickSearchResultThumbnail()
-                .clickInfoButton();
-        String displayedLyricsString;
-        displayedLyricsString = homePage.clickLyricsTab();
-        Assert.assertEquals(displayedLyricsString, lyricsInfoText);
-
-        String displayedArtistString;
-        displayedArtistString = homePage.clickArtistTab();
-        Assert.assertEquals(displayedArtistString, searchArtist);
-
-        String displayedAlbumString;
-        displayedAlbumString = homePage.clickAlbumTab();
-        Assert.assertEquals(displayedAlbumString, albumInfoText);
-
-    }
-
     //click shuffle button in info panel albums tab (Acceptance criteria 6)
     @Test
     public void checkShufflePlayBtn() {
@@ -76,6 +38,30 @@ public class InfoPanelTests extends BaseTest {
                 .clickAlbumTab();
         homePage.clickAlbumTabShuffleBtn();
         Assert.assertTrue(homePage.checkQueueTitle());
+
+    }
+    @Test
+    //click each tab and verify correct info is displayed in info panel then press the shuffle button (Acceptance critera 1,2,3)
+    public void checkInfoPanelTabs() {
+        LoginPage loginPage = new LoginPage(getDriver());
+        HomePage homePage = new HomePage(getDriver());
+        loginPage.loginValidCredentials();
+        String lyricsInfoText = "No lyrics available. Are you listening to Bach?";
+        String albumInfoText = "Play all songs in the album Dark Days EP";
+
+        homePage.searchSong(searchArtist)
+                .clickSearchResultThumbnail();
+        String displayedLyricsString;
+        displayedLyricsString = homePage.clickLyricsTab();
+        Assert.assertEquals(displayedLyricsString, lyricsInfoText);
+
+        String displayedArtistString;
+        displayedArtistString = homePage.clickArtistTab();
+        Assert.assertEquals(displayedArtistString, searchArtist);
+
+        String displayedAlbumString;
+        displayedAlbumString = homePage.clickAlbumTab();
+        Assert.assertEquals(displayedAlbumString, albumInfoText);
 
     }
 }
