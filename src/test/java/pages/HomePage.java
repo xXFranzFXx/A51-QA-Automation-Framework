@@ -105,9 +105,8 @@ public class HomePage extends BasePage {
     private WebElement artistTabShuffleBtn;
     @FindBy(xpath = "//*[@id=\"lyrics\"]/div/p/span/text()")
     private WebElement lyricsTabInfoText;
-
-
-
+    @FindBy(xpath = "//h1[text()[normalize-space()=' Current Queue ']]")
+    private WebElement currentQueueText;
     @FindBy(css = "section#extra .tabs")
     private WebElement infoPanelTabsGroupLocator;
     private final By searchResultThumbnail = By.cssSelector("section[data-testid=\"song-excerpts\"] span.cover:nth-child(1)");
@@ -120,8 +119,8 @@ public class HomePage extends BasePage {
     private final By albumTabShuffleBtn = By.cssSelector("article[data-test=\"album-info\"] .fa-random");
     private final By currentQueueHeader = By.cssSelector("#queueWrapper .heading-wrapper h1");
     private final By currentQueueLocator = By.xpath("//h1[text()[normalize-space()=' Current Queue ']]");
-    @FindBy(xpath = "//h1[text()[normalize-space()=' Current Queue ']]")
-    private WebElement currentQueueText;
+    private final By logoutButtonLocator = By.cssSelector("i.fa.fa-sign-out");
+
     /**
      * INFO panel components end
      */
@@ -273,5 +272,12 @@ public class HomePage extends BasePage {
         WebElement thumbnail = wait.until(ExpectedConditions.visibilityOfElementLocated(searchResultThumbnail));
         thumbnail.click();
         return this;
+  }
+  public Boolean checkForLogoutBtn() {
+        WebElement logoutButton = wait.until(ExpectedConditions.presenceOfElementLocated(logoutButtonLocator));
+        return logoutButton.isDisplayed();
+  }
+  public void clickLogoutButton() {
+        click(logoutButtonLocator);
   }
 }

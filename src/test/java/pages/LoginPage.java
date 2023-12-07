@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class LoginPage extends BasePage{
     //locators
@@ -13,7 +14,7 @@ public class LoginPage extends BasePage{
     @FindBy(css = "[type='password']")
     private WebElement passwordField;
     @FindBy(xpath = "//a[@href='registration']")
-    private WebElement registrationLink;
+    private WebElement registrationLinkLocator;
     @FindBy(css = ".fa-sign-out")
     private WebElement logoutBtn;
     //constructor method
@@ -35,13 +36,16 @@ public class LoginPage extends BasePage{
     }
     public void loginValidCredentials() {
         provideEmail("fake@fakeaccount.com");
-        providePassword("te$t$tudent");
+        providePassword("te$t$tudent1");
         clickSubmitBtn();
     }
     public LoginPage clickLogOutBtn() {
         logoutBtn.click();
         return this;
     }
-    public void getRegistrationLink() {
+    public Boolean getRegistrationLink() {
+     WebElement registrationLink =  wait.until(ExpectedConditions.visibilityOf(registrationLinkLocator));
+     return registrationLink.isDisplayed();
+
     }
 }

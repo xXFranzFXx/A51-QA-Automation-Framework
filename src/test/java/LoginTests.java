@@ -4,6 +4,18 @@ import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.LoginPage;
 
+/**
+ * Story:
+ * As a user, I want to be able to log in to my account, so I can use Koel app
+ * Acceptance Criteria:
+ * 1. User should be able to log in to Koel app after registering a new account with testpro.io domain
+ * 2. User should be navigated to the Homepage after successful login
+ * 3. User should be able to log in with the updated email and the old email should not work
+ * 4. User should be able to log in with the updated password and the old password should not work 'Password is incorrect' message should be displayed
+ * 5. User should not be able to log in with invalid format email (without @ symbol, dot or domain) and valid password. 'email format is incorrect' message should be displayed
+ * 6. User should not be able to log in with valid registered email and invalid password. 'Password is incorrect' message should be displayed
+ * 7. User should not be able to log in with empty 'Email Address' and 'Password fields'
+ */
 public class LoginTests extends BaseTest {
 
 
@@ -12,7 +24,7 @@ public class LoginTests extends BaseTest {
         HomePage homePage = new HomePage(getDriver());
         LoginPage loginPage =  new LoginPage(getDriver());
         loginPage.provideEmail("fake@fakeaccount.com")
-                .providePassword("te$t$tudent")
+                .providePassword("te$t$tudent1")
                 .clickSubmitBtn();
         Assert.assertTrue(homePage.getUserAvatar());
     }
@@ -24,17 +36,17 @@ public class LoginTests extends BaseTest {
         loginPage.provideEmail("fake@fakeaccount.com")
                 .providePassword("wrongPassword")
                 .clickSubmitBtn();
-        loginPage.getRegistrationLink();
+        Assert.assertTrue(loginPage.getRegistrationLink());
     }
 
     @Test
     public void loginWrongEmailTest() {
         HomePage homePage = new HomePage(getDriver());
         LoginPage loginPage =  new LoginPage(getDriver());
-        loginPage.provideEmail("wrong@wrong.mail")
-                .providePassword("te$t$tudent")
+        loginPage.provideEmail("wrong@wrongmail")
+                .providePassword("te$t$tudent1")
                 .clickSubmitBtn();
-        loginPage.getRegistrationLink();
+        Assert.assertTrue(loginPage.getRegistrationLink());
     }
 
     @Test
@@ -44,7 +56,7 @@ public class LoginTests extends BaseTest {
         loginPage.provideEmail("fake@fakeaccount.com")
                 .providePassword("")
                 .clickSubmitBtn();
-        loginPage.getRegistrationLink();
+        Assert.assertTrue(loginPage.getRegistrationLink());
     }
 //    @Test(dataProvider = "LoginData")
 //    public void loginWithLoginData(String email, String password) {

@@ -20,13 +20,13 @@ public class BasePage {
     protected WebDriverWait wait;
     protected Actions actions;
 
-    private int timeSeconds = 5;
+    private int timeSeconds = 10;
     @FindBy(css = "[data-testid='sound-bar-play']")
     private WebElement soundBarVisualizer;
     //constructor method
     public BasePage(WebDriver givenDriver) {
         driver = givenDriver;
-        wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         actions = new Actions(driver);
         PageFactory.initElements(driver, this);
         PageFactory.initElements(new AjaxElementLocatorFactory(driver, timeSeconds), this);

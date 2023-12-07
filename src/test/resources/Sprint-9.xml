@@ -3,12 +3,11 @@
 
 <suite name="Sprint-9" parallel="methods" thread-count="2">
 
-    <test name="Sprint-9" preserve-order="false">
+    <test name="Sprint-9" preserve-order="true">
         <parameter name="baseURL" value="https://qa.koel.app/"/>
         <classes>
             <class name="InfoPanelTests"/>
-
-
+            <class name="LogoutTests"/>
         </classes>
     </test>
 </suite>
