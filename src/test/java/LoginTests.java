@@ -38,8 +38,7 @@ public class LoginTests extends BaseTest {
             Reporter.log("Unable to login with Excel Data for an unknown reason." + e);
         }
     }
-    //logs in with newly created account
-    @Test //(dependsOnMethods = { "registerNewAccount" })
+    @Test (description = "log in with newly registered account with testpro.io domain")//(dependsOnMethods = { "registerNewAccount" })
     public void loginWithNewAccount() {
         HomePage homePage = new HomePage(getDriver());
         LoginPage loginPage =  new LoginPage(getDriver());
@@ -50,8 +49,8 @@ public class LoginTests extends BaseTest {
         Assert.assertTrue(homePage.getUserAvatar());
     }
 
-    //logs in with newlyCreatedAccount, updates the email, logs out and tries to log back in with old email
-    @Test (dependsOnMethods = { "loginWithNewAccount" })
+
+    @Test (description ="log in with new account, update email, log out and attempt to log back in with old email address", dependsOnMethods = { "loginWithNewAccount" })
     public void loginAndUpdateNewAccount() {
         ProfilePage profilePage = new ProfilePage(getDriver());
         HomePage homePage = new HomePage(getDriver());
@@ -75,8 +74,8 @@ public class LoginTests extends BaseTest {
             Assert.assertTrue(homePage.checkForLogoutBtn());
         }
     }
-    //logs in with the updated email and updates the password, logs out, and attempts to log in with old password
-    @Test (dependsOnMethods = { "loginAndUpdateNewAccount"} )
+
+    @Test (description = "Log in with the updated email and update the password, log out, and attempt to log in with old password", dependsOnMethods = { "loginAndUpdateNewAccount"} )
     public void loginWithUpdatedEmailAndUpdatePwd() {
         ProfilePage profilePage = new ProfilePage(getDriver());
         HomePage homePage = new HomePage(getDriver());
@@ -96,8 +95,8 @@ public class LoginTests extends BaseTest {
         Reporter.log("User successfully updated password and logged in using it", true);
 
     }
-    //resets profile back to default newly registered account details after previous test completes
-    @Test(dependsOnMethods = { "loginWithUpdatedEmailAndUpdatePwd" })
+    //
+    @Test(description = "Reset profile back to default newly registered account details after previous test completes", dependsOnMethods = { "loginWithUpdatedEmailAndUpdatePwd" })
     public void resetProfile() {
         ProfilePage profilePage = new ProfilePage(getDriver());
         HomePage homePage = new HomePage(getDriver());
@@ -120,7 +119,7 @@ public class LoginTests extends BaseTest {
 
     }
 
-    @Test(groups = { "Login" })
+    @Test(description = "Log in success test", groups = { "Login" })
     public void loginSuccessTest() {
         HomePage homePage = new HomePage(getDriver());
         LoginPage loginPage =  new LoginPage(getDriver());
@@ -130,7 +129,7 @@ public class LoginTests extends BaseTest {
         Assert.assertTrue(homePage.getUserAvatar());
     }
 
-    @Test(groups = { "Login" })
+    @Test(description = "Log in with incorrect password", groups = { "Login" })
     public void loginWrongPasswordTest() {
         HomePage homePage = new HomePage(getDriver());
         LoginPage loginPage =  new LoginPage(getDriver());
@@ -140,7 +139,7 @@ public class LoginTests extends BaseTest {
         Assert.assertTrue(loginPage.getRegistrationLink());
     }
 
-    @Test(groups = { "Login" })
+    @Test(description = "Log in with incorrect email address", groups = { "Login" })
     public void loginWrongEmailTest() {
         HomePage homePage = new HomePage(getDriver());
         LoginPage loginPage =  new LoginPage(getDriver());
@@ -150,7 +149,7 @@ public class LoginTests extends BaseTest {
         Assert.assertTrue(loginPage.getRegistrationLink());
     }
 
-    @Test(groups = { "Login" })
+    @Test(description = "Log in with blank password", groups = { "Login" })
     public void loginEmptyPasswordTest() {
         HomePage homePage = new HomePage(getDriver());
         LoginPage loginPage =  new LoginPage(getDriver());
@@ -160,7 +159,7 @@ public class LoginTests extends BaseTest {
         Assert.assertTrue(loginPage.getRegistrationLink());
     }
 
-    @Test(dataProvider = "LoginData")
+    @Test(description = "Log in with data read from external source", dataProvider = "LoginData")
     public void loginWithLoginData(String email, String password) {
         HomePage homePage = new HomePage(getDriver());
         LoginPage loginPage =  new LoginPage(getDriver());
@@ -177,7 +176,7 @@ public class LoginTests extends BaseTest {
             Assert.assertTrue(loginPage.getRegistrationLink());
         }
     }
-    @Test(dataProvider = "excel-data")
+    @Test(description = "Log in with data read from Excel Sheet", dataProvider = "excel-data")
     public void loginWithExcelData(String email, String password){
         HomePage homePage = new HomePage(getDriver());
         LoginPage loginPage =  new LoginPage(getDriver());
