@@ -1,3 +1,5 @@
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.LoginPage;
@@ -13,7 +15,7 @@ public class ProfileTests extends BaseTest {
         ProfilePage profilePage = new ProfilePage(getDriver());
         LoginPage loginPage = new LoginPage(getDriver());
         String randomNm = generateRandomName();
-        String profileName = profilePage.getProfileName().toString();
+        String profileName = profilePage.getProfileName();
 
         loginPage.loginValidCredentials();
         profilePage.clickAvatar()

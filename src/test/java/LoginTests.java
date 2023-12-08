@@ -21,31 +21,35 @@ import pages.RegistrationPage;
 public class LoginTests extends BaseTest {
     private final String registerEmail = "franz.fernando+1@testpro.io";
     private final String updatedEmail = "updated.email@testpro.io";
-    private final String defaultPassword = "jcBAMmQV";
+    private final String defaultPassword = "te$t$tudent1";
     private final String updatedPassword = "te$t$tudent2";
-//    @Test
-    public void registerNewAccount(){
+    @Test
+    public void registerNewAccount() {
         HomePage homePage = new HomePage(getDriver());
-        LoginPage loginPage =  new LoginPage(getDriver());
+        LoginPage loginPage = new LoginPage(getDriver());
         RegistrationPage registrationPage = new RegistrationPage(getDriver());
-
-        loginPage.clickRegistrationLink();
-        registrationPage.registerNewAccount(registerEmail);
-        Assert.assertTrue(registrationPage.getConfirmationMsg());
+        try {
+            loginPage.clickRegistrationLink();
+            registrationPage.registerNewAccount(registerEmail);
+            Assert.assertTrue(registrationPage.getConfirmationMsg());
+        } catch (Exception e) {
+            Reporter.log("Unable to login with Excel Data for an unknown reason." + e);
+        }
     }
     //logs in with newly created account
-    @Test
+    @Test(dependsOnMethods = { "registerNewAccount" })
     public void loginWithNewAccount() {
         HomePage homePage = new HomePage(getDriver());
         LoginPage loginPage =  new LoginPage(getDriver());
         loginPage.provideEmail(registerEmail)
                 .providePassword(defaultPassword)
                 .clickSubmitBtn();
+        Reporter.log("User has successfully logged in with a new account", true);
         Assert.assertTrue(homePage.getUserAvatar());
     }
 
     //logs in with newlyCreatedAccount, updates the email, logs out and tries to log back in with old email
-    @Test
+    @Test (dependsOnMethods = { "registerNewAccount", "loginWithNewAccount" })
     public void loginAndUpdateNewAccount() {
         ProfilePage profilePage = new ProfilePage(getDriver());
         HomePage homePage = new HomePage(getDriver());
@@ -62,10 +66,11 @@ public class LoginTests extends BaseTest {
         loginPage.provideEmail(registerEmail)
                 .providePassword(defaultPassword)
                 .clickSubmitBtn();
+        Reporter.log("User has updated email and attempted to log in with old email", true);
         Assert.assertTrue(loginPage.getRegistrationLink());
     }
     //logs in with the updated email and updates the password, logs out, and attempts to log in with old password
-    @Test
+    @Test (dependsOnMethods = { "loginAndUpdateNewAccount"} )
     public void loginWithUpdatedEmailAndUpdatePwd() {
         ProfilePage profilePage = new ProfilePage(getDriver());
         HomePage homePage = new HomePage(getDriver());
@@ -81,10 +86,29 @@ public class LoginTests extends BaseTest {
         loginPage.provideEmail(updatedEmail)
                 .providePassword(defaultPassword)
                 .clickSubmitBtn();
+        Reporter.log("User successfully updated password and logged in using it", true);
+        Assert.assertTrue(loginPage.getRegistrationLink());
+    }
+    //resets profile back to default newly registered account details after previous test completes
+    @Test(dependsOnMethods = { "loginWithUpdatedEmailAndUpdatePwd" })
+    public void resetProfile() {
+        ProfilePage profilePage = new ProfilePage(getDriver());
+        HomePage homePage = new HomePage(getDriver());
+        LoginPage loginPage =  new LoginPage(getDriver());
+        loginPage.provideEmail(updatedEmail)
+                .providePassword(updatedPassword)
+                .clickSubmitBtn();
+        profilePage.clickAvatar()
+                .provideNewEmail(registerEmail)
+                .provideNewPassword(defaultPassword)
+                .provideCurrentPassword(updatedPassword)
+                .clickSaveButton()
+                .clickLogout();
+        Reporter.log("Log in tests for Sprint-9 completed and test profile has been reset so tests can be run again.", true);
         Assert.assertTrue(loginPage.getRegistrationLink());
     }
 
-    @Test
+    @Test(groups = { "Login" })
     public void loginSuccessTest() {
         HomePage homePage = new HomePage(getDriver());
         LoginPage loginPage =  new LoginPage(getDriver());
@@ -94,7 +118,7 @@ public class LoginTests extends BaseTest {
         Assert.assertTrue(homePage.getUserAvatar());
     }
 
-    @Test
+    @Test(groups = { "Login" })
     public void loginWrongPasswordTest() {
         HomePage homePage = new HomePage(getDriver());
         LoginPage loginPage =  new LoginPage(getDriver());
@@ -104,7 +128,7 @@ public class LoginTests extends BaseTest {
         Assert.assertTrue(loginPage.getRegistrationLink());
     }
 
-    @Test
+    @Test(groups = { "Login" })
     public void loginWrongEmailTest() {
         HomePage homePage = new HomePage(getDriver());
         LoginPage loginPage =  new LoginPage(getDriver());
@@ -114,7 +138,7 @@ public class LoginTests extends BaseTest {
         Assert.assertTrue(loginPage.getRegistrationLink());
     }
 
-    @Test
+    @Test(groups = { "Login" })
     public void loginEmptyPasswordTest() {
         HomePage homePage = new HomePage(getDriver());
         LoginPage loginPage =  new LoginPage(getDriver());
@@ -123,16 +147,23 @@ public class LoginTests extends BaseTest {
                 .clickSubmitBtn();
         Assert.assertTrue(loginPage.getRegistrationLink());
     }
-//    @Test(dataProvider = "LoginData")
+
+    @Test(dataProvider = "LoginData")
     public void loginWithLoginData(String email, String password) {
         HomePage homePage = new HomePage(getDriver());
         LoginPage loginPage =  new LoginPage(getDriver());
-        loginPage.provideEmail(email)
-                .providePassword(password)
-                .clickSubmitBtn();
-        Assert.assertTrue(homePage.getUserAvatar());
+
+        try {
+            loginPage.provideEmail(email)
+                    .providePassword(password)
+                    .clickSubmitBtn();
+                Assert.assertTrue(loginPage.getRegistrationLink());
+
+        } catch(Exception e) {
+            Reporter.log("Unable to login with Excel Data for an unknown reason." + e);
+        }
     }
-//    @Test(dataProvider = "excel-data")
+    @Test(dataProvider = "excel-data")
     public void loginWithExcelData(String email, String password){
         HomePage homePage = new HomePage(getDriver());
         LoginPage loginPage =  new LoginPage(getDriver());

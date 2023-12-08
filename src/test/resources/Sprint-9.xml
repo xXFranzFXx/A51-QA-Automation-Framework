@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="Sprint-9" parallel="methods" thread-count="1">
+<suite name="Sprint-9" parallel="methods" thread-count="3">
 
-    <test name="Sprint-9" preserve-order="true">
+    <test name="Sprint-9" >
         <parameter name="baseURL" value="https://qa.koel.app/"/>
         <classes>
             <class name="InfoPanelTests"/>
             <class name="LogoutTests"/>
-<!--            <class name="LoginTests"/>-->
+            <class name="LoginTests">
+            </class>
         </classes>
     </test>
 </suite>

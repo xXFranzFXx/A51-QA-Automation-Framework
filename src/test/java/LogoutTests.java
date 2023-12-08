@@ -1,9 +1,11 @@
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.ProfilePage;
 
+import javax.print.DocFlavor;
 import java.util.UUID;
 
 /**
@@ -16,13 +18,25 @@ import java.util.UUID;
  * 4. User should be able to log out after updating email and password
  */
 public class LogoutTests extends BaseTest{
-      private String generateRandomName() {
-            return UUID.randomUUID().toString().replace("-", "");
-        }
+
+    // assert presence of logout button and logout after logging in and verify user navigates to Login page, then log back in again (Acceptance criteria 1,2,3)
+    // Precondition: User is navigated to Homepage
+    @Test
+    public void useLogoutButton() {
+        HomePage homePage = new HomePage(getDriver());
+        LoginPage loginPage = new LoginPage(getDriver());
+        loginPage.loginValidCredentials();
+        Assert.assertTrue(homePage.checkForLogoutBtn());
+
+        homePage.clickLogoutButton();
+        Assert.assertTrue(loginPage.getRegistrationLink());
+        Reporter.log("Successfully logged out after logging in", true);
+
+    }
 
     //Log in update user name and password and logout then verify user navigates to login page (Acceptance Criteria 1,2,3,4)
     //This test fails when ran with useLogoutButton test
-    @Test
+    @Test(dependsOnMethods = { "useLogoutButton" })
     public void logoutAfterProfileUpdate() {
         HomePage homePage = new HomePage(getDriver());
         LoginPage loginPage = new LoginPage(getDriver());
@@ -33,25 +47,16 @@ public class LogoutTests extends BaseTest{
         String profileName = profilePage.getProfileName();
         profilePage.clickAvatar()
                 .provideNewPassword("te$t$tudent1")
-                    .provideRandomProfileName(randomNm)
+                .provideRandomProfileName(randomNm)
                 .provideCurrentPassword(password);
 
-                Assert.assertTrue(profilePage.clickSave());
+        Assert.assertTrue(profilePage.clickSave());
         profilePage.clickLogout();
         Assert.assertTrue(loginPage.getRegistrationLink());
+        Reporter.log("User has logged out after updating username and password and redirected to login page", true);
     }
-    // assert presence of logout button and logout after logging in and verify user navigates to Login page, then log back in again (Acceptance criteria 1,2,3)
-    // Precondition: User is navigated to Homepage
-//    @Test
-    public void useLogoutButton() {
-        HomePage homePage = new HomePage(getDriver());
-        LoginPage loginPage = new LoginPage(getDriver());
-        loginPage.loginValidCredentials();
-        Assert.assertTrue(homePage.checkForLogoutBtn());
-
-        homePage.clickLogoutButton();
-        Assert.assertTrue(loginPage.getRegistrationLink());
-
+    private String generateRandomName() {
+        return UUID.randomUUID().toString().replace("-", "");
     }
 
 }

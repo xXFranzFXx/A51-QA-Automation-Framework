@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
+import org.testng.Reporter;
 
 public class HomePage extends BasePage {
 
@@ -205,9 +206,12 @@ public class HomePage extends BasePage {
        clickInfoBtnActive();
         if(!lyricsTab.isDisplayed()) {
          clickInfoButton();
+            Reporter.log("Info Panel is now visible.");
          return lyricsTab.isDisplayed();
         } else {
           clickInfoButton();
+            Reporter.log("Info Panel is now hidden.");
+
             return !lyricsTab.isDisplayed();
         }
     }

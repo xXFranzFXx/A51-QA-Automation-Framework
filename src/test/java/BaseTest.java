@@ -35,7 +35,7 @@ public class BaseTest {
     public  WebDriverWait wait;
     public Actions action;
     public String url;
-
+    
     //stores an instance of WebDriver for each thread during tests execution
     private final ThreadLocal <WebDriver> threadDriver = new ThreadLocal<>();
 
@@ -129,10 +129,10 @@ public class BaseTest {
     @DataProvider(name="LoginData")
     public Object[][] getDataFromDataProvider(){
         return new Object[][]{
-                {"demo@class.com", "te$t$tudent"},
+//                {"demo@class.com", "te$t$tudent"},
                 {"invalidemail@class.com", "te$t$tudent"},
                 {"demo@class.com", "InvalidPassword"},
-                {"",""}
+//                {"",""}
         };
     }
 

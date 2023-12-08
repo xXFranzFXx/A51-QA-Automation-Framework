@@ -1,4 +1,5 @@
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.LoginPage;
@@ -17,6 +18,7 @@ public class HomeTests extends BaseTest{
                 .clickGreenAddToBtn()
                 .clickFirstSearchResult();
         Assert.assertTrue(homePage.notificationMsg());
+        Reporter.log("Added song to playlist", true);
 
     }
 //    @Test
