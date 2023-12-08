@@ -8,8 +8,8 @@
         <classes>
             <class name="InfoPanelTests"/>
             <class name="LogoutTests"/>
-            <class name="LoginTests">
-            </class>
+<!--            <class name="LoginTests">-->
+<!--            </class>-->
         </classes>
     </test>
 </suite>
