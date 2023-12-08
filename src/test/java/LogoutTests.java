@@ -35,7 +35,7 @@ public class LogoutTests extends BaseTest{
     }
 
     //Log in update user name and password and logout then verify user navigates to login page (Acceptance Criteria 1,2,3,4)
-    //This test fails when ran with useLogoutButton test
+    //This test fails when ran with useLogoutButton test, so the "dependsOn" attribute has been set
     @Test(dependsOnMethods = { "useLogoutButton" })
     public void logoutAfterProfileUpdate() {
         HomePage homePage = new HomePage(getDriver());

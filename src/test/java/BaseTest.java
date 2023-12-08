@@ -115,9 +115,6 @@ public class BaseTest {
     }
 
 
-
-
-
     //navigates to login page
     public void navigateToLogin(String baseURL) {
         getDriver().get(baseURL);
@@ -129,10 +126,10 @@ public class BaseTest {
     @DataProvider(name="LoginData")
     public Object[][] getDataFromDataProvider(){
         return new Object[][]{
-//                {"demo@class.com", "te$t$tudent"},
+                {"demo@class.com", "te$t$tudent"},
                 {"invalidemail@class.com", "te$t$tudent"},
                 {"demo@class.com", "InvalidPassword"},
-//                {"",""}
+                {"",""}
         };
     }
 

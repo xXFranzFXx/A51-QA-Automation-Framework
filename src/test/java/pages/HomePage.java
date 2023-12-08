@@ -45,8 +45,8 @@ public class HomePage extends BasePage {
     //play button used for hoverplay method
     @FindBy(css = "[data-testid='play-btn']")
     private WebElement play;
-    @FindBy(css = "section#playlistWrapper td.title")
-    private By songTitle;
+
+
     @FindBy(css = "button[data-test='view-all-songs-btn']")
     private By viewAllBtnLocator;
 
@@ -112,12 +112,13 @@ public class HomePage extends BasePage {
     private WebElement currentQueueText;
     @FindBy(css = "section#extra .tabs")
     private WebElement infoPanelTabsGroupLocator;
+    private final By songTitle = By.cssSelector("section#playlistWrapper td.title");
     private final By searchResultThumbnail = By.cssSelector("section[data-testid=\"song-excerpts\"] span.cover:nth-child(1)");
-    private final By lyricsTabLocator = By.cssSelector("#extraTabLyrics");
+    private final By lyricsTabLocator = By.id("#extraTabLyrics");
     private final By lyricsTabInfo = By.cssSelector(".none span");
-    private final By artisTabLocator = By.cssSelector("#extraTabArtist");
+    private final By artisTabLocator = By.id("#extraTabArtist");
     private final By artistTabInfo = By.cssSelector("[data-test='artist-info'] h1.name span");
-    private final By albumTabLocator = By.cssSelector("#extraTabAlbum");
+    private final By albumTabLocator = By.id("#extraTabAlbum");
     private final By albumTabInfo = By.cssSelector("main span a.control.control-play");
     private final By albumTabShuffleBtn = By.cssSelector("article[data-test=\"album-info\"] .fa-random");
     private final By currentQueueHeader = By.cssSelector("#queueWrapper .heading-wrapper h1");
@@ -195,9 +196,8 @@ public class HomePage extends BasePage {
         return this;
     }
 
-    public HomePage clickInfoButton() {
+    public void clickInfoButton() {
      infoButton.click();
-       return this;
     }
     //click the info button and check for info panel visibility, click again if invisible this verifies it disappears when clicked
     //if the first click turns on visibility, click again to make it invisible, and negative assert visibility of info panel this verifies that the info button toggles the visibility.
@@ -206,12 +206,11 @@ public class HomePage extends BasePage {
        clickInfoBtnActive();
         if(!lyricsTab.isDisplayed()) {
          clickInfoButton();
-            Reporter.log("Info Panel is now visible.");
+            Reporter.log("Info Panel is now visible.", true);
          return lyricsTab.isDisplayed();
         } else {
           clickInfoButton();
-            Reporter.log("Info Panel is now hidden.");
-
+            Reporter.log("Info Panel is now hidden.", true);
             return !lyricsTab.isDisplayed();
         }
     }
