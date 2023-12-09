@@ -19,8 +19,7 @@ import java.util.UUID;
  */
 public class LogoutTests extends BaseTest{
 
-    // assert presence of logout button and logout after logging in and verify user navigates to Login page, then log back in again (Acceptance criteria 1,2,3)
-    // Precondition: User is navigated to Homepage
+
     @Test(description = "Log in and verify visibility of logout button, then log out")
     public void useLogoutButton() {
         HomePage homePage = new HomePage(getDriver());
@@ -34,8 +33,7 @@ public class LogoutTests extends BaseTest{
 
     }
 
-    //Log in update user name and password and logout then verify user navigates to login page (Acceptance Criteria 1,2,3,4)
-    //This test fails when ran with useLogoutButton test, so the "dependsOn" attribute has been set
+
     @Test(dependsOnMethods = { "useLogoutButton" }, description = "Update username and password then logout and verify navigation back to login screen")
     public void logoutAfterProfileUpdate() {
         HomePage homePage = new HomePage(getDriver());
