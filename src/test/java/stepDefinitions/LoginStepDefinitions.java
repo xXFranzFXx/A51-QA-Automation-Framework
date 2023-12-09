@@ -14,11 +14,15 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-
+import resources.BaseTest;
 
 
 import java.time.Duration;
 
+/**
+ *
+ * This class runs cucumber separately from BaseTest configuration
+ */
 public class LoginStepDefinitions {
 
 

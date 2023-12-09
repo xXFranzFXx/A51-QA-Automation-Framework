@@ -3,8 +3,9 @@ import org.testng.annotations.Test;
 import pages.AllSongsPage;
 import pages.HomePage;
 import pages.LoginPage;
+import resources.BaseTest;
 
-public class AllSongsTests extends BaseTest{
+public class AllSongsTests extends BaseTest {
 
 
     @Test(description = "Play the first song on All Songs page")

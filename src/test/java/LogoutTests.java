@@ -4,8 +4,8 @@ import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.ProfilePage;
+import resources.BaseTest;
 
-import javax.print.DocFlavor;
 import java.util.UUID;
 
 /**
@@ -17,7 +17,7 @@ import java.util.UUID;
  * 3. User should be navigated to the Login page after logging out
  * 4. User should be able to log out after updating email and password
  */
-public class LogoutTests extends BaseTest{
+public class LogoutTests extends BaseTest {
 
 
     @Test(description = "Log in and verify visibility of logout button, then log out")

@@ -3,8 +3,9 @@ import org.testng.Reporter;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.LoginPage;
+import resources.BaseTest;
 
-public class HomeTests extends BaseTest{
+public class HomeTests extends BaseTest {
 
 
     @Test(description = "Add a song to a playlist")

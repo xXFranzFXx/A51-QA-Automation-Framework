@@ -1,5 +1,4 @@
 import org.openqa.selenium.ElementClickInterceptedException;
-import org.openqa.selenium.NotFoundException;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
@@ -7,6 +6,7 @@ import pages.HomePage;
 import pages.LoginPage;
 import pages.ProfilePage;
 import pages.RegistrationPage;
+import resources.BaseTest;
 
 /**
  * Story:
@@ -25,9 +25,9 @@ public class LoginTests extends BaseTest {
     private final String updatedEmail = "updated.email@testpro.io";
     private final String defaultPassword = "te$t$tudent1";
     private final String updatedPassword = "te$t$tudent2";
+
 //    @Test
     public void registerNewAccount() {
-        HomePage homePage = new HomePage(getDriver());
         LoginPage loginPage = new LoginPage(getDriver());
         RegistrationPage registrationPage = new RegistrationPage(getDriver());
         try {
@@ -101,21 +101,28 @@ public class LoginTests extends BaseTest {
         ProfilePage profilePage = new ProfilePage(getDriver());
         HomePage homePage = new HomePage(getDriver());
         LoginPage loginPage =  new LoginPage(getDriver());
+        String url = "https://qa.koel.app/#!/home";
+        String loginUrl = driver.getCurrentUrl();
         try {
             loginPage.provideEmail(updatedEmail)
                     .providePassword(updatedPassword)
                     .clickSubmitBtn();
-            profilePage.clickAvatar()
-                    .provideNewEmail(registerEmail)
-                    .provideNewPassword(defaultPassword)
-                    .provideCurrentPassword(updatedPassword)
-                    .clickSaveButton();
-            Assert.assertTrue(profilePage.notificationPopup());
+            if(loginUrl.equals(url)) {
+                profilePage.clickAvatar()
+                        .provideNewEmail(registerEmail)
+                        .provideNewPassword(defaultPassword)
+                        .provideCurrentPassword(updatedPassword)
+                        .clickSaveButton();
+                Assert.assertTrue(profilePage.notificationPopup());
+                Reporter.log("Restored profile", true);
+            } else {
+                Assert.assertNotEquals(loginUrl, url);
+                Reporter.log("Failed to log in, profile was not reset", true);
+            }
         } catch(ElementClickInterceptedException e) {
            Reporter.log("Unable to reset profile" + e, true);
-
         }
-        Reporter.log("Log in tests for Sprint-9 completed and test profile has been reset so tests can be run again.", true);
+
 
     }
 
@@ -172,8 +179,9 @@ public class LoginTests extends BaseTest {
                 Reporter.log("Logged in using logindata", true);
 
         } catch(Exception e) {
-            Reporter.log("Invalid login data, check username or password." + e, true);
+
             Assert.assertTrue(loginPage.getRegistrationLink());
+            Reporter.log("Invalid login data, check username or password." + e, true);
         }
     }
     @Test(description = "Log in with data read from Excel Sheet", dataProvider = "excel-data")

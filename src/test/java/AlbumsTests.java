@@ -3,8 +3,9 @@ import org.testng.Reporter;
 import org.testng.annotations.Test;
 import pages.AlbumsPage;
 import pages.LoginPage;
+import resources.BaseTest;
 
-public class AlbumsTests extends BaseTest{
+public class AlbumsTests extends BaseTest {
 
     @Test(description = "Right click on an album and play all songs")
     public void playFirstAlbumSongs() {

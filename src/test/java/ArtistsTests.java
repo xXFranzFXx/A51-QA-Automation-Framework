@@ -3,8 +3,9 @@ import org.testng.Reporter;
 import org.testng.annotations.Test;
 import pages.ArtistsPage;
 import pages.LoginPage;
+import resources.BaseTest;
 
-public class ArtistsTests extends BaseTest{
+public class ArtistsTests extends BaseTest {
     LoginPage loginPage = new LoginPage(getDriver());
     ArtistsPage artistsPage = new ArtistsPage(getDriver());
 
