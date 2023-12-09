@@ -6,7 +6,7 @@ import pages.LoginPage;
 
 public class AlbumsTests extends BaseTest{
 
-    @Test
+    @Test(description = "Right click on an album and play all songs")
     public void playFirstAlbumSongs() {
         LoginPage loginPage = new LoginPage(getDriver());
         AlbumsPage albumsPage = new AlbumsPage(getDriver());

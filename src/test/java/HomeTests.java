@@ -7,7 +7,7 @@ import pages.LoginPage;
 public class HomeTests extends BaseTest{
 
 
-
+    @Test(description = "Add a song to a playlist")
     public void addSongToPlaylist() {
         LoginPage loginPage = new LoginPage(getDriver());
         HomePage homePage = new HomePage(getDriver());

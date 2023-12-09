@@ -8,7 +8,7 @@ public class ArtistsTests extends BaseTest{
     LoginPage loginPage = new LoginPage(getDriver());
     ArtistsPage artistsPage = new ArtistsPage(getDriver());
 
-    @Test
+    @Test(description = "Play all songs by an artist")
     public void playAllSongsByArtist () {
         loginPage.loginValidCredentials();
         artistsPage.navigateToArtists()

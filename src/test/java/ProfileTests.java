@@ -10,7 +10,7 @@ import java.util.UUID;
 public class ProfileTests extends BaseTest {
 
 
-    @Test
+    @Test(description = "Update profile name")
     public void changeProfileName()  throws InterruptedException {
         ProfilePage profilePage = new ProfilePage(getDriver());
         LoginPage loginPage = new LoginPage(getDriver());

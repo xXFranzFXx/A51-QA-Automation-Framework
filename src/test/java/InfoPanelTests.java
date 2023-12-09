@@ -19,8 +19,7 @@ import pages.LoginPage;
 public class InfoPanelTests extends BaseTest {
     private final String searchArtist = "Grav";
 
-    @Test
-    //checks visibility/invisibility of info panel by clicking INFO button (Acceptance criteria 4,5)
+    @Test(description = "checks for visibility of the info panel upon logging in")
     public void toggleInfoPanel() {
         LoginPage loginPage = new LoginPage(getDriver());
         HomePage homePage = new HomePage(getDriver());
@@ -29,8 +28,7 @@ public class InfoPanelTests extends BaseTest {
         Reporter.log("Info panel is visible");
 
     }
-    //click shuffle button in info panel albums tab (Acceptance criteria 6)
-    @Test(dependsOnMethods = { "toggleInfoPanel" })
+    @Test(description = "Login, search for an artist and play song, then test shuffle play button in the Album Tab", dependsOnMethods = { "toggleInfoPanel" })
     public void checkShufflePlayBtn() {
         LoginPage loginPage = new LoginPage(getDriver());
         HomePage homePage = new HomePage(getDriver());
@@ -43,8 +41,7 @@ public class InfoPanelTests extends BaseTest {
         Reporter.log("Successfully shuffled songs using Album tab shuffle button", true);
 
     }
-    @Test(dependsOnMethods = { "toggleInfoPanel", "checkShufflePlayBtn" })
-    //click each tab and verify correct info is displayed in info panel then press the shuffle button (Acceptance criteria 1,2,3)
+    @Test(description = "click each tab and verify correct info is displayed in info panel then press the shuffle button", dependsOnMethods = { "toggleInfoPanel", "checkShufflePlayBtn" })
     public void checkInfoPanelTabs() {
         LoginPage loginPage = new LoginPage(getDriver());
         HomePage homePage = new HomePage(getDriver());

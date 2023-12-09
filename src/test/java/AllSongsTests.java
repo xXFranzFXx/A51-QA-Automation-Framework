@@ -7,7 +7,7 @@ import pages.LoginPage;
 public class AllSongsTests extends BaseTest{
 
 
-    @Test
+    @Test(description = "Play the first song on All Songs page")
     public void playFirstSong() {
         LoginPage loginPage = new LoginPage(getDriver());
         AllSongsPage allSongsPage = new AllSongsPage(getDriver());
@@ -19,7 +19,7 @@ public class AllSongsTests extends BaseTest{
         Assert.assertTrue(allSongsPage.checkSongPlaying());
 
     }
-    @Test
+    @Test(description = "Click on the Album Tab in the Info Panel")
     public void clickInfoPanelAlbumTab() {
         LoginPage loginPage = new LoginPage(getDriver());
         AllSongsPage allSongsPage = new AllSongsPage(getDriver());
