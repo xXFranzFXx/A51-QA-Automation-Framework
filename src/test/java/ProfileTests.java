@@ -19,7 +19,7 @@ public class ProfileTests extends BaseTest {
 
         loginPage.loginValidCredentials();
         profilePage.clickAvatar()
-            .provideCurrentPassword("te$t$tudent")
+            .provideCurrentPassword("te$t$tudent1")
             .provideRandomProfileName(randomNm)
             .clickSave();
         Assert.assertEquals(profileName, randomNm);
