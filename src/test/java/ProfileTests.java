@@ -2,7 +2,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.LoginPage;
 import pages.ProfilePage;
-import resources.BaseTest;
 
 import java.util.UUID;
 

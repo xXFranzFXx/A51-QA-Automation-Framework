@@ -6,7 +6,6 @@ import pages.HomePage;
 import pages.LoginPage;
 import pages.ProfilePage;
 import pages.RegistrationPage;
-import resources.BaseTest;
 
 /**
  * Story:

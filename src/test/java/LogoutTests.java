@@ -4,7 +4,6 @@ import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.ProfilePage;
-import resources.BaseTest;
 
 import java.util.UUID;
 
