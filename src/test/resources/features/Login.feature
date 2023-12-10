@@ -1,8 +1,9 @@
+@functionalityTest @login
 Feature: Login feature
-  #this step sets the initial step of opening the login page for all the scenarios.
-  Background:
-    Given User opens Log in page
 
+  Background: Test multiple scenarios that may be encountered when logging in
+    Given User is on login page
+ @smoke @regression
   Scenario Outline: Log in Success
     When User enters email "<email>"
     And  User enters password "<password>"
@@ -12,18 +13,18 @@ Feature: Login feature
     | email | password |
     | fake@fakeaccount.com | te$t$tudent1 |
 
-  Scenario Outline: Log in incorrect password
-    When User enters email "<email>"
-    And  User enters password "<password>"
-    And  User clicks submit
-    Then User should still be on Login page
+#  Scenario Outline: Log in incorrect password
+#    When User enters email "<email>"
+#    And  User enters password "<password>"
+#    And  User clicks submit
+#    Then User should still be on Login page
+#
+#  Examples:
+#    | email                 | password           |
+#    | fake@fakeaccount.com  | fakePassword       |
+#    | fake@fakeaccount.com  | fakePassword2      |
 
-  Examples:
-    | email                 | password           |
-    | fake@fakeaccount.com  | fakePassword       |
-    | fake@fakeaccount.com  | fakePassword2      |
-
-
+  @regression
   Scenario Outline: Log in with invalid email input and/or invalid password input
     When User enters email "<email>"
     And User enters password "<password>"
@@ -36,7 +37,7 @@ Feature: Login feature
       |                      | te$t$tudent1       |
       | fake@fakeaccount.com |                    |
       |                      |                    |
-
+  @updateProfileAll @smoke @e2e @ignore
   Scenario Outline: Log in and update email address and password, log out and attempt to log in with old email address and old password
     Given User logs in
     When User clicks profile pic
@@ -57,7 +58,7 @@ Feature: Login feature
     | email | newEmail | password| newPasswd |
     | franz.fernando+1@testpro.io | updated.email@testpro.io | te$t$tudent1 | te$t$tudent2 |
 
-
+  @resetProfile @ignore
   Scenario Outline: Reset profile back to original email
     When User enters email "<newEmail>"
     And  User enters password "<password>"

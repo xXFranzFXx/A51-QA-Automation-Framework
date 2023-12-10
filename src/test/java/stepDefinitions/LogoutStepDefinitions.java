@@ -1,12 +1,15 @@
 package stepDefinitions;
 
 import io.cucumber.java.After;
+import io.cucumber.java.AfterAll;
 import io.cucumber.java.Before;
+import io.cucumber.java.BeforeAll;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.testng.Assert;
+import org.testng.annotations.Parameters;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.ProfilePage;
@@ -15,27 +18,14 @@ import java.net.MalformedURLException;
 import java.util.UUID;
 
 
-public class LogoutStepDefinitions extends  BaseDefinitions{
+public class LogoutStepDefinitions extends BaseDefinitions{
     private static String generateRandomName() {
         return UUID.randomUUID().toString().replace("-", "");
     }
     private static final String newName = generateRandomName();
-    @Before
-    public void setup() {
-        setupBrowser();
-    }
-    @After
-    public void close() {
-        closeBrowser();
-    }
-
-    @Given("User opens Log in page")
-    public void userOpensWebpage() throws MalformedURLException {
-       getDriver().get("https://qa.koel.app");
-    }
 
 
-    @Given("User is logged in")
+    @And("User is logged in")
     public void login() {
             LoginPage loginPage = new LoginPage(getDriver());
             loginPage.loginValidCredentials();
@@ -67,8 +57,7 @@ public class LogoutStepDefinitions extends  BaseDefinitions{
 
     @Then("Profile page is opened")
     public void profilePageIsOpened() {
-        String url = "https://qa.koel.app/#!/profile";
-        Assert.assertEquals(getDriver().getCurrentUrl(), url);
+        Assert.assertEquals(getDriver().getCurrentUrl(), profileUrl);
     }
 
     @When("User enters current password")

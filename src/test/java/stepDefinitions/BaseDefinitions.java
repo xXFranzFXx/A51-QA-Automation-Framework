@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import com.beust.jcommander.Parameter;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -22,6 +23,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
+import pages.LoginPage;
+import pages.ProfilePage;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -31,19 +34,23 @@ import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 public class BaseDefinitions {
-    public WebDriver driver;
+    public static WebDriver driver;
     public WebDriverWait wait;
-    private final ThreadLocal <WebDriver> threadDriver = new ThreadLocal<>();
-    public WebDriver getDriver() {
+    private static final ThreadLocal <WebDriver> threadDriver = new ThreadLocal<>();
+    public static WebDriver getDriver() {
         return threadDriver.get();
     }
+
     int timeSeconds = 10;
-    public void setupBrowser() {
+    public static String url = "https://qa.koel.app";
+    public static String profileUrl = url + "/#!/profile";
+    public static void setupBrowser() {
         threadDriver.set(initializeDriver());
         getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10L));
+        getDriver().get(url);
     }
 
-    public WebDriver initializeDriver() {
+    public static WebDriver initializeDriver() {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--disable-notifications");
@@ -52,7 +59,7 @@ public class BaseDefinitions {
         return driver;
     }
 
-    public void closeBrowser(){
+    public static void closeBrowser(){
         driver.quit();
     }
 

@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -9,7 +10,7 @@ public class LoginPage extends BasePage{
     //locators
     @FindBy(css = "[type='submit']")
     private WebElement submitButtonLocator;
-    @FindBy(css = "[type='email")
+    @FindBy(css = "[type='email']")
     private WebElement emailField;
     @FindBy(css = "[type='password']")
     private WebElement passwordField;
@@ -18,6 +19,7 @@ public class LoginPage extends BasePage{
     @FindBy(css = ".fa-sign-out")
     private WebElement logoutBtn;
     //constructor method
+    private By emailInput = By.cssSelector("[type='email']");
     public LoginPage(WebDriver givenDriver) {
         super(givenDriver);
     }
@@ -25,7 +27,10 @@ public class LoginPage extends BasePage{
     public void clickSubmitBtn() {
        submitButtonLocator.click();
     }
+    public void enterEmail(String email) {
+      driver.findElement(emailInput).sendKeys(email);
 
+    }
     public LoginPage provideEmail(String email) {
         emailField.sendKeys(email);
         return this;

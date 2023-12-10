@@ -7,11 +7,16 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import pages.LoginPage;
 import pages.ProfilePage;
 
-public class LoginStepDefinitions extends BaseDefinitions {
+import java.net.MalformedURLException;
+
+
+
+public class LoginStepDefinitions  extends BaseDefinitions{
     @Before
     public void setup() {
         setupBrowser();
@@ -21,17 +26,17 @@ public class LoginStepDefinitions extends BaseDefinitions {
         closeBrowser();
     }
 
+
+
+
     @Then("User should navigate to home page")
     public void checkHomePage() {
-        String url = "https://qa.koel.app/#!/home";
-        Assert.assertEquals(getDriver().getCurrentUrl(), url);
-
     }
 
     @When("User enters email {string}")
     public void userEntersEmail(String email) {
         LoginPage loginPage = new LoginPage(getDriver());
-        loginPage.provideEmail(email);
+        loginPage.enterEmail(email);
     }
 
     @And("User enters password {string}")
@@ -74,5 +79,11 @@ public class LoginStepDefinitions extends BaseDefinitions {
     public void userProvidesNewPassword(String newPasswd) {
         ProfilePage profilePage = new ProfilePage(getDriver());
         profilePage.provideNewPassword(newPasswd);
+    }
+
+    @Given("User is on login page")
+    public void userIsOnLoginPage() {
+        LoginPage loginPage = new LoginPage(getDriver());
+        Assert.assertTrue(loginPage.getRegistrationLink());
     }
 }

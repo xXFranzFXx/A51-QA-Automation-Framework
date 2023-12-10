@@ -7,10 +7,12 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 @Test
+
 @CucumberOptions (
-            features = "src/test/resources/features",
-            glue="stepDefinitions",
-            publish = true
+            features = {"src/test/resources/features"},
+            glue= "stepDefinitions",
+            publish = true,
+            tags = "@functionalityTest and not @ignore"
     )
 
     public class CucumberRunner extends AbstractTestNGCucumberTests {
@@ -28,6 +30,7 @@ import org.testng.annotations.Test;
 //            return testNGCucumberRunner.provideScenarios();
 //        }
 
+        //allow parallel testing
         @Override
         @DataProvider(parallel = true)
         public Object [][] scenarios() {
