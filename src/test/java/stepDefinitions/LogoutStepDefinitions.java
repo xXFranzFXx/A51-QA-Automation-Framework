@@ -16,6 +16,10 @@ import java.util.UUID;
 
 
 public class LogoutStepDefinitions extends  BaseDefinitions{
+    private static String generateRandomName() {
+        return UUID.randomUUID().toString().replace("-", "");
+    }
+    private static final String newName = generateRandomName();
     @Before
     public void setup() {
         setupBrowser();
@@ -24,6 +28,7 @@ public class LogoutStepDefinitions extends  BaseDefinitions{
     public void close() {
         closeBrowser();
     }
+
     @Given("User opens Log in page")
     public void userOpensWebpage() throws MalformedURLException {
        getDriver().get("https://qa.koel.app");
@@ -77,10 +82,7 @@ public class LogoutStepDefinitions extends  BaseDefinitions{
         ProfilePage profilePage = new ProfilePage(getDriver());
         profilePage.provideRandomProfileName(newName);
     }
-    private static String generateRandomName() {
-        return UUID.randomUUID().toString().replace("-", "");
-    }
-    private static final String newName = generateRandomName();
+
 
     @And("User clicks save button")
     public void userClicksSaveButton() {

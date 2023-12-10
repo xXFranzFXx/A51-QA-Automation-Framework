@@ -41,7 +41,6 @@ public class BaseDefinitions {
     public void setupBrowser() {
         threadDriver.set(initializeDriver());
         getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10L));
-
     }
 
     public WebDriver initializeDriver() {
@@ -50,13 +49,8 @@ public class BaseDefinitions {
         options.addArguments("--disable-notifications");
         options.addArguments("--remote-allow-origins=*");
         driver = new ChromeDriver(options);
-//        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         return driver;
-
     }
-//    public void launchBrowser() {
-//       driver.get("https://qa.koel.app");
-//    }
 
     public void closeBrowser(){
         driver.quit();
