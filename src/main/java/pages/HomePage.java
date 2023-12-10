@@ -195,7 +195,10 @@ public class HomePage extends BasePage {
         click(greenAddToBtn);
         return this;
     }
+    public boolean checkTheme (String theme) {
+         return wait.until(ExpectedConditions.attributeToBe(By.xpath("//html[@data-theme]"), "data-theme", theme));
 
+    }
     public void clickInfoButton() {
      infoButton.click();
     }

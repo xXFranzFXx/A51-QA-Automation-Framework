@@ -9,6 +9,8 @@
             <class name="InfoPanelTests"/>
             <class name="LogoutTests"/>
             <class name="LoginTests"/>
+            <class name="ProfileTests"/>
+
         </classes>
     </test>
 </suite>

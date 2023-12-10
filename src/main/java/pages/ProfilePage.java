@@ -7,6 +7,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class ProfilePage extends BasePage{
+    @FindBy(xpath = "//*[@data-testid='theme-card-pines']/div")
+    private WebElement inThePinesThemeLocator;
     @FindBy(xpath = "//*[@data-testid=\"btn-logout\"]/i")
     private WebElement logoutButton;
     @FindBy(css = ".success.show")
@@ -29,6 +31,10 @@ public class ProfilePage extends BasePage{
 
     public ProfilePage(WebDriver givenDriver) {
         super(givenDriver);
+    }
+    public ProfilePage pinesTheme() {
+        inThePinesThemeLocator.click();
+        return this;
     }
     public ProfilePage provideRandomProfileName(String randomName) {
         WebElement profileName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[name='name']")));

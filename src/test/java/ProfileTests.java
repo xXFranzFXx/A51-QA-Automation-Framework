@@ -1,5 +1,7 @@
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
+import pages.HomePage;
 import pages.LoginPage;
 import pages.ProfilePage;
 
@@ -25,5 +27,17 @@ public class ProfileTests extends BaseTest {
     }
     private String generateRandomName() {
         return UUID.randomUUID().toString().replace("-", "");
+    }
+
+    @Test(description = "Update theme to In the Pines")
+    public void choosePinesTheme() {
+        HomePage homePage = new HomePage(getDriver());
+        ProfilePage profilePage = new ProfilePage(getDriver());
+        LoginPage loginPage = new LoginPage(getDriver());
+        loginPage.loginValidCredentials();
+        profilePage.clickAvatar()
+                .pinesTheme();
+        Assert.assertTrue(homePage.checkTheme("pines"));
+        Reporter.log("changed theme to pines",   true);
     }
 }

@@ -22,6 +22,7 @@ public class BasePage {
     protected Actions actions;
 
     private int timeSeconds = 10;
+
     @FindBy(css = "[data-testid='sound-bar-play']")
     private WebElement soundBarVisualizer;
     //constructor method

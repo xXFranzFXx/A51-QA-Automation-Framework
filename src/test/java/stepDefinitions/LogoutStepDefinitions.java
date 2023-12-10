@@ -8,6 +8,8 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.Cookie;
+import org.openqa.selenium.html5.LocalStorage;
 import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import pages.HomePage;
@@ -15,10 +17,14 @@ import pages.LoginPage;
 import pages.ProfilePage;
 
 import java.net.MalformedURLException;
+import java.util.Set;
 import java.util.UUID;
 
 
 public class LogoutStepDefinitions extends BaseDefinitions{
+    static LoginPage loginPage;
+    static ProfilePage profilePage;
+    static HomePage homePage;
     private static String generateRandomName() {
         return UUID.randomUUID().toString().replace("-", "");
     }
@@ -27,74 +33,78 @@ public class LogoutStepDefinitions extends BaseDefinitions{
 
     @And("User is logged in")
     public void login() {
-            LoginPage loginPage = new LoginPage(getDriver());
+
+            loginPage = new LoginPage(getDriver());
             loginPage.loginValidCredentials();
+
+
         }
     @And("Logout button is visible next to profile pic")
     public void logoutBtnVisible() {
-        HomePage homePage = new HomePage(getDriver());
+        homePage = new HomePage(getDriver());
         Assert.assertTrue(homePage.checkForLogoutBtn());
     }
 
 
     @When("User clicks logout button")
     public void userClicksLogoutButton() {
-        ProfilePage profilePage = new ProfilePage(getDriver());
+        profilePage = new ProfilePage(getDriver());
         profilePage.clickLogout();
     }
 
     @Then("User is logged out and navigates back to login screen")
     public void userIsLoggedOutAndNavigatesBackToLoginScreen() {
-        LoginPage loginPage = new LoginPage(getDriver());
+        loginPage = new LoginPage(getDriver());
         Assert.assertTrue(loginPage.getRegistrationLink());
     }
 
     @When("User clicks profile pic")
     public void userClicksProfilePic() {
-        ProfilePage profilePage = new ProfilePage(getDriver());
+        profilePage = new ProfilePage(getDriver());
         profilePage.clickAvatar();
     }
 
     @Then("Profile page is opened")
     public void profilePageIsOpened() {
+        profilePage = new ProfilePage(getDriver());
         Assert.assertEquals(getDriver().getCurrentUrl(), profileUrl);
     }
 
     @When("User enters current password")
     public void userEntersCurrentPassword() {
-        ProfilePage profilePage = new ProfilePage(getDriver());
+        profilePage = new ProfilePage(getDriver());
         profilePage.provideCurrentPassword("te$t$tudent1");
     }
 
     @And("User enters updated name")
     public void userEntersUpdatedName() {
-        ProfilePage profilePage = new ProfilePage(getDriver());
+        profilePage = new ProfilePage(getDriver());
         profilePage.provideRandomProfileName(newName);
     }
 
 
     @And("User clicks save button")
     public void userClicksSaveButton() {
-        ProfilePage profilePage = new ProfilePage(getDriver());
+        profilePage = new ProfilePage(getDriver());
         profilePage.clickSave();
 
     }
 
     @Then("Success message is displayed")
     public void successMessageIsDisplayed() {
-        ProfilePage profilePage = new ProfilePage(getDriver());
+        profilePage = new ProfilePage(getDriver());
         Assert.assertTrue(profilePage.notificationPopup());
     }
 
     @When("Success message disappears")
     public void successMessageDisappears() {
-        ProfilePage profilePage = new ProfilePage(getDriver());
+        profilePage = new ProfilePage(getDriver());
         Assert.assertTrue(profilePage.notificationHasDisappeared());
     }
 
     @Then("User navigates back to login screen")
     public void userNavigatesBackToLoginScreen() {
-        LoginPage loginPage = new LoginPage(getDriver());
+        loginPage = new LoginPage(getDriver());
         Assert.assertTrue(loginPage.getRegistrationLink());
     }
 
