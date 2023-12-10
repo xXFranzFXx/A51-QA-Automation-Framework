@@ -202,7 +202,7 @@ public class HomePage extends BasePage {
     //click the info button and check for info panel visibility, click again if invisible this verifies it disappears when clicked
     //if the first click turns on visibility, click again to make it invisible, and negative assert visibility of info panel this verifies that the info button toggles the visibility.
 
-    public Boolean checkVisibility() {
+    public boolean checkVisibility() {
        clickInfoBtnActive();
         if(!lyricsTab.isDisplayed()) {
          clickInfoButton();
@@ -289,7 +289,7 @@ public class HomePage extends BasePage {
         thumbnail.click();
         return this;
   }
-  public Boolean checkForLogoutBtn() {
+  public boolean checkForLogoutBtn() {
         WebElement logoutButton = wait.until(ExpectedConditions.presenceOfElementLocated(logoutButtonLocator));
         return logoutButton.isDisplayed();
   }

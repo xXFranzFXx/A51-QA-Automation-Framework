@@ -64,9 +64,12 @@ public class ProfilePage extends BasePage{
         currentPassword.sendKeys(password);
         return this;
     }
-    public Boolean notificationPopup() {
+    public boolean notificationPopup() {
        WebElement notification = wait.until(ExpectedConditions.visibilityOf(updateNotification));
         return notification.isDisplayed();
+    }
+    public boolean notificationHasDisappeared() {
+        return wait.until(ExpectedConditions.invisibilityOf(updateNotification));
     }
     public void clickLogout() {
         wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector(".success.show")));

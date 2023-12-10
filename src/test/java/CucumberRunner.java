@@ -4,10 +4,12 @@ import io.cucumber.testng.TestNGCucumberRunner;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
 
-
+@Test
 @CucumberOptions (
-            features = {"src/test/resources/features/Login.feature"},
+            features = "src/test/resources/features",
+            glue="stepDefinitions",
             publish = true
     )
 
@@ -21,16 +23,16 @@ import org.testng.annotations.DataProvider;
         }
 
         //feature file will provide the data
-        @DataProvider
-        public Object[][] features() {
-            return testNGCucumberRunner.provideScenarios();
-        }
-
-//        @Override
-//        @DataProvider(parallel = true)
-//        public Object [][] scenarios() {
-//            return super.scenarios();
+//        @DataProvider
+//        public Object[][] features() {
+//            return testNGCucumberRunner.provideScenarios();
 //        }
+
+        @Override
+        @DataProvider(parallel = true)
+        public Object [][] scenarios() {
+            return super.scenarios();
+        }
         @AfterClass(alwaysRun = true)
         public void tearDownThisClass() {
             testNGCucumberRunner.finish();

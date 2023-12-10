@@ -1,7 +1,7 @@
 Feature: Login feature
   #this step sets the initial step of opening the login page for all the scenarios.
   Background:
-    Given I open Login Page
+    Given User opens Log in page
 
   Scenario: Login Success
 #    Given I open Login Page
@@ -12,21 +12,26 @@ Feature: Login feature
 
   Scenario Outline: Login incorrect password
     When I enter email "<email>"
-    And I enter incorrect password "<incorrectPassword>"
+    And I enter incorrect password "<password>"
     And I click submit
     Then I should still be on Login page
 
   Examples:
-    | email                 | incorrectPassword  |
+    | email                 | password           |
     | fake@fakeaccount.com  | fakePassword       |
     | fake@fakeaccount.com  | fakePassword2      |
 
 
-  Scenario: Login with invalid email
-    When I enter invalid email ".@nonexistentemail.com"
-    And I enter password "te$t$tudent"
+  Scenario Outline: Login with invalid email
+    When I enter "<email>"
+    And I enter password "<password>"
     And I click submit
     Then I should still be on Login page
+    Examples:
+      | email                | password           |
+      | fake@fakeaccountcom  | te$t$tudent1       |
+      | fake@,.com           | te$t$tudent1     |
+
 
   Scenario: Empty Login and Password
     When I enter empty email " "

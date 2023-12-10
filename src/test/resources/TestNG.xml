@@ -3,8 +3,8 @@
 
 <suite name="TestNG" parallel="methods" thread-count="4">
 
-    <test name="Example Test" preserve-order="false">
-        <parameter name="baseURL" value="https://qa.koel.app/"/>
+    <test name="Cucumber Tests">
+
         <classes>
             <class name="CucumberRunner">
         </class>

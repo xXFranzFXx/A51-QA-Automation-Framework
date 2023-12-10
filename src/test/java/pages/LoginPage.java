@@ -46,7 +46,7 @@ public class LoginPage extends BasePage{
     public void clickRegistrationLink() {
         registrationLinkLocator.click();
     }
-    public Boolean getRegistrationLink() {
+    public boolean getRegistrationLink() {
      WebElement registrationLink =  wait.until(ExpectedConditions.visibilityOf(registrationLinkLocator));
      return registrationLink.isDisplayed();
 
