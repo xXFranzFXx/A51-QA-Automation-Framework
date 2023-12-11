@@ -4,6 +4,7 @@ Feature: Testing functionality of Profile page
     Given User is logged in
     And User navigates to profile page
 
+    @regression
     Scenario Outline: User can update the theme
       When User clicks on a theme "<theme>"
       Then The profile theme will be updated to "<theme>"
@@ -28,14 +29,14 @@ Feature: Testing functionality of Profile page
       |cat         |
 
     @ignore
-    Scenario Outline: User can update profile theme
-      When clicks on a theme "<theme>"
-
+    Scenario Outline: User tries to update email with invalid formatted email
+      When User provides current password "<password>"
+      And User provides new email address "<newEmail>"
 
       Examples:
-      |email|
-      | testpro.com |
-      | email@      |
-      | " "         |
-      | testpro@testpro |
+      |newEmail|password|
+      | testpro.com |te$t$tudent1 |
+      | email@      |te$t$tudent1 |
+      | " "         |te$t$tudent1 |
+      | testpro@testpro |te$t$tudent1 |
 

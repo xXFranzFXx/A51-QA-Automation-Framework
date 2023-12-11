@@ -3,6 +3,7 @@ Feature: Login feature
 
   Background: Test multiple scenarios that may be encountered when logging in
     Given User is on login page
+
  @smoke @regression
   Scenario Outline: Log in Success
     When User enters email "<email>"
@@ -12,17 +13,6 @@ Feature: Login feature
   Examples:
     | email | password |
     | fake@fakeaccount.com | te$t$tudent1 |
-
-#  Scenario Outline: Log in incorrect password
-#    When User enters email "<email>"
-#    And  User enters password "<password>"
-#    And  User clicks submit
-#    Then User should still be on Login page
-#
-#  Examples:
-#    | email                 | password           |
-#    | fake@fakeaccount.com  | fakePassword       |
-#    | fake@fakeaccount.com  | fakePassword2      |
 
   @regression
   Scenario Outline: Log in with invalid email input and/or invalid password input
@@ -37,6 +27,7 @@ Feature: Login feature
       |                      | te$t$tudent1       |
       | fake@fakeaccount.com |                    |
       |                      |                    |
+
   @updateProfileAll @smoke @e2e @ignore
   Scenario Outline: Log in and update email address and password, log out and attempt to log in with old email address and old password
     Given User logs in

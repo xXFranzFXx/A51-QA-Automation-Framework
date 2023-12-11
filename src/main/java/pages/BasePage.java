@@ -23,7 +23,7 @@ public class BasePage {
     protected Actions actions;
 
     private int timeSeconds = 10;
-     public static Set<String> themes = Set.of("pines","classic", "violet", "oak", "slate", "madison", "astronaut", "chocolate", "Laura", "rose-petals", "purple-waves", "pop-culture", "jungle", "mountains", "nemo", "cat");
+    public static Set<String> themes = Set.of("pines","classic", "violet", "oak", "slate", "madison", "astronaut", "chocolate", "laura", "rose-petals", "purple-waves", "pop-culture", "jungle", "mountains", "nemo", "cat");
 
     @FindBy(css = "[data-testid='sound-bar-play']")
     private WebElement soundBarVisualizer;
