@@ -20,14 +20,12 @@ public class RegistrationPage extends BasePage{
         emailInput.sendKeys(email);
         return this;
     }
-    public RegistrationPage clickSubmit() {
+    public void clickSubmit() {
         submitButton.click();
-        return this;
     }
-    public RegistrationPage registerNewAccount(String newEmail) {
+    public void registerNewAccount(String newEmail) {
         provideEmail(newEmail)
                 .clickSubmit();
-        return this;
 
     }
     public boolean getConfirmationMsg() {

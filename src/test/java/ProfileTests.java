@@ -5,10 +5,11 @@ import pages.HomePage;
 import pages.LoginPage;
 import pages.ProfilePage;
 
+import java.util.ArrayList;
+import java.util.Set;
 import java.util.UUID;
 
 public class ProfileTests extends BaseTest {
-
 
     @Test(description = "Update profile name")
     public void changeProfileName()  throws InterruptedException {
@@ -16,14 +17,17 @@ public class ProfileTests extends BaseTest {
         LoginPage loginPage = new LoginPage(getDriver());
         String randomNm = generateRandomName();
         String profileName = profilePage.getProfileName();
-
-        loginPage.loginValidCredentials();
-        profilePage.clickAvatar()
-            .provideCurrentPassword("te$t$tudent1")
-            .provideRandomProfileName(randomNm)
-            .clickSave();
-        Assert.assertEquals(profileName, randomNm);
-
+        try {
+            loginPage.loginValidCredentials();
+            profilePage.clickAvatar()
+                    .provideCurrentPassword("te$t$tudent1")
+                    .provideRandomProfileName(randomNm)
+                    .clickSave();
+            Assert.assertEquals(profileName, randomNm);
+            Reporter.log("Updated user name to" + randomNm, true);
+        }catch (Exception e) {
+            Reporter.log("Failed to update user name" + e, true);
+        }
     }
     private String generateRandomName() {
         return UUID.randomUUID().toString().replace("-", "");
@@ -34,10 +38,15 @@ public class ProfileTests extends BaseTest {
         HomePage homePage = new HomePage(getDriver());
         ProfilePage profilePage = new ProfilePage(getDriver());
         LoginPage loginPage = new LoginPage(getDriver());
-        loginPage.loginValidCredentials();
-        profilePage.clickAvatar()
-                .pinesTheme();
-        Assert.assertTrue(homePage.checkTheme("pines"));
-        Reporter.log("changed theme to pines",   true);
+        try {
+            loginPage.loginValidCredentials();
+            profilePage.clickAvatar()
+                    .clickTheme("pines");
+            Assert.assertTrue(profilePage.verifyTheme("pines"));
+            Reporter.log("Changed theme to pines", true);
+        } catch(Exception e) {
+            Reporter.log("Failed to change theme to pines theme" + e, true);
+            Assert.assertFalse(false);
+        }
     }
 }

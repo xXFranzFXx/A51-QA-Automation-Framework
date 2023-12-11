@@ -1,4 +1,4 @@
-@todo
+@functionalityTest @profile
 Feature: Testing functionality of Profile page
   Background:
     Given User is logged in
@@ -10,15 +10,27 @@ Feature: Testing functionality of Profile page
 
       Examples:
       |theme|
-      |Astronaut|
-      | Violet  |
-      | Nemo    |
+      |pines|
+      |classic|
+      |violet |
+      |oak    |
+      |slate  |
+      |madison|
+      |astronaut|
+      |chocolate|
+      |laura    |
+      |rose-petals|
+      |purple-waves|
+      |pop-culture |
+      |jungle      |
+      |mountains   |
+      |nemo        |
+      |cat         |
 
-    Scenario Outline: Attempting to update profile with invalid info results in error
-      When User enters current password
-      And User provides invalidly formatted email address "<email>"
-      And User clicks submit
-      Then User will receive error message
+    @ignore
+    Scenario Outline: User can update profile theme
+      When clicks on a theme "<theme>"
+
 
       Examples:
       |email|

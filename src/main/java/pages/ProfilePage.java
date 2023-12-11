@@ -32,9 +32,8 @@ public class ProfilePage extends BasePage{
     public ProfilePage(WebDriver givenDriver) {
         super(givenDriver);
     }
-    public ProfilePage pinesTheme() {
+    public void pinesTheme() {
         inThePinesThemeLocator.click();
-        return this;
     }
     public ProfilePage provideRandomProfileName(String randomName) {
         WebElement profileName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[name='name']")));
@@ -87,5 +86,14 @@ public class ProfilePage extends BasePage{
         currentPassword.sendKeys(newPassword);
         return this;
     }
+    public ProfilePage clickTheme(String theme) {
+        By newTheme = By.xpath( "//*[@data-testid='theme-card-"+theme+"']");
+        WebElement themeLocator = wait.until(ExpectedConditions.visibilityOfElementLocated(newTheme));
+        findElement(themeLocator).click();
+        return this;
+    }
+    public boolean checkTheme (String theme) {
+        return wait.until(ExpectedConditions.attributeToBe(By.xpath("//html[@data-theme]"), "data-theme", theme));
 
+    }
 }

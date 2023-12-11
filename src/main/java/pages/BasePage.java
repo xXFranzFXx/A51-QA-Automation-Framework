@@ -13,6 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.Set;
 
 //POM
 public class BasePage {
@@ -22,6 +23,7 @@ public class BasePage {
     protected Actions actions;
 
     private int timeSeconds = 10;
+     public static Set<String> themes = Set.of("pines","classic", "violet", "oak", "slate", "madison", "astronaut", "chocolate", "Laura", "rose-petals", "purple-waves", "pop-culture", "jungle", "mountains", "nemo", "cat");
 
     @FindBy(css = "[data-testid='sound-bar-play']")
     private WebElement soundBarVisualizer;
@@ -59,5 +61,8 @@ public class BasePage {
     public boolean isSongPlaying() {
         findElement(soundBarVisualizer);
         return soundBarVisualizer.isDisplayed();
+    }
+    public boolean verifyTheme (String theme) {
+       return themes.contains(theme) ? wait.until(ExpectedConditions.attributeToBe(By.xpath("//html[@data-theme]"), "data-theme", theme)) : false;
     }
 }
