@@ -23,7 +23,7 @@ public class LoginStepDefinitions  extends BaseDefinitions{
 
 
     @Before
-    public void setup() {
+    public void setup() throws MalformedURLException {
         setupBrowser();
     }
     @After

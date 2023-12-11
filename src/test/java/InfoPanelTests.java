@@ -58,6 +58,7 @@ public class InfoPanelTests extends BaseTest {
 
         }catch(Exception e) {
             Reporter.log("Failed to verify Lyrics tab" + e);
+            Assert.assertFalse(false);
         }
         try {
             String displayedArtistString;
@@ -67,6 +68,8 @@ public class InfoPanelTests extends BaseTest {
 
         }catch(Exception e) {
             Reporter.log("Failed to verify Artist tab" + e);
+            Assert.assertFalse(false);
+
         }
         try {
         String displayedAlbumString;
@@ -76,7 +79,9 @@ public class InfoPanelTests extends BaseTest {
 
         }catch(Exception e) {
             Reporter.log("Failed to verify Album tab" + e);
+            Assert.assertFalse(false);
+
         }
-        Reporter.log("Verified functionality of all tabs in info panel", true);
+        Reporter.log("Finished testing functionality of all tabs in info panel", true);
     }
 }

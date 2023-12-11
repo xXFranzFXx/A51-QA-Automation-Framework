@@ -32,6 +32,8 @@ Feature: Testing functionality of Profile page
     Scenario Outline: User tries to update email with invalid formatted email
       When User provides current password "<password>"
       And User provides new email address "<newEmail>"
+      And User clicks save button
+      Then User receives error message
 
       Examples:
       |newEmail|password|
