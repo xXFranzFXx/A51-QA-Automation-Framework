@@ -1,7 +1,7 @@
 @functionalityTest @profile
 Feature: Testing functionality of Profile page
   Background:
-    Given User is logged in
+    Given User logs in
     And User navigates to profile page
 
     @regression
@@ -28,17 +28,17 @@ Feature: Testing functionality of Profile page
       |nemo        |
       |cat         |
 
-    @ignore
+    @ignore #bug, koel allows user to update email with invalid format and user cannot log back in after that
     Scenario Outline: User tries to update email with invalid formatted email
       When User provides current password "<password>"
       And User provides new email address "<newEmail>"
-      And User clicks save button
+      And User clicks save
       Then User receives error message
 
       Examples:
       |newEmail|password|
       | testpro.com |te$t$tudent1 |
       | email@      |te$t$tudent1 |
-      | " "         |te$t$tudent1 |
+      |         |te$t$tudent1 |
       | testpro@testpro |te$t$tudent1 |
 

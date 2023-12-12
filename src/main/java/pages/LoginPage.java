@@ -40,7 +40,7 @@ public class LoginPage extends BasePage{
        return this;
     }
     public void loginValidCredentials() {
-        provideEmail("fake@fakeaccount.com");
+        provideEmail("franz.fernando+1@testpro.io");
         providePassword("te$t$tudent1");
         clickSubmitBtn();
     }

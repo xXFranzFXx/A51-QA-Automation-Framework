@@ -27,4 +27,17 @@ public class ProfileStepDefinitions extends BaseDefinitions{
         profilePage = new ProfilePage(getDriver());
         profilePage.clickAvatar();
     }
+
+    @Then("User receives error message")
+    public void userReceivesErrorMessage() {
+        profilePage = new ProfilePage(getDriver());
+        Assert.assertEquals("true", profilePage.invalidEmailMsg());
+    }
+
+
+    @And("User clicks save")
+    public void userClicksSave() {
+        profilePage = new ProfilePage(getDriver());
+        profilePage.moveToSaveAndClick();
+    }
 }

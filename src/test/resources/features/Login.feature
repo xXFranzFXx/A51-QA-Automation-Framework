@@ -12,7 +12,7 @@ Feature: Login feature
     Then User should navigate to home page
   Examples:
     | email | password |
-    | fake@fakeaccount.com | te$t$tudent1 |
+    | franz.fernando+1@testpro.io | te$t$tudent1 |
 
   @regression
   Scenario Outline: Log in with invalid email input and/or invalid password input
@@ -22,10 +22,10 @@ Feature: Login feature
     Then User should still be on Login page
     Examples:
       | email                | password           |
-      | fake@fakeaccountcom  | te$t$tudent1       |
-      | fake@fakeaccount.com | te$t$tudent        |
+      | franz.fernando+1@testprio  | te$t$tudent1       |
+      | franz.fernando+1@testpro.io| te$t$tudent        |
       |                      | te$t$tudent1       |
-      | fake@fakeaccount.com |                    |
+      | franz.fernando+1@testpro.io |                    |
       |                      |                    |
 
   @updateProfileAll @smoke @e2e @ignore

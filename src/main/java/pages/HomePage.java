@@ -27,7 +27,7 @@ public class HomePage extends BasePage {
     @FindBy(css = ".fa-plus-circle")
     private WebElement addNewPlaylistIcon;
     //delete playlist button
-    @FindBy(css = ".btn-delete-playlist")
+    @FindBy(className = "btn-delete-playlist")
     private By deletePlaylistBtn;
     //notification message
     @FindBy(css = ".all-songs tr.song-item:nth-child(1)")
@@ -112,6 +112,8 @@ public class HomePage extends BasePage {
     private WebElement currentQueueText;
     @FindBy(css = "section#extra .tabs")
     private WebElement infoPanelTabsGroupLocator;
+
+    //todo: convert to @FindBy
     private final By songTitle = By.cssSelector("section#playlistWrapper td.title");
     private final By searchResultThumbnail = By.cssSelector("section[data-testid=\"song-excerpts\"] span.cover:nth-child(1)");
     private final By lyricsTabLocator = By.id("extraTabLyrics");

@@ -1,6 +1,7 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -29,6 +30,9 @@ public class ProfilePage extends BasePage{
     @FindBy(css = "button.btn-submit")
     private WebElement saveButton;
 
+    @FindBy(id = "inputProfileEmail")
+    private WebElement emailId;
+
     public ProfilePage(WebDriver givenDriver) {
         super(givenDriver);
     }
@@ -46,7 +50,7 @@ public class ProfilePage extends BasePage{
         findElement(profilePageLink).click();
         return this;
     }
-    public Boolean clickSave() {
+    public boolean clickSave() {
       findElement(saveButton).click();
       return updateNotification.isDisplayed();
     }
@@ -96,4 +100,18 @@ public class ProfilePage extends BasePage{
         return wait.until(ExpectedConditions.attributeToBe(By.xpath("//html[@data-theme]"), "data-theme", theme));
 
     }
+    public String invalidEmailMsg () {
+        WebElement popUpMsg = findElement(emailId);
+        return popUpMsg.getAttribute("required");
+    }
+    public ProfilePage moveToSaveAndClick() {
+       actions.moveToElement(saveButton).click().build().perform();
+        return this;
+    }
+    public void getMsgAlertText () {
+        WebElement popUpMsg = driver.findElement(By.id("inputProfileEmail"));
+        SearchContext shadowRoot = popUpMsg.getShadowRoot();
+
+    }
+  
 }

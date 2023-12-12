@@ -34,6 +34,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URI;
+import java.net.URL;
 import java.time.Duration;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
@@ -41,20 +42,19 @@ import org.openqa.selenium.remote.Augmenter;
 
 public class BaseDefinitions {
     public static WebDriver driver;
-    public WebDriverWait wait;
     private static final ThreadLocal <WebDriver> threadDriver = new ThreadLocal<>();
     public static WebDriver getDriver() {
         return threadDriver.get();
     }
-    public static WebStorage webStorage;
+//    public static WebStorage webStorage;
 
-    int timeSeconds = 10;
+    static int timeSeconds = 10;
     public static String url = "https://qa.koel.app";
     public static String profileUrl = url + "/#!/profile";
-    public static LocalStorage localStorage;
+//    public static LocalStorage localStorage;
     public static void setupBrowser() throws MalformedURLException {
-        threadDriver.set(initializeDriver(System.getProperty("browser")));
-        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10L));
+        threadDriver.set(initializeDriver(System.getProperty("browser", "")));
+        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(timeSeconds));
         getDriver().get(url);
 //        System.out.println(localStorage);
 
@@ -72,7 +72,6 @@ public class BaseDefinitions {
             case "MicrosoftEdge":
                 WebDriverManager.edgedriver().setup();
                 EdgeOptions edgeOptions = new EdgeOptions();
-//                edgeOptions.addArguments(new String[]{"--remote-allow-origins=*", "--disable-notifications", "--start-maximized"});
                 return driver = new EdgeDriver();
             //gradle clean test -Dbrowser=grid-edge
             case "grid-edge":
@@ -86,12 +85,28 @@ public class BaseDefinitions {
             case "grid-chrome":
                 caps.setCapability("browserName", "chrome");
                 return driver = new RemoteWebDriver(URI.create(gridURL).toURL(),caps);
+            case "cloud":
+                return lambdaTest();
             default:
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions options = new ChromeOptions();
                 options.addArguments("--remote-allow-origins=*", "--disable-notifications", "--start-maximized", "--incognito");
                 return driver = new ChromeDriver(options);
         }
+    }
+    public static WebDriver lambdaTest() throws MalformedURLException {
+        String username = "linkstasite.cs5";
+        String authKey = "5DmWRPa0tmr9lZ0UlXDXRVGbqHEClVdDGnSsHrEMvx3jskb5Cu";
+        String hub = "@hub.lambdatest.com/wd/hub";
+        DesiredCapabilities caps = new DesiredCapabilities();
+        caps.setCapability("platform", "windows 10");
+        caps.setCapability("browserName", "Chrome");
+        caps.setCapability("version", "120.0");
+        caps.setCapability("resolution", "1024X768");
+        caps.setCapability("build", "TestNG with Java");
+        caps.setCapability("name", BaseDefinitions.class.getName()); //or this.getClass().getName()
+        caps.setCapability("plugin", "java-testNG");
+        return new RemoteWebDriver(new URL("https://" + username + ":" + authKey + hub), caps);
     }
 
     public static void closeBrowser(){

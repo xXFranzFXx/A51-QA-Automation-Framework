@@ -24,7 +24,8 @@ public class BasePage {
 
     private int timeSeconds = 10;
     public static Set<String> themes = Set.of("pines","classic", "violet", "oak", "slate", "madison", "astronaut", "chocolate", "laura", "rose-petals", "purple-waves", "pop-culture", "jungle", "mountains", "nemo", "cat");
-
+    @FindBy(linkText = "#!/queue")
+    private By currentQueueLocator;
     @FindBy(css = "[data-testid='sound-bar-play']")
     private WebElement soundBarVisualizer;
     //constructor method
@@ -64,5 +65,8 @@ public class BasePage {
     }
     public boolean verifyTheme (String theme) {
        return themes.contains(theme) ? wait.until(ExpectedConditions.attributeToBe(By.xpath("//html[@data-theme]"), "data-theme", theme)) : false;
+    }
+    public void currentQueuePage () {
+        click(currentQueueLocator);
     }
 }
