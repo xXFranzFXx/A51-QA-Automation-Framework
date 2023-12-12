@@ -89,4 +89,6 @@ public class LoginStepDefinitions  extends BaseDefinitions{
         loginPage = new LoginPage(getDriver());
         Assert.assertTrue(loginPage.getRegistrationLink());
     }
+
+
 }

@@ -20,9 +20,12 @@ Feature: Homepage
       Background: New user logs in
         Given User logs in as new user
 
-      Scenario: User will see a welcome message for new users
+      Scenario Outline: User will see a welcome message for new users
         Given User is on homepage
-        Then User should see welcome message "<Hello, Student!>"
+        Then User should see welcome message "<welcomeMessage>"
+        Examples:
+        |welcomeMessage|
+        |Hey, student!|
 
       Scenario: Recently played songs should be present if user plays at least one song
         Given User is on homepage

@@ -50,6 +50,7 @@ public class BaseDefinitions {
 
     static int timeSeconds = 10;
     public static String url = "https://qa.koel.app";
+    public static String homeUrl = url + "/#!";
     public static String profileUrl = url + "/#!/profile";
 //    public static LocalStorage localStorage;
     public static void setupBrowser() throws MalformedURLException {

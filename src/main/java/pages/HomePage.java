@@ -112,6 +112,10 @@ public class HomePage extends BasePage {
     private WebElement currentQueueText;
     @FindBy(css = "section#extra .tabs")
     private WebElement infoPanelTabsGroupLocator;
+    @FindBy(xpath = "//h1[text()[normalize-space()='Hey, student!']]")
+    private WebElement welcomeMsg;
+    @FindBy(css = "p.recent .text-secondary")
+    private WebElement emptyListPlaceHolderText;
 
     //todo: convert to @FindBy
     private final By songTitle = By.cssSelector("section#playlistWrapper td.title");
@@ -297,5 +301,11 @@ public class HomePage extends BasePage {
   }
   public void clickLogoutButton() {
         click(logoutButtonLocator);
+  }
+  public String getWelcomMsg() {
+        return findElement(welcomeMsg).getText();
+  }
+  public boolean noRecentlyPlayed() {
+        return findElement(emptyListPlaceHolderText).isDisplayed();
   }
 }
