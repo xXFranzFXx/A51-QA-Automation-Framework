@@ -90,11 +90,10 @@ public class ProfilePage extends BasePage{
         currentPassword.sendKeys(newPassword);
         return this;
     }
-    public ProfilePage clickTheme(String theme) {
+    public void clickTheme(String theme) {
         By newTheme = By.xpath( "//*[@data-testid='theme-card-"+theme+"']");
         WebElement themeLocator = wait.until(ExpectedConditions.visibilityOfElementLocated(newTheme));
         findElement(themeLocator).click();
-        return this;
     }
     public boolean checkTheme (String theme) {
         return wait.until(ExpectedConditions.attributeToBe(By.xpath("//html[@data-theme]"), "data-theme", theme));
@@ -104,9 +103,8 @@ public class ProfilePage extends BasePage{
         WebElement popUpMsg = findElement(emailId);
         return popUpMsg.getAttribute("required");
     }
-    public ProfilePage moveToSaveAndClick() {
+    public void moveToSaveAndClick() {
        actions.moveToElement(saveButton).click().build().perform();
-        return this;
     }
     public void getMsgAlertText () {
         WebElement popUpMsg = driver.findElement(By.id("inputProfileEmail"));

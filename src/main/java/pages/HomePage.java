@@ -9,12 +9,16 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.Reporter;
 
+import java.util.List;
+
+
 public class HomePage extends BasePage {
 
     //user avatar icon element
     @FindBy(css = "img.avatar")
     private WebElement userAvatarIcon;
-
+    @FindBy(xpath = "//*[@id=\"userBadge\"]/a[1]/span")
+    private By userBadgeLocator;
     //first created playlist
     @FindBy(css = ".playlist:nth-child(3)")
     private By firstPlaylist;
@@ -32,12 +36,12 @@ public class HomePage extends BasePage {
     //notification message
     @FindBy(css = ".all-songs tr.song-item:nth-child(1)")
     private WebElement firstSongLocator;
-    @FindBy(css =".show-success")
+    @FindBy(css = ".show-success")
     private WebElement successNotification;
     //block containing all songs
-    @FindBy(css= ".songs")
+    @FindBy(css = ".songs")
     private WebElement allSongs;
-    @FindBy(css =  "[data-testid='playlist-context-menu-create-simple']")
+    @FindBy(css = "[data-testid='playlist-context-menu-create-simple']")
     private WebElement selectCreateNewPlaylist;
     @FindBy(xpath = "//*[@id=\"searchForm\"]/input")
     private WebElement searchSongInput;
@@ -47,9 +51,12 @@ public class HomePage extends BasePage {
     private WebElement play;
 
 
-    @FindBy(css = "button[data-test='view-all-songs-btn']")
+    @FindBy(css = "h1 button[data-testid='view-all-songs-btn']")
     private By viewAllBtnLocator;
 
+    @FindBy(xpath = "//section[@class=\"recent\"]//h1")
+    private WebElement recentlyPlayedViewAllBtn;
+    private By rPPlayedViewAllBtn = By.xpath("//section[@class=\"recent\"]//h1/button");
     //AddTo dropdown menu choice in the context menu when right-clicking a song
     @FindBy(xpath = "//*[@id=\"app\"]/nav/ul/li[4]")
     private WebElement addToLocator;
@@ -112,12 +119,36 @@ public class HomePage extends BasePage {
     private WebElement currentQueueText;
     @FindBy(css = "section#extra .tabs")
     private WebElement infoPanelTabsGroupLocator;
-    @FindBy(xpath = "//h1[text()[normalize-space()='Hey, student!']]")
+    @FindBy(xpath = "//*[@id=\"homeWrapper\"]/header/div[2]/h1")
     private WebElement welcomeMsg;
-    @FindBy(css = "p.recent .text-secondary")
+    @FindBy(css = "section.recent .text-secondary")
     private WebElement emptyListPlaceHolderText;
-
-    //todo: convert to @FindBy
+    @FindBy(xpath = "//span[@class='right']/a[@class='shuffle-album']")
+    private WebElement rAShuffleBtn;
+    @FindBy(xpath = "//span[@class='right']/a[@class='download-album']")
+    private WebElement rADownloadBtn;
+    @FindBy(xpath = "//span[@class='album-thumb-wrapper']//span[@class='album-thumb']")
+    private WebElement playBtnBefore;
+    @FindBy(xpath = "//i[@class='fa-play']")
+    private WebElement hoverPlayBtnLocator;
+    @FindBy(css = "#playlists h1")
+    private WebElement createNewPlaylistBtnLocator;
+    @FindBy(xpath = "//*[@id='playlists']//i[@data-testid='sidebar-create-playlist-btn']")
+    private WebElement createNewPlaylistBtn;
+    @FindBy(xpath = "//*[@data-testid=\"playlist-context-menu-create-simple\"]")
+    private WebElement contextMenuNewPlaylst;
+    @FindBy(xpath = "//*[@data-testid=\"playlist-context-menu-create-smart\"]")
+    private WebElement contextMenuNewSmartlst;
+    @FindBy(css = "input[name='name']")
+    private WebElement newPlaylistInput;
+    @FindBy(xpath = "//form[@data-testid='create-smart-playlist-form']")
+    private WebElement smartListModal;
+    @FindBy(xpath = "//span[@class=\"value-wrapper\"]/input[@type=\"text\"]")
+    private WebElement smartListCriteriaInput;
+    @FindBy(xpath = "//*[@id=\"mainWrapper\"]/div/div/div/form/div/div[1]/input")
+    private WebElement smartListFormNameInput;
+    @FindBy(xpath = "//button[text()=\"Save\"]")
+    private WebElement smartListSaveButton;
     private final By songTitle = By.cssSelector("section#playlistWrapper td.title");
     private final By searchResultThumbnail = By.cssSelector("section[data-testid=\"song-excerpts\"] span.cover:nth-child(1)");
     private final By lyricsTabLocator = By.id("extraTabLyrics");
@@ -130,6 +161,14 @@ public class HomePage extends BasePage {
     private final By currentQueueHeader = By.cssSelector("#queueWrapper .heading-wrapper h1");
     private final By currentQueueLocator = By.xpath("//h1[text()[normalize-space()=' Current Queue ']]");
     private final By logoutButtonLocator = By.cssSelector("i.fa.fa-sign-out");
+    private final By badgeNameTextLocator = By.xpath("//*[@id=\"userBadge\"]/a[1]/span");
+    private final By playPauseBtn = By.xpath("//span[@title='Play or resume']//i[@class='fa fa-play']");
+    private final By recentlyAddedlistItems = By.xpath("//ol[@class=\"recently-added-album-list\"][1]/li");
+    private final By searchResultsGroup = By.cssSelector("#searchExcerptsWrapper .results section");
+    private final By selectNewSmartList = By.cssSelector("li[data-testid=\"playlist-context-menu-create-smart\"]");
+
+    @FindBy(xpath = "//article/footer/div/span[@class=\"sep text-secondary\"]")
+    private WebElement rAThumbnailTitle;
 
     /**
      * INFO panel components end
@@ -137,40 +176,47 @@ public class HomePage extends BasePage {
     public HomePage(WebDriver givenDriver) {
         super(givenDriver);
     }
-    String strUrl = driver.getCurrentUrl();
-    public boolean getUserAvatar () {
+
+    private final String strUrl = driver.getCurrentUrl();
+
+    public boolean getUserAvatar() {
         return userAvatarIcon.isEnabled();
     }
+
     public HomePage chooseFirstPlaylist() {
         click(firstPlaylist);
         return this;
     }
+
     public HomePage deletePlaylist() {
         click(deletePlaylistBtn);
         return this;
     }
+
     public HomePage searchSong(String song) {
 
         searchSongInput.clear();
         searchSongInput.sendKeys(song);
         return this;
     }
+
     public boolean notificationMsg() {
         findElement(successNotification);
         return successNotification.isDisplayed();
     }
-    public boolean hoverPlay() throws InterruptedException{
-        findElement(play);
-        actions.moveToElement(play).perform();
-        return play.isDisplayed();
 
+    public boolean hoverPlay() throws InterruptedException {
+        WebElement btn = wait.until(ExpectedConditions.presenceOfElementLocated(playPauseBtn));
+        actions.moveToElement(btn).perform();
+        return playBtnBefore.isEnabled();
     }
+
     public int countSongs() {
-       return findElements(songTitle).size();
+        return findElements(songTitle).size();
     }
 
-    public HomePage choosePlaylistByName(String playlistName){
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(text(),'"+playlistName+"')]"))).click();
+    public HomePage choosePlaylistByName(String playlistName) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(text(),'" + playlistName + "')]"))).click();
         return this;
     }
 
@@ -178,6 +224,7 @@ public class HomePage extends BasePage {
         doubleClick((WebElement) firstPlaylist);
         return this;
     }
+
     public HomePage enterNewPlaylistName(String newPlaylistName) {
         findElement(playlistInputField);
         playlistInputField.sendKeys(Keys.chord(Keys.CONTROL, "A", Keys.BACK_SPACE));
@@ -185,53 +232,67 @@ public class HomePage extends BasePage {
         playlistInputField.sendKeys(Keys.ENTER);
         return this;
     }
+
     public HomePage contextClickFirstSong() {
         contextClick(firstSongLocator);
         return this;
     }
+
     public HomePage clickViewAllButton() {
         click(viewAllBtnLocator);
         return this;
     }
+    public HomePage clickRPViewAllBtn() {
+        actions.moveToElement(recentlyPlayedViewAllBtn).perform();
+        click(rPPlayedViewAllBtn);
+
+        return this;
+    }
+
+
     public HomePage clickFirstSearchResult() {
         click(firstSongResult);
         return this;
     }
+
     public HomePage clickGreenAddToBtn() {
         click(greenAddToBtn);
         return this;
     }
 
     public void clickInfoButton() {
-     infoButton.click();
+        infoButton.click();
     }
     //click the info button and check for info panel visibility, click again if invisible this verifies it disappears when clicked
     //if the first click turns on visibility, click again to make it invisible, and negative assert visibility of info panel this verifies that the info button toggles the visibility.
 
     public boolean checkVisibility() {
-       clickInfoBtnActive();
-        if(!lyricsTab.isDisplayed()) {
-         clickInfoButton();
+        clickInfoBtnActive();
+        if (!lyricsTab.isDisplayed()) {
+            clickInfoButton();
             Reporter.log("Info Panel is now visible.", true);
-         return lyricsTab.isDisplayed();
+            return lyricsTab.isDisplayed();
         } else {
-          clickInfoButton();
+            clickInfoButton();
             Reporter.log("Info Panel is now hidden.", true);
             return !lyricsTab.isDisplayed();
         }
     }
+
     public String clickLyricsTab() {
         click(lyricsTabLocator);
         WebElement lyricsInfoText = wait.until(ExpectedConditions.presenceOfElementLocated(lyricsTabInfo));
         return lyricsInfoText.getText();
     }
+
     public String clickArtistTab() {
         click(artisTabLocator);
         WebElement artistInfoText = wait.until(ExpectedConditions.presenceOfElementLocated(artistTabInfo));
         return artistInfoText.getText();
     }
+
     public String clickAlbumTab() {
-        if(isInfoPanelVisible().isDisplayed()){
+        if (isInfoPanelVisible().isDisplayed()) {
             click(albumTabLocator);
         } else {
             clickInfoButton();
@@ -240,72 +301,249 @@ public class HomePage extends BasePage {
         WebElement albumInfoText = wait.until(ExpectedConditions.presenceOfElementLocated(albumTabInfo));
         return albumInfoText.getText();
     }
+
     public HomePage checkHeaderTitle() {
         WebElement headerTitle = wait.until(ExpectedConditions.presenceOfElementLocated(currentQueueHeader));
         Assert.assertTrue(headerTitle.isDisplayed());
         return this;
     }
-    public void clickAlbumTabShuffleBtn () {
-       click(albumTabShuffleBtn);
+
+    public void clickAlbumTabShuffleBtn() {
+        click(albumTabShuffleBtn);
 
     }
+
     public Boolean checkQueueTitle() {
-       String url ="https://qa.koel.app/#!/queue";
-       String currentUrl = driver.getCurrentUrl();
-       return url.equals(currentUrl);
+        String url = "https://qa.koel.app/#!/queue";
+        String currentUrl = driver.getCurrentUrl();
+        return url.equals(currentUrl);
     }
 
-   public HomePage doubleClickFirstSearchResult() {
+    public HomePage doubleClickFirstSearchResult() {
         actions.doubleClick(searchResultSongText).perform();
         return this;
-   }
-   public WebElement isInfoPanelVisible() {
+    }
+
+    public WebElement isInfoPanelVisible() {
         return findElement(infoPanelShowing);
-   }
+    }
 
-  public boolean isInfoPanelTabsInvisible() {
-      return wait.until(ExpectedConditions.invisibilityOf(infoPanelTabsGroupLocator));
-  }
+    public boolean isInfoPanelTabsInvisible() {
+        return wait.until(ExpectedConditions.invisibilityOf(infoPanelTabsGroupLocator));
+    }
 
-   public HomePage getSearchResultSongText() {
+    public HomePage getSearchResultSongText() {
         searchResultSongLocator.getText();
         return this;
-   }
+    }
 
-   public HomePage getArtistTabText() {
+    public HomePage getArtistTabText() {
         artistTabInfoText.getText();
         return this;
-   }
-   public HomePage getAlbumTabText() {
+    }
 
-        albumTabCoverPlayBtnText.getText();
-        return this;
-   }
-   public boolean checkAlbumTabText() {
+    //   public HomePage getAlbumTabText() {
+//
+//        albumTabCoverPlayBtnText.getText();
+//        return this;
+//   }
+    public boolean checkAlbumTabText() {
         findElement(albumTabCoverFinder);
 //       Assert.assertTrue(albumTabCoverFinder.isDisplayed());
-       return albumTabCoverFinder.isDisplayed();
-   }
-   public void clickInfoBtnActive() {
-       wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("[data-testid='toggle-extra-panel-btn]")));
-       wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".control.text-uppercase.active"))).click();
-   }
-  public HomePage clickSearchResultThumbnail() {
+        return albumTabCoverFinder.isDisplayed();
+    }
+
+    public void clickInfoBtnActive() {
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("[data-testid='toggle-extra-panel-btn]")));
+        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".control.text-uppercase.active"))).click();
+    }
+
+    public HomePage clickSearchResultThumbnail() {
         WebElement thumbnail = wait.until(ExpectedConditions.visibilityOfElementLocated(searchResultThumbnail));
         thumbnail.click();
         return this;
-  }
-  public boolean checkForLogoutBtn() {
+    }
+
+    public boolean checkForLogoutBtn() {
         WebElement logoutButton = wait.until(ExpectedConditions.presenceOfElementLocated(logoutButtonLocator));
         return logoutButton.isDisplayed();
-  }
-  public void clickLogoutButton() {
+    }
+
+    public void clickLogoutButton() {
         click(logoutButtonLocator);
-  }
-  public String getWelcomMsg() {
+    }
+
+    public String getWelcomMsg() {
         return findElement(welcomeMsg).getText();
-  }
-  public boolean noRecentlyPlayed() {
+    }
+
+    public boolean noRecentlyPlayed() {
         return findElement(emptyListPlaceHolderText).isDisplayed();
-  }
+
+    }
+
+    public void clickFooterPlayBtn() {
+        actions.moveToElement(play).perform();
+        click(playPauseBtn);
+    }
+
+    public boolean getUserBadgeText(String name) {
+        return wait.until(ExpectedConditions.textToBePresentInElementLocated(badgeNameTextLocator, name));
+    }
+
+    public int searchResultsSize() {
+        return findElements(searchResultsGroup).size();
+    }
+
+    public boolean searchResultsExists() {
+        return (searchResultsSize() > 0);
+    }
+
+    public int recentlyPlayedListSize() {
+        return findElements(By.className("recent-song-list")).size();
+    }
+
+    public boolean recentlyPlayedListExists() {
+        int li = findElements(By.className("recent-song-list")).size();
+        return (li > 0);
+    }
+    @FindBy(css = "section.recent p.text-secondary")
+    private WebElement rPEmptyText;
+    public boolean noRecentlyPlayedList() {
+        String text = "Your recently played songs will be displayed here.";
+        wait.until(ExpectedConditions.textToBePresentInElement(rPEmptyText, text));
+        return findElement(rPEmptyText).isDisplayed();
+    }
+
+    public boolean recentlyAddedListHasAlbumTitles() {
+        List<WebElement> li = findElements(recentlyAddedlistItems);
+        Reporter.log("Recently Added list items" + li, true);
+        for (WebElement l : li) {
+            Reporter.log("list item" + l, true);
+            WebElement albumTitle = findElement(rAThumbnailTitle);
+            Reporter.log("Checking for album titles" + albumTitle.getText(), true);
+            return albumTitle.getText().equals("by");
+        }
+        return false;
+    }
+
+    public boolean checkRAListButtonsOnHover() {
+        List<WebElement> li = findElements(recentlyAddedlistItems);
+        Reporter.log("Recently Added list items" + li, true);
+        for (WebElement l : li) {
+            Reporter.log("list item" + l, true);
+            actions.moveToElement(l).perform();
+            Reporter.log("Checking for buttons", true);
+            if (rAShuffleBtn.isDisplayed()) {
+                return rADownloadBtn.isDisplayed();
+            }
+            Reporter.log("both buttons present", true);
+        }
+        Reporter.log("Couldn't locate buttons", true);
+        return false;
+    }
+
+
+
+    public String getSearchedTitleFromResults() {
+        return getSearchedSongTitle();
+    }
+
+    public HomePage clickAboutLink() {
+        about();
+        return this;
+    }
+
+    public boolean aboutModalVisible() {
+        return checkAboutModal();
+    }
+
+    public void closeModalPopup() {
+        closeModal();
+    }
+
+    public boolean isModalClosed() {
+        return modalIsClosed();
+    }
+
+    /**
+     * Side menu links actions
+     */
+    public void clickHome() {
+        homePage();
+    }
+
+    public HomePage clickCurrentQueue() {
+        currentQueuePage();
+        return this;
+    }
+
+    public void clickAllSongs() {
+        allSongsPage();
+    }
+
+    public void clickAlbums() {
+        albumsPage();
+    }
+
+    public void clickArtists() {
+        artistsPage();
+    }
+
+    public void clickRecentlyPlayed() {
+        recentlyPlayedPage();
+    }
+
+    public void clickFavorites() {
+        favorites();
+    }
+
+    public void clickCreateNewPlaylist() {
+        actions.moveToElement(createNewPlaylistBtnLocator).perform();
+        createNewPlaylistBtn.click();
+    }
+
+    public void contextMenuNewPlaylist() {
+        actions.moveToElement(contextMenuNewPlaylst).perform();
+        clickElement(contextMenuNewPlaylst);
+    }
+
+    public void contextMenuNewSmartlist() {
+       actions.moveToElement(contextMenuNewSmartlst).perform();
+       click(selectNewSmartList);
+    }
+
+    public void enterPlaylistName(String playlist) {
+        WebElement input = findElement(newPlaylistInput);
+        input.sendKeys(playlist);
+        input.sendKeys(Keys.ENTER);
+    }
+
+    public boolean playlistAddedToMenu(String playlist) {
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//li[@class=\"playlist playlist\"]/a[text()='" + playlist + "']"))).isDisplayed();
+    }
+
+    public boolean smartListModalVisible() {
+        return findElement(smartListModal).isDisplayed();
+    }
+
+    public void enterSmartListName(String smartList) {
+        WebElement input = findElement(smartListFormNameInput);
+        input.sendKeys("newSmartList");
+
+    }
+    public void enterSmartListCriteria(String criteria) {
+        WebElement input = findElement(smartListCriteriaInput);
+        input.sendKeys(criteria);
+
+
+    }
+    public boolean smartlistAddedToMenu(String playlist) {
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//li[@class=\"playlist playlist smart\"]/a[text()='" + playlist + "']"))).isDisplayed();
+    }
+
+    public void clickSaveSmartList() {
+        findElement(smartListSaveButton).click();
+    }
 }
+

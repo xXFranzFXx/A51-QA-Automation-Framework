@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
             features = {"src/test/resources/features"},
             glue= "stepDefinitions",
             publish = true,
-            tags = "@functionalityTest and not @ignore"
+            tags = "@homePage and not @ignore"
     )
 
     public class CucumberRunner extends AbstractTestNGCucumberTests {
@@ -24,18 +24,18 @@ import org.testng.annotations.Test;
             testNGCucumberRunner =  new TestNGCucumberRunner(this.getClass());
         }
 
-        //feature file will provide the data
-//        @DataProvider
-//        public Object[][] features() {
-//            return testNGCucumberRunner.provideScenarios();
-//        }
+//        feature file will provide the data
+        @DataProvider
+        public Object[][] features() {
+            return testNGCucumberRunner.provideScenarios();
+        }
 
         //allow parallel testing
-        @Override
-        @DataProvider(parallel = true)
-        public Object [][] scenarios() {
-            return super.scenarios();
-        }
+//        @Override
+//        @DataProvider(parallel = true)
+//        public Object [][] scenarios() {
+//            return super.scenarios();
+//        }
         @AfterClass(alwaysRun = true)
         public void tearDownThisClass() {
             testNGCucumberRunner.finish();

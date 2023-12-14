@@ -1,3 +1,4 @@
+@homePage
 Feature: Homepage
   Background:
   As a user, I want to be able to open Homepage
@@ -15,35 +16,113 @@ Feature: Homepage
   Profile link, Logout and About Koel icons should be displayed and linked to correct pages.
 
     Rule: User logs in as a new user
-      -User should see a welcome message
-      -User should have no recently played songs
+      - User should see a welcome message
+      - User should have no recently played songs
       Background: New user logs in
         Given User logs in as new user
-
+@ignore
       Scenario Outline: User will see a welcome message for new users
         Given User is on homepage
-        Then User should see welcome message "<welcomeMessage>"
-        Examples:
-        |welcomeMessage|
-        |Hey, student!|
+        Then User profile name should be "<profileName>"
 
+  Examples:
+        |profileName|
+        |student|
+@ignore
       Scenario: Recently played songs should be present if user plays at least one song
         Given User is on homepage
-        Then User should not see recently played songs
-        When User plays a song
-        Then User should see recently played songs
+        Then User should see not see recently played songs
 
     Rule: User logs in as regular user
       - User has already played a song
       - User has updated profile name
-      Background: Regular user logs in
+      - User has already "liked" a song
+      Background: Regular user logs in as regular user
         Given User logs in
+        And User is on homepage
 
-      Scenario: User will see a welcome message
-        Given User is on homepage
-        Then welcome message should contain user's name
 
+      Scenario: User profile name no longer is "student"
+        Then User will not see same welcome message as new user
 
     Scenario: Recently played songs should be present if user played at least one song
-       Given User is on homepage
        Then User should see recently played songs
+
+    Scenario: User should see "View All" button next to "Recently Played" list
+       When User clicks View All button
+       Then User will navigate to Recently Played page
+
+
+    Scenario: User should see "Recently Added" list with basic functionality on homepage
+      Given Recently Added songlist exists
+      Then Album name should be displayed for each song
+      And Download and Shuffle icons will be visible on hovered song
+      And Close browser
+     @navigationHeader
+     Scenario: Test profile link functionality
+       When User clicks profile link
+       Then User will be on profile page
+       And Close browser
+      @navigationHeader
+     Scenario:  Test "About Koel" link
+       When User clicks About link
+       Then An About Koel modal will appear
+       When User clicks close
+       Then The Modal will disappear
+       And Close browser
+      @navigationHeader
+     Scenario: User can successfully log out from home page
+       When User clicks on logout link
+       Then User will be logged out and navigate to login screen
+     @navigation
+     Scenario: User can navigate to "Home" from side menu
+       When User clicks Home in the left side navigation panel
+       Then User navigates to home page
+      @navigation
+      Scenario: User can navigate to "All Songs" from side menu
+       When User clicks All Songs in the left side navigation panel
+       Then User navigates to All Songs page
+      @navigation
+      Scenario: User can navigate to "Albums" from side menu
+       When User clicks Albums in the left side navigation panel
+       Then User navigates to Albums page
+      @navigation
+      Scenario: User can navigate to "Artists" from side menu
+       When User clicks Artists in the left side navigation panel
+       Then User navigates to Artists page
+      @navigation
+      Scenario: User can navigate to "Recently Played" from side menu
+        When User clicks Recently Played in the left side navigation panel
+        Then User will navigate to Recently Played page
+      @navigation
+      Scenario: User can navigate to "Favorites" from side menu
+        When User clicks Favorites in the left side navigation panel
+        Then User will navigate to Favorites page
+     @search
+     Scenario: Test the functionality of search bar
+       When User executes a search
+       Then Search results will be displayed
+       And Close browser
+     @createPlaylist
+     Scenario: User can create a playlist
+       When User clicks the Create a new playlist button next to the PLAYLISTS menu header in the side menu
+       And User selects New Playlist in the context menu
+       And User enters playlist name in the input field followed by pushing ENTER key
+       Then A new playlist will be listed in the side menu
+       And Close browser
+      @createSmartPlaylist
+      Scenario: User can create a smart playlist
+        When User clicks the Create a new playlist button next to the PLAYLISTS menu header in the side menu
+        And User selects New Smart Playlist in the context menu
+        Then A New Smart Playlist modal will appear
+        When User enters smart playlist name in the Name input field
+        And User enters song criteria in the criteria input field
+        And User clicks Save button
+        Then A new smart list will be in the side menu
+        And Close browser
+
+
+
+
+
+

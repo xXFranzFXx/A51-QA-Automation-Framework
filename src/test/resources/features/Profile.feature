@@ -28,7 +28,7 @@ Feature: Testing functionality of Profile page
       |nemo        |
       |cat         |
 
-    @ignore #bug, koel allows user to update email with invalid format and user cannot log back in after that
+    @ignore #bug, koel allows user to update email with invalid format i.e. testpro@testpro
     Scenario Outline: User tries to update email with invalid formatted email
       When User provides current password "<password>"
       And User provides new email address "<newEmail>"

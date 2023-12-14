@@ -50,8 +50,18 @@ public class BaseDefinitions {
 
     static int timeSeconds = 10;
     public static String url = "https://qa.koel.app";
-    public static String homeUrl = url + "/#!";
-    public static String profileUrl = url + "/#!/profile";
+    public static String pageUrl = url + "/#!/";
+    public static String homeUrl = buildUrl("home");
+    public static String profileUrl = buildUrl("profile");
+    public static String currentQueueUrl = buildUrl("queue");
+    public static String  allSongsUrl = buildUrl("songs");
+    public static String albumsUrl = buildUrl("albums");
+    public static String artistUrl = buildUrl("artists");
+    public static String favoritesUrl = buildUrl("favorites");
+    public static String recentlyPlayedUrl = buildUrl("recently-played");
+    public static String buildUrl(String page){
+        return (pageUrl + page);
+    }
 //    public static LocalStorage localStorage;
     public static void setupBrowser() throws MalformedURLException {
         threadDriver.set(initializeDriver(System.getProperty("browser", "")));

@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 
 public class AllSongsPage extends BasePage{
+
     @FindBy(xpath = "//h1[text()[normalize-space()='All Songs']]")
     private WebElement allSongsPageTitleLocator;
     @FindBy(css = ".all-songs tr.song-item:nth-child(1)")

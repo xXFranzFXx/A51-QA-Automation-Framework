@@ -20,8 +20,6 @@ import java.util.Set;
 public class LoginStepDefinitions  extends BaseDefinitions{
     static LoginPage loginPage;
     static ProfilePage profilePage;
-
-
     @Before
     public void setup() throws MalformedURLException {
         setupBrowser();
@@ -30,6 +28,7 @@ public class LoginStepDefinitions  extends BaseDefinitions{
     public void close() {
         closeBrowser();
     }
+
 
 
     @Then("User should navigate to home page")
