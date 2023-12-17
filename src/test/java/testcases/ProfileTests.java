@@ -1,3 +1,6 @@
+package testcases;
+
+import base.BaseTest;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.BeforeMethod;
@@ -8,8 +11,6 @@ import pages.LoginPage;
 import pages.ProfilePage;
 
 import java.net.MalformedURLException;
-import java.util.ArrayList;
-import java.util.Set;
 import java.util.UUID;
 
 public class ProfileTests extends BaseTest {
@@ -23,9 +24,9 @@ public class ProfileTests extends BaseTest {
     @Parameters({"baseURL"})
     public void setup(String baseURL) throws MalformedURLException {
         setupBrowser(baseURL);
-        profilePage = new ProfilePage(getDriver());
         loginPage = new LoginPage(getDriver());
         homePage = new HomePage(getDriver());
+        profilePage = loginPage.loginValidCredentials().clickAvatar();
     }
 
     @Test(description = "Update profile name")
@@ -33,8 +34,7 @@ public class ProfileTests extends BaseTest {
         String randomNm = generateRandomName();
         String profileName = profilePage.getProfileName();
         try {
-            loginPage.loginValidCredentials();
-            profilePage.clickAvatar()
+         profilePage
                     .provideCurrentPassword("te$t$tudent1")
                     .provideRandomProfileName(randomNm)
                     .clickSave();
@@ -51,8 +51,7 @@ public class ProfileTests extends BaseTest {
     @Test(description = "Update theme to In the Pines")
     public void choosePinesTheme() {
         try {
-            loginPage.loginValidCredentials();
-            profilePage.clickAvatar()
+            profilePage
                     .clickTheme("pines");
             Assert.assertTrue(profilePage.verifyTheme("pines"));
             Reporter.log("Changed theme to pines", true);

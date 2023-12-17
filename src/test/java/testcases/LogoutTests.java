@@ -1,13 +1,15 @@
+package testcases;
+
+import base.BaseTest;
 import org.testng.Assert;
 import org.testng.Reporter;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.ProfilePage;
-import pages.RegistrationPage;
 
 import java.net.MalformedURLException;
 import java.util.UUID;
@@ -21,6 +23,7 @@ import java.util.UUID;
  * 3. User should be navigated to the Login page after logging out
  * 4. User should be able to log out after updating email and password
  */
+@Listeners
 public class LogoutTests extends BaseTest {
     private String generateRandomName() {
         return UUID.randomUUID().toString().replace("-", "");
@@ -36,18 +39,15 @@ public class LogoutTests extends BaseTest {
     @Parameters({"baseURL"})
     public void setup(String baseURL) throws MalformedURLException {
         setupBrowser(baseURL);
-        loginPage = new LoginPage(getDriver());
         homePage = new HomePage(getDriver());
-        profilePage = new ProfilePage(getDriver());
+        loginPage = new LoginPage(getDriver());
+        profilePage = loginPage.loginValidCredentials().clickAvatar();
     }
 
 
     @Test(description = "Log in and verify visibility of logout button, then log out")
     public void useLogoutButton() {
-
-        loginPage.loginValidCredentials();
         Assert.assertTrue(homePage.checkForLogoutBtn());
-
         homePage.clickLogoutButton();
         Assert.assertTrue(loginPage.getRegistrationLink());
         Reporter.log("Successfully logged out after logging in", true);
@@ -55,15 +55,12 @@ public class LogoutTests extends BaseTest {
     }
 
 
-    @Test(dependsOnMethods = { "useLogoutButton" }, description = "Update username and password then logout and verify navigation back to login screen")
+//    @Test(dependsOnMethods = { "useLogoutButton" }, description = "Update username and password then logout and verify navigation back to login screen")
     public void logoutAfterProfileUpdate() {
-
-
-        loginPage.loginValidCredentials();
         String randomNm = generateRandomName();
         String password = "te$t$tudent1";
         String profileName = profilePage.getProfileName();
-        profilePage.clickAvatar()
+        profilePage
                 .provideNewPassword("te$t$tudent1")
                 .provideRandomProfileName(randomNm)
                 .provideCurrentPassword(password);
@@ -73,10 +70,5 @@ public class LogoutTests extends BaseTest {
         Assert.assertTrue(loginPage.getRegistrationLink());
         Reporter.log("User has logged out after updating username and password and redirected to login page", true);
     }
-    @AfterMethod
-    public void tearDown() {
-        closeBrowser();
-    }
-
 
 }

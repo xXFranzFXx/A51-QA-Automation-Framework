@@ -1,3 +1,4 @@
+import base.BaseTest;
 import org.openqa.selenium.ElementClickInterceptedException;
 import org.testng.Assert;
 import org.testng.Reporter;
@@ -41,7 +42,7 @@ public class LoginTests extends BaseTest {
         loginPage = new LoginPage(getDriver());
         homePage = new HomePage(getDriver());
         registrationPage = new RegistrationPage(getDriver());
-        profilePage = new ProfilePage(getDriver());
+        profilePage = loginPage.loginValidCredentials().clickAvatar();
 
     }
 //    @Test
@@ -71,7 +72,7 @@ public class LoginTests extends BaseTest {
                 .providePassword(defaultPassword)
                 .clickSubmitBtn();
         try {
-            profilePage.clickAvatar()
+            profilePage
                     .provideNewEmail(updatedEmail)
                     .provideCurrentPassword(defaultPassword)
                     .clickSaveButton()
@@ -92,7 +93,7 @@ public class LoginTests extends BaseTest {
         loginPage.provideEmail(updatedEmail)
                 .providePassword(defaultPassword)
                 .clickSubmitBtn();
-        profilePage.clickAvatar()
+        profilePage
                 .provideNewPassword(updatedPassword)
                 .provideCurrentPassword(defaultPassword)
                 .clickSaveButton()
@@ -173,7 +174,7 @@ public class LoginTests extends BaseTest {
                     .providePassword(updatedPassword)
                     .clickSubmitBtn();
             if(loginUrl.equals(url)) {
-                profilePage.clickAvatar()
+                profilePage
                         .provideNewEmail(registerEmail)
                         .provideNewPassword(defaultPassword)
                         .provideCurrentPassword(updatedPassword)

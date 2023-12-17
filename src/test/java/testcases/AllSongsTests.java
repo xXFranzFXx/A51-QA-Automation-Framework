@@ -1,8 +1,10 @@
+package testcases;
+
+import base.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pages.AlbumsPage;
 import pages.AllSongsPage;
 import pages.HomePage;
 import pages.LoginPage;
@@ -20,15 +22,14 @@ public class AllSongsTests extends BaseTest {
     @Parameters({"baseURL"})
     public void setup(String baseURL) throws MalformedURLException {
         setupBrowser(baseURL);
-        loginPage = new LoginPage(getDriver());
-        allSongsPage = new AllSongsPage(getDriver());
         homePage = new HomePage(getDriver());
+        loginPage = new LoginPage(getDriver());
+        allSongsPage = loginPage.loginValidCredentials().clickAllSongs();
     }
 
     @Test(description = "Play the first song on All Songs page")
     public void playFirstSong() {
-        loginPage.loginValidCredentials();
-        allSongsPage.navigateToAllSongs()
+       allSongsPage
                 .checkHeaderTitle()
                 .contextClickFirstSong()
                 .choosePlayOption();
@@ -37,14 +38,11 @@ public class AllSongsTests extends BaseTest {
     }
     @Test(description = "Click on the Album Tab in the Info Panel")
     public void clickInfoPanelAlbumTab() {
-        HomePage homePage = new HomePage(getDriver());
-        loginPage.loginValidCredentials();
-        allSongsPage.navigateToAllSongs()
+        allSongsPage
                 .checkHeaderTitle()
                 .contextClickFirstSong()
                 .choosePlayOption();
         homePage.clickAlbumTab();
         Assert.assertTrue(homePage.checkAlbumTabText());
-
     }
 }

@@ -1,3 +1,6 @@
+package testcases;
+
+import base.BaseTest;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.BeforeMethod;
@@ -7,7 +10,7 @@ import pages.*;
 
 import java.net.MalformedURLException;
 
-public class CurrentQueueTests extends BaseTest{
+public class CurrentQueueTests extends BaseTest {
     LoginPage loginPage;
     HomePage homePage;
     CurrentQueuePage currentQueuePage;

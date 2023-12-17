@@ -150,8 +150,8 @@ public class HomePageStepDefinitions extends BaseDefinitions {
 
     @When("User clicks profile link")
     public void userClicksProfileLink() {
-        profilePage = new ProfilePage(getDriver());
-        profilePage.clickAvatar();
+        homePage = new HomePage(getDriver());
+        homePage.clickAvatar();
     }
 
     @Then("User will be on profile page")

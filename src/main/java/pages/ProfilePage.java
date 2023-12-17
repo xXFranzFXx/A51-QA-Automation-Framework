@@ -16,8 +16,7 @@ public class ProfilePage extends BasePage{
     private WebElement updateNotification;
     @FindBy(css = "[data-testid=\"view-profile-link\"] .name")
     private WebElement avatarLocator;
-    @FindBy(xpath = "//a[@href=\"/#!/profile\"]")
-    private WebElement profilePageLink;
+
     @FindBy(css = "[name='current_password']")
     private WebElement currentPassword;
     @FindBy(css = "[name='new_password']")
@@ -46,10 +45,7 @@ public class ProfilePage extends BasePage{
         return this;
     }
 
-    public ProfilePage clickAvatar() {
-        findElement(profilePageLink).click();
-        return this;
-    }
+
     public boolean clickSave() {
       findElement(saveButton).click();
       return updateNotification.isDisplayed();

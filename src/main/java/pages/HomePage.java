@@ -3,17 +3,20 @@ package pages;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.locators.RelativeLocator;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.Reporter;
 
 import java.util.List;
-import java.util.NoSuchElementException;
 
 
 public class HomePage extends BasePage {
+    RecentlyPlayedPage recentlyPlayedPage;
+    AlbumsPage albumsPage;
+    CurrentQueuePage currentQueuePage;
+    ArtistsPage artistsPage;
+    ProfilePage profilePage;
 
     //user avatar icon element
     @FindBy(css = "img.avatar")
@@ -163,6 +166,8 @@ public class HomePage extends BasePage {
     private WebElement rPEmptyText;
     @FindBy(xpath = "//section[@id='playlistWrapper']//table[@class='items']/tr")
     private List<WebElement> playlistSongs;
+    @FindBy(xpath = "//a[@href=\"/#!/profile\"]")
+    private WebElement profilePageLink;
     private final By songTitle = By.cssSelector("section#playlistWrapper td.title");
     private final By searchResultThumbnail = By.cssSelector("section[data-testid=\"song-excerpts\"] span.cover:nth-child(1)");
     private final By lyricsTabLocator = By.id("extraTabLyrics");
@@ -475,27 +480,37 @@ public class HomePage extends BasePage {
      */
     public void clickHome() {
         homePage();
+        new HomePage(driver);
     }
 
-    public HomePage clickCurrentQueue() {
+    public CurrentQueuePage clickCurrentQueue() {
         currentQueuePage();
-        return this;
+        return new CurrentQueuePage(driver);
     }
-
-    public void clickAllSongs() {
+    public boolean checkSongPlaying() {
+        return isSongPlaying();
+    }
+    public AllSongsPage clickAllSongs() {
         allSongsPage();
+        return new AllSongsPage(driver);
     }
-
-    public void clickAlbums() {
+    public ProfilePage clickAvatar() {
+        findElement(profilePageLink).click();
+        return new ProfilePage(driver);
+    }
+    public AlbumsPage clickAlbums() {
         albumsPage();
+        return new AlbumsPage(driver);
     }
 
-    public void clickArtists() {
+    public ArtistsPage clickArtists() {
         artistsPage();
+        return new ArtistsPage(driver);
     }
 
-    public void clickRecentlyPlayed() {
+    public RecentlyPlayedPage clickRecentlyPlayed() {
         recentlyPlayedPage();
+        return new RecentlyPlayedPage(driver);
     }
 
     public void clickFavorites() {

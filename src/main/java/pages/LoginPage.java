@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class LoginPage extends BasePage{
+    HomePage homePage;
     //locators
     @FindBy(css = "[type='submit']")
     private WebElement submitButtonLocator;
@@ -38,10 +39,11 @@ public class LoginPage extends BasePage{
        passwordField.sendKeys(password);
        return this;
     }
-    public void loginValidCredentials() {
+    public HomePage loginValidCredentials() {
         provideEmail("fake@fakeaccount.com");
         providePassword("te$t$tudent1");
         clickSubmitBtn();
+        return new HomePage(driver);
     }
     public void loginAsNewUser() {
         provideEmail("franz.fernando+1@testpro.io");

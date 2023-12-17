@@ -10,6 +10,7 @@ import pages.ProfilePage;
 
 public class ProfileStepDefinitions extends BaseDefinitions{
     ProfilePage profilePage;
+    HomePage homePage;
 
     @When("User clicks on a theme {string}")
     public void userClicksOnATheme(String theme) {
@@ -24,8 +25,8 @@ public class ProfileStepDefinitions extends BaseDefinitions{
 
     @And("User navigates to profile page")
     public void userNavigatesToProfilePage() {
-        profilePage = new ProfilePage(getDriver());
-        profilePage.clickAvatar();
+        homePage = new HomePage(getDriver());
+        homePage.clickAvatar();
     }
 
     @Then("User receives error message")

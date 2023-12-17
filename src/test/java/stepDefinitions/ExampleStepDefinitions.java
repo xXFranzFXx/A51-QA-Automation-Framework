@@ -20,7 +20,7 @@ import java.time.Duration;
 
 /**
  *
- * This class runs cucumber separately from BaseTest configuration
+ * This class runs cucumber separately from base.BaseTest configuration
  */
 public class ExampleStepDefinitions {
 

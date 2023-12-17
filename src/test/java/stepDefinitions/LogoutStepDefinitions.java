@@ -60,8 +60,8 @@ public class LogoutStepDefinitions extends BaseDefinitions{
 
     @When("User clicks profile pic")
     public void userClicksProfilePic() {
-        profilePage = new ProfilePage(getDriver());
-        profilePage.clickAvatar();
+        homePage = new HomePage(getDriver());
+        homePage.clickAvatar();
     }
 
     @Then("Profile page is opened")

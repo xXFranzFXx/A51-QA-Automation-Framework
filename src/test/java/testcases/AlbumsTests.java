@@ -1,3 +1,6 @@
+package testcases;
+
+import base.BaseTest;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.BeforeMethod;
@@ -12,6 +15,7 @@ import java.net.MalformedURLException;
 public class AlbumsTests extends BaseTest {
     LoginPage loginPage;
     AlbumsPage albumsPage;
+    HomePage homePage;
     public AlbumsTests() {
         super();
     }
@@ -20,14 +24,12 @@ public class AlbumsTests extends BaseTest {
     public void setup(String baseURL) throws MalformedURLException {
         setupBrowser(baseURL);
         loginPage = new LoginPage(getDriver());
-        albumsPage = new AlbumsPage(getDriver());
+        albumsPage = loginPage.loginValidCredentials().clickAlbums();
     }
 
     @Test(description = "Right click on an album and play all songs")
     public void playFirstAlbumSongs() {
-        loginPage.loginValidCredentials();
-        albumsPage.navigateToAlbums()
-                .rightClickAlbum()
+                albumsPage.rightClickAlbum()
                 .selectPlayAll();
         Assert.assertTrue(albumsPage.checkAlbumSongPlaying());
         Reporter.log("Added all songs from selected album to current queue", true);

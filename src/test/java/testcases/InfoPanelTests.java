@@ -1,3 +1,6 @@
+package testcases;
+
+import base.BaseTest;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.BeforeMethod;
@@ -38,12 +41,11 @@ public class InfoPanelTests extends BaseTest {
     public void setup(String baseURL) throws MalformedURLException {
         setupBrowser(baseURL);
         loginPage = new LoginPage(getDriver());
-        homePage = new HomePage(getDriver());
+        homePage = loginPage.loginValidCredentials();
     }
 
     @Test(description = "checks for visibility of the info panel upon logging in")
     public void toggleInfoPanel() {
-        loginPage.loginValidCredentials();
         Reporter.log("Info panel is visible " + homePage.checkVisibility(), true);
         if(homePage.checkVisibility()) {
             homePage.clickInfoBtnActive();
@@ -64,7 +66,6 @@ public class InfoPanelTests extends BaseTest {
     }
     @Test(description = "Login, search for an artist and play song, then test shuffle play button in the Album Tab")
     public void checkShufflePlayBtn() {
-        loginPage.loginValidCredentials();
         checkInfoPanel();
         homePage.searchSong(searchArtist)
                 .clickSearchResultThumbnail()
@@ -76,7 +77,6 @@ public class InfoPanelTests extends BaseTest {
     }
     @Test(description = "click each tab and verify correct info is displayed in info panel then press the shuffle button")
     public void checkInfoPanelTabs() {
-        loginPage.loginValidCredentials();
         String lyricsInfoText = "No lyrics available. Are you listening to Bach?";
         String albumInfoText = "Play all songs in the album Dark Days EP";
         checkInfoPanel();
