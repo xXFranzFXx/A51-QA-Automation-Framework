@@ -18,6 +18,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFCell;
+import pages.*;
 
 import java.net.MalformedURLException;
 import java.net.URI;
@@ -26,31 +27,37 @@ import java.time.Duration;
 
 public class BaseTest {
 
+
+
+
     //constant variables used by helper methods
-    public WebDriver driver;
-    public  WebDriverWait wait;
-    public Actions action;
+    public static WebDriver driver;
+    public  static WebDriverWait wait;
+    public static Actions action;
     public String url;
     
     //stores an instance of WebDriver for each thread during tests execution
-    private final ThreadLocal <WebDriver> threadDriver = new ThreadLocal<>();
+    private static final ThreadLocal <WebDriver> threadDriver = new ThreadLocal<>();
 
     //return the current instance of WebDriver associated with the current thread.
-    public WebDriver getDriver() {
+    public static WebDriver getDriver() {
         return threadDriver.get();
     }
 
 
-    @BeforeMethod
+    public static void navigateToLogin(String baseURL) {
+        getDriver().get(baseURL);
+    }
+
+
     //use parameter for baseURL  from TestNG config file
-    @Parameters({"baseURL"})
-    public void setupBrowser(String baseURL) throws MalformedURLException {
+    public static void setupBrowser(String baseURL) throws MalformedURLException {
         threadDriver.set(pickBrowser(System.getProperty("browser")));
-        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10L));
+        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         navigateToLogin(baseURL);
     }
 
-    public WebDriver pickBrowser(String browser) throws MalformedURLException {
+    public static  WebDriver pickBrowser(String browser) throws MalformedURLException {
         DesiredCapabilities caps = new DesiredCapabilities();
         String gridURL = "http://192.168.0.15:4444";
         switch (browser) {
@@ -88,7 +95,7 @@ public class BaseTest {
 
     }
 
-    public WebDriver lambdaTest() throws MalformedURLException {
+    public static WebDriver lambdaTest() throws MalformedURLException {
         String username = "linkstasite.cs5";
         String authKey = "5DmWRPa0tmr9lZ0UlXDXRVGbqHEClVdDGnSsHrEMvx3jskb5Cu";
         String hub = "@hub.lambdatest.com/wd/hub";
@@ -102,21 +109,6 @@ public class BaseTest {
         caps.setCapability("plugin", "java-testNG");
         return new RemoteWebDriver(new URL("https://" + username + ":" + authKey + hub), caps);
     }
-    //close the browser after successful test
-    @AfterMethod
-    public void closeBrowser() {
-        //close the current instance and remove it from grid testing
-        threadDriver.get().close();
-        threadDriver.remove();
-    }
-
-
-    //navigates to login page
-    public void navigateToLogin(String baseURL) {
-        getDriver().get(baseURL);
-    }
-    //locates email input field and enters email address provided
-
 
     // Data providers start
     @DataProvider(name="LoginData")
@@ -136,7 +128,6 @@ public class BaseTest {
         return arrObj;
     }
     // Data providers end
-
     //helper method for fetching data from excel sheet
     public String [][] getExcelData(String fileName, String sheetName) {
         String [][] data = null;
@@ -164,6 +155,13 @@ public class BaseTest {
             System.out.println("Something went terribly wrong." + e);
         }
         return data;
+    }
+
+    @AfterMethod
+    public static void closeBrowser() {
+        //close the current instance and remove it from grid testing
+        threadDriver.get().close();
+        threadDriver.remove();
     }
 
 }

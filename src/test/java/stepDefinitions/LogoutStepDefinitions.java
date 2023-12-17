@@ -22,9 +22,9 @@ import java.util.UUID;
 
 
 public class LogoutStepDefinitions extends BaseDefinitions{
-    static LoginPage loginPage;
-    static ProfilePage profilePage;
-    static HomePage homePage;
+    LoginPage loginPage;
+    ProfilePage profilePage;
+    HomePage homePage;
     private static String generateRandomName() {
         return UUID.randomUUID().toString().replace("-", "");
     }

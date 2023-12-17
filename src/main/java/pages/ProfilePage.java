@@ -8,15 +8,15 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class ProfilePage extends BasePage{
-    @FindBy(xpath = "//*[@data-testid='theme-card-pines']/div")
+    @FindBy(xpath = "//div[@data-testid='theme-card-pines']/div")
     private WebElement inThePinesThemeLocator;
-    @FindBy(xpath = "//*[@data-testid=\"btn-logout\"]/i")
+    @FindBy(xpath = "//a[@data-testid=\"btn-logout\"]/i")
     private WebElement logoutButton;
     @FindBy(css = ".success.show")
     private WebElement updateNotification;
     @FindBy(css = "[data-testid=\"view-profile-link\"] .name")
     private WebElement avatarLocator;
-    @FindBy(xpath = "//*[@href=\"/#!/profile\"]")
+    @FindBy(xpath = "//a[@href=\"/#!/profile\"]")
     private WebElement profilePageLink;
     @FindBy(css = "[name='current_password']")
     private WebElement currentPassword;
@@ -24,7 +24,7 @@ public class ProfilePage extends BasePage{
     private WebElement newPassword;
     @FindBy(css ="[name='email']")
     private WebElement newEmail;
-    @FindBy(xpath = "//*[@data-testid=\"view-profile-link\"] /span")
+    @FindBy(xpath = "//span[@id='userBadge']//a[@data-testid='view-profile-link']/span")
     private WebElement actualProfileName;
 
     @FindBy(css = "button.btn-submit")

@@ -17,9 +17,9 @@ import java.net.MalformedURLException;
 import java.util.Set;
 
 
-public class LoginStepDefinitions  extends BaseDefinitions{
-    static LoginPage loginPage;
-    static ProfilePage profilePage;
+public class LoginStepDefinitions  extends BaseDefinitions {
+    LoginPage loginPage;
+    ProfilePage profilePage;
     @Before
     public void setup() throws MalformedURLException {
         setupBrowser();
@@ -28,8 +28,6 @@ public class LoginStepDefinitions  extends BaseDefinitions{
     public void close() {
         closeBrowser();
     }
-
-
 
     @Then("User should navigate to home page")
     public void checkHomePage() {
@@ -88,6 +86,4 @@ public class LoginStepDefinitions  extends BaseDefinitions{
         loginPage = new LoginPage(getDriver());
         Assert.assertTrue(loginPage.getRegistrationLink());
     }
-
-
 }

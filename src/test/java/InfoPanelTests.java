@@ -1,8 +1,12 @@
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.LoginPage;
+
+import java.net.MalformedURLException;
 
 
 /**
@@ -17,22 +21,51 @@ import pages.LoginPage;
  * 6 User should be able to shuffle songs on 'INFO' panel
  */
 public class InfoPanelTests extends BaseTest {
+    LoginPage loginPage;
+    HomePage homePage;
     private final String searchArtist = "Grav";
+
+    private void checkInfoPanel() {
+        if(!homePage.checkVisibility()){
+            homePage.clickInfoButton();
+        }
+    }
+    public InfoPanelTests() {
+        super();
+    }
+    @BeforeMethod
+    @Parameters({"baseURL"})
+    public void setup(String baseURL) throws MalformedURLException {
+        setupBrowser(baseURL);
+        loginPage = new LoginPage(getDriver());
+        homePage = new HomePage(getDriver());
+    }
 
     @Test(description = "checks for visibility of the info panel upon logging in")
     public void toggleInfoPanel() {
-        LoginPage loginPage = new LoginPage(getDriver());
-        HomePage homePage = new HomePage(getDriver());
         loginPage.loginValidCredentials();
-        Assert.assertTrue(homePage.checkVisibility());
-        Reporter.log("Info panel is visible");
+        Reporter.log("Info panel is visible " + homePage.checkVisibility(), true);
+        if(homePage.checkVisibility()) {
+            homePage.clickInfoBtnActive();
+            Assert.assertFalse(homePage.checkVisibility());
+            Reporter.log("Clicked Info Active button, now it's visible? " + homePage.checkVisibility(), true);
+            homePage.clickInfoButton();
+            Assert.assertTrue(homePage.checkVisibility());
+            Reporter.log("Info panel is visible! ", true);
+        } else {
+            homePage.clickInfoButton();
+            Assert.assertTrue(homePage.checkVisibility());
+            homePage.clickInfoBtnActive();
+            Assert.assertFalse(homePage.checkVisibility());
+            Reporter.log("Info Panel is invisible", true);
+
+        }
 
     }
-    @Test(description = "Login, search for an artist and play song, then test shuffle play button in the Album Tab", dependsOnMethods = { "toggleInfoPanel" })
+    @Test(description = "Login, search for an artist and play song, then test shuffle play button in the Album Tab")
     public void checkShufflePlayBtn() {
-        LoginPage loginPage = new LoginPage(getDriver());
-        HomePage homePage = new HomePage(getDriver());
         loginPage.loginValidCredentials();
+        checkInfoPanel();
         homePage.searchSong(searchArtist)
                 .clickSearchResultThumbnail()
                 .clickAlbumTab();
@@ -41,13 +74,12 @@ public class InfoPanelTests extends BaseTest {
         Reporter.log("Successfully shuffled songs using Album tab shuffle button", true);
 
     }
-    @Test(description = "click each tab and verify correct info is displayed in info panel then press the shuffle button", dependsOnMethods = { "toggleInfoPanel", "checkShufflePlayBtn" })
+    @Test(description = "click each tab and verify correct info is displayed in info panel then press the shuffle button")
     public void checkInfoPanelTabs() {
-        LoginPage loginPage = new LoginPage(getDriver());
-        HomePage homePage = new HomePage(getDriver());
         loginPage.loginValidCredentials();
         String lyricsInfoText = "No lyrics available. Are you listening to Bach?";
         String albumInfoText = "Play all songs in the album Dark Days EP";
+        checkInfoPanel();
         try {
             homePage.searchSong(searchArtist)
                     .clickSearchResultThumbnail();

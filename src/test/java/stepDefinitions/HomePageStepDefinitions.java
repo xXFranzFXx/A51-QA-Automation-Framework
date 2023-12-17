@@ -16,19 +16,10 @@ import pages.RecentlyPlayedPage;
 import java.net.MalformedURLException;
 
 public class HomePageStepDefinitions extends BaseDefinitions {
-//    @Before
-//    public void setup() throws MalformedURLException {
-//        setupBrowser();
-//    }
-//    @After
-//    public void quit() {
-//        closeBrowser();
-//    }
-
-    static LoginPage loginPage;
-    static HomePage homePage;
-    static ProfilePage profilePage;
-    static String search = "Grav";
+     LoginPage loginPage;
+     HomePage homePage;
+     ProfilePage profilePage;
+     String search = "Grav";
     static String newPlaylist = "newPlaylist";
     static String newSmartList = "newSmartList";
     static String searchSong;
@@ -133,6 +124,29 @@ public class HomePageStepDefinitions extends BaseDefinitions {
         homePage = new HomePage(getDriver());
         Assert.assertTrue(homePage.checkRAListButtonsOnHover());
     }
+    @When("User clicks the Create a new playlist button next to the PLAYLISTS menu header in the side menu")
+    public void userClicksTheCreateANewPlaylistButton() {
+        homePage = new HomePage(getDriver());
+        homePage.clickCreateNewPlaylist();
+    }
+
+    @And("User selects New Playlist in the context menu")
+    public void userSelectsNewPlaylistInTheContextMenu() {
+        homePage = new HomePage(getDriver());
+        homePage.contextMenuNewPlaylist();
+    }
+
+
+
+//    @Then("A success notification will appear")
+//    public void aSuccessNotificationWillAppear() {
+//    }
+
+    @Then("A new playlist will be listed in the side menu")
+    public void aNewPlaylistWillBeListedInTheSideMenu() {
+        homePage = new HomePage(getDriver());
+        Assert.assertTrue(homePage.playlistAddedToMenu(newPlaylist));
+    }
 
     @When("User clicks profile link")
     public void userClicksProfileLink() {
@@ -160,13 +174,13 @@ public class HomePageStepDefinitions extends BaseDefinitions {
     @When("User clicks close")
     public void userClicksClose() {
         homePage = new HomePage(getDriver());
-        homePage.closeModalPopup();
+        homePage.closeModalAndLogOut();
     }
 
     @Then("The Modal will disappear")
     public void theModalWillDisappear() {
-        homePage = new HomePage(getDriver());
-        Assert.assertTrue(homePage.isModalClosed());
+        loginPage = new LoginPage(getDriver());
+       Assert.assertTrue(loginPage.getRegistrationLink());
     }
 
 
@@ -228,29 +242,7 @@ public class HomePageStepDefinitions extends BaseDefinitions {
         Assert.assertTrue(homePage.searchResultsExists());
     }
 
-    @When("User clicks the Create a new playlist button next to the PLAYLISTS menu header in the side menu")
-    public void userClicksTheCreateANewPlaylistButton() {
-        homePage = new HomePage(getDriver());
-        homePage.clickCreateNewPlaylist();
-    }
 
-    @And("User selects New Playlist in the context menu")
-    public void userSelectsNewPlaylistInTheContextMenu() {
-        homePage = new HomePage(getDriver());
-        homePage.contextMenuNewPlaylist();
-    }
-
-
-
-//    @Then("A success notification will appear")
-//    public void aSuccessNotificationWillAppear() {
-//    }
-
-    @Then("A new playlist will be listed in the side menu")
-    public void aNewPlaylistWillBeListedInTheSideMenu() {
-        homePage = new HomePage(getDriver());
-        Assert.assertTrue(homePage.playlistAddedToMenu(newPlaylist));
-    }
 
     @And("User selects New Smart Playlist in the context menu")
     public void userSelectsNewSmartPlaylistInTheContextMenu() {

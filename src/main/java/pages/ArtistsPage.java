@@ -13,12 +13,12 @@ public class ArtistsPage extends BasePage{
     private WebElement shuffleLocator;
     @FindBy(xpath = "//img[@alt='Sound bars']")
     private WebElement soundBarLocator;
-    @FindBy(xpath = "//*[@id=\"sidebar\"]/section[1]/ul/li[5]/a")
+    @FindBy(xpath = "//nav[@id='sidebar']/section[1]/ul/li[5]/a")
     private By artistsSideMenuLocator;
     @FindBy(xpath = "//h1[text()[normalize-space()='Artists']]")
     private WebElement artistsPageTitleLocator;
     //finds the link to any album on the artists page
-    @FindBy(xpath = "//*[@id=\"artistsWrapper\"]/div/article[1]/span/span/a")
+    @FindBy(xpath = "//section[@id='artistsWrapper']/div/article[1]/span/span/a")
     private WebElement firstArtistAlbumLocator;
     public ArtistsPage(WebDriver givenDriver) {
         super(givenDriver);

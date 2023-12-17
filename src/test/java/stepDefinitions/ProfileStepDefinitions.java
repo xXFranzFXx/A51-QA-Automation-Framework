@@ -9,7 +9,7 @@ import pages.LoginPage;
 import pages.ProfilePage;
 
 public class ProfileStepDefinitions extends BaseDefinitions{
-    static ProfilePage profilePage;
+    ProfilePage profilePage;
 
     @When("User clicks on a theme {string}")
     public void userClicksOnATheme(String theme) {

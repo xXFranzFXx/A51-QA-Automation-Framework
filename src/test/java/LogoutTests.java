@@ -1,10 +1,15 @@
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.ProfilePage;
+import pages.RegistrationPage;
 
+import java.net.MalformedURLException;
 import java.util.UUID;
 
 /**
@@ -17,12 +22,29 @@ import java.util.UUID;
  * 4. User should be able to log out after updating email and password
  */
 public class LogoutTests extends BaseTest {
+    private String generateRandomName() {
+        return UUID.randomUUID().toString().replace("-", "");
+    }
+    LoginPage loginPage;
+    HomePage homePage;
+    ProfilePage profilePage;
+
+    public LogoutTests() {
+        super();
+    }
+    @BeforeMethod
+    @Parameters({"baseURL"})
+    public void setup(String baseURL) throws MalformedURLException {
+        setupBrowser(baseURL);
+        loginPage = new LoginPage(getDriver());
+        homePage = new HomePage(getDriver());
+        profilePage = new ProfilePage(getDriver());
+    }
 
 
     @Test(description = "Log in and verify visibility of logout button, then log out")
     public void useLogoutButton() {
-        HomePage homePage = new HomePage(getDriver());
-        LoginPage loginPage = new LoginPage(getDriver());
+
         loginPage.loginValidCredentials();
         Assert.assertTrue(homePage.checkForLogoutBtn());
 
@@ -35,9 +57,8 @@ public class LogoutTests extends BaseTest {
 
     @Test(dependsOnMethods = { "useLogoutButton" }, description = "Update username and password then logout and verify navigation back to login screen")
     public void logoutAfterProfileUpdate() {
-        HomePage homePage = new HomePage(getDriver());
-        LoginPage loginPage = new LoginPage(getDriver());
-        ProfilePage profilePage = new ProfilePage(getDriver());
+
+
         loginPage.loginValidCredentials();
         String randomNm = generateRandomName();
         String password = "te$t$tudent1";
@@ -52,8 +73,10 @@ public class LogoutTests extends BaseTest {
         Assert.assertTrue(loginPage.getRegistrationLink());
         Reporter.log("User has logged out after updating username and password and redirected to login page", true);
     }
-    private String generateRandomName() {
-        return UUID.randomUUID().toString().replace("-", "");
+    @AfterMethod
+    public void tearDown() {
+        closeBrowser();
     }
+
 
 }

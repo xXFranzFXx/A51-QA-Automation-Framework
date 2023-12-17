@@ -1,20 +1,35 @@
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.ProfilePage;
 
+import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.Set;
 import java.util.UUID;
 
 public class ProfileTests extends BaseTest {
+    ProfilePage profilePage;
+    LoginPage loginPage;
+    HomePage homePage;
+    public ProfileTests() {
+        super();
+    }
+    @BeforeMethod
+    @Parameters({"baseURL"})
+    public void setup(String baseURL) throws MalformedURLException {
+        setupBrowser(baseURL);
+        profilePage = new ProfilePage(getDriver());
+        loginPage = new LoginPage(getDriver());
+        homePage = new HomePage(getDriver());
+    }
 
     @Test(description = "Update profile name")
     public void changeProfileName()  throws InterruptedException {
-        ProfilePage profilePage = new ProfilePage(getDriver());
-        LoginPage loginPage = new LoginPage(getDriver());
         String randomNm = generateRandomName();
         String profileName = profilePage.getProfileName();
         try {
@@ -35,9 +50,6 @@ public class ProfileTests extends BaseTest {
 
     @Test(description = "Update theme to In the Pines")
     public void choosePinesTheme() {
-        HomePage homePage = new HomePage(getDriver());
-        ProfilePage profilePage = new ProfilePage(getDriver());
-        LoginPage loginPage = new LoginPage(getDriver());
         try {
             loginPage.loginValidCredentials();
             profilePage.clickAvatar()

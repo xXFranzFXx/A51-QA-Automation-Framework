@@ -13,9 +13,8 @@ public class AllSongsPage extends BasePage{
     private WebElement firstSongElementLocator;
     @FindBy(css = "li.playback")
     private WebElement choosePlayAllLocator;
-//    @FindBy(css = "[data-testid='sound-bar-play']")
-//    private WebElement soundBarVisualizer;
-    @FindBy(xpath = "//*[@id=\"sidebar\"]/section[1]/ul/li[3]/a")
+
+    @FindBy(xpath = "//nav[@id='sidebar']/section[@class='music']/ul/li[3]/a")
     private WebElement allSongsLocator;
 
     public AllSongsPage(WebDriver givenDriver) {
@@ -34,7 +33,6 @@ public class AllSongsPage extends BasePage{
         Assert.assertTrue(allSongsPageTitleLocator.isDisplayed());
         return this;
     }
-
     public AllSongsPage contextClickFirstSong() {
         contextClick(firstSongElementLocator);
         return this;

@@ -25,12 +25,12 @@ import org.testng.annotations.Test;
         }
 
 //        feature file will provide the data
-        @DataProvider
+       @ DataProvider
         public Object[][] features() {
             return testNGCucumberRunner.provideScenarios();
         }
 
-        //allow parallel testing
+//        allow parallel testing
 //        @Override
 //        @DataProvider(parallel = true)
 //        public Object [][] scenarios() {

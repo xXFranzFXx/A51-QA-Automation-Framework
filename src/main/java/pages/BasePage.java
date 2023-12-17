@@ -1,20 +1,25 @@
 package pages;
 
+import org.checkerframework.checker.units.qual.C;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-
+import org.testng.Reporter;
 import java.time.Duration;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Set;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 //POM
 public class BasePage {
@@ -24,39 +29,55 @@ public class BasePage {
     protected Actions actions;
 
     private int timeSeconds = 5;
+    public static String durationRe = "[^\\W•]+([1-9][0-99]+|[01]?[0-9]):([0-5]?[0-9]):([0-5]?[0-9])";
+    public static String songTotalRe = "^\\d{1,}[^\\W•]";
     public static Set<String> themes = Set.of("pines","classic", "violet", "oak", "slate", "madison", "astronaut", "chocolate", "laura", "rose-petals", "purple-waves", "pop-culture", "jungle", "mountains", "nemo", "cat");
-    @FindBy(css = "button[data-testid='about-btn']")
+    @FindBy(xpath = "//div[@class='header-right']//button[@data-testid='about-btn']")
     private WebElement aboutBtnLocator;
-    @FindBy(css = "[data-testid='about-modal']")
+    @FindBy(xpath = "//div[@class='modal-wrapper overlay']//div[@data-testid='about-modal']")
     private WebElement aboutModalLocator;
-//    @FindBy(css = "button[data-testid='about-btn']")
-    @FindBy(xpath = "//*[@class=\"modal-wrapper overlay\"]//footer")
-    private WebElement modalCloseLocator;
-    @FindBy(xpath = "//button[@data-test='close-modal-btn']")
-    private WebElement closeModalBtn;
-    private By closeModalButton = By.xpath("//*[@class=\"modal-wrapper overlay\"]//footer//button");
+    @FindBy(xpath = "//h1[contains(text(), 'About Koel')]")
+    List<WebElement> modal;
 
-    @FindBy(css = "a[class='queue']")
+    @FindBy(xpath = "//div[@class='modal-wrapper overlay']//footer")
+    private WebElement modalCloseLocator;
+    @FindBy(xpath = "//div[@class='modal-wrapper overlay']//button[@data-test='close-modal-btn']")
+    private WebElement closeModalBtn;
+
+
+    @FindBy(xpath = "//nav[@id='sidebar']//a[@class='queue']")
+    @CacheLookup
     private WebElement currentQueueLocator;
-    @FindBy(css = "a[class='home active']")
+    @FindBy(xpath = "//nav[@id='sidebar']//a[@class='home active']")
+    @CacheLookup
     private WebElement homeLocator;
-    @FindBy(css = "a[class='songs']")
+    @FindBy(xpath = "//nav[@id='sidebar']//a[@class='songs']")
+    @CacheLookup
     private WebElement allSongsLocator;
-    @FindBy(css = "a[class='albums']")
+    @FindBy(xpath = "//nav[@id='sidebar']//a[@class='albums']")
+    @CacheLookup
     private WebElement albumsLocator;
-    @FindBy(css = "a[class='artists']")
+    @FindBy(xpath = "//nav[@id='sidebar']//a[@class='artists']")
+    @CacheLookup
     private WebElement artistsLocator;
-    @FindBy(xpath = "//*[@class='playlist favorites']//a")
+    @FindBy(xpath = "//section[@id='playlists']//li[@class='playlist favorites']/a")
+    @CacheLookup
     private WebElement favoritesLocator;
     @FindBy(css = "#overlay.overlay.loading")
     private WebElement sideMenuOverlayLoading;
     @FindBy(css = "[data-testid='sound-bar-play']")
+    @CacheLookup
     private WebElement soundBarVisualizer;
-    @FindBy(xpath = "//*[@class='playlist recently-played']")
+    @FindBy(xpath = "//section[@id='playlists']//li[@class='playlist recently-played']/a")
     private WebElement recentlyPlayedLocator;
-    @FindBy(xpath = "//*[@id=\"searchExcerptsWrapper\"]/div/div/section[1]/ul/article/span[2]/span[1]")
+    @FindBy(xpath = "//section[@id='searchExcerptsWrapper']//span[@class='details']")
     private WebElement searchResultSongLocator;
-    //constructor method
+    @FindBy(css = ".fa-sign-out")
+    @CacheLookup
+    private WebElement logoutButtonLocator;
+    private By closeModalButton = By.xpath("//div[@class='modal-wrapper overlay']//button[@data-test='close-modal-btn']");
+
+
     public BasePage(WebDriver givenDriver) {
         driver = givenDriver;
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -65,8 +86,13 @@ public class BasePage {
         PageFactory.initElements(new AjaxElementLocatorFactory(driver, 10), this);
     }
 
-    //reusable methods, inherited by other pages
+    public boolean verifyTheme (String theme) {
+        return themes.contains(theme) ? wait.until(ExpectedConditions.attributeToBe(By.xpath("//html[@data-theme]"), "data-theme", theme)) : false;
+    }
 
+    protected WebElement find(By locator) {
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    }
     protected WebElement findElement(WebElement webElement) {
         return wait.until(ExpectedConditions.visibilityOf(webElement));
     }
@@ -94,9 +120,7 @@ public class BasePage {
         findElement(soundBarVisualizer);
         return soundBarVisualizer.isDisplayed();
     }
-    public boolean verifyTheme (String theme) {
-       return themes.contains(theme) ? wait.until(ExpectedConditions.attributeToBe(By.xpath("//html[@data-theme]"), "data-theme", theme)) : false;
-    }
+
     protected void currentQueuePage () {
         actions.moveToElement(currentQueueLocator).perform();
         clickElement(currentQueueLocator);    }
@@ -123,7 +147,9 @@ public class BasePage {
     protected void favorites() {actions.moveToElement(favoritesLocator).perform();
         clickElement(favoritesLocator);
     }
-
+    public void clickLogoutButton() {
+        findElement(logoutButtonLocator).click();
+    }
     protected boolean checkAboutModal() {
         return findElement(aboutModalLocator).isDisplayed();
     }
@@ -133,12 +159,29 @@ public class BasePage {
     protected void closeModal() {
        actions.moveToElement(modalCloseLocator).perform();
        click(closeModalButton);
-
+    }
+    protected void closeModalAndLogout() {
+        actions.moveToElement(modalCloseLocator).perform();
+        click(closeModalButton);
+        clickLogoutButton();
     }
     protected boolean modalIsClosed() {
-        return wait.until(ExpectedConditions.invisibilityOf(closeModalBtn));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(0));
+        return modal.contains(closeModalBtn);
     }
+    protected void doesNotExists(WebElement webElement) {
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(0));
+        boolean elementDNE = false;
+        try {
+            webElement.click();
+        } catch (NoSuchElementException e) {
+            elementDNE = true;
+        }
+        finally {
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+            Assert.assertTrue(elementDNE);
+        }
 
-
+    }
 
 }
