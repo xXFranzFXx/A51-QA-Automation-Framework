@@ -1,47 +1,20 @@
 package stepDefinitions;
 
-import com.beust.jcommander.Parameter;
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.apache.poi.xssf.usermodel.XSSFCell;
-import org.apache.poi.xssf.usermodel.XSSFRow;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.html5.LocalStorage;
-import org.openqa.selenium.html5.WebStorage;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.support.events.EventFiringDecorator;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Reporter;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Parameters;
-import pages.LoginPage;
-import pages.ProfilePage;
 
-import java.io.FileInputStream;
-import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URL;
 import java.time.Duration;
-import java.util.Set;
-import java.util.concurrent.TimeUnit;
-import org.openqa.selenium.remote.Augmenter;
-import util.listeners.WebEventListener;
 
 public class BaseDefinitions {
     public static WebDriver driver;
@@ -103,14 +76,9 @@ public class BaseDefinitions {
                 return lambdaTest();
             default:
                 WebDriverManager.chromedriver().setup();
-                ChromeDriverService service = new ChromeDriverService.Builder().usingAnyFreePort().build();
                 ChromeOptions options = new ChromeOptions();
                 options.addArguments("--remote-allow-origins=*", "--disable-notifications", "--start-maximized", "--incognito");
-                WebEventListener eventListener = new WebEventListener();
-                driver = new ChromeDriver(service, options);
-                EventFiringDecorator<WebDriver> decorator = new EventFiringDecorator<>(eventListener);
-                return decorator.decorate(driver);
-
+                return driver = new ChromeDriver(options);
         }
     }
     public static WebDriver lambdaTest() throws MalformedURLException {

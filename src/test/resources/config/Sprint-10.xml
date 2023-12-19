@@ -3,7 +3,6 @@
 
 <suite name="TestNG" parallel="methods" thread-count="2">
     <listeners>
-<!--        <listener class-name="util.listeners.WebEventListener"/>-->
         <listener class-name="util.listeners.TestListener"/>
     </listeners>
 

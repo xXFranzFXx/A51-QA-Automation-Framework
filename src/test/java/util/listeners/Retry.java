@@ -1,20 +1,10 @@
 package util.listeners;
 
-import base.BaseTest;
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.MediaEntityBuilder;
-import com.aventstack.extentreports.MediaEntityModelProvider;
 import com.aventstack.extentreports.Status;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
-import util.extentReports.ExtentTestManager;
-import util.extentReports.TestUtil;
+import util.TestUtil;
 
-import static util.extentReports.TestUtil.sysTime;
-import java.io.File;
 import java.io.IOException;
 import static util.extentReports.ExtentTestManager.getTest;
 
