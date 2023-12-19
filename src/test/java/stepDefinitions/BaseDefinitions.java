@@ -11,6 +11,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
@@ -21,6 +22,7 @@ import org.openqa.selenium.html5.WebStorage;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.events.EventFiringDecorator;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
@@ -39,6 +41,7 @@ import java.time.Duration;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.remote.Augmenter;
+import util.listeners.WebEventListener;
 
 public class BaseDefinitions {
     public static WebDriver driver;
@@ -100,9 +103,14 @@ public class BaseDefinitions {
                 return lambdaTest();
             default:
                 WebDriverManager.chromedriver().setup();
+                ChromeDriverService service = new ChromeDriverService.Builder().usingAnyFreePort().build();
                 ChromeOptions options = new ChromeOptions();
                 options.addArguments("--remote-allow-origins=*", "--disable-notifications", "--start-maximized", "--incognito");
-                return driver = new ChromeDriver(options);
+                WebEventListener eventListener = new WebEventListener();
+                driver = new ChromeDriver(service, options);
+                EventFiringDecorator<WebDriver> decorator = new EventFiringDecorator<>(eventListener);
+                return decorator.decorate(driver);
+
         }
     }
     public static WebDriver lambdaTest() throws MalformedURLException {

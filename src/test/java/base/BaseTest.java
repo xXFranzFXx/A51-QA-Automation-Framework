@@ -1,5 +1,7 @@
 package base;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -14,14 +16,16 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.events.EventFiringDecorator;
 import org.testng.annotations.*;
-import util.WebEventListener;
+import util.listeners.WebEventListener;
+import util.listeners.TestListener;
 
 import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URL;
 import java.time.Duration;
 
-public class BaseTest extends WebEventListener {
+public class BaseTest{
+
     public static WebDriver driver;
     public JavascriptExecutor getJs() {
         return (JavascriptExecutor) driver;
@@ -33,6 +37,7 @@ public class BaseTest extends WebEventListener {
     public static void navigateToLogin(String baseURL) {
         getDriver().get(baseURL);
     }
+
     public static void setupBrowser(String baseURL) throws MalformedURLException {
         threadDriver.set(pickBrowser(System.getProperty("browser")));
         getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -68,7 +73,7 @@ public class BaseTest extends WebEventListener {
                 return driver = new RemoteWebDriver(URI.create(gridURL).toURL(),caps);
             case "cloud":
                 return lambdaTest();
-            default:
+          default:
                 WebDriverManager.chromedriver().setup();
                 ChromeDriverService service = new ChromeDriverService.Builder().usingAnyFreePort().build();
                 ChromeOptions options = new ChromeOptions();
@@ -77,6 +82,13 @@ public class BaseTest extends WebEventListener {
                 driver = new ChromeDriver(service, options);
                 EventFiringDecorator<WebDriver> decorator = new EventFiringDecorator<>(eventListener);
                 return decorator.decorate(driver);
+
+//            default:
+//                WebDriverManager.chromedriver().setup();
+//                ChromeOptions options1 = new ChromeOptions();
+//                options1.addArguments("--remote-allow-origins=*", "--disable-notifications", "--start-maximized", "--incognito");
+//                return driver = new ChromeDriver(options1);
+
         }
     }
     public static WebDriver lambdaTest() throws MalformedURLException {
@@ -104,7 +116,7 @@ public class BaseTest extends WebEventListener {
         };
     }
 
-    @AfterMethod
+
     public static void closeBrowser() {
         threadDriver.get().close();
         threadDriver.remove();

@@ -23,7 +23,6 @@ import java.util.regex.Pattern;
 
 //POM
 public class BasePage {
-    //POM attributes
     protected WebDriver driver;
     protected WebDriverWait wait;
     protected Actions actions;
@@ -32,6 +31,10 @@ public class BasePage {
     public static String durationRe = "[^\\W•]+([1-9][0-99]+|[01]?[0-9]):([0-5]?[0-9]):([0-5]?[0-9])";
     public static String songTotalRe = "^\\d{1,}[^\\W•]";
     public static Set<String> themes = Set.of("pines","classic", "violet", "oak", "slate", "madison", "astronaut", "chocolate", "laura", "rose-petals", "purple-waves", "pop-culture", "jungle", "mountains", "nemo", "cat");
+
+    /**
+     * Navigation header "About" link
+     */
     @FindBy(xpath = "//div[@class='header-right']//button[@data-testid='about-btn']")
     private WebElement aboutBtnLocator;
     @FindBy(xpath = "//div[@class='modal-wrapper overlay']//div[@data-testid='about-modal']")
@@ -44,6 +47,9 @@ public class BasePage {
     @FindBy(xpath = "//div[@class='modal-wrapper overlay']//button[@data-test='close-modal-btn']")
     private WebElement closeModalBtn;
 
+    /**
+     * Side Menu links
+     */
 
     @FindBy(xpath = "//nav[@id='sidebar']//a[@class='queue']")
     @CacheLookup

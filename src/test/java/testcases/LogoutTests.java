@@ -1,16 +1,17 @@
 package testcases;
 
 import base.BaseTest;
+import com.aventstack.extentreports.ExtentTest;
 import org.testng.Assert;
 import org.testng.Reporter;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Listeners;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.ProfilePage;
+import util.extentReports.ExtentManager;
+import static util.extentReports.ExtentTestManager.startTest;
 
+import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.util.UUID;
 
@@ -23,7 +24,7 @@ import java.util.UUID;
  * 3. User should be navigated to the Login page after logging out
  * 4. User should be able to log out after updating email and password
  */
-@Listeners
+
 public class LogoutTests extends BaseTest {
     private String generateRandomName() {
         return UUID.randomUUID().toString().replace("-", "");
@@ -37,15 +38,22 @@ public class LogoutTests extends BaseTest {
     }
     @BeforeMethod
     @Parameters({"baseURL"})
+
     public void setup(String baseURL) throws MalformedURLException {
+
         setupBrowser(baseURL);
         homePage = new HomePage(getDriver());
         loginPage = new LoginPage(getDriver());
         profilePage = loginPage.loginValidCredentials().clickAvatar();
     }
+    @AfterMethod
+    public void close() {
+        closeBrowser();
+    }
 
 
     @Test(description = "Log in and verify visibility of logout button, then log out")
+
     public void useLogoutButton() {
         Assert.assertTrue(homePage.checkForLogoutBtn());
         homePage.clickLogoutButton();

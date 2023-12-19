@@ -20,19 +20,20 @@ dependencies {
     implementation 'io.cucumber:cucumber-core:7.9.0'
     implementation 'io.cucumber:cucumber-java:7.9.0'
     implementation 'io.cucumber:cucumber-gherkin:7.9.0'
-    implementation 'com.aventstack:extentreports:5.1.1'
-
+    implementation 'com.aventstack:extentreports:3.1.5'
+    implementation 'org.apache.logging.log4j:log4j-api:2.22.0'
+    implementation 'org.apache.logging.log4j:log4j-core:2.22.0'
 }
 
 test {
     useTestNG() {
-        suites "src/test/resources/Sprint-10.xml"
-        suites "src/test/resources/Sprint-9.xml"
+        suites "src/test/resources/config/Sprint-10.xml"
+        suites "src/test/resources/config/Sprint-9.xml"
 
-//        suites "src/test/resources/${suite}.xml"   //This is for testing with Jenkins
-//        suites "src/test/resources/SmokeTests.xml"
-//        suites "src/test/resources/RegressionTests.xml"
-//        suites "src/test/resources/TestNG.xml"
+//        suites "src/test/resources/config/${suite}.xml"   //This is for testing with Jenkins
+//        suites "src/test/resources/config/SmokeTests.xml"
+//        suites "src/test/resources/config/RegressionTests.xml"
+//        suites "src/test/resources/config/TestNG.xml"
         systemProperty "browser", System.getProperty("browser")
     }
 }

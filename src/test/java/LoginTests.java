@@ -42,7 +42,6 @@ public class LoginTests extends BaseTest {
         loginPage = new LoginPage(getDriver());
         homePage = new HomePage(getDriver());
         registrationPage = new RegistrationPage(getDriver());
-        profilePage = loginPage.loginValidCredentials().clickAvatar();
 
     }
 //    @Test
@@ -60,8 +59,8 @@ public class LoginTests extends BaseTest {
         loginPage.provideEmail(registerEmail)
                 .providePassword(defaultPassword)
                 .clickSubmitBtn();
-        Reporter.log("User has successfully logged in with a new account", true);
         Assert.assertTrue(homePage.getUserAvatar());
+        Reporter.log("User has successfully logged in with a new account", true);
     }
 
 

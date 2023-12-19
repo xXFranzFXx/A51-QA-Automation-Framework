@@ -1,20 +1,22 @@
-package util;
+package util.listeners;
 
 import base.BaseTest;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-import io.cucumber.java.eo.Se;
+
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Sequence;
-import org.openqa.selenium.support.events.WebDriverEventListener;
 import org.openqa.selenium.support.events.WebDriverListener;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-import org.testng.Reporter;
+import util.extentReports.ExtentManager;
+import util.extentReports.ExtentTestManager;
+import util.logs.Log;
 
 import java.io.File;
 import java.io.IOException;
@@ -26,14 +28,15 @@ import java.util.Set;
 
 
 public class WebEventListener implements WebDriverListener, ITestListener{
-     ExtentTest test;
-     ExtentReports extent = ExtentReporterNG.getReportObject();
-     WebDriver driver;
+     Log log;
+     ExtentTest test = ExtentTestManager.getTest();
+     ExtentReports extent = ExtentManager.createInstance();
+     WebDriver driver = BaseTest.getDriver();
      ThreadLocal<ExtentTest> extentTest = new ThreadLocal<>();
     public String getScreenShotPath(String testCaseName, WebDriver driver) throws IOException {
         TakesScreenshot ts = (TakesScreenshot) driver;
         File source = ts.getScreenshotAs(OutputType.FILE);
-        String destinationFile = System.getProperty("user.dir") + "//reports//" + testCaseName + ".png";
+        String destinationFile = System.getProperty("user.dir") + "/reports/extent-reports/screenshots" + testCaseName + ".png";
         FileUtils.copyFile(source, new File(destinationFile));
         return destinationFile;
 
@@ -64,8 +67,9 @@ public class WebEventListener implements WebDriverListener, ITestListener{
 
         }
         try {
-            extentTest.get().addScreenCaptureFromPath(getScreenShotPath(testMethodName, driver),
-                    result.getMethod().getMethodName());
+            String curDir = System.getProperty("user.dir");
+            extentTest.get().addScreenCaptureFromPath("/reports/extent-reports/screenshots/" +
+                    result.getMethod().getMethodName() + ".png");
 
         } catch (IOException e) {
             // TODO Auto-generated catch block
@@ -80,231 +84,230 @@ public class WebEventListener implements WebDriverListener, ITestListener{
     }
 
     public void beforeAnyCall(Object target, Method method, Object[] args) {
-
-            Reporter.log("Before calling method: " + method.getName());
+            Log.debug( "Before calling method: " + method.getName());
         }
 
         public void afterAnyCall(Object target, Method method, Object[] args, Object result) {
-            Reporter.log("After calling method: " + method.getName());
+            Log.debug("After calling method: " + method.getName());
         }
 
         public void onError(Object target, Method method, Object[] args, InvocationTargetException e) {
-           Reporter.log("Error while calling method: " + method.getName() + " - " + e.getMessage(), true);
+            Log.fatal( "Error while calling method: " + method.getName() + " - " + e.getMessage());
         }
 
         public void beforeAnyWebDriverCall(WebDriver driver, Method method, Object[] args) {
-           Reporter.log("Before calling WebDriver method: " + method.getName());
+           Log.debug("Before calling WebDriver method: " + method.getName());
         }
 
         public void afterAnyWebDriverCall(WebDriver driver, Method method, Object[] args, Object result) {
-           Reporter.log("After calling WebDriver method: " + method.getName());
+           Log.debug("After calling WebDriver method: " + method.getName());
         }
 
         public void beforeGet(WebDriver driver, String url) {
-           Reporter.log("Before navigating to URL: " + url);
+           Log.debug("Before navigating to URL: " + url);
         }
 
         public void afterGet(WebDriver driver, String url) {
-           Reporter.log("After navigating to URL: " + url);
+           Log.debug("After navigating to URL: " + url);
         }
 
         public void beforeGetCurrentUrl(WebDriver driver) {
-           Reporter.log("Before getting current URL.");
+           Log.debug("Before getting current URL.");
         }
 
         public void afterGetCurrentUrl(String result, WebDriver driver) {
-           Reporter.log("After getting current URL: " + result);
+           Log.debug("After getting current URL: " + result);
         }
 
         public void beforeGetTitle(WebDriver driver) {
-           Reporter.log("Before getting page title.");
+           Log.debug("Before getting page title.");
         }
 
         public void afterGetTitle(WebDriver driver, String result) {
-           Reporter.log("After getting page title: " + result);
+           Log.debug("After getting page title: " + result);
         }
 
         public void beforeFindElement(WebDriver driver, By locator) {
-           Reporter.log("Before finding element by: " + locator);
+           Log.debug("Before finding element by: " + locator);
         }
 
         public void afterFindElement(WebDriver driver, By locator, WebElement result) {
-           Reporter.log("After finding element by: " + locator);
+           Log.debug("After finding element by: " + locator);
         }
 
         public void beforeFindElements(WebDriver driver, By locator) {
-           Reporter.log("Before finding elements by: " + locator);
+           Log.debug("Before finding elements by: " + locator);
         }
 
         public void afterFindElements(WebDriver driver, By locator, List<WebElement> result) {
-           Reporter.log("After finding elements by: " + locator);
+           Log.debug("After finding elements by: " + locator);
         }
 
         public void beforeGetPageSource(WebDriver driver) {
-           Reporter.log("Before getting page source.");
+           Log.debug("Before getting page source.");
         }
 
         public void afterGetPageSource(WebDriver driver, String result) {
-           Reporter.log("After getting page source.");
+           Log.debug("After getting page source.");
         }
 
         public void beforeClose(WebDriver driver) {
-           Reporter.log("Before closing the WebDriver.");
+           Log.debug("Before closing the WebDriver.");
         }
 
         public void afterClose(WebDriver driver) {
-           Reporter.log("After closing the WebDriver.");
+           Log.debug("After closing the WebDriver.");
         }
 
         public void beforeQuit(WebDriver driver) {
-           Reporter.log("Before quitting the WebDriver.");
+           Log.debug("Before quitting the WebDriver.");
         }
 
         public void afterQuit(WebDriver driver) {
-           Reporter.log("After quitting the WebDriver.");
+           Log.debug("After quitting the WebDriver.");
         }
 
         public void beforeGetWindowHandles(WebDriver driver) {
-           Reporter.log("Before getting window handles.");
+           Log.debug("Before getting window handles.");
         }
 
         public void afterGetWindowHandles(WebDriver driver, Set<String> result) {
-           Reporter.log("After getting window handles.");
+           Log.debug("After getting window handles.");
         }
 
         public void beforeGetWindowHandle(WebDriver driver) {
-           Reporter.log("Before getting window handle.");
+           Log.debug("Before getting window handle.");
         }
 
         public void afterGetWindowHandle(WebDriver driver, String result) {
-           Reporter.log("After getting window handle.");
+           Log.debug("After getting window handle.");
         }
 
         public void beforeExecuteScript(WebDriver driver, String script, Object[] args) {
-           Reporter.log("Before executing script: " + script);
+           Log.debug("Before executing script: " + script);
         }
 
         public void afterExecuteScript(WebDriver driver, String script, Object[] args, Object result) {
-           Reporter.log("After executing script: " + script);
+           Log.debug("After executing script: " + script);
         }
 
         public void beforeExecuteAsyncScript(WebDriver driver, String script, Object[] args) {
-           Reporter.log("Before executing async script: " + script);
+           Log.debug("Before executing async script: " + script);
         }
 
         public void afterExecuteAsyncScript(WebDriver driver, String script, Object[] args, Object result) {
-           Reporter.log("After executing async script: " + script);
+           Log.debug("After executing async script: " + script);
         }
 
         public void beforePerform(WebDriver driver, Collection<Sequence> actions) {
-           Reporter.log("Before performing actions.");
+           Log.debug("Before performing actions.");
         }
 
         public void afterPerform(WebDriver driver, Collection<Sequence> actions) {
-           Reporter.log("After performing actions.");
+           Log.debug("After performing actions.");
         }
 
         public void beforeResetInputState(WebDriver driver) {
-           Reporter.log("Before resetting input state.");
+           Log.debug("Before resetting input state.");
         }
 
         public void afterResetInputState(WebDriver driver) {
-           Reporter.log("After resetting input state.");
+           Log.debug("After resetting input state.");
         }
 
         public void beforeAnyWebElementCall(WebElement element, Method method, Object[] args) {
-           Reporter.log("Before calling WebElement method: " + method.getName());
+           Log.debug("Before calling WebElement method: " + method.getName());
         }
 
         public void afterAnyWebElementCall(WebElement element, Method method, Object[] args, Object result) {
-           Reporter.log("After calling WebElement method: " + method.getName());
+           Log.debug("After calling WebElement method: " + method.getName());
         }
 
         public void beforeClick(WebElement element) {
-           Reporter.log("Before clicking on element.");
+           Log.debug("Before clicking on element.");
         }
 
         public void afterClick(WebElement element) {
-           Reporter.log("After clicking on element.");
+           Log.debug("After clicking on element.");
         }
 
         public void beforeSubmit(WebElement element) {
-           Reporter.log("Before submitting a form element.");
+           Log.debug("Before submitting a form element.");
         }
 
         public void afterSubmit(WebElement element) {
-           Reporter.log("After submitting a form element.");
+           Log.debug("After submitting a form element.");
         }
 
         public void beforeSendKeys(WebElement element, CharSequence... keysToSend) {
-           Reporter.log("Before sending keys to element.");
+           Log.debug("Before sending keys to element.");
         }
 
         public void afterSendKeys(WebElement element, CharSequence... keysToSend) {
-           Reporter.log("After sending keys to element.");
+           Log.debug("After sending keys to element.");
         }
 
         public void beforeClear(WebElement element) {
-           Reporter.log("Before clearing the text of an element.");
+           Log.debug("Before clearing the text of an element.");
         }
 
         public void afterClear(WebElement element) {
-           Reporter.log("After clearing the text of an element.");
+           Log.debug("After clearing the text of an element.");
         }
 
         public void beforeGetTagName(WebElement element) {
-           Reporter.log("Before getting the tag name of an element.");
+           Log.debug("Before getting the tag name of an element.");
         }
 
         public void afterGetTagName(WebElement element, String result) {
-           Reporter.log("After getting the tag name of an element: " + result);
+           Log.debug("After getting the tag name of an element: " + result);
         }
 
         public void beforeGetAttribute(WebElement element, String name) {
-           Reporter.log("Before getting an attribute of an element: " + name);
+           Log.debug("Before getting an attribute of an element: " + name);
         }
 
         public void afterGetAttribute(WebElement element, String name, String result) {
-           Reporter.log("After getting an attribute of an element: " + name);
+           Log.debug("After getting an attribute of an element: " + name);
         }
 
         public void beforeIsSelected(WebElement element) {
-           Reporter.log("Before checking if element is selected.");
+           Log.debug("Before checking if element is selected.");
         }
 
         public void afterIsSelected(WebElement element, boolean result) {
-           Reporter.log("After checking if element is selected: " + result);
+           Log.debug("After checking if element is selected: " + result);
         }
 
         public void beforeIsEnabled(WebElement element) {
-           Reporter.log("Before checking if element is enabled.");
+           Log.debug("Before checking if element is enabled.");
         }
 
         public void afterIsEnabled(WebElement element, boolean result) {
-           Reporter.log("After checking if element is enabled: " + result);
+           Log.debug("After checking if element is enabled: " + result);
         }
 
         public void beforeGetText(WebElement element) {
-           Reporter.log("Before getting text from element.");
+           Log.debug("Before getting text from element.");
         }
 
         public void afterGetText(WebElement element, String result) {
-           Reporter.log("After getting text from element: " + result);
+           Log.debug("After getting text from element: " + result);
         }
 
         public void beforeFindElement(WebElement element, By locator) {
-           Reporter.log("Before finding element within element: " + locator);
+           Log.debug("Before finding element within element: " + locator);
         }
 
         public void afterFindElement(WebElement element, By locator, WebElement result) {
-           Reporter.log("After finding element within element: " + locator);
+           Log.debug("After finding element within element: " + locator);
         }
 
         public void beforeFindElements(WebElement element, By locator) {
-           Reporter.log("Before finding elements within element: " + locator);
+           Log.debug("Before finding elements within element: " + locator);
         }
 
         public void afterFindElements(WebElement element, By locator, List<WebElement> result) {
-           Reporter.log("After finding elements within element: " + locator);
+           Log.debug("After finding elements within element: " + locator);
         }
     }
