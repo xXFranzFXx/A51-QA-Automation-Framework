@@ -1,4 +1,4 @@
-import base.BaseTest;
+import base.BaseDefinitions;
 import org.openqa.selenium.ElementClickInterceptedException;
 import org.testng.Assert;
 import org.testng.Reporter;
@@ -22,7 +22,7 @@ import java.net.MalformedURLException;
  * 6. User should not be able to log in with valid registered email and invalid password. 'Password is incorrect' message should be displayed
  * 7. User should not be able to log in with empty 'Email Address' and 'Password fields'
  */
-public class LoginTests extends BaseTest {
+public class LoginTests extends BaseDefinitions {
     private final String registerEmail = "franz.fernando+1@testpro.io";
     private final String updatedEmail = "updated.email@testpro.io";
     private final String defaultPassword = "te$t$tudent1";
@@ -36,9 +36,8 @@ public class LoginTests extends BaseTest {
         super();
     }
     @BeforeMethod
-    @Parameters({"baseURL"})
-    public void setup(String baseURL) throws MalformedURLException {
-        setupBrowser(baseURL);
+    public void setup() throws MalformedURLException {
+        setupBrowser();
         loginPage = new LoginPage(getDriver());
         homePage = new HomePage(getDriver());
         registrationPage = new RegistrationPage(getDriver());
@@ -137,7 +136,7 @@ public class LoginTests extends BaseTest {
         Assert.assertTrue(loginPage.getRegistrationLink());
     }
 
-    @Test(description = "Log in with data read from external source", dataProvider = "LoginData")
+    @Test(description = "Log in with data read from external source", dataProvider ="LoginData")
     public void loginWithLoginData(String email, String password) {
         try {
             loginPage.provideEmail(email)

@@ -1,20 +1,16 @@
 package stepDefinitions;
 
-import io.cucumber.java.After;
+import base.BaseDefinitions;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.testng.Assert;
-import org.testng.Reporter;
-import org.testng.annotations.Listeners;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.ProfilePage;
 import pages.RecentlyPlayedPage;
-
-import java.net.MalformedURLException;
 
 public class HomePageStepDefinitions extends BaseDefinitions {
      LoginPage loginPage;

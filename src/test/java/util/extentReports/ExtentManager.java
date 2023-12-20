@@ -2,7 +2,9 @@ package util.extentReports;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-import com.aventstack.extentreports.reporter.configuration.ChartLocation;
+import java.lang.Enum;
+
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import org.openqa.selenium.Platform;
 
@@ -25,15 +27,14 @@ public class ExtentManager {
     public static ExtentReports createInstance() {
         platform = getCurrentPlatform();
         String fileName = getReportFileLocation(platform);
-        ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(fileName);
-        htmlReporter.config().setTestViewChartLocation(ChartLocation.BOTTOM);
-        htmlReporter.config().setChartVisibilityOnOpen(true);
+        ExtentSparkReporter htmlReporter = new ExtentSparkReporter(fileName);
         htmlReporter.config().setTheme(Theme.STANDARD);
         htmlReporter.config().setDocumentTitle(fileName);
         htmlReporter.config().setEncoding("utf-8");
         htmlReporter.config().setReportName(fileName);
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
+        extent.setReportUsesManualConfiguration(true);
         return extent;
     }
     //Select the extent report file location based on platform

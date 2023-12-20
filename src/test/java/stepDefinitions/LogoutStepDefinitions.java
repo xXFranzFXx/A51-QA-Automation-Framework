@@ -1,27 +1,18 @@
 package stepDefinitions;
 
-import io.cucumber.java.After;
-import io.cucumber.java.AfterAll;
-import io.cucumber.java.Before;
-import io.cucumber.java.BeforeAll;
+import base.BaseDefinitions;
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.Cookie;
-import org.openqa.selenium.html5.LocalStorage;
 import org.testng.Assert;
-import org.testng.annotations.Parameters;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.ProfilePage;
 
-import java.net.MalformedURLException;
-import java.util.Set;
 import java.util.UUID;
 
 
-public class LogoutStepDefinitions extends BaseDefinitions{
+public class LogoutStepDefinitions extends BaseDefinitions {
     LoginPage loginPage;
     ProfilePage profilePage;
     HomePage homePage;

@@ -10,19 +10,39 @@ repositories {
 }
 
 dependencies {
-    testImplementation 'org.testng:testng:7.6.1'
+    implementation 'org.testng:testng:7.6.1'
     implementation 'org.seleniumhq.selenium:selenium-java:4.5.0'
     testImplementation 'io.github.bonigarcia:webdrivermanager:5.4.1'
 
     implementation 'org.apache.poi:poi-ooxml:5.2.3'
-
+    implementation 'tech.grasshopper:extentreports-cucumber7-adapter:1.14.0'
     implementation 'io.cucumber:cucumber-testng:7.9.0'
-    implementation 'io.cucumber:cucumber-core:7.9.0'
-    implementation 'io.cucumber:cucumber-java:7.9.0'
-    implementation 'io.cucumber:cucumber-gherkin:7.9.0'
-    implementation 'com.aventstack:extentreports:3.1.5'
+    testImplementation 'io.cucumber:cucumber-core:7.9.0'
+    testImplementation 'io.cucumber:cucumber-java:7.9.0'
+    testImplementation 'io.cucumber:cucumber-gherkin:7.9.0'
+    testImplementation 'io.cucumber:cucumber-junit:7.9.0'
+    implementation 'com.aventstack:extentreports:5.0.9'
     implementation 'org.apache.logging.log4j:log4j-api:2.22.0'
     implementation 'org.apache.logging.log4j:log4j-core:2.22.0'
+}
+configurations {
+    cucumberRuntime {
+        extendsFrom testImplementation
+    }
+}
+
+task cucumber() {
+    dependsOn assemble, compileTestJava
+    doLast {
+        javaexec {
+            main = "io.cucumber.core.cli.Main"
+            classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+            args = ['--plugin', 'pretty',
+                    '--plugin', 'io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm',
+                    '--plugin', 'com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:',
+                    '--glue', 'com.example.definitions', 'src/test/resources']
+        }
+    }
 }
 
 test {

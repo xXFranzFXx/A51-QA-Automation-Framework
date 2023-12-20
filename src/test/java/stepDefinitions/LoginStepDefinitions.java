@@ -1,20 +1,18 @@
 package stepDefinitions;
 
 
+import base.BaseDefinitions;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.Cookie;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import pages.LoginPage;
 import pages.ProfilePage;
 
 import java.net.MalformedURLException;
-import java.util.Set;
 
 
 public class LoginStepDefinitions  extends BaseDefinitions {

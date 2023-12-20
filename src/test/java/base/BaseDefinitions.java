@@ -1,6 +1,11 @@
-package stepDefinitions;
+package base;
 
+import io.cucumber.java.After;
+import io.cucumber.java.Scenario;
+import io.cucumber.plugin.event.Node;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -97,7 +102,7 @@ public class BaseDefinitions {
     }
 
     public static void closeBrowser(){
-        driver.quit();
+            driver.quit();
     }
 
 }

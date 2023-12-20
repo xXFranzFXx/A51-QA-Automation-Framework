@@ -14,13 +14,7 @@ import java.io.*;
 
 public class ExcelFile {
     private String excelFilePath = "./src/test/resources/testData/";
-    @DataProvider(name="excel-data")
-    public Object[][] excelDP() throws IOException {
-        Object [][] arrObj;
-        arrObj = getExcelData("test.xlsx", "Sheet1");
-        return arrObj;
-    }
-    // Data providers end
+
     public String [][] getExcelData(String fileName, String sheetName) {
         String [][] data = null;
         try {

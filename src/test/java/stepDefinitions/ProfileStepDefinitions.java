@@ -1,14 +1,14 @@
 package stepDefinitions;
 
+import base.BaseDefinitions;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.testng.Assert;
 import pages.HomePage;
-import pages.LoginPage;
 import pages.ProfilePage;
 
-public class ProfileStepDefinitions extends BaseDefinitions{
+public class ProfileStepDefinitions extends BaseDefinitions {
     ProfilePage profilePage;
     HomePage homePage;
 
