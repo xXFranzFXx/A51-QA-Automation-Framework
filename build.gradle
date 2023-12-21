@@ -25,35 +25,16 @@ dependencies {
     implementation 'org.apache.logging.log4j:log4j-api:2.22.0'
     implementation 'org.apache.logging.log4j:log4j-core:2.22.0'
 }
-configurations {
-    cucumberRuntime {
-        extendsFrom testImplementation
-    }
-}
-
-task cucumber() {
-    dependsOn assemble, compileTestJava
-    doLast {
-        javaexec {
-            main = "io.cucumber.core.cli.Main"
-            classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
-            args = ['--plugin', 'pretty',
-                    '--plugin', 'io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm',
-                    '--plugin', 'com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:',
-                    '--glue', 'com.example.definitions', 'src/test/resources']
-        }
-    }
-}
 
 test {
     useTestNG() {
-        suites "src/test/resources/config/Sprint-10.xml"
-        suites "src/test/resources/config/Sprint-9.xml"
+//        suites "src/test/resources/config/Sprint-10.xml"
+//        suites "src/test/resources/config/Sprint-9.xml"
 
 //        suites "src/test/resources/config/${suite}.xml"   //This is for testing with Jenkins
 //        suites "src/test/resources/config/SmokeTests.xml"
 //        suites "src/test/resources/config/RegressionTests.xml"
-//        suites "src/test/resources/config/TestNG.xml"
+        suites "src/test/resources/config/TestNG.xml"
         systemProperty "browser", System.getProperty("browser")
     }
 }

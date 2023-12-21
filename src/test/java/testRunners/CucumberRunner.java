@@ -16,11 +16,9 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import util.listeners.ExtentReportListener;
 
 import java.net.MalformedURLException;
 
-@Test
 @CucumberOptions (
             features = {"src/test/resources/features"},
             glue= "stepDefinitions",
@@ -29,15 +27,13 @@ import java.net.MalformedURLException;
             monochrome = true,
             plugin = {
                     "pretty",
-                    "json:reports/cucumber-reports/cucumber.json",
-                    "html:reports/cucumber-reports/cucumber.html",
                     "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
-}
+},
+        dryRun = true
     )
     public class CucumberRunner extends AbstractTestNGCucumberTests {
         private TestNGCucumberRunner testNGCucumberRunner;
-        private static ExtentReports extentReports ;
-        private static ExtentTest extentTest;
+
 
         @BeforeClass(alwaysRun = true)
         public void setupCucumber(){
