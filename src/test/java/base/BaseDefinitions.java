@@ -1,6 +1,7 @@
 package base;
 
 import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import io.cucumber.plugin.event.Node;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -111,7 +112,6 @@ public class BaseDefinitions {
         caps.setCapability("plugin", "java-testNG");
         return new RemoteWebDriver(new URL("https://" + username + ":" + authKey + hub), caps);
     }
-
     public static void closeBrowser(){
             driver.quit();
     }

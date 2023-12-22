@@ -1,18 +1,23 @@
 package stepDefinitions;
 
 import base.BaseDefinitions;
+import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.testng.Assert;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.ProfilePage;
 import pages.RecentlyPlayedPage;
+import static base.BaseDefinitions.*;
 
-public class HomePageStepDefinitions extends BaseDefinitions {
+public class HomePageStepDefinitions {
      LoginPage loginPage;
      HomePage homePage;
      ProfilePage profilePage;
