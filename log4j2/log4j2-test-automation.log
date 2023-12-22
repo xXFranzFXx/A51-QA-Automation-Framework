@@ -8,3 +8,113 @@
 [INFO ] 2023-12-19 08:44:50.968 [TestNG-test=Sprint-9-1] Log - playFirstAlbumSongs started!
 [INFO ] 2023-12-19 08:44:51.355 [TestNG-test=Sprint-9-1] Log - playFirstAlbumSongs passed!
 [INFO ] 2023-12-19 08:44:51.486 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-21 16:55:13.713 [main] Log - Before calling method: manage
+[INFO ] 2023-12-21 16:55:13.714 [main] Log - Before calling WebDriver method: manage
+[INFO ] 2023-12-21 16:55:13.723 [main] Log - After calling WebDriver method: manage
+[INFO ] 2023-12-21 16:55:13.723 [main] Log - After calling method: manage
+[INFO ] 2023-12-21 16:55:13.723 [main] Log - Before calling method: timeouts
+[INFO ] 2023-12-21 16:55:13.728 [main] Log - After calling method: timeouts
+[INFO ] 2023-12-21 16:55:13.729 [main] Log - Before calling method: implicitlyWait
+[INFO ] 2023-12-21 16:55:13.740 [main] Log - After calling method: implicitlyWait
+[INFO ] 2023-12-21 16:55:13.740 [main] Log - Before calling method: get
+[INFO ] 2023-12-21 16:55:13.740 [main] Log - Before calling WebDriver method: get
+[INFO ] 2023-12-21 16:55:13.740 [main] Log - Before navigating to URL: https://qa.koel.app
+[INFO ] 2023-12-21 16:55:14.696 [main] Log - After navigating to URL: https://qa.koel.app
+[INFO ] 2023-12-21 16:55:14.696 [main] Log - After calling WebDriver method: get
+[INFO ] 2023-12-21 16:55:14.696 [main] Log - After calling method: get
+[INFO ] 2023-12-21 16:55:15.522 [main] Log - Before calling method: findElement
+[INFO ] 2023-12-21 16:55:15.522 [main] Log - Before calling WebDriver method: findElement
+[INFO ] 2023-12-21 16:55:15.523 [main] Log - Before finding element by: By.cssSelector: [type='email']
+[INFO ] 2023-12-21 16:55:15.549 [main] Log - After finding element by: By.cssSelector: [type='email']
+[INFO ] 2023-12-21 16:55:15.549 [main] Log - After calling WebDriver method: findElement
+[INFO ] 2023-12-21 16:55:15.549 [main] Log - After calling method: findElement
+[INFO ] 2023-12-21 16:55:15.549 [main] Log - Before calling method: sendKeys
+[INFO ] 2023-12-21 16:55:15.549 [main] Log - Before calling WebElement method: sendKeys
+[INFO ] 2023-12-21 16:55:15.549 [main] Log - Before sending keys to element.
+[INFO ] 2023-12-21 16:55:15.675 [main] Log - After sending keys to element.
+[INFO ] 2023-12-21 16:55:15.675 [main] Log - After calling WebElement method: sendKeys
+[INFO ] 2023-12-21 16:55:15.675 [main] Log - After calling method: sendKeys
+[INFO ] 2023-12-21 16:55:15.675 [main] Log - Before calling method: findElement
+[INFO ] 2023-12-21 16:55:15.676 [main] Log - Before calling WebDriver method: findElement
+[INFO ] 2023-12-21 16:55:15.676 [main] Log - Before finding element by: By.cssSelector: [type='password']
+[INFO ] 2023-12-21 16:55:15.689 [main] Log - After finding element by: By.cssSelector: [type='password']
+[INFO ] 2023-12-21 16:55:15.689 [main] Log - After calling WebDriver method: findElement
+[INFO ] 2023-12-21 16:55:15.689 [main] Log - After calling method: findElement
+[INFO ] 2023-12-21 16:55:15.689 [main] Log - Before calling method: sendKeys
+[INFO ] 2023-12-21 16:55:15.689 [main] Log - Before calling WebElement method: sendKeys
+[INFO ] 2023-12-21 16:55:15.689 [main] Log - Before sending keys to element.
+[INFO ] 2023-12-21 16:55:15.719 [main] Log - After sending keys to element.
+[INFO ] 2023-12-21 16:55:15.720 [main] Log - After calling WebElement method: sendKeys
+[INFO ] 2023-12-21 16:55:15.720 [main] Log - After calling method: sendKeys
+[INFO ] 2023-12-21 16:55:15.720 [main] Log - Before calling method: findElement
+[INFO ] 2023-12-21 16:55:15.720 [main] Log - Before calling WebDriver method: findElement
+[INFO ] 2023-12-21 16:55:15.720 [main] Log - Before finding element by: By.cssSelector: [type='submit']
+[INFO ] 2023-12-21 16:55:15.739 [main] Log - After finding element by: By.cssSelector: [type='submit']
+[INFO ] 2023-12-21 16:55:15.739 [main] Log - After calling WebDriver method: findElement
+[INFO ] 2023-12-21 16:55:15.739 [main] Log - After calling method: findElement
+[INFO ] 2023-12-21 16:55:15.739 [main] Log - Before calling method: click
+[INFO ] 2023-12-21 16:55:15.739 [main] Log - Before calling WebElement method: click
+[INFO ] 2023-12-21 16:55:15.739 [main] Log - Before clicking on element.
+[INFO ] 2023-12-21 16:55:15.770 [main] Log - After clicking on element.
+[INFO ] 2023-12-21 16:55:15.771 [main] Log - After calling WebElement method: click
+[INFO ] 2023-12-21 16:55:15.771 [main] Log - After calling method: click
+[INFO ] 2023-12-21 16:55:15.776 [main] Log - Before calling method: getCurrentUrl
+[INFO ] 2023-12-21 16:55:15.777 [main] Log - Before calling WebDriver method: getCurrentUrl
+[INFO ] 2023-12-21 16:55:15.777 [main] Log - Before getting current URL.
+[INFO ] 2023-12-21 16:55:15.783 [main] Log - After calling WebDriver method: getCurrentUrl
+[INFO ] 2023-12-21 16:55:15.783 [main] Log - After calling method: getCurrentUrl
+[INFO ] 2023-12-21 16:55:15.785 [main] Log - Before calling method: getCurrentUrl
+[INFO ] 2023-12-21 16:55:15.785 [main] Log - Before calling WebDriver method: getCurrentUrl
+[INFO ] 2023-12-21 16:55:15.785 [main] Log - Before getting current URL.
+[INFO ] 2023-12-21 16:55:15.790 [main] Log - After calling WebDriver method: getCurrentUrl
+[INFO ] 2023-12-21 16:55:15.790 [main] Log - After calling method: getCurrentUrl
+[INFO ] 2023-12-21 16:55:15.790 [main] Log - Before calling method: get
+[INFO ] 2023-12-21 16:55:15.790 [main] Log - Before calling WebDriver method: get
+[INFO ] 2023-12-21 16:55:15.791 [main] Log - Before navigating to URL: https://qa.koel.app/#!/home
+[INFO ] 2023-12-21 16:55:15.810 [main] Log - After navigating to URL: https://qa.koel.app/#!/home
+[INFO ] 2023-12-21 16:55:15.811 [main] Log - After calling WebDriver method: get
+[INFO ] 2023-12-21 16:55:15.811 [main] Log - After calling method: get
+[INFO ] 2023-12-21 16:55:15.815 [main] Log - Before calling method: getCurrentUrl
+[INFO ] 2023-12-21 16:55:15.816 [main] Log - Before calling WebDriver method: getCurrentUrl
+[INFO ] 2023-12-21 16:55:15.816 [main] Log - Before getting current URL.
+[INFO ] 2023-12-21 16:55:15.824 [main] Log - After calling WebDriver method: getCurrentUrl
+[INFO ] 2023-12-21 16:55:15.824 [main] Log - After calling method: getCurrentUrl
+[INFO ] 2023-12-21 16:55:15.828 [main] Log - Before calling method: perform
+[INFO ] 2023-12-21 16:55:15.829 [main] Log - Before calling WebDriver method: perform
+[INFO ] 2023-12-21 16:55:15.829 [main] Log - Before performing actions.
+[INFO ] 2023-12-21 16:55:15.830 [Forwarding actions on session bc8645f0f1a6e8667d66201b75f19e64 to remote] Log - Before calling method: findElement
+[INFO ] 2023-12-21 16:55:15.830 [Forwarding actions on session bc8645f0f1a6e8667d66201b75f19e64 to remote] Log - Before calling WebDriver method: findElement
+[INFO ] 2023-12-21 16:55:15.831 [Forwarding actions on session bc8645f0f1a6e8667d66201b75f19e64 to remote] Log - Before finding element by: By.xpath: //section[@class="recent"]//h1
+[INFO ] 2023-12-21 16:55:16.064 [Forwarding actions on session bc8645f0f1a6e8667d66201b75f19e64 to remote] Log - After finding element by: By.xpath: //section[@class="recent"]//h1
+[INFO ] 2023-12-21 16:55:16.064 [Forwarding actions on session bc8645f0f1a6e8667d66201b75f19e64 to remote] Log - After calling WebDriver method: findElement
+[INFO ] 2023-12-21 16:55:16.064 [Forwarding actions on session bc8645f0f1a6e8667d66201b75f19e64 to remote] Log - After calling method: findElement
+[INFO ] 2023-12-21 16:55:16.181 [main] Log - After performing actions.
+[INFO ] 2023-12-21 16:55:16.181 [main] Log - After calling WebDriver method: perform
+[INFO ] 2023-12-21 16:55:16.181 [main] Log - After calling method: perform
+[INFO ] 2023-12-21 16:55:16.182 [main] Log - Before calling method: findElement
+[INFO ] 2023-12-21 16:55:16.182 [main] Log - Before calling WebDriver method: findElement
+[INFO ] 2023-12-21 16:55:16.182 [main] Log - Before finding element by: By.xpath: //section[@class="recent"]//h1/button
+[INFO ] 2023-12-21 16:55:16.206 [main] Log - After finding element by: By.xpath: //section[@class="recent"]//h1/button
+[INFO ] 2023-12-21 16:55:16.206 [main] Log - After calling WebDriver method: findElement
+[INFO ] 2023-12-21 16:55:16.206 [main] Log - After calling method: findElement
+[INFO ] 2023-12-21 16:55:16.206 [main] Log - Before calling method: isDisplayed
+[INFO ] 2023-12-21 16:55:16.206 [main] Log - Before calling WebElement method: isDisplayed
+[INFO ] 2023-12-21 16:55:16.238 [main] Log - After calling WebElement method: isDisplayed
+[INFO ] 2023-12-21 16:55:16.238 [main] Log - After calling method: isDisplayed
+[INFO ] 2023-12-21 16:55:16.238 [main] Log - Before calling method: isEnabled
+[INFO ] 2023-12-21 16:55:16.238 [main] Log - Before calling WebElement method: isEnabled
+[INFO ] 2023-12-21 16:55:16.238 [main] Log - Before checking if element is enabled.
+[INFO ] 2023-12-21 16:55:16.273 [main] Log - After checking if element is enabled: true
+[INFO ] 2023-12-21 16:55:16.273 [main] Log - After calling WebElement method: isEnabled
+[INFO ] 2023-12-21 16:55:16.273 [main] Log - After calling method: isEnabled
+[INFO ] 2023-12-21 16:55:16.273 [main] Log - Before calling method: click
+[INFO ] 2023-12-21 16:55:16.273 [main] Log - Before calling WebElement method: click
+[INFO ] 2023-12-21 16:55:16.273 [main] Log - Before clicking on element.
+[INFO ] 2023-12-21 16:55:16.440 [main] Log - After clicking on element.
+[INFO ] 2023-12-21 16:55:16.440 [main] Log - After calling WebElement method: click
+[INFO ] 2023-12-21 16:55:16.440 [main] Log - After calling method: click
+[INFO ] 2023-12-21 16:55:16.442 [main] Log - Before calling method: getCurrentUrl
+[INFO ] 2023-12-21 16:55:16.442 [main] Log - Before calling WebDriver method: getCurrentUrl
+[INFO ] 2023-12-21 16:55:16.442 [main] Log - Before getting current URL.
+[INFO ] 2023-12-21 16:55:16.451 [main] Log - After calling WebDriver method: getCurrentUrl
+[INFO ] 2023-12-21 16:55:16.451 [main] Log - After calling method: getCurrentUrl

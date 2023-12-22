@@ -8,6 +8,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
@@ -15,6 +16,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.events.EventFiringDecorator;
+import util.listeners.TestListener;
 
 import java.net.MalformedURLException;
 import java.net.URI;
@@ -80,10 +83,18 @@ public class BaseDefinitions {
             case "cloud":
                 return lambdaTest();
             default:
+//                WebDriverManager.chromedriver().setup();
+//                ChromeOptions options = new ChromeOptions();
+//                options.addArguments("--remote-allow-origins=*", "--disable-notifications", "--start-maximized", "--incognito");
+//                return driver = new ChromeDriver(options);
                 WebDriverManager.chromedriver().setup();
+                ChromeDriverService service = new ChromeDriverService.Builder().usingAnyFreePort().build();
                 ChromeOptions options = new ChromeOptions();
                 options.addArguments("--remote-allow-origins=*", "--disable-notifications", "--start-maximized", "--incognito");
-                return driver = new ChromeDriver(options);
+                TestListener eventListener = new TestListener();
+                driver = new ChromeDriver(service, options);
+                EventFiringDecorator<WebDriver> decorator = new EventFiringDecorator<>(eventListener);
+                return decorator.decorate(driver);
         }
     }
     public static WebDriver lambdaTest() throws MalformedURLException {

@@ -28,19 +28,17 @@ import java.net.MalformedURLException;
             plugin = {
                     "pretty",
                     "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
-},
-        dryRun = true
+                },
+            dryRun = true
     )
     public class CucumberRunner extends AbstractTestNGCucumberTests {
         private TestNGCucumberRunner testNGCucumberRunner;
-
 
         @BeforeClass(alwaysRun = true)
         public void setupCucumber(){
             testNGCucumberRunner =  new TestNGCucumberRunner(this.getClass());
         }
 
-//        feature file will provide the data
         @DataProvider
         public Object[][] features() {
             return testNGCucumberRunner.provideScenarios();
