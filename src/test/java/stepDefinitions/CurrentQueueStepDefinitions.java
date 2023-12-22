@@ -1,4 +1,6 @@
 package stepDefinitions;
 
-public class CurrentQueueStepDefinitions {
+import base.BaseDefinitions;
+
+public class CurrentQueueStepDefinitions extends BaseDefinitions {
 }
