@@ -15,9 +15,8 @@ import pages.HomePage;
 import pages.LoginPage;
 import pages.ProfilePage;
 import pages.RecentlyPlayedPage;
-import static base.BaseDefinitions.*;
 
-public class HomePageStepDefinitions {
+public class HomePageStepDefinitions extends BaseDefinitions {
      LoginPage loginPage;
      HomePage homePage;
      ProfilePage profilePage;
