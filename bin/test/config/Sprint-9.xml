@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Sprint-9" parallel="methods" thread-count="1">
+    <listeners>
+        <listener class-name="util.listeners.TestListener"/>
+        <listener class-name="util.listeners.AnnotationTransformer"/>
+    </listeners>
+    <test name="Sprint-9" >
+        <parameter name="baseURL" value="https://qa.koel.app/"/>
+        <classes>
+            <class name="testcases.InfoPanelTests"/>
+            <class name="testcases.LogoutTests"/>
+            <class name="LoginTests"/>
+            <class name="testcases.ProfileTests"/>
+            <class name="testcases.HomeTests"/>
+            <class name="testcases.CurrentQueueTests"/>
+            <class name="testcases.AlbumsTests"/>
+            <class name="testcases.AllSongsTests"/>
+        </classes>
+    </test>
+</suite>
