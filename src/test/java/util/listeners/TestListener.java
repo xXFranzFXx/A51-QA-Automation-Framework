@@ -20,8 +20,8 @@ import java.util.Set;
 
 public class TestListener  implements ITestListener, WebDriverListener {
     //Extent Report Declarations
-    private static ExtentReports extent = ExtentManager.createInstance();
-    private static ThreadLocal<ExtentTest> test = new ThreadLocal<>();
+    ExtentReports extent = ExtentManager.getInstance();
+    ThreadLocal<ExtentTest> test = new ThreadLocal<>();
     @Override
     public synchronized void onStart(ITestContext context) {
        Log.info("Extent Reports for Koel Automation Test Suite started!");

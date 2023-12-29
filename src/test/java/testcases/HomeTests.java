@@ -124,11 +124,11 @@ public class HomeTests extends BaseTest {
         Assert.assertTrue(homePage.notificationMsg());
     }
 //    @AfterClass
-//    public void deleteAllPlaylists() {
-//        loginPage = new LoginPage(getDriver());
-//        loginPage.loginValidCredentials();
-//        homePage = new HomePage(getDriver());
-//        homePage.deleteAllPlaylists();
-//    }
+    public void deleteAllPlaylists() {
+        loginPage = new LoginPage(getDriver());
+        loginPage.loginValidCredentials();
+        homePage = new HomePage(getDriver());
+        homePage.deleteAllPlaylists();
+    }
 
 }

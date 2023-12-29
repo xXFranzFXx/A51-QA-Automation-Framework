@@ -63,10 +63,10 @@ public class LogoutTests extends BaseTest {
 //    @Test(dependsOnMethods = { "useLogoutButton" }, description = "Update username and password then logout and verify navigation back to login screen")
     public void logoutAfterProfileUpdate() {
         String randomNm = generateRandomName();
-        String password = "te$t$tudent1";
+        String password = System.getProperty("koelPassword");
         String profileName = profilePage.getProfileName();
         profilePage
-                .provideNewPassword("te$t$tudent1")
+                .provideNewPassword(System.getProperty("koelPassword"))
                 .provideRandomProfileName(randomNm)
                 .provideCurrentPassword(password);
 

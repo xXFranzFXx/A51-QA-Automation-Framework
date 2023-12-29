@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.Reporter;
 
+import java.time.Duration;
 import java.util.List;
 
 
@@ -187,6 +188,8 @@ public class HomePage extends BasePage {
     private final By selectNewSmartList = By.cssSelector("li[data-testid=\"playlist-context-menu-create-smart\"]");
     private final String strUrl = driver.getCurrentUrl();
     private final By infoBtnLocator = RelativeLocator.with(By.tagName("button")).toLeftOf(By.id("equalizer"));
+    @FindBy(xpath="//section[@id='playlists']/ul/li[3]/nav/ul/li[2]")
+    private WebElement playlistDelete;
     @FindBy(xpath = "//div[@class='alertify']//nav/button[@class='ok']")
     private WebElement ok;
     /**
@@ -197,9 +200,10 @@ public class HomePage extends BasePage {
     }
 
     public HomePage contextClickFirstPlDelete() {
-       By delete = By.xpath("//section[@id='playlists']/ul/li[3]/nav/ul/li[2]");
+
        contextClick(playlistsMenuFirstPl);
-       click(delete);
+       actions.moveToElement(playlistDelete).click().perform();
+//       findElement(playlistDelete).click();
        return this;
     }
     public HomePage deleteAllPlaylists() {
@@ -207,13 +211,14 @@ public class HomePage extends BasePage {
         if(list.isEmpty()) return this;
         for (WebElement l: list) {
             l.click();
-            Reporter.log("playlists song total " + playlistSongs.size(), true);
-            if(!playlistSongs.isEmpty()){
+//            Reporter.log("playlists song total " + playlistSongs.size(), true);
+            if(playlistSongs.isEmpty()){
                 contextClickFirstPlDelete();
-                wait.until(ExpectedConditions.elementToBeClickable(ok)).click();
             } else {
                 contextClickFirstPlDelete();
+                wait.until(ExpectedConditions.elementToBeClickable(ok)).click();
             }
+
         }
         return this;
     }

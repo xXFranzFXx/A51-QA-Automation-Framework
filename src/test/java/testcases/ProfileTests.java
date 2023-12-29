@@ -40,7 +40,7 @@ public class ProfileTests extends BaseTest {
         String profileName = profilePage.getProfileName();
         try {
          profilePage
-                    .provideCurrentPassword("te$t$tudent1")
+                    .provideCurrentPassword(System.getProperty("koelPassword"))
                     .provideRandomProfileName(randomNm)
                     .clickSave();
             Assert.assertEquals(profileName, randomNm);
