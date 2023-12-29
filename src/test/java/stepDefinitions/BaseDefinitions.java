@@ -17,6 +17,8 @@ import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URL;
 import java.time.Duration;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class BaseDefinitions {
     public static WebDriver driver;
@@ -100,6 +102,19 @@ public class BaseDefinitions {
 
     public static void closeBrowser(){
         driver.quit();
+    }
+    public static String checkString(String string) {
+        Pattern userPattern = Pattern.compile("^&&");
+        Matcher userMatcher = userPattern.matcher(string);
+        Pattern passwdPattern = Pattern.compile("^!!");
+        Matcher passwdMatcher = passwdPattern.matcher(string);
+        if(userMatcher.find()){
+            return System.getProperty("koelNewUser");
+        } else if (passwdMatcher.find()) {
+            return System.getProperty("koelPassword");
+        } else {
+            return string;
+        }
     }
 
 }

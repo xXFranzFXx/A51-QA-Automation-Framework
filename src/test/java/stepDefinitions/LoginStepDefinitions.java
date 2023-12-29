@@ -89,17 +89,5 @@ public class LoginStepDefinitions  extends BaseDefinitions {
         loginPage = new LoginPage(getDriver());
         Assert.assertTrue(loginPage.getRegistrationLink());
     }
-    public String checkString(String string) {
-        Pattern userPattern = Pattern.compile("^&&");
-        Matcher userMatcher = userPattern.matcher(string);
-        Pattern passwdPattern = Pattern.compile("^!!");
-        Matcher passwdMatcher = passwdPattern.matcher(string);
-        if(userMatcher.find()){
-            return System.getProperty("koelNewUser");
-        } else if (passwdMatcher.find()) {
-            return System.getProperty("koelPassword");
-        } else {
-            return string;
-        }
-    }
+
 }
