@@ -40,14 +40,14 @@ public class LoginPage extends BasePage{
        return this;
     }
     public HomePage loginValidCredentials() {
-        provideEmail("fake@fakeaccount.com");
-        providePassword("te$t$tudent1");
+        provideEmail(System.getProperty("koelUser"));
+        providePassword(System.getProperty("koelPassword"));
         clickSubmitBtn();
         return new HomePage(driver);
     }
     public void loginAsNewUser() {
-        provideEmail("franz.fernando+1@testpro.io");
-        providePassword("te$t$tudent1");
+        provideEmail(System.getProperty("koelNewUser"));
+        providePassword(System.getProperty("koelPassword"));
         clickSubmitBtn();
     }
 

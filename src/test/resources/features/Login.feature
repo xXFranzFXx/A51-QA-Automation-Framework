@@ -12,7 +12,7 @@ Feature: Login feature
     Then User should navigate to home page
   Examples:
     | email | password |
-    | franz.fernando+1@testpro.io | te$t$tudent1 |
+    | &&newUser | !!newUserPassword |
 
   @regression
   Scenario Outline: Log in with invalid email input and/or invalid password input
@@ -47,7 +47,7 @@ Feature: Login feature
     Then User should still be on Login page
     Examples:
     | email | newEmail | password| newPasswd |
-    | franz.fernando+1@testpro.io | updated.email@testpro.io | te$t$tudent1 | te$t$tudent2 |
+    | &&newUser | updated.email@testpro.io | !!newUserPassword | te$t$tudent2 |
 
   @resetProfile @ignore
   Scenario Outline: Reset profile back to original email
@@ -64,6 +64,6 @@ Feature: Login feature
     Then Success message is displayed
     Examples:
       | oldEmail | newEmail | password| oldPasswd |
-      | franz.fernando+1@testpro.io | updated.email@testpro.io | te$t$tudent2 | te$t$tudent1 |
+      | &&newUser | updated.email@testpro.io | te$t$tudent2 | !!newUserPassword |
 
 

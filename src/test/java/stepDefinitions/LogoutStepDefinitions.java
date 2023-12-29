@@ -73,7 +73,7 @@ public class LogoutStepDefinitions extends BaseDefinitions{
     @When("User enters current password")
     public void userEntersCurrentPassword() {
         profilePage = new ProfilePage(getDriver());
-        profilePage.provideCurrentPassword("te$t$tudent1");
+        profilePage.provideCurrentPassword(System.getProperty("password"));
     }
 
     @And("User enters updated name")

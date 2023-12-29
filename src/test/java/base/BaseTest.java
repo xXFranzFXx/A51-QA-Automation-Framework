@@ -1,6 +1,7 @@
 package base;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.github.cdimascio.dotenv.Dotenv;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -89,8 +90,8 @@ public class BaseTest{
         }
     }
     public static WebDriver lambdaTest() throws MalformedURLException {
-        String username = "linkstasite.cs5";
-        String authKey = "5DmWRPa0tmr9lZ0UlXDXRVGbqHEClVdDGnSsHrEMvx3jskb5Cu";
+        String username = System.getProperty("lambdaTestUser");
+        String authKey = System.getProperty("lambdaTestKey");
         String hub = "@hub.lambdatest.com/wd/hub";
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("platform", "windows 10");
@@ -112,8 +113,11 @@ public class BaseTest{
                 {"",""}
         };
     }
-
-
+    @BeforeClass
+    public void loadEnv() {
+        Dotenv dotenv = Dotenv.configure().directory("./src/test/resources").load();
+        dotenv.entries().forEach(e -> System.setProperty(e.getKey(), e.getValue()));
+    }
     public static void closeBrowser() {
         threadDriver.get().close();
         threadDriver.remove();

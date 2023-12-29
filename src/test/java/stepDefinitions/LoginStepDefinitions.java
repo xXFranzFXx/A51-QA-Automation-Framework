@@ -15,11 +15,14 @@ import pages.ProfilePage;
 
 import java.net.MalformedURLException;
 import java.util.Set;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 
 public class LoginStepDefinitions  extends BaseDefinitions {
     LoginPage loginPage;
     ProfilePage profilePage;
+
     @Before
     public void setup() throws MalformedURLException {
         setupBrowser();
@@ -36,13 +39,13 @@ public class LoginStepDefinitions  extends BaseDefinitions {
     @When("User enters email {string}")
     public void userEntersEmail(String email) {
         loginPage = new LoginPage(getDriver());
-        loginPage.enterEmail(email);
+        loginPage.enterEmail(checkString(email));
     }
 
     @And("User enters password {string}")
     public void userEntersPassword(String password) {
         loginPage = new LoginPage(getDriver());
-        loginPage.providePassword(password);
+        loginPage.providePassword(checkString(password));
     }
 
     @And("User clicks submit")
@@ -66,24 +69,37 @@ public class LoginStepDefinitions  extends BaseDefinitions {
     @When("User provides current password {string}")
     public void userProvidesCurrentPassword(String password) {
         profilePage = new ProfilePage(getDriver());
-        profilePage.provideCurrentPassword(password);
+        profilePage.provideCurrentPassword(checkString(password));
     }
 
     @And("User provides new email address {string}")
     public void userProvidesNewEmailAddress(String newEmail) {
         profilePage = new ProfilePage(getDriver());
-        profilePage.provideNewEmail(newEmail);
+        profilePage.provideNewEmail(checkString(newEmail));
     }
 
     @And("User provides new password {string}")
     public void userProvidesNewPassword(String newPasswd) {
         profilePage = new ProfilePage(getDriver());
-        profilePage.provideNewPassword(newPasswd);
+        profilePage.provideNewPassword(checkString(newPasswd));
     }
 
     @Given("User is on login page")
     public void userIsOnLoginPage() {
         loginPage = new LoginPage(getDriver());
         Assert.assertTrue(loginPage.getRegistrationLink());
+    }
+    public String checkString(String string) {
+        Pattern userPattern = Pattern.compile("^&&");
+        Matcher userMatcher = userPattern.matcher(string);
+        Pattern passwdPattern = Pattern.compile("^!!");
+        Matcher passwdMatcher = passwdPattern.matcher(string);
+        if(userMatcher.find()){
+            return System.getProperty("koelNewUser");
+        } else if (passwdMatcher.find()) {
+            return System.getProperty("koelPassword");
+        } else {
+            return string;
+        }
     }
 }

@@ -1,0 +1,58 @@
+[INFO ] 2023-12-19 08:40:27.108 [TestNG-test=Sprint-9-1] Log - playFirstAlbumSongsstarted!
+[INFO ] 2023-12-19 08:40:27.511 [TestNG-test=Sprint-9-1] Log - playFirstAlbumSongspassed!
+[INFO ] 2023-12-19 08:42:02.187 [TestNG-test=Sprint-9-1] Log - playFirstAlbumSongs started!
+[INFO ] 2023-12-19 08:42:02.538 [TestNG-test=Sprint-9-1] Log - playFirstAlbumSongs passed!
+[INFO ] 2023-12-19 08:44:47.171 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-19 08:44:47.176 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-19 08:44:47.178 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-19 08:44:50.968 [TestNG-test=Sprint-9-1] Log - playFirstAlbumSongs started!
+[INFO ] 2023-12-19 08:44:51.355 [TestNG-test=Sprint-9-1] Log - playFirstAlbumSongs passed!
+[INFO ] 2023-12-19 08:44:51.486 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-28 21:33:45.005 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-28 21:33:45.008 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-28 21:33:45.144 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-28 21:33:45.184 [TestNG-test=Sprint-9-1] Log - useLogoutButton started!
+[WARN ] 2023-12-28 21:33:45.186 [TestNG-test=Sprint-9-1] Log - useLogoutButton skipped
+[INFO ] 2023-12-28 21:33:45.191 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-28 21:35:06.913 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-28 21:35:06.919 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-28 21:35:07.061 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-28 21:35:12.340 [TestNG-test=Sprint-9-1] Log - useLogoutButton started!
+[INFO ] 2023-12-28 21:35:12.878 [TestNG-test=Sprint-9-1] Log - useLogoutButton passed!
+[INFO ] 2023-12-28 21:35:13.008 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-28 21:36:45.585 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-28 21:36:45.589 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-28 21:36:45.723 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-28 21:36:49.860 [TestNG-test=Sprint-9-1] Log - useLogoutButton started!
+[INFO ] 2023-12-28 21:36:50.287 [TestNG-test=Sprint-9-1] Log - useLogoutButton passed!
+[INFO ] 2023-12-28 21:36:50.433 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-28 21:40:19.639 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-28 21:40:19.643 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-28 21:40:19.778 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-28 21:40:23.987 [TestNG-test=Sprint-9-1] Log - useLogoutButton started!
+[INFO ] 2023-12-28 21:40:24.429 [TestNG-test=Sprint-9-1] Log - useLogoutButton passed!
+[INFO ] 2023-12-28 21:40:24.547 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-28 21:41:36.818 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-28 21:41:36.821 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-28 21:41:36.954 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-28 21:41:41.073 [TestNG-test=Sprint-9-1] Log - useLogoutButton started!
+[INFO ] 2023-12-28 21:41:41.569 [TestNG-test=Sprint-9-1] Log - useLogoutButton passed!
+[INFO ] 2023-12-28 21:41:41.719 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-28 21:42:31.408 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-28 21:42:31.411 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-28 21:42:31.548 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-28 21:42:35.751 [TestNG-test=Sprint-9-1] Log - useLogoutButton started!
+[INFO ] 2023-12-28 21:42:36.160 [TestNG-test=Sprint-9-1] Log - useLogoutButton passed!
+[INFO ] 2023-12-28 21:42:36.292 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-28 21:43:47.823 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-28 21:43:47.828 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-28 21:43:47.961 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-28 21:43:52.274 [TestNG-test=Sprint-9-1] Log - useLogoutButton started!
+[INFO ] 2023-12-28 21:43:52.709 [TestNG-test=Sprint-9-1] Log - useLogoutButton passed!
+[INFO ] 2023-12-28 21:43:52.828 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-28 21:46:28.740 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-28 21:46:28.744 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-28 21:46:28.877 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-28 21:46:33.187 [TestNG-test=Sprint-9-1] Log - useLogoutButton started!
+[INFO ] 2023-12-28 21:46:33.613 [TestNG-test=Sprint-9-1] Log - useLogoutButton passed!
+[INFO ] 2023-12-28 21:46:33.738 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!

@@ -1,17 +1,14 @@
 package testcases;
 
 import base.BaseTest;
-import com.aventstack.extentreports.ExtentTest;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.*;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.ProfilePage;
-import util.extentReports.ExtentManager;
-import static util.extentReports.ExtentTestManager.startTest;
 
-import java.lang.reflect.Method;
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.util.UUID;
 
@@ -39,7 +36,7 @@ public class LogoutTests extends BaseTest {
     @BeforeMethod
     @Parameters({"baseURL"})
 
-    public void setup(String baseURL) throws MalformedURLException {
+    public void setup(String baseURL) throws MalformedURLException, IOException {
 
         setupBrowser(baseURL);
         homePage = new HomePage(getDriver());
