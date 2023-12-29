@@ -23,9 +23,10 @@ import java.net.MalformedURLException;
  * 7. User should not be able to log in with empty 'Email Address' and 'Password fields'
  */
 public class LoginTests extends BaseTest {
-    private final String registerEmail = "franz.fernando+1@testpro.io";
+    private final String registerEmail = System.getProperty("koelNewUser");
+    private final String testEmail = System.getProperty("koelUser");
     private final String updatedEmail = "updated.email@testpro.io";
-    private final String defaultPassword = "te$t$tudent1";
+    private final String defaultPassword = System.getProperty("koelPassword");
     private final String updatedPassword = "te$t$tudent2";
 
     LoginPage loginPage;
@@ -107,15 +108,15 @@ public class LoginTests extends BaseTest {
 
     @Test(description = "Log in success test", groups = { "Login" })
     public void loginSuccessTest() {
-        loginPage.provideEmail("fake@fakeaccount.com")
-                .providePassword("te$t$tudent1")
+        loginPage.provideEmail(testEmail)
+                .providePassword(defaultPassword)
                 .clickSubmitBtn();
         Assert.assertTrue(homePage.getUserAvatar());
     }
 
     @Test(description = "Log in with incorrect password", groups = { "Login" })
     public void loginWrongPasswordTest() {
-        loginPage.provideEmail("fake@fakeaccount.com")
+        loginPage.provideEmail(testEmail)
                 .providePassword("wrongPassword")
                 .clickSubmitBtn();
         Assert.assertTrue(loginPage.getRegistrationLink());
@@ -124,14 +125,14 @@ public class LoginTests extends BaseTest {
     @Test(description = "Log in with incorrect email address", groups = { "Login" })
     public void loginWrongEmailTest() {
         loginPage.provideEmail("wrong@wrongmail")
-                .providePassword("te$t$tudent1")
+                .providePassword(defaultPassword)
                 .clickSubmitBtn();
         Assert.assertTrue(loginPage.getRegistrationLink());
     }
 
     @Test(description = "Log in with blank password", groups = { "Login" })
     public void loginEmptyPasswordTest() {
-        loginPage.provideEmail("fake@fakeaccount.com")
+        loginPage.provideEmail(testEmail)
                 .providePassword("")
                 .clickSubmitBtn();
         Assert.assertTrue(loginPage.getRegistrationLink());
