@@ -34,13 +34,13 @@ public class LoginStepDefinitions  extends BaseDefinitions {
     @When("User enters email {string}")
     public void userEntersEmail(String email) {
         loginPage = new LoginPage(getDriver());
-        loginPage.enterEmail(email);
+        loginPage.enterEmail(checkString(email));
     }
 
     @And("User enters password {string}")
     public void userEntersPassword(String password) {
         loginPage = new LoginPage(getDriver());
-        loginPage.providePassword(password);
+        loginPage.providePassword(checkString(password));
     }
 
     @And("User clicks submit")
@@ -64,19 +64,19 @@ public class LoginStepDefinitions  extends BaseDefinitions {
     @When("User provides current password {string}")
     public void userProvidesCurrentPassword(String password) {
         profilePage = new ProfilePage(getDriver());
-        profilePage.provideCurrentPassword(password);
+        profilePage.provideCurrentPassword(checkString(password));
     }
 
     @And("User provides new email address {string}")
     public void userProvidesNewEmailAddress(String newEmail) {
         profilePage = new ProfilePage(getDriver());
-        profilePage.provideNewEmail(newEmail);
+        profilePage.provideNewEmail(checkString(newEmail));
     }
 
     @And("User provides new password {string}")
     public void userProvidesNewPassword(String newPasswd) {
         profilePage = new ProfilePage(getDriver());
-        profilePage.provideNewPassword(newPasswd);
+        profilePage.provideNewPassword(checkString(newPasswd));
     }
 
     @Given("User is on login page")

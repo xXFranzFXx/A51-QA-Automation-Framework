@@ -24,6 +24,8 @@ import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URL;
 import java.time.Duration;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class BaseDefinitions {
     public static WebDriver driver;
@@ -99,8 +101,8 @@ public class BaseDefinitions {
         }
     }
     public static WebDriver lambdaTest() throws MalformedURLException {
-        String username = "linkstasite.cs5";
-        String authKey = "5DmWRPa0tmr9lZ0UlXDXRVGbqHEClVdDGnSsHrEMvx3jskb5Cu";
+        String username = System.getProperty("lambdaTestUser");
+        String authKey = System.getProperty("lambdaTestKey");
         String hub = "@hub.lambdatest.com/wd/hub";
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("platform", "windows 10");
@@ -114,6 +116,19 @@ public class BaseDefinitions {
     }
     public static void closeBrowser(){
             driver.quit();
+    }
+    public static String checkString(String string) {
+        Pattern userPattern = Pattern.compile("^&&");
+        Matcher userMatcher = userPattern.matcher(string);
+        Pattern passwdPattern = Pattern.compile("^!!");
+        Matcher passwdMatcher = passwdPattern.matcher(string);
+        if(userMatcher.find()){
+            return System.getProperty("koelNewUser");
+        } else if (passwdMatcher.find()) {
+            return System.getProperty("koelPassword");
+        } else {
+            return string;
+        }
     }
 
 }
