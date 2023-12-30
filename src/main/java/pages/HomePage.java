@@ -10,6 +10,7 @@ import org.testng.Reporter;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 
 public class HomePage extends BasePage {
@@ -101,7 +102,8 @@ public class HomePage extends BasePage {
 
     @FindBy(css = "#extra.text-secondary.showing")
     private WebElement infoPanelShowing;
-
+    @FindBy(xpath = "//section[@id='playlists']/ul/li")
+    private List<WebElement> playlistsSection;
     @FindAll({
             @FindBy(xpath = "//section[@id='playlists']/ul/li[@class='playlist playlist smart']/a"),
             @FindBy(xpath = "//section[@id='playlists']/ul/li[@class='playlist playlist']/a")
@@ -192,8 +194,8 @@ public class HomePage extends BasePage {
     private By playlistDelete = By.xpath("//section[@id='playlists']/ul/li[3]/nav/ul/li[2]");
     @FindBy(xpath = "//section[@id='playlistWrapper']//i[@class='fa fa-file-o']")
     private WebElement emptyPlaylistIcon;
-    @FindBy(xpath = "//section[@id='playlistWrapper']//button[@class='del btn-delete-playlist']/i")
-    private WebElement playlstNotEmptyDelButton;
+    @FindBy(xpath = "//section[@id='playlistWrapper']//span[@class='btn-group']//button[@class='del btn-delete-playlist']/i")
+    private By playlstNotEmptyDelButton;
     @FindBy(xpath = "//div[@class='alertify']//nav/button[@class='ok']")
     private WebElement ok;
     /**
@@ -209,21 +211,31 @@ public class HomePage extends BasePage {
        click(playlistDelete);
        return this;
     }
-    public HomePage deleteAllPlaylists() {
-        if(allPlaylists.isEmpty()) return this;
-        playlistsMenuFirstPl.click();
-        for (WebElement l: allPlaylists) {
-            //section[@id='playlists']/ul/li[3]/a
-            if(emptyPlaylistIcon.isDisplayed()){
-                contextClickFirstPlDelete();
-            } else {
-                contextClickFirstPlDelete();
-//                actions.moveToElement(playlstNotEmptyDelButton).click().perform();
-                wait.until(ExpectedConditions.elementToBeClickable(ok)).click();
+    public void deleteAllPlaylists() {
+        if(playlistsEmpty()) {
+            Reporter.log("There are currently no playlists to delete", true);
+            return;
+        } else {
+            Reporter.log("Total Playlists: " + allPlaylists.size(), true);
+            for (WebElement l : allPlaylists) {
+                try {
+                    contextClickFirstPlDelete();
+                    Reporter.log("deleted playlist: " + l.getText(), true);
+                } catch (NoSuchElementException e) {
+                    Reporter.log("cannot delete playlist" + e, true);
+                }
+                try {
+                    if (!userAvatarIcon.isDisplayed())
+                        wait.until(ExpectedConditions.elementToBeClickable(ok)).click();
+                } catch (NoSuchElementException e) {
+                    Reporter.log("cannot delete playlist" + e, true);
+                }
             }
-
         }
-        return this;
+        Reporter.log("Total Playlists remaining: " + allPlaylists.size(), true);
+    }
+    public boolean playlistsEmpty() {
+        return (playlistsSection.size() == 2);
     }
     public HomePage hoverAddToTHenSelectPlaylist() {
      actions.moveToElement(addToDropDown).perform();

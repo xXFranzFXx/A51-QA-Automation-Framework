@@ -208,3 +208,237 @@
 [INFO ] 2023-12-29 17:20:55.603 [TestNG-test=Sprint-9-1] Log - createPlaylist started!
 [INFO ] 2023-12-29 17:20:57.065 [TestNG-test=Sprint-9-1] Log - createPlaylist passed!
 [INFO ] 2023-12-29 17:20:57.194 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 12:51:45.608 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 12:51:45.612 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 12:51:45.745 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 12:51:51.364 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists started!
+[INFO ] 2023-12-30 12:52:02.639 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists passed!
+[INFO ] 2023-12-30 12:52:02.783 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 12:54:44.188 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 12:54:44.192 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 12:54:44.327 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 12:54:48.564 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists started!
+[FATAL] 2023-12-30 12:55:20.158 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 12:55:30.218 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[INFO ] 2023-12-30 12:57:06.637 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 12:57:06.641 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 12:57:06.778 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 12:57:10.584 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists started!
+[INFO ] 2023-12-30 12:57:15.403 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists passed!
+[INFO ] 2023-12-30 12:57:15.525 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 12:58:50.788 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 12:58:50.792 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 12:58:50.930 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 12:58:54.511 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists started!
+[FATAL] 2023-12-30 12:58:59.533 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 12:59:01.567 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 12:59:03.860 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 12:59:06.128 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 12:59:08.418 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 12:59:10.704 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 12:59:13.018 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[ERROR] 2023-12-30 12:59:13.022 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists failed!
+[INFO ] 2023-12-30 12:59:13.292 [TestNG-test=Sprint-9-1] Log - screen shot taken for failed test deleteAllPlaylists
+[INFO ] 2023-12-30 12:59:13.438 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 12:59:46.595 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 12:59:46.599 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 12:59:46.729 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 12:59:50.480 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists started!
+[FATAL] 2023-12-30 12:59:55.495 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 12:59:57.559 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 12:59:59.878 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:00:02.192 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:00:04.485 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:00:06.747 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:00:09.009 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[ERROR] 2023-12-30 13:00:09.012 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists failed!
+[INFO ] 2023-12-30 13:00:09.355 [TestNG-test=Sprint-9-1] Log - screen shot taken for failed test deleteAllPlaylists
+[INFO ] 2023-12-30 13:00:09.492 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 13:01:07.547 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 13:01:07.550 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 13:01:07.690 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 13:01:11.464 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists started!
+[FATAL] 2023-12-30 13:01:16.510 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:01:18.522 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:01:20.793 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:01:23.056 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:01:25.364 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:01:27.644 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:01:29.905 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[ERROR] 2023-12-30 13:01:29.908 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists failed!
+[INFO ] 2023-12-30 13:01:30.181 [TestNG-test=Sprint-9-1] Log - screen shot taken for failed test deleteAllPlaylists
+[INFO ] 2023-12-30 13:01:30.304 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 13:02:24.209 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 13:02:24.213 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 13:02:24.348 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 13:02:28.288 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists started!
+[FATAL] 2023-12-30 13:02:33.334 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[INFO ] 2023-12-30 13:02:55.051 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 13:02:55.055 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 13:02:55.199 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 13:02:59.182 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists started!
+[FATAL] 2023-12-30 13:03:04.183 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:03:06.234 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:03:08.515 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:03:10.789 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:03:13.102 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[INFO ] 2023-12-30 13:04:16.497 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 13:04:16.502 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 13:04:16.636 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 13:04:20.383 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists started!
+[FATAL] 2023-12-30 13:04:25.440 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:04:27.468 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:04:29.776 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:04:32.095 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:04:34.368 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:04:36.651 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:04:38.956 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[ERROR] 2023-12-30 13:04:38.959 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists failed!
+[INFO ] 2023-12-30 13:04:39.227 [TestNG-test=Sprint-9-1] Log - screen shot taken for failed test deleteAllPlaylists
+[INFO ] 2023-12-30 13:04:39.363 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 13:07:21.541 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 13:07:21.545 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 13:07:21.677 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 13:07:25.391 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists started!
+[FATAL] 2023-12-30 13:07:30.466 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:07:32.528 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:07:34.840 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:07:37.117 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[INFO ] 2023-12-30 13:09:30.822 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 13:09:30.826 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 13:09:30.962 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 13:09:34.562 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists started!
+[FATAL] 2023-12-30 13:09:39.542 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:09:41.579 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:09:43.839 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:09:46.157 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:09:48.449 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:09:50.720 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:09:53.015 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[ERROR] 2023-12-30 13:09:53.020 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists failed!
+[INFO ] 2023-12-30 13:09:53.302 [TestNG-test=Sprint-9-1] Log - screen shot taken for failed test deleteAllPlaylists
+[INFO ] 2023-12-30 13:09:53.421 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 13:12:36.538 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 13:12:36.542 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 13:12:36.674 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 13:12:40.686 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists started!
+[FATAL] 2023-12-30 13:12:45.822 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:12:47.828 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:12:50.097 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:12:52.362 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:12:54.675 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:12:56.946 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:12:59.254 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[ERROR] 2023-12-30 13:12:59.256 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists failed!
+[INFO ] 2023-12-30 13:13:00.164 [TestNG-test=Sprint-9-1] Log - screen shot taken for failed test deleteAllPlaylists
+[INFO ] 2023-12-30 13:13:00.748 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 13:13:35.640 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 13:13:35.643 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 13:13:35.780 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 13:13:39.739 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists started!
+[FATAL] 2023-12-30 13:13:44.809 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:13:46.875 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:13:49.150 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:13:51.467 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:13:53.742 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:13:56.021 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:13:58.322 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[ERROR] 2023-12-30 13:13:58.325 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists failed!
+[INFO ] 2023-12-30 13:13:58.580 [TestNG-test=Sprint-9-1] Log - screen shot taken for failed test deleteAllPlaylists
+[INFO ] 2023-12-30 13:13:58.741 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 13:17:21.103 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 13:17:21.107 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 13:17:21.232 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 13:17:25.352 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists started!
+[FATAL] 2023-12-30 13:17:30.929 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:17:32.994 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:17:35.301 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:17:37.614 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:17:39.886 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:17:42.158 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:17:44.428 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:17:46.439 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:17:48.485 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:17:50.768 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:17:53.035 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:17:55.344 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[INFO ] 2023-12-30 13:18:48.781 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 13:18:48.786 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 13:18:48.924 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 13:18:52.595 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists started!
+[FATAL] 2023-12-30 13:18:57.832 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:18:59.892 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:19:02.167 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:19:04.473 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:19:06.752 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:19:09.046 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:19:11.324 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[ERROR] 2023-12-30 13:19:11.328 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists failed!
+[INFO ] 2023-12-30 13:19:11.634 [TestNG-test=Sprint-9-1] Log - screen shot taken for failed test deleteAllPlaylists
+[INFO ] 2023-12-30 13:19:11.793 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 13:20:22.165 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 13:20:22.169 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 13:20:22.309 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 13:20:26.076 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists started!
+[FATAL] 2023-12-30 13:20:30.635 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:20:32.701 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:20:35.004 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:20:37.268 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:20:39.538 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:20:41.801 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:20:44.081 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[ERROR] 2023-12-30 13:20:44.087 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists failed!
+[INFO ] 2023-12-30 13:20:45.085 [TestNG-test=Sprint-9-1] Log - screen shot taken for failed test deleteAllPlaylists
+[INFO ] 2023-12-30 13:20:45.335 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 13:22:21.132 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 13:22:21.136 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 13:22:21.268 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 13:22:25.041 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists started!
+[FATAL] 2023-12-30 13:22:29.628 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:22:31.689 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:22:34.006 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:22:36.266 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:22:38.568 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:22:40.852 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[FATAL] 2023-12-30 13:22:43.156 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[ERROR] 2023-12-30 13:22:43.158 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists failed!
+[INFO ] 2023-12-30 13:22:43.448 [TestNG-test=Sprint-9-1] Log - screen shot taken for failed test deleteAllPlaylists
+[INFO ] 2023-12-30 13:22:43.571 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 13:25:18.032 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 13:25:18.036 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 13:25:18.171 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 13:25:21.942 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists started!
+[INFO ] 2023-12-30 13:25:25.166 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists passed!
+[INFO ] 2023-12-30 13:25:25.285 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 13:41:39.482 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 13:41:39.486 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 13:41:39.625 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 13:41:43.362 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists started!
+[INFO ] 2023-12-30 13:43:47.897 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists passed!
+[INFO ] 2023-12-30 13:43:48.090 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 13:45:30.877 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 13:45:30.881 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 13:45:31.017 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 13:45:34.694 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists started!
+[INFO ] 2023-12-30 13:46:16.286 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 13:46:16.289 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 13:46:16.422 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 13:46:19.984 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists started!
+[INFO ] 2023-12-30 13:48:39.604 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 13:48:39.608 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 13:48:39.739 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 13:48:43.535 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists started!
+[INFO ] 2023-12-30 13:49:25.944 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists passed!
+[INFO ] 2023-12-30 13:49:26.077 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 13:56:51.207 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 13:56:51.211 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 13:56:51.353 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 13:56:55.314 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists started!
+[INFO ] 2023-12-30 13:56:56.209 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists passed!
+[INFO ] 2023-12-30 13:56:56.337 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 13:59:08.386 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 13:59:08.390 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 13:59:08.529 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 13:59:12.320 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists started!
+[INFO ] 2023-12-30 13:59:13.226 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists passed!
+[INFO ] 2023-12-30 13:59:13.359 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!

@@ -42,7 +42,7 @@ public class HomeTests extends BaseTest {
         Assert.assertTrue(homePage.playlistAddedToMenu("playlist"));
 
     }
-    @Test(description = "Add a song to a playlist", priority = 1)//, dependsOnMethods = {"createPlaylist"})
+    @Test(description = "Add a song to a playlist", priority = 1, dependsOnMethods = {"createPlaylist"})
     public void addSongToPlaylist() {
         loginPage = new LoginPage(getDriver());
         loginPage.loginValidCredentials();
@@ -77,7 +77,6 @@ public class HomeTests extends BaseTest {
 
     }
     @Test
-
     public void checkRecentlyAdded() {
         loginPage = new LoginPage(getDriver());
         loginPage.loginValidCredentials();
@@ -118,17 +117,18 @@ public class HomeTests extends BaseTest {
     public void deletePlaylist() {
         loginPage = new LoginPage(getDriver());
         loginPage.loginValidCredentials();
-
         homePage = new HomePage(getDriver());
         homePage.contextClickFirstPlDelete();
         Assert.assertTrue(homePage.notificationMsg());
     }
 //    @AfterClass
+    @Test(dependsOnMethods = {"addSongToPlaylist"})
     public void deleteAllPlaylists() {
         loginPage = new LoginPage(getDriver());
         loginPage.loginValidCredentials();
         homePage = new HomePage(getDriver());
         homePage.deleteAllPlaylists();
+        Assert.assertTrue(homePage.playlistsEmpty());
     }
 
 }
