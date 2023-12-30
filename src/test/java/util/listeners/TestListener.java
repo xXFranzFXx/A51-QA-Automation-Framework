@@ -1,6 +1,8 @@
 package util.listeners;
 
 import com.aventstack.extentreports.*;
+import com.aventstack.extentreports.markuputils.ExtentColor;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Sequence;
 import org.openqa.selenium.support.events.WebDriverListener;
@@ -40,15 +42,14 @@ public class TestListener  implements ITestListener, WebDriverListener {
     @Override
     public synchronized void onTestSuccess(ITestResult result) {
         Log.info(result.getMethod().getMethodName() + " passed!");
-        test.get().pass("Test passed");
+        test.get().pass(MarkupHelper.createLabel("Test Passed", ExtentColor.GREEN));
     }
     @Override
     public synchronized void onTestFailure(ITestResult result) {
-//        Log.info(result.getMethod().getMethodName() + " failed!");
         Log.error(result.getMethod().getMethodName() + " failed!");
         try {
             TestUtil.takeScreenshotAtEndOfTest(result.getMethod().getMethodName());
-            test.get().log(Status.FAIL, "fail").addScreenCaptureFromPath("/reports/extent-reports/screenshots/" + result.getMethod().getMethodName() + ".png");
+            test.get().log(Status.FAIL, "fail ❌").addScreenCaptureFromPath("/reports/extent-reports/screenshots/" + result.getMethod().getMethodName() + ".png");
             Log.info("screen shot taken for failed test " + result.getMethod().getMethodName());
         } catch (IOException e) {
             e.printStackTrace();
@@ -58,7 +59,7 @@ public class TestListener  implements ITestListener, WebDriverListener {
     @Override
     public synchronized void onTestSkipped(ITestResult result) {
         Log.warn(result.getMethod().getMethodName() + " skipped");
-        test.get().skip(result.getThrowable());
+        test.get().skip(MarkupHelper.createLabel("Skipped", ExtentColor.AMBER));
     }
     @Override
     public void onTestFailedButWithinSuccessPercentage(ITestResult result) {

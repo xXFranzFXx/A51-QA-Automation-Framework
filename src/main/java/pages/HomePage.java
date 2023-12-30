@@ -215,8 +215,7 @@ public class HomePage extends BasePage {
         if(playlistsEmpty()) {
             Reporter.log("There are currently no playlists to delete", true);
             return;
-        } else {
-            Reporter.log("Total Playlists: " + allPlaylists.size(), true);
+        }
             for (WebElement l : allPlaylists) {
                 try {
                     contextClickFirstPlDelete();
@@ -231,7 +230,6 @@ public class HomePage extends BasePage {
                     Reporter.log("cannot delete playlist" + e, true);
                 }
             }
-        }
         Reporter.log("Total Playlists remaining: " + allPlaylists.size(), true);
     }
     public boolean playlistsEmpty() {

@@ -442,3 +442,93 @@
 [INFO ] 2023-12-30 13:59:12.320 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists started!
 [INFO ] 2023-12-30 13:59:13.226 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists passed!
 [INFO ] 2023-12-30 13:59:13.359 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 14:15:03.913 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 14:15:03.917 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 14:15:04.058 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 14:15:04.060 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 14:15:23.761 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 14:15:23.765 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 14:15:23.896 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 14:15:29.249 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists started!
+[INFO ] 2023-12-30 14:16:53.527 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists passed!
+[INFO ] 2023-12-30 14:16:53.660 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 14:18:58.106 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 14:18:58.110 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 14:18:58.245 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 14:19:02.529 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists started!
+[INFO ] 2023-12-30 14:19:03.430 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists passed!
+[INFO ] 2023-12-30 14:19:03.569 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 14:21:46.691 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 14:21:46.697 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 14:21:46.848 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 14:21:51.203 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists started!
+[INFO ] 2023-12-30 14:23:15.017 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists passed!
+[INFO ] 2023-12-30 14:23:15.130 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 14:28:34.256 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 14:28:34.260 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 14:28:34.399 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 14:28:38.539 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists started!
+[FATAL] 2023-12-30 14:29:11.131 [TestNG-test=Sprint-9-1] Log - Error while calling method: findElement - null
+[ERROR] 2023-12-30 14:29:11.135 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists failed!
+[INFO ] 2023-12-30 14:29:12.365 [TestNG-test=Sprint-9-1] Log - screen shot taken for failed test deleteAllPlaylists
+[INFO ] 2023-12-30 14:29:12.492 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 14:31:29.041 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 14:31:29.045 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 14:31:29.176 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 14:31:33.217 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists started!
+[INFO ] 2023-12-30 14:32:45.472 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists passed!
+[INFO ] 2023-12-30 14:32:45.592 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 14:35:08.900 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 14:35:08.903 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 14:35:09.037 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 14:35:13.077 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists started!
+[INFO ] 2023-12-30 14:36:37.926 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists passed!
+[INFO ] 2023-12-30 14:36:38.045 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 14:37:26.581 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 14:37:26.584 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 14:37:26.713 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 14:37:30.763 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists started!
+[INFO ] 2023-12-30 14:37:31.641 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists passed!
+[INFO ] 2023-12-30 14:37:31.775 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 14:45:34.504 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 14:45:34.508 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 14:45:34.647 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 14:45:38.709 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists started!
+[INFO ] 2023-12-30 14:45:39.576 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists passed!
+[INFO ] 2023-12-30 14:45:39.702 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 14:48:03.245 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 14:48:03.249 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 14:48:03.390 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 14:48:07.485 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists started!
+[INFO ] 2023-12-30 14:48:08.402 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists passed!
+[INFO ] 2023-12-30 14:48:08.528 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 14:52:37.767 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 14:52:37.770 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 14:52:37.904 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 14:52:42.133 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists started!
+[INFO ] 2023-12-30 14:52:43.014 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists passed!
+[INFO ] 2023-12-30 14:52:43.152 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 14:59:34.717 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 14:59:34.721 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 14:59:34.856 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 14:59:39.190 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists started!
+[INFO ] 2023-12-30 14:59:40.111 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists passed!
+[INFO ] 2023-12-30 14:59:40.240 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 15:00:27.065 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 15:00:27.069 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 15:00:27.208 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 15:00:31.178 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists started!
+[INFO ] 2023-12-30 15:00:32.115 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists passed!
+[INFO ] 2023-12-30 15:00:32.246 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 15:01:19.503 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 15:01:19.507 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 15:01:19.641 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 15:01:23.670 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists started!
+[INFO ] 2023-12-30 15:01:24.566 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists passed!
+[INFO ] 2023-12-30 15:01:24.696 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 15:02:40.181 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 15:02:40.184 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-30 15:02:40.335 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-30 15:02:44.616 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists started!
+[INFO ] 2023-12-30 15:02:45.551 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists passed!
+[INFO ] 2023-12-30 15:02:45.686 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!

@@ -122,7 +122,7 @@ public class HomeTests extends BaseTest {
         Assert.assertTrue(homePage.notificationMsg());
     }
 //    @AfterClass
-    @Test(dependsOnMethods = {"addSongToPlaylist"})
+    @Test//(dependsOnMethods = {"addSongToPlaylist"})
     public void deleteAllPlaylists() {
         loginPage = new LoginPage(getDriver());
         loginPage.loginValidCredentials();
