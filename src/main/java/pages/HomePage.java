@@ -188,8 +188,12 @@ public class HomePage extends BasePage {
     private final By selectNewSmartList = By.cssSelector("li[data-testid=\"playlist-context-menu-create-smart\"]");
     private final String strUrl = driver.getCurrentUrl();
     private final By infoBtnLocator = RelativeLocator.with(By.tagName("button")).toLeftOf(By.id("equalizer"));
-    @FindBy(xpath="//section[@id='playlists']/ul/li[3]/nav/ul/li[2]")
-    private WebElement playlistDelete;
+
+    private By playlistDelete = By.xpath("//section[@id='playlists']/ul/li[3]/nav/ul/li[2]");
+    @FindBy(xpath = "//section[@id='playlistWrapper']//i[@class='fa fa-file-o']")
+    private WebElement emptyPlaylistIcon;
+    @FindBy(xpath = "//section[@id='playlistWrapper']//button[@class='del btn-delete-playlist']/i")
+    private WebElement playlstNotEmptyDelButton;
     @FindBy(xpath = "//div[@class='alertify']//nav/button[@class='ok']")
     private WebElement ok;
     /**
@@ -202,20 +206,19 @@ public class HomePage extends BasePage {
     public HomePage contextClickFirstPlDelete() {
 
        contextClick(playlistsMenuFirstPl);
-       actions.moveToElement(playlistDelete).click().perform();
-//       findElement(playlistDelete).click();
+       click(playlistDelete);
        return this;
     }
     public HomePage deleteAllPlaylists() {
-        List<WebElement> list = allPlaylists;
-        if(list.isEmpty()) return this;
-        for (WebElement l: list) {
-            l.click();
-//            Reporter.log("playlists song total " + playlistSongs.size(), true);
-            if(playlistSongs.isEmpty()){
+        if(allPlaylists.isEmpty()) return this;
+        playlistsMenuFirstPl.click();
+        for (WebElement l: allPlaylists) {
+            //section[@id='playlists']/ul/li[3]/a
+            if(emptyPlaylistIcon.isDisplayed()){
                 contextClickFirstPlDelete();
             } else {
                 contextClickFirstPlDelete();
+//                actions.moveToElement(playlstNotEmptyDelButton).click().perform();
                 wait.until(ExpectedConditions.elementToBeClickable(ok)).click();
             }
 
