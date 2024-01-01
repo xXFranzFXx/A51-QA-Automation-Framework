@@ -17,6 +17,8 @@
             <class name="testcases.CurrentQueueTests"/>
             <class name="testcases.AlbumsTests"/>
             <class name="testcases.AllSongsTests"/>
+            <class name="testcases.ArtistsTests"/>
+
         </classes>
     </test>
 </suite>

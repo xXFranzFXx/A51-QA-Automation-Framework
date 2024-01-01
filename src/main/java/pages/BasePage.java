@@ -36,15 +36,23 @@ public class BasePage {
      * Navigation header "About" link
      */
     @FindBy(xpath = "//div[@class='header-right']//button[@data-testid='about-btn']")
+    @CacheLookup
+
     private WebElement aboutBtnLocator;
     @FindBy(xpath = "//div[@class='modal-wrapper overlay']//div[@data-testid='about-modal']")
     private WebElement aboutModalLocator;
     @FindBy(xpath = "//h1[contains(text(), 'About Koel')]")
+    @CacheLookup
+
     List<WebElement> modal;
 
     @FindBy(xpath = "//div[@class='modal-wrapper overlay']//footer")
+    @CacheLookup
+
     private WebElement modalCloseLocator;
     @FindBy(xpath = "//div[@class='modal-wrapper overlay']//button[@data-test='close-modal-btn']")
+    @CacheLookup
+
     private WebElement closeModalBtn;
 
     /**
@@ -75,13 +83,19 @@ public class BasePage {
     @CacheLookup
     private WebElement soundBarVisualizer;
     @FindBy(xpath = "//section[@id='playlists']//li[@class='playlist recently-played']/a")
+    @CacheLookup
+
     private WebElement recentlyPlayedLocator;
     @FindBy(xpath = "//section[@id='searchExcerptsWrapper']//span[@class='details']")
+    @CacheLookup
+
     private WebElement searchResultSongLocator;
     @FindBy(css = ".fa-sign-out")
     @CacheLookup
     private WebElement logoutButtonLocator;
-    private By closeModalButton = By.xpath("//div[@class='modal-wrapper overlay']//button[@data-test='close-modal-btn']");
+    @FindBy(xpath = "//div[@class='modal-wrapper overlay']//button[@data-test='close-modal-btn']")
+    @CacheLookup
+    private By closeModalButton;
 
 
     public BasePage(WebDriver givenDriver) {

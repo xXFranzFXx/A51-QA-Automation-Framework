@@ -33,6 +33,10 @@ public class LogoutTests extends BaseTest {
     public LogoutTests() {
         super();
     }
+    @BeforeClass
+    public void loadProperties() {
+        loadEnv();
+    }
     @BeforeMethod
     @Parameters({"baseURL"})
 
@@ -52,6 +56,7 @@ public class LogoutTests extends BaseTest {
     @Test(description = "Log in and verify visibility of logout button, then log out")
 
     public void useLogoutButton() {
+        loginPage.loginValidCredentials();
         Assert.assertTrue(homePage.checkForLogoutBtn());
         homePage.clickLogoutButton();
         Assert.assertTrue(loginPage.getRegistrationLink());
@@ -61,19 +66,19 @@ public class LogoutTests extends BaseTest {
 
 
 //    @Test(dependsOnMethods = { "useLogoutButton" }, description = "Update username and password then logout and verify navigation back to login screen")
-    public void logoutAfterProfileUpdate() {
-        String randomNm = generateRandomName();
-        String password = System.getProperty("koelPassword");
-        String profileName = profilePage.getProfileName();
-        profilePage
-                .provideNewPassword(System.getProperty("koelPassword"))
-                .provideRandomProfileName(randomNm)
-                .provideCurrentPassword(password);
-
-        Assert.assertTrue(profilePage.clickSave());
-        profilePage.clickLogout();
-        Assert.assertTrue(loginPage.getRegistrationLink());
-        Reporter.log("User has logged out after updating username and password and redirected to login page", true);
-    }
+//    public void logoutAfterProfileUpdate() {
+//        String randomNm = generateRandomName();
+//        String password = System.getProperty("koelPassword");
+//        String profileName = profilePage.getProfileName();
+//        profilePage
+//                .provideNewPassword(System.getProperty("koelPassword"))
+//                .provideRandomProfileName(randomNm)
+//                .provideCurrentPassword(password);
+//
+//        Assert.assertTrue(profilePage.clickSave());
+//        profilePage.clickLogout();
+//        Assert.assertTrue(loginPage.getRegistrationLink());
+//        Reporter.log("User has logged out after updating username and password and redirected to login page", true);
+//    }
 
 }

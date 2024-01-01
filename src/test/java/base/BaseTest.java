@@ -14,6 +14,7 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.events.EventFiringDecorator;
+import org.testng.Reporter;
 import org.testng.annotations.*;
 import util.listeners.TestListener;
 
@@ -38,13 +39,14 @@ public class BaseTest{
 
     public static void setupBrowser(String baseURL) throws MalformedURLException {
         threadDriver.set(pickBrowser(System.getProperty("browser")));
+        Reporter.log("browser is: " + System.getProperty("browser"));
         getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         getDriver().manage().deleteAllCookies();
         navigateToLogin(baseURL);
     }
     public static  WebDriver pickBrowser(String browser) throws MalformedURLException {
         DesiredCapabilities caps = new DesiredCapabilities();
-        String gridURL = "http://192.168.0.15:4444";
+        String gridURL = "http://192.168.0.224:4444";
         switch (browser) {
             case "firefox":
                 WebDriverManager.firefoxdriver().setup();
@@ -67,7 +69,10 @@ public class BaseTest{
                 return driver = new RemoteWebDriver(URI.create(gridURL).toURL(),caps);
             //gradle clean test -Dbrowser=grid-chrome
             case "grid-chrome":
+                ChromeOptions options1 = new ChromeOptions();
+                options1.addArguments("--remote-allow-origins=*", "--disable-notifications", "--start-maximized", "--incognito");
                 caps.setCapability("browserName", "chrome");
+                caps.setCapability(ChromeOptions.CAPABILITY, options1);
                 return driver = new RemoteWebDriver(URI.create(gridURL).toURL(),caps);
             case "cloud":
                 return lambdaTest();
@@ -113,13 +118,18 @@ public class BaseTest{
                 {"",""}
         };
     }
-    @BeforeClass
+
     public void loadEnv() {
         Dotenv dotenv = Dotenv.configure().directory("./src/test/resources").load();
         dotenv.entries().forEach(e -> System.setProperty(e.getKey(), e.getValue()));
+
     }
     public static void closeBrowser() {
-        threadDriver.get().close();
-        threadDriver.remove();
+        if (getDriver() == null) {
+            threadDriver.get().close();
+            threadDriver.remove();
+        }
+        threadDriver.get().quit();
+
     }
 }

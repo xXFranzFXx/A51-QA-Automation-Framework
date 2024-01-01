@@ -1,0 +1,490 @@
+[INFO ] 2023-12-31 09:18:42.561 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 09:18:42.568 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 09:18:42.704 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 09:18:53.140 [TestNG-test=Sprint-9-1] Log - useLogoutButton started!
+[WARN ] 2023-12-31 09:18:53.144 [TestNG-test=Sprint-9-1] Log - useLogoutButton skipped
+[INFO ] 2023-12-31 09:18:53.149 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 09:21:32.784 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 09:21:32.787 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 09:21:32.925 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 09:22:51.648 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 09:22:51.653 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 09:22:51.787 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 09:25:06.701 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 09:25:06.704 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 09:25:06.833 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 09:25:17.241 [TestNG-test=Sprint-9-1] Log - useLogoutButton started!
+[WARN ] 2023-12-31 09:25:17.247 [TestNG-test=Sprint-9-1] Log - useLogoutButton skipped
+[INFO ] 2023-12-31 09:25:17.254 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 09:30:20.831 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 09:30:20.835 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 09:30:20.973 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 09:33:13.381 [TestNG-test=Sprint-9-1] Log - useLogoutButton started!
+[WARN ] 2023-12-31 09:33:13.386 [TestNG-test=Sprint-9-1] Log - useLogoutButton skipped
+[INFO ] 2023-12-31 09:33:13.393 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 09:39:15.402 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 09:39:15.405 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 09:39:15.548 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 09:40:25.359 [TestNG-test=Sprint-9-1] Log - useLogoutButton started!
+[WARN ] 2023-12-31 09:40:25.367 [TestNG-test=Sprint-9-1] Log - useLogoutButton skipped
+[INFO ] 2023-12-31 09:40:25.373 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 09:42:25.856 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 09:42:25.860 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 09:42:25.996 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 09:45:26.405 [TestNG-test=Sprint-9-1] Log - useLogoutButton started!
+[WARN ] 2023-12-31 09:45:26.412 [TestNG-test=Sprint-9-1] Log - useLogoutButton skipped
+[INFO ] 2023-12-31 09:45:26.433 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 09:47:48.124 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 09:47:48.129 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 09:47:48.266 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 09:50:48.693 [TestNG-test=Sprint-9-1] Log - useLogoutButton started!
+[WARN ] 2023-12-31 09:50:48.700 [TestNG-test=Sprint-9-1] Log - useLogoutButton skipped
+[INFO ] 2023-12-31 09:50:48.723 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 09:54:14.704 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 09:54:14.707 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 09:54:14.849 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 09:55:28.781 [TestNG-test=Sprint-9-1] Log - useLogoutButton started!
+[WARN ] 2023-12-31 09:55:28.790 [TestNG-test=Sprint-9-1] Log - useLogoutButton skipped
+[INFO ] 2023-12-31 09:55:28.812 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 10:02:44.002 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 10:02:44.006 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 10:02:44.143 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 10:02:44.675 [TestNG-test=Sprint-9-1] Log - useLogoutButton started!
+[WARN ] 2023-12-31 10:02:44.678 [TestNG-test=Sprint-9-1] Log - useLogoutButton skipped
+[INFO ] 2023-12-31 10:02:44.687 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 10:04:30.593 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 10:04:30.597 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 10:04:30.737 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 10:04:31.236 [TestNG-test=Sprint-9-1] Log - useLogoutButton started!
+[WARN ] 2023-12-31 10:04:31.240 [TestNG-test=Sprint-9-1] Log - useLogoutButton skipped
+[INFO ] 2023-12-31 10:04:31.245 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 10:23:13.488 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 10:23:13.492 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 10:23:13.642 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 10:23:26.351 [TestNG-test=Sprint-9-1] Log - useLogoutButton started!
+[ERROR] 2023-12-31 10:23:36.456 [TestNG-test=Sprint-9-1] Log - useLogoutButton failed!
+[INFO ] 2023-12-31 10:23:36.883 [TestNG-test=Sprint-9-1] Log - screen shot taken for failed test useLogoutButton
+[INFO ] 2023-12-31 10:23:37.041 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 10:25:48.447 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 10:25:48.452 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 10:25:48.599 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 10:28:49.048 [TestNG-test=Sprint-9-1] Log - useLogoutButton started!
+[WARN ] 2023-12-31 10:28:49.068 [TestNG-test=Sprint-9-1] Log - useLogoutButton skipped
+[INFO ] 2023-12-31 10:28:49.089 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 10:31:04.674 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 10:31:04.686 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 10:31:04.859 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 10:32:41.545 [TestNG-test=Sprint-9-1] Log - useLogoutButton started!
+[ERROR] 2023-12-31 10:32:43.934 [TestNG-test=Sprint-9-1] Log - useLogoutButton failed!
+[ERROR] 2023-12-31 10:32:43.990 [TestNG-test=Sprint-9-1] Log - useLogoutButton failed!
+[INFO ] 2023-12-31 10:32:44.045 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 10:51:16.166 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 10:51:16.170 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 10:51:16.308 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 10:51:23.082 [TestNG-test=Sprint-9-1] Log - useLogoutButton started!
+[ERROR] 2023-12-31 10:51:34.291 [TestNG-test=Sprint-9-1] Log - useLogoutButton failed!
+[INFO ] 2023-12-31 10:51:34.679 [TestNG-test=Sprint-9-1] Log - screen shot taken for failed test useLogoutButton
+[INFO ] 2023-12-31 10:51:34.799 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 10:54:29.454 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 10:54:29.458 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 10:54:29.602 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 12:13:54.801 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 12:13:54.805 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 12:13:54.948 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 12:14:00.626 [TestNG-test=Sprint-9-1] Log - useLogoutButton started!
+[ERROR] 2023-12-31 12:14:02.505 [TestNG-test=Sprint-9-1] Log - useLogoutButton failed!
+[INFO ] 2023-12-31 12:14:03.196 [TestNG-test=Sprint-9-1] Log - screen shot taken for failed test useLogoutButton
+[INFO ] 2023-12-31 12:14:03.201 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 12:23:15.750 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 12:23:15.754 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 12:23:15.895 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 12:23:21.687 [TestNG-test=Sprint-9-1] Log - useLogoutButton started!
+[ERROR] 2023-12-31 12:24:25.540 [TestNG-test=Sprint-9-1] Log - useLogoutButton failed!
+[INFO ] 2023-12-31 12:24:26.043 [TestNG-test=Sprint-9-1] Log - screen shot taken for failed test useLogoutButton
+[INFO ] 2023-12-31 12:24:26.054 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 12:28:05.941 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 12:28:05.945 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 12:28:06.081 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 12:29:35.155 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 12:29:35.159 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 12:29:35.296 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 12:32:35.715 [TestNG-test=Sprint-9-1] Log - useLogoutButton started!
+[WARN ] 2023-12-31 12:32:35.746 [TestNG-test=Sprint-9-1] Log - useLogoutButton skipped
+[INFO ] 2023-12-31 12:32:35.756 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 12:35:56.319 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 12:35:56.323 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 12:35:56.471 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 12:36:01.490 [TestNG-test=Sprint-9-1] Log - createPlaylist started!
+[FATAL] 2023-12-31 12:36:01.531 [TestNG-test=Sprint-9-1] Log - Error while calling method: sendKeys - null
+[ERROR] 2023-12-31 12:36:01.533 [TestNG-test=Sprint-9-1] Log - createPlaylist failed!
+[INFO ] 2023-12-31 12:36:01.789 [TestNG-test=Sprint-9-1] Log - screen shot taken for failed test createPlaylist
+[INFO ] 2023-12-31 12:36:01.938 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 12:38:17.170 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 12:38:17.175 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 12:38:17.313 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 12:38:17.346 [TestNG-test=Sprint-9-1] Log - createPlaylist started!
+[ERROR] 2023-12-31 12:38:17.355 [TestNG-test=Sprint-9-1] Log - createPlaylist failed!
+[ERROR] 2023-12-31 12:38:17.356 [TestNG-test=Sprint-9-1] Log - createPlaylist failed!
+[INFO ] 2023-12-31 12:38:17.358 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 12:39:02.094 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 12:39:02.100 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 12:39:02.245 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 12:40:10.920 [TestNG-test=Sprint-9-1] Log - createPlaylist started!
+[ERROR] 2023-12-31 12:40:13.198 [TestNG-test=Sprint-9-1] Log - createPlaylist failed!
+[ERROR] 2023-12-31 12:40:13.401 [TestNG-test=Sprint-9-1] Log - createPlaylist failed!
+[INFO ] 2023-12-31 12:40:13.457 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 12:40:50.794 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 12:40:50.798 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 12:40:50.932 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 12:42:20.553 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 12:42:20.557 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 12:42:20.694 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 12:44:45.700 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 12:44:45.704 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 12:44:45.843 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 12:47:46.272 [TestNG-test=Sprint-9-1] Log - checkRASongsOnHover started!
+[WARN ] 2023-12-31 12:47:46.291 [TestNG-test=Sprint-9-1] Log - checkRASongsOnHover skipped
+[INFO ] 2023-12-31 12:47:46.302 [TestNG-test=Sprint-9-1] Log - checkRecentlyAdded started!
+[WARN ] 2023-12-31 12:47:46.303 [TestNG-test=Sprint-9-1] Log - checkRecentlyAdded skipped
+[INFO ] 2023-12-31 12:47:46.305 [TestNG-test=Sprint-9-1] Log - clickAboutLink started!
+[WARN ] 2023-12-31 12:47:46.306 [TestNG-test=Sprint-9-1] Log - clickAboutLink skipped
+[INFO ] 2023-12-31 12:47:46.308 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists started!
+[WARN ] 2023-12-31 12:47:46.308 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists skipped
+[INFO ] 2023-12-31 12:47:46.310 [TestNG-test=Sprint-9-1] Log - hoverOverPlayBtn started!
+[WARN ] 2023-12-31 12:47:46.310 [TestNG-test=Sprint-9-1] Log - hoverOverPlayBtn skipped
+[INFO ] 2023-12-31 12:47:46.314 [TestNG-test=Sprint-9-1] Log - modalCloses started!
+[WARN ] 2023-12-31 12:47:46.314 [TestNG-test=Sprint-9-1] Log - modalCloses skipped
+[INFO ] 2023-12-31 12:47:46.325 [TestNG-test=Sprint-9-1] Log - recentlyPlayedExists started!
+[WARN ] 2023-12-31 12:47:46.325 [TestNG-test=Sprint-9-1] Log - recentlyPlayedExists skipped
+[INFO ] 2023-12-31 12:47:46.332 [TestNG-test=Sprint-9-1] Log - createPlaylist started!
+[WARN ] 2023-12-31 12:47:46.333 [TestNG-test=Sprint-9-1] Log - createPlaylist skipped
+[INFO ] 2023-12-31 12:47:46.339 [TestNG-test=Sprint-9-1] Log - addSongToPlaylist started!
+[WARN ] 2023-12-31 12:47:46.340 [TestNG-test=Sprint-9-1] Log - addSongToPlaylist skipped
+[INFO ] 2023-12-31 12:47:46.341 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 12:48:37.847 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 12:48:37.852 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 12:48:37.985 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 12:51:38.440 [TestNG-test=Sprint-9-1] Log - checkRASongsOnHover started!
+[WARN ] 2023-12-31 12:51:38.448 [TestNG-test=Sprint-9-1] Log - checkRASongsOnHover skipped
+[INFO ] 2023-12-31 12:51:38.458 [TestNG-test=Sprint-9-1] Log - checkRecentlyAdded started!
+[WARN ] 2023-12-31 12:51:38.458 [TestNG-test=Sprint-9-1] Log - checkRecentlyAdded skipped
+[INFO ] 2023-12-31 12:51:38.460 [TestNG-test=Sprint-9-1] Log - clickAboutLink started!
+[WARN ] 2023-12-31 12:51:38.461 [TestNG-test=Sprint-9-1] Log - clickAboutLink skipped
+[INFO ] 2023-12-31 12:51:38.463 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists started!
+[WARN ] 2023-12-31 12:51:38.463 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists skipped
+[INFO ] 2023-12-31 12:51:38.466 [TestNG-test=Sprint-9-1] Log - hoverOverPlayBtn started!
+[WARN ] 2023-12-31 12:51:38.466 [TestNG-test=Sprint-9-1] Log - hoverOverPlayBtn skipped
+[INFO ] 2023-12-31 12:51:38.469 [TestNG-test=Sprint-9-1] Log - modalCloses started!
+[WARN ] 2023-12-31 12:51:38.470 [TestNG-test=Sprint-9-1] Log - modalCloses skipped
+[INFO ] 2023-12-31 12:51:38.473 [TestNG-test=Sprint-9-1] Log - recentlyPlayedExists started!
+[WARN ] 2023-12-31 12:51:38.473 [TestNG-test=Sprint-9-1] Log - recentlyPlayedExists skipped
+[INFO ] 2023-12-31 12:51:38.478 [TestNG-test=Sprint-9-1] Log - createPlaylist started!
+[WARN ] 2023-12-31 12:51:38.479 [TestNG-test=Sprint-9-1] Log - createPlaylist skipped
+[INFO ] 2023-12-31 12:51:38.499 [TestNG-test=Sprint-9-1] Log - addSongToPlaylist started!
+[WARN ] 2023-12-31 12:51:38.499 [TestNG-test=Sprint-9-1] Log - addSongToPlaylist skipped
+[INFO ] 2023-12-31 12:51:38.503 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 12:52:52.968 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 12:52:52.972 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 12:52:53.110 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 12:55:53.574 [TestNG-test=Sprint-9-1] Log - checkRASongsOnHover started!
+[WARN ] 2023-12-31 12:55:53.580 [TestNG-test=Sprint-9-1] Log - checkRASongsOnHover skipped
+[INFO ] 2023-12-31 12:55:53.591 [TestNG-test=Sprint-9-1] Log - checkRecentlyAdded started!
+[WARN ] 2023-12-31 12:55:53.591 [TestNG-test=Sprint-9-1] Log - checkRecentlyAdded skipped
+[INFO ] 2023-12-31 12:55:53.611 [TestNG-test=Sprint-9-1] Log - clickAboutLink started!
+[WARN ] 2023-12-31 12:55:53.611 [TestNG-test=Sprint-9-1] Log - clickAboutLink skipped
+[INFO ] 2023-12-31 12:55:53.613 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists started!
+[WARN ] 2023-12-31 12:55:53.614 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists skipped
+[INFO ] 2023-12-31 12:55:53.617 [TestNG-test=Sprint-9-1] Log - hoverOverPlayBtn started!
+[WARN ] 2023-12-31 12:55:53.617 [TestNG-test=Sprint-9-1] Log - hoverOverPlayBtn skipped
+[INFO ] 2023-12-31 12:55:53.620 [TestNG-test=Sprint-9-1] Log - modalCloses started!
+[WARN ] 2023-12-31 12:55:53.621 [TestNG-test=Sprint-9-1] Log - modalCloses skipped
+[INFO ] 2023-12-31 12:55:53.624 [TestNG-test=Sprint-9-1] Log - recentlyPlayedExists started!
+[WARN ] 2023-12-31 12:55:53.624 [TestNG-test=Sprint-9-1] Log - recentlyPlayedExists skipped
+[INFO ] 2023-12-31 12:55:53.627 [TestNG-test=Sprint-9-1] Log - createPlaylist started!
+[WARN ] 2023-12-31 12:55:53.628 [TestNG-test=Sprint-9-1] Log - createPlaylist skipped
+[INFO ] 2023-12-31 12:55:53.631 [TestNG-test=Sprint-9-1] Log - addSongToPlaylist started!
+[WARN ] 2023-12-31 12:55:53.632 [TestNG-test=Sprint-9-1] Log - addSongToPlaylist skipped
+[INFO ] 2023-12-31 12:55:53.633 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 12:56:16.272 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 12:56:16.276 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 12:56:16.419 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 12:59:16.882 [TestNG-test=Sprint-9-1] Log - checkRASongsOnHover started!
+[WARN ] 2023-12-31 12:59:16.900 [TestNG-test=Sprint-9-1] Log - checkRASongsOnHover skipped
+[INFO ] 2023-12-31 12:59:16.907 [TestNG-test=Sprint-9-1] Log - checkRecentlyAdded started!
+[WARN ] 2023-12-31 12:59:16.907 [TestNG-test=Sprint-9-1] Log - checkRecentlyAdded skipped
+[INFO ] 2023-12-31 12:59:16.911 [TestNG-test=Sprint-9-1] Log - clickAboutLink started!
+[WARN ] 2023-12-31 12:59:16.911 [TestNG-test=Sprint-9-1] Log - clickAboutLink skipped
+[INFO ] 2023-12-31 12:59:16.913 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists started!
+[WARN ] 2023-12-31 12:59:16.913 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists skipped
+[INFO ] 2023-12-31 12:59:16.916 [TestNG-test=Sprint-9-1] Log - hoverOverPlayBtn started!
+[WARN ] 2023-12-31 12:59:16.917 [TestNG-test=Sprint-9-1] Log - hoverOverPlayBtn skipped
+[INFO ] 2023-12-31 12:59:16.918 [TestNG-test=Sprint-9-1] Log - modalCloses started!
+[WARN ] 2023-12-31 12:59:16.919 [TestNG-test=Sprint-9-1] Log - modalCloses skipped
+[INFO ] 2023-12-31 12:59:16.921 [TestNG-test=Sprint-9-1] Log - recentlyPlayedExists started!
+[WARN ] 2023-12-31 12:59:16.921 [TestNG-test=Sprint-9-1] Log - recentlyPlayedExists skipped
+[INFO ] 2023-12-31 12:59:16.924 [TestNG-test=Sprint-9-1] Log - createPlaylist started!
+[WARN ] 2023-12-31 12:59:16.924 [TestNG-test=Sprint-9-1] Log - createPlaylist skipped
+[INFO ] 2023-12-31 12:59:16.929 [TestNG-test=Sprint-9-1] Log - addSongToPlaylist started!
+[WARN ] 2023-12-31 12:59:16.930 [TestNG-test=Sprint-9-1] Log - addSongToPlaylist skipped
+[INFO ] 2023-12-31 12:59:16.932 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 13:00:58.366 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 13:00:58.371 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 13:00:58.536 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 13:01:07.267 [TestNG-test=Sprint-9-1] Log - checkRASongsOnHover started!
+[ERROR] 2023-12-31 13:01:09.327 [TestNG-test=Sprint-9-1] Log - checkRASongsOnHover failed!
+[ERROR] 2023-12-31 13:01:09.422 [TestNG-test=Sprint-9-1] Log - checkRASongsOnHover failed!
+[INFO ] 2023-12-31 13:01:54.118 [TestNG-test=Sprint-9-2] Log - checkRecentlyAdded started!
+[WARN ] 2023-12-31 13:01:54.122 [TestNG-test=Sprint-9-2] Log - checkRecentlyAdded skipped
+[INFO ] 2023-12-31 13:01:54.135 [TestNG-test=Sprint-9-2] Log - clickAboutLink started!
+[WARN ] 2023-12-31 13:01:54.135 [TestNG-test=Sprint-9-2] Log - clickAboutLink skipped
+[INFO ] 2023-12-31 13:01:54.143 [TestNG-test=Sprint-9-2] Log - deleteAllPlaylists started!
+[WARN ] 2023-12-31 13:01:54.143 [TestNG-test=Sprint-9-2] Log - deleteAllPlaylists skipped
+[INFO ] 2023-12-31 13:01:54.144 [TestNG-test=Sprint-9-2] Log - hoverOverPlayBtn started!
+[WARN ] 2023-12-31 13:01:54.145 [TestNG-test=Sprint-9-2] Log - hoverOverPlayBtn skipped
+[INFO ] 2023-12-31 13:01:54.147 [TestNG-test=Sprint-9-2] Log - modalCloses started!
+[WARN ] 2023-12-31 13:01:54.147 [TestNG-test=Sprint-9-2] Log - modalCloses skipped
+[INFO ] 2023-12-31 13:01:54.148 [TestNG-test=Sprint-9-2] Log - recentlyPlayedExists started!
+[WARN ] 2023-12-31 13:01:54.148 [TestNG-test=Sprint-9-2] Log - recentlyPlayedExists skipped
+[INFO ] 2023-12-31 13:01:54.151 [TestNG-test=Sprint-9-2] Log - createPlaylist started!
+[WARN ] 2023-12-31 13:01:54.151 [TestNG-test=Sprint-9-2] Log - createPlaylist skipped
+[INFO ] 2023-12-31 13:01:54.156 [TestNG-test=Sprint-9-2] Log - addSongToPlaylist started!
+[WARN ] 2023-12-31 13:01:54.156 [TestNG-test=Sprint-9-2] Log - addSongToPlaylist skipped
+[INFO ] 2023-12-31 13:01:54.158 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 13:03:07.033 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 13:03:07.037 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 13:03:07.176 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 13:03:15.411 [TestNG-test=Sprint-9-1] Log - checkRASongsOnHover started!
+[ERROR] 2023-12-31 13:03:17.503 [TestNG-test=Sprint-9-1] Log - checkRASongsOnHover failed!
+[ERROR] 2023-12-31 13:03:17.714 [TestNG-test=Sprint-9-1] Log - checkRASongsOnHover failed!
+[INFO ] 2023-12-31 13:05:32.661 [TestNG-test=Sprint-9-2] Log - checkRecentlyAdded started!
+[WARN ] 2023-12-31 13:05:32.666 [TestNG-test=Sprint-9-2] Log - checkRecentlyAdded skipped
+[INFO ] 2023-12-31 13:05:32.680 [TestNG-test=Sprint-9-2] Log - clickAboutLink started!
+[WARN ] 2023-12-31 13:05:32.680 [TestNG-test=Sprint-9-2] Log - clickAboutLink skipped
+[INFO ] 2023-12-31 13:05:32.682 [TestNG-test=Sprint-9-2] Log - deleteAllPlaylists started!
+[WARN ] 2023-12-31 13:05:32.682 [TestNG-test=Sprint-9-2] Log - deleteAllPlaylists skipped
+[INFO ] 2023-12-31 13:05:32.685 [TestNG-test=Sprint-9-2] Log - hoverOverPlayBtn started!
+[WARN ] 2023-12-31 13:05:32.687 [TestNG-test=Sprint-9-2] Log - hoverOverPlayBtn skipped
+[INFO ] 2023-12-31 13:05:32.691 [TestNG-test=Sprint-9-2] Log - modalCloses started!
+[WARN ] 2023-12-31 13:05:32.691 [TestNG-test=Sprint-9-2] Log - modalCloses skipped
+[INFO ] 2023-12-31 13:05:32.695 [TestNG-test=Sprint-9-2] Log - recentlyPlayedExists started!
+[WARN ] 2023-12-31 13:05:32.696 [TestNG-test=Sprint-9-2] Log - recentlyPlayedExists skipped
+[INFO ] 2023-12-31 13:05:32.699 [TestNG-test=Sprint-9-2] Log - createPlaylist started!
+[WARN ] 2023-12-31 13:05:32.699 [TestNG-test=Sprint-9-2] Log - createPlaylist skipped
+[INFO ] 2023-12-31 13:05:32.707 [TestNG-test=Sprint-9-2] Log - addSongToPlaylist started!
+[WARN ] 2023-12-31 13:05:32.707 [TestNG-test=Sprint-9-2] Log - addSongToPlaylist skipped
+[INFO ] 2023-12-31 13:05:32.708 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 13:06:15.605 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 13:06:15.610 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 13:06:15.750 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 13:06:23.835 [TestNG-test=Sprint-9-1] Log - checkRASongsOnHover started!
+[ERROR] 2023-12-31 13:06:35.569 [TestNG-test=Sprint-9-1] Log - checkRASongsOnHover failed!
+[INFO ] 2023-12-31 13:06:36.011 [TestNG-test=Sprint-9-1] Log - screen shot taken for failed test checkRASongsOnHover
+[INFO ] 2023-12-31 13:09:36.074 [TestNG-test=Sprint-9-1] Log - checkRecentlyAdded started!
+[WARN ] 2023-12-31 13:09:36.076 [TestNG-test=Sprint-9-1] Log - checkRecentlyAdded skipped
+[INFO ] 2023-12-31 13:09:36.084 [TestNG-test=Sprint-9-1] Log - clickAboutLink started!
+[WARN ] 2023-12-31 13:09:36.084 [TestNG-test=Sprint-9-1] Log - clickAboutLink skipped
+[INFO ] 2023-12-31 13:09:36.087 [TestNG-test=Sprint-9-1] Log - createPlaylist started!
+[WARN ] 2023-12-31 13:09:36.088 [TestNG-test=Sprint-9-1] Log - createPlaylist skipped
+[INFO ] 2023-12-31 13:09:36.091 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists started!
+[WARN ] 2023-12-31 13:09:36.092 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists skipped
+[INFO ] 2023-12-31 13:09:36.099 [TestNG-test=Sprint-9-1] Log - hoverOverPlayBtn started!
+[WARN ] 2023-12-31 13:09:36.099 [TestNG-test=Sprint-9-1] Log - hoverOverPlayBtn skipped
+[INFO ] 2023-12-31 13:09:36.109 [TestNG-test=Sprint-9-1] Log - modalCloses started!
+[WARN ] 2023-12-31 13:09:36.109 [TestNG-test=Sprint-9-1] Log - modalCloses skipped
+[INFO ] 2023-12-31 13:09:36.113 [TestNG-test=Sprint-9-1] Log - recentlyPlayedExists started!
+[WARN ] 2023-12-31 13:09:36.114 [TestNG-test=Sprint-9-1] Log - recentlyPlayedExists skipped
+[INFO ] 2023-12-31 13:09:36.121 [TestNG-test=Sprint-9-1] Log - addSongToPlaylist started!
+[WARN ] 2023-12-31 13:09:36.122 [TestNG-test=Sprint-9-1] Log - addSongToPlaylist skipped
+[INFO ] 2023-12-31 13:09:36.123 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 13:12:18.970 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 13:12:18.974 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 13:12:19.112 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 13:12:27.346 [TestNG-test=Sprint-9-1] Log - checkRASongsOnHover started!
+[ERROR] 2023-12-31 13:12:29.354 [TestNG-test=Sprint-9-1] Log - checkRASongsOnHover failed!
+[ERROR] 2023-12-31 13:12:29.617 [TestNG-test=Sprint-9-1] Log - checkRASongsOnHover failed!
+[INFO ] 2023-12-31 13:13:52.171 [TestNG-test=Sprint-9-2] Log - checkRecentlyAdded started!
+[WARN ] 2023-12-31 13:13:52.183 [TestNG-test=Sprint-9-2] Log - checkRecentlyAdded skipped
+[INFO ] 2023-12-31 13:13:52.195 [TestNG-test=Sprint-9-2] Log - clickAboutLink started!
+[WARN ] 2023-12-31 13:13:52.196 [TestNG-test=Sprint-9-2] Log - clickAboutLink skipped
+[INFO ] 2023-12-31 13:13:52.199 [TestNG-test=Sprint-9-2] Log - createPlaylist started!
+[WARN ] 2023-12-31 13:13:52.199 [TestNG-test=Sprint-9-2] Log - createPlaylist skipped
+[INFO ] 2023-12-31 13:13:52.201 [TestNG-test=Sprint-9-2] Log - deleteAllPlaylists started!
+[WARN ] 2023-12-31 13:13:52.201 [TestNG-test=Sprint-9-2] Log - deleteAllPlaylists skipped
+[INFO ] 2023-12-31 13:13:52.205 [TestNG-test=Sprint-9-2] Log - hoverOverPlayBtn started!
+[WARN ] 2023-12-31 13:13:52.205 [TestNG-test=Sprint-9-2] Log - hoverOverPlayBtn skipped
+[INFO ] 2023-12-31 13:13:52.208 [TestNG-test=Sprint-9-2] Log - modalCloses started!
+[WARN ] 2023-12-31 13:13:52.208 [TestNG-test=Sprint-9-2] Log - modalCloses skipped
+[INFO ] 2023-12-31 13:13:52.209 [TestNG-test=Sprint-9-2] Log - recentlyPlayedExists started!
+[WARN ] 2023-12-31 13:13:52.209 [TestNG-test=Sprint-9-2] Log - recentlyPlayedExists skipped
+[INFO ] 2023-12-31 13:13:52.212 [TestNG-test=Sprint-9-2] Log - addSongToPlaylist started!
+[WARN ] 2023-12-31 13:13:52.213 [TestNG-test=Sprint-9-2] Log - addSongToPlaylist skipped
+[INFO ] 2023-12-31 13:13:52.216 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 13:14:00.350 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 13:14:00.355 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 13:14:00.511 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 13:14:00.913 [TestNG-test=Sprint-9-1] Log - checkRASongsOnHover started!
+[WARN ] 2023-12-31 13:14:00.916 [TestNG-test=Sprint-9-1] Log - checkRASongsOnHover skipped
+[INFO ] 2023-12-31 13:14:00.924 [TestNG-test=Sprint-9-1] Log - checkRecentlyAdded started!
+[WARN ] 2023-12-31 13:14:00.924 [TestNG-test=Sprint-9-1] Log - checkRecentlyAdded skipped
+[INFO ] 2023-12-31 13:14:00.926 [TestNG-test=Sprint-9-1] Log - clickAboutLink started!
+[WARN ] 2023-12-31 13:14:00.926 [TestNG-test=Sprint-9-1] Log - clickAboutLink skipped
+[INFO ] 2023-12-31 13:14:00.929 [TestNG-test=Sprint-9-1] Log - createPlaylist started!
+[WARN ] 2023-12-31 13:14:00.929 [TestNG-test=Sprint-9-1] Log - createPlaylist skipped
+[INFO ] 2023-12-31 13:14:00.931 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists started!
+[WARN ] 2023-12-31 13:14:00.932 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists skipped
+[INFO ] 2023-12-31 13:14:00.935 [TestNG-test=Sprint-9-1] Log - hoverOverPlayBtn started!
+[WARN ] 2023-12-31 13:14:00.935 [TestNG-test=Sprint-9-1] Log - hoverOverPlayBtn skipped
+[INFO ] 2023-12-31 13:14:00.946 [TestNG-test=Sprint-9-1] Log - modalCloses started!
+[WARN ] 2023-12-31 13:14:00.946 [TestNG-test=Sprint-9-1] Log - modalCloses skipped
+[INFO ] 2023-12-31 13:14:00.950 [TestNG-test=Sprint-9-1] Log - recentlyPlayedExists started!
+[WARN ] 2023-12-31 13:14:00.950 [TestNG-test=Sprint-9-1] Log - recentlyPlayedExists skipped
+[INFO ] 2023-12-31 13:14:00.952 [TestNG-test=Sprint-9-1] Log - addSongToPlaylist started!
+[WARN ] 2023-12-31 13:14:00.952 [TestNG-test=Sprint-9-1] Log - addSongToPlaylist skipped
+[INFO ] 2023-12-31 13:14:00.953 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 13:14:11.183 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 13:14:11.187 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 13:14:11.332 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 13:14:19.717 [TestNG-test=Sprint-9-1] Log - checkRASongsOnHover started!
+[ERROR] 2023-12-31 13:14:21.726 [TestNG-test=Sprint-9-1] Log - checkRASongsOnHover failed!
+[ERROR] 2023-12-31 13:14:21.938 [TestNG-test=Sprint-9-1] Log - checkRASongsOnHover failed!
+[INFO ] 2023-12-31 13:14:40.574 [TestNG-test=Sprint-9-2] Log - checkRecentlyAdded started!
+[WARN ] 2023-12-31 13:14:40.576 [TestNG-test=Sprint-9-2] Log - checkRecentlyAdded skipped
+[INFO ] 2023-12-31 13:14:40.590 [TestNG-test=Sprint-9-2] Log - clickAboutLink started!
+[WARN ] 2023-12-31 13:14:40.591 [TestNG-test=Sprint-9-2] Log - clickAboutLink skipped
+[INFO ] 2023-12-31 13:14:40.593 [TestNG-test=Sprint-9-2] Log - createPlaylist started!
+[WARN ] 2023-12-31 13:14:40.593 [TestNG-test=Sprint-9-2] Log - createPlaylist skipped
+[INFO ] 2023-12-31 13:14:40.595 [TestNG-test=Sprint-9-2] Log - deleteAllPlaylists started!
+[WARN ] 2023-12-31 13:14:40.595 [TestNG-test=Sprint-9-2] Log - deleteAllPlaylists skipped
+[INFO ] 2023-12-31 13:14:40.600 [TestNG-test=Sprint-9-2] Log - hoverOverPlayBtn started!
+[WARN ] 2023-12-31 13:14:40.600 [TestNG-test=Sprint-9-2] Log - hoverOverPlayBtn skipped
+[INFO ] 2023-12-31 13:14:40.603 [TestNG-test=Sprint-9-2] Log - modalCloses started!
+[WARN ] 2023-12-31 13:14:40.604 [TestNG-test=Sprint-9-2] Log - modalCloses skipped
+[INFO ] 2023-12-31 13:14:40.606 [TestNG-test=Sprint-9-2] Log - recentlyPlayedExists started!
+[WARN ] 2023-12-31 13:14:40.607 [TestNG-test=Sprint-9-2] Log - recentlyPlayedExists skipped
+[INFO ] 2023-12-31 13:14:40.610 [TestNG-test=Sprint-9-2] Log - addSongToPlaylist started!
+[WARN ] 2023-12-31 13:14:40.610 [TestNG-test=Sprint-9-2] Log - addSongToPlaylist skipped
+[INFO ] 2023-12-31 13:14:40.613 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 13:14:56.265 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 13:14:56.269 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 13:14:56.408 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 13:15:06.801 [TestNG-test=Sprint-9-1] Log - checkRASongsOnHover started!
+[ERROR] 2023-12-31 13:15:18.331 [TestNG-test=Sprint-9-1] Log - checkRASongsOnHover failed!
+[INFO ] 2023-12-31 13:15:18.779 [TestNG-test=Sprint-9-1] Log - screen shot taken for failed test checkRASongsOnHover
+[INFO ] 2023-12-31 13:35:22.311 [TestNG-test=Sprint-9-1] Log - checkRecentlyAdded started!
+[WARN ] 2023-12-31 13:35:22.319 [TestNG-test=Sprint-9-1] Log - checkRecentlyAdded skipped
+[INFO ] 2023-12-31 13:35:22.333 [TestNG-test=Sprint-9-1] Log - clickAboutLink started!
+[WARN ] 2023-12-31 13:35:22.334 [TestNG-test=Sprint-9-1] Log - clickAboutLink skipped
+[INFO ] 2023-12-31 13:35:22.336 [TestNG-test=Sprint-9-1] Log - createPlaylist started!
+[WARN ] 2023-12-31 13:35:22.336 [TestNG-test=Sprint-9-1] Log - createPlaylist skipped
+[INFO ] 2023-12-31 13:35:22.338 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists started!
+[WARN ] 2023-12-31 13:35:22.338 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists skipped
+[INFO ] 2023-12-31 13:35:22.341 [TestNG-test=Sprint-9-1] Log - hoverOverPlayBtn started!
+[WARN ] 2023-12-31 13:35:22.341 [TestNG-test=Sprint-9-1] Log - hoverOverPlayBtn skipped
+[INFO ] 2023-12-31 13:35:22.346 [TestNG-test=Sprint-9-1] Log - modalCloses started!
+[WARN ] 2023-12-31 13:35:22.346 [TestNG-test=Sprint-9-1] Log - modalCloses skipped
+[INFO ] 2023-12-31 13:35:22.349 [TestNG-test=Sprint-9-1] Log - recentlyPlayedExists started!
+[WARN ] 2023-12-31 13:35:22.349 [TestNG-test=Sprint-9-1] Log - recentlyPlayedExists skipped
+[INFO ] 2023-12-31 13:35:22.351 [TestNG-test=Sprint-9-1] Log - addSongToPlaylist started!
+[WARN ] 2023-12-31 13:35:22.352 [TestNG-test=Sprint-9-1] Log - addSongToPlaylist skipped
+[INFO ] 2023-12-31 13:35:22.354 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 13:43:43.808 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 13:43:43.812 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 13:43:43.950 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 13:43:50.118 [TestNG-test=Sprint-9-1] Log - useLogoutButton started!
+[ERROR] 2023-12-31 13:44:01.396 [TestNG-test=Sprint-9-1] Log - useLogoutButton failed!
+[INFO ] 2023-12-31 13:44:01.800 [TestNG-test=Sprint-9-1] Log - screen shot taken for failed test useLogoutButton
+[INFO ] 2023-12-31 13:44:01.805 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 13:45:53.681 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 13:45:53.685 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 13:45:53.874 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 13:45:54.302 [TestNG-test=Sprint-9-1] Log - useLogoutButton started!
+[WARN ] 2023-12-31 13:45:54.304 [TestNG-test=Sprint-9-1] Log - useLogoutButton skipped
+[INFO ] 2023-12-31 13:45:54.310 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 13:46:05.600 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 13:46:05.603 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 13:46:05.747 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 13:46:14.541 [TestNG-test=Sprint-9-1] Log - useLogoutButton started!
+[ERROR] 2023-12-31 13:46:26.129 [TestNG-test=Sprint-9-1] Log - useLogoutButton failed!
+[INFO ] 2023-12-31 13:46:26.568 [TestNG-test=Sprint-9-1] Log - screen shot taken for failed test useLogoutButton
+[INFO ] 2023-12-31 13:46:26.575 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 13:48:11.210 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 13:48:11.214 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 13:48:11.363 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 13:48:19.534 [TestNG-test=Sprint-9-1] Log - useLogoutButton started!
+[ERROR] 2023-12-31 13:48:21.822 [TestNG-test=Sprint-9-1] Log - useLogoutButton failed!
+[ERROR] 2023-12-31 13:48:21.908 [TestNG-test=Sprint-9-1] Log - useLogoutButton failed!
+[INFO ] 2023-12-31 13:48:21.984 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 13:49:28.233 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 13:49:28.237 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 13:49:28.412 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 13:50:43.906 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 13:50:43.910 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 13:50:44.049 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 13:50:53.047 [TestNG-test=Sprint-9-1] Log - useLogoutButton started!
+[ERROR] 2023-12-31 13:50:55.144 [TestNG-test=Sprint-9-1] Log - useLogoutButton failed!
+[ERROR] 2023-12-31 13:50:55.241 [TestNG-test=Sprint-9-1] Log - useLogoutButton failed!
+[INFO ] 2023-12-31 13:50:55.303 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 13:52:14.530 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 13:52:14.535 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 13:52:14.673 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 13:52:23.711 [TestNG-test=Sprint-9-1] Log - useLogoutButton started!
+[ERROR] 2023-12-31 13:52:25.943 [TestNG-test=Sprint-9-1] Log - useLogoutButton failed!
+[INFO ] 2023-12-31 13:52:26.732 [TestNG-test=Sprint-9-1] Log - screen shot taken for failed test useLogoutButton
+[INFO ] 2023-12-31 13:52:26.738 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 13:53:47.577 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 13:53:47.581 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 13:53:47.720 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 13:53:56.878 [TestNG-test=Sprint-9-1] Log - useLogoutButton started!
+[ERROR] 2023-12-31 13:54:08.557 [TestNG-test=Sprint-9-1] Log - useLogoutButton failed!
+[INFO ] 2023-12-31 13:54:08.990 [TestNG-test=Sprint-9-1] Log - screen shot taken for failed test useLogoutButton
+[INFO ] 2023-12-31 13:54:08.996 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 14:12:57.590 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 14:12:57.594 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 14:12:57.731 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 14:13:06.427 [TestNG-test=Sprint-9-1] Log - useLogoutButton started!
+[ERROR] 2023-12-31 14:13:08.397 [TestNG-test=Sprint-9-1] Log - useLogoutButton failed!
+[INFO ] 2023-12-31 14:13:09.168 [TestNG-test=Sprint-9-1] Log - screen shot taken for failed test useLogoutButton
+[INFO ] 2023-12-31 14:13:09.175 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 14:15:49.278 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 14:15:49.281 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 14:15:49.426 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 14:15:57.080 [TestNG-test=Sprint-9-1] Log - useLogoutButton started!
+[ERROR] 2023-12-31 14:15:58.885 [TestNG-test=Sprint-9-1] Log - useLogoutButton failed!
+[ERROR] 2023-12-31 14:15:59.011 [TestNG-test=Sprint-9-1] Log - useLogoutButton failed!
+[INFO ] 2023-12-31 14:15:59.085 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 19:17:59.986 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 19:17:59.990 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 19:18:00.135 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 19:18:09.092 [TestNG-test=Sprint-9-1] Log - useLogoutButton started!
+[INFO ] 2023-12-31 19:18:17.427 [TestNG-test=Sprint-9-1] Log - useLogoutButton passed!
+[INFO ] 2023-12-31 19:18:17.435 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 19:19:34.284 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 19:19:34.287 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 19:19:34.426 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 19:19:41.886 [TestNG-test=Sprint-9-1] Log - useLogoutButton started!
+[INFO ] 2023-12-31 19:19:48.699 [TestNG-test=Sprint-9-1] Log - useLogoutButton passed!
+[INFO ] 2023-12-31 19:19:49.477 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 19:21:11.366 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 19:21:11.370 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2023-12-31 19:21:11.504 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2023-12-31 19:21:17.816 [TestNG-test=Sprint-9-1] Log - checkRASongsOnHover started!
+[INFO ] 2023-12-31 19:21:22.467 [TestNG-test=Sprint-9-1] Log - checkRASongsOnHover passed!
+[INFO ] 2023-12-31 19:21:28.977 [TestNG-test=Sprint-9-1] Log - checkRecentlyAdded started!
+[ERROR] 2023-12-31 19:21:43.297 [TestNG-test=Sprint-9-1] Log - checkRecentlyAdded failed!
+[INFO ] 2023-12-31 19:21:43.895 [TestNG-test=Sprint-9-1] Log - screen shot taken for failed test checkRecentlyAdded
+[INFO ] 2023-12-31 19:21:51.401 [TestNG-test=Sprint-9-1] Log - clickAboutLink started!
+[INFO ] 2023-12-31 19:21:56.870 [TestNG-test=Sprint-9-1] Log - clickAboutLink passed!
+[INFO ] 2023-12-31 19:22:05.130 [TestNG-test=Sprint-9-1] Log - createPlaylist started!
+[INFO ] 2023-12-31 19:22:11.943 [TestNG-test=Sprint-9-1] Log - createPlaylist passed!
+[INFO ] 2023-12-31 19:22:19.497 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists started!
+[INFO ] 2023-12-31 19:23:36.507 [TestNG-test=Sprint-9-1] Log - deleteAllPlaylists passed!
+[INFO ] 2023-12-31 19:23:43.366 [TestNG-test=Sprint-9-1] Log - hoverOverPlayBtn started!
+[INFO ] 2023-12-31 19:23:48.033 [TestNG-test=Sprint-9-1] Log - hoverOverPlayBtn passed!
+[INFO ] 2023-12-31 19:23:55.903 [TestNG-test=Sprint-9-1] Log - modalCloses started!
+[INFO ] 2023-12-31 19:24:01.421 [TestNG-test=Sprint-9-1] Log - modalCloses passed!
+[INFO ] 2023-12-31 19:24:08.439 [TestNG-test=Sprint-9-1] Log - recentlyPlayedExists started!
+[INFO ] 2023-12-31 19:24:12.011 [TestNG-test=Sprint-9-1] Log - recentlyPlayedExists passed!
+[INFO ] 2023-12-31 19:24:18.273 [TestNG-test=Sprint-9-1] Log - addSongToPlaylist started!
+[ERROR] 2023-12-31 19:25:25.726 [TestNG-test=Sprint-9-1] Log - addSongToPlaylist failed!
+[INFO ] 2023-12-31 19:25:26.190 [TestNG-test=Sprint-9-1] Log - screen shot taken for failed test addSongToPlaylist
+[INFO ] 2023-12-31 19:25:26.438 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!

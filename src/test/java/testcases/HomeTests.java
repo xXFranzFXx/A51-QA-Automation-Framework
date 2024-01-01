@@ -17,6 +17,11 @@ public class HomeTests extends BaseTest {
     public HomeTests() {
         super();
     }
+
+    @BeforeClass
+    public void setEnv() {
+        loadEnv();
+    }
     @BeforeMethod
     @Parameters({"baseURL"})
     public void setup(String baseURL) throws MalformedURLException {
@@ -42,7 +47,7 @@ public class HomeTests extends BaseTest {
         Assert.assertTrue(homePage.playlistAddedToMenu("playlist"));
 
     }
-    @Test(description = "Add a song to a playlist", priority = 1, dependsOnMethods = {"createPlaylist"})
+    @Test(description = "Add a song to a playlist", priority = 2, dependsOnMethods = {"createPlaylist"})
     public void addSongToPlaylist() {
         loginPage = new LoginPage(getDriver());
         loginPage.loginValidCredentials();
@@ -122,7 +127,7 @@ public class HomeTests extends BaseTest {
         Assert.assertTrue(homePage.notificationMsg());
     }
 //    @AfterClass
-    @Test//(dependsOnMethods = {"addSongToPlaylist"})
+    @Test(priority = 3)
     public void deleteAllPlaylists() {
         loginPage = new LoginPage(getDriver());
         loginPage.loginValidCredentials();

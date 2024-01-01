@@ -28,9 +28,10 @@ public class ExtentManager {
 //        htmlReporter.config().setTestViewChartLocation(ChartLocation.BOTTOM);
 //        htmlReporter.config().setChartVisibilityOnOpen(true);
         htmlReporter.config().setTheme(Theme.DARK);
-        htmlReporter.config().setDocumentTitle(fileName);
+        htmlReporter.config().setDocumentTitle("Extent Report");
         htmlReporter.config().setEncoding("utf-8");
-        htmlReporter.config().setReportName(fileName);
+        htmlReporter.config().setReportName("Koel Automation Tests");
+
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
         return extent;

@@ -20,7 +20,7 @@ public class Retry implements IRetryAnalyzer {
                 count++;                                    //Increase the maxTry count by 1
                 iTestResult.setStatus(ITestResult.FAILURE); //Mark test as failed and take base64Screenshot
                 try {
-                    TestUtil.takeScreenshotAtEndOfTest(iTestResult.getMethod().getMethodName());
+//                    TestUtil.takeScreenshotAtEndOfTest(iTestResult.getMethod().getMethodName());
                     extendReportsFailOperations(iTestResult);   //ExtentReports fail operations
                 } catch (IOException e) {
                     throw new RuntimeException(e);

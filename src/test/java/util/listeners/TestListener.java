@@ -60,10 +60,12 @@ public class TestListener  implements ITestListener, WebDriverListener {
     public synchronized void onTestSkipped(ITestResult result) {
         Log.warn(result.getMethod().getMethodName() + " skipped");
         test.get().skip(MarkupHelper.createLabel("Skipped", ExtentColor.AMBER));
+        test.get().log(Status.SKIP,  result.getThrowable());
     }
     @Override
     public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
         Log.info("onTestFailedButWithinSuccessPercentage for " + result.getMethod().getMethodName());
+
     }
     public void beforeAnyCall(Object target, Method method, Object[] args) {
         Log.debug( "Before calling method: " + method.getName());

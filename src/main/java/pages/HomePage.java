@@ -1,6 +1,7 @@
 package pages;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.locators.RelativeLocator;
@@ -21,6 +22,7 @@ public class HomePage extends BasePage {
     ProfilePage profilePage;
 
     //user avatar icon element
+    @CacheLookup
     @FindBy(css = "img.avatar")
     private WebElement userAvatarIcon;
     //side menu first playlist
@@ -76,9 +78,8 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//nav[@class='menu song-menu']//li[@class='playlist'][1]")
     private WebElement playlistLocator;
 
-    @FindBy(css =".btn-add-to")
+    @FindBy(xpath = "//section[@id='songResultsWrapper']//button[@class='btn-add-to']")
     private WebElement greenAddToBtn;
-
 
     /**
      * Search results components start
@@ -190,12 +191,13 @@ public class HomePage extends BasePage {
     private final By selectNewSmartList = By.cssSelector("li[data-testid=\"playlist-context-menu-create-smart\"]");
     private final String strUrl = driver.getCurrentUrl();
     private final By infoBtnLocator = RelativeLocator.with(By.tagName("button")).toLeftOf(By.id("equalizer"));
-
-    private By playlistDelete = By.xpath("//section[@id='playlists']/ul/li[3]/nav/ul/li[2]");
+    @FindBy(xpath = "//section[@id='playlists']/ul/li[3]/nav/ul/li[2]")
+    private By playlistDelete;
     @FindBy(xpath = "//section[@id='playlistWrapper']//i[@class='fa fa-file-o']")
     private WebElement emptyPlaylistIcon;
     @FindBy(xpath = "//section[@id='playlistWrapper']//span[@class='btn-group']//button[@class='del btn-delete-playlist']/i")
     private By playlstNotEmptyDelButton;
+    @CacheLookup
     @FindBy(xpath = "//div[@class='alertify']//nav/button[@class='ok']")
     private WebElement ok;
     /**
@@ -206,20 +208,21 @@ public class HomePage extends BasePage {
     }
 
     public HomePage contextClickFirstPlDelete() {
-
+       wait.until(ExpectedConditions.elementToBeClickable(playlistsMenuFirstPl));
        contextClick(playlistsMenuFirstPl);
        click(playlistDelete);
-       return this;
+
+        return this;
     }
     public void deleteAllPlaylists() {
         if(playlistsEmpty()) {
             Reporter.log("There are currently no playlists to delete", true);
             return;
         }
+
             for (WebElement l : allPlaylists) {
                 try {
                     contextClickFirstPlDelete();
-                    Reporter.log("deleted playlist: " + l.getText(), true);
                 } catch (NoSuchElementException e) {
                     Reporter.log("cannot delete playlist" + e, true);
                 }
@@ -230,12 +233,13 @@ public class HomePage extends BasePage {
                     Reporter.log("cannot delete playlist" + e, true);
                 }
             }
+
         Reporter.log("Total Playlists remaining: " + allPlaylists.size(), true);
     }
     public boolean playlistsEmpty() {
         return (playlistsSection.size() == 2);
     }
-    public HomePage hoverAddToTHenSelectPlaylist() {
+    public HomePage hoverAddToThenSelectPlaylist() {
      actions.moveToElement(addToDropDown).perform();
      findElement(chooseFirstPlylstFrmDD).click();
      return this;
@@ -288,7 +292,8 @@ public class HomePage extends BasePage {
     }
 
     public HomePage clickGreenAddToBtn() {
-       findElement(greenAddToBtn).click();
+        wait.until(ExpectedConditions.visibilityOf(greenAddToBtn)).click();
+//       findElement(greenAddToBtn).click();
         return this;
     }
     public HomePage selectPlaylistToAddTo() {

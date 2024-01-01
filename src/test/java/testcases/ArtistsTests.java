@@ -3,10 +3,7 @@ package testcases;
 import base.BaseTest;
 import org.testng.Assert;
 import org.testng.Reporter;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pages.ArtistsPage;
 import pages.LoginPage;
 
@@ -17,6 +14,10 @@ public class ArtistsTests extends BaseTest {
     ArtistsPage artistsPage;
     public ArtistsTests() {
         super();
+    }
+    @BeforeClass
+    public void setEnv() {
+        loadEnv();
     }
     @BeforeMethod
     @Parameters({"baseURL"})
