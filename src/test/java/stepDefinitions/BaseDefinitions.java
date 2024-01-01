@@ -26,7 +26,6 @@ public class BaseDefinitions {
     public static WebDriver getDriver() {
         return threadDriver.get();
     }
-//    public static WebStorage webStorage;
 
     static int timeSeconds = 10;
     public static String url = "https://qa.koel.app";
@@ -42,13 +41,10 @@ public class BaseDefinitions {
     public static String buildUrl(String page){
         return (pageUrl + page);
     }
-//    public static LocalStorage localStorage;
     public static void setupBrowser() throws MalformedURLException {
         threadDriver.set(initializeDriver(System.getProperty("browser", "")));
         getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(timeSeconds));
         getDriver().get(url);
-//        System.out.println(localStorage);
-
     }
     public static WebDriver initializeDriver(String browser) throws MalformedURLException {
         DesiredCapabilities caps = new DesiredCapabilities();
@@ -74,7 +70,10 @@ public class BaseDefinitions {
                 return driver = new RemoteWebDriver(URI.create(gridURL).toURL(),caps);
             //gradle clean test -Dbrowser=grid-chrome
             case "grid-chrome":
+                ChromeOptions options1 = new ChromeOptions();
+                options1.addArguments("--remote-allow-origins=*", "--disable-notifications", "--start-maximized", "--incognito");
                 caps.setCapability("browserName", "chrome");
+                caps.setCapability(ChromeOptions.CAPABILITY, options1);
                 return driver = new RemoteWebDriver(URI.create(gridURL).toURL(),caps);
             case "cloud":
                 return lambdaTest();
@@ -101,7 +100,11 @@ public class BaseDefinitions {
     }
 
     public static void closeBrowser(){
-        driver.quit();
+        if (getDriver() == null) {
+            threadDriver.get().close();
+            threadDriver.remove();
+        }
+        threadDriver.get().quit();
     }
     public static String checkString(String string) {
         Pattern userPattern = Pattern.compile("^&&");
@@ -116,5 +119,4 @@ public class BaseDefinitions {
             return string;
         }
     }
-
 }
