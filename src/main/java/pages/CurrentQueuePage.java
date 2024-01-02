@@ -59,8 +59,4 @@ public class CurrentQueuePage extends  BasePage{
         int li = findElements(queueTableRows).size();
         return (li > 0);
     }
-
-
-
-
 }

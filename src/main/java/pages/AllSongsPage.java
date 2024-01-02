@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 
+import java.util.List;
+
 public class AllSongsPage extends BasePage{
 
     @FindBy(xpath = "//h1[text()[normalize-space()='All Songs']]")
@@ -16,6 +18,10 @@ public class AllSongsPage extends BasePage{
 
     @FindBy(xpath = "//nav[@id='sidebar']/section[@class='music']/ul/li[3]/a")
     private WebElement allSongsLocator;
+    @FindBy(xpath = "//section[@id='songsWrapper']//tr[@class='song-item']//button[@class='text-secondary' and contains(@title, 'Like')]")
+    private List<WebElement> likeButton;
+    @FindBy(xpath = "//section[@id='songsWrapper']//tr[@class='song-item']//button[@class='text-secondary' and contains(@title, 'Unlike')]")
+    private List<WebElement> likedSongsButton;
 
     public AllSongsPage(WebDriver givenDriver) {
         super(givenDriver);
@@ -36,6 +42,16 @@ public class AllSongsPage extends BasePage{
     public AllSongsPage contextClickFirstSong() {
         contextClick(firstSongElementLocator);
         return this;
+    }
+    public AllSongsPage unlikeSongs() {
+        if(likedSongsButton.isEmpty()) return this;
+        for(WebElement l: likedSongsButton) {
+                l.click();
+        }
+        return this;
+    }
+    public boolean checkUnliked() {
+        return likedSongsButton.isEmpty();
     }
 
     public void choosePlayOption() {

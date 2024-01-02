@@ -150,3 +150,16 @@
 [INFO ] 2024-01-02 11:17:24.437 [TestNG-tests-1] Log - deleteAllPlaylists started!
 [INFO ] 2024-01-02 11:19:08.564 [TestNG-tests-1] Log - deleteAllPlaylists passed!
 [INFO ] 2024-01-02 11:19:08.845 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-02 13:01:54.419 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-02 13:01:54.423 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-02 13:01:54.566 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite started!
+[FATAL] 2024-01-02 13:01:59.956 [TestNG-tests-1] Log - Error while calling method: sendKeys - null
+[INFO ] 2024-01-02 13:01:59.958 [TestNG-tests-1] Log - unlikeAll started!
+[WARN ] 2024-01-02 13:01:59.962 [TestNG-tests-1] Log - unlikeAll skipped
+[INFO ] 2024-01-02 13:01:59.973 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-02 13:03:09.525 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-02 13:03:09.529 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-02 13:03:09.680 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-02 13:03:20.152 [TestNG-tests-1] Log - unlikeAll started!
+[INFO ] 2024-01-02 13:03:53.281 [TestNG-tests-1] Log - unlikeAll passed!
+[INFO ] 2024-01-02 13:03:53.660 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite ending!
