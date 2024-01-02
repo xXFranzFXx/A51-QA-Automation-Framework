@@ -47,8 +47,6 @@ public class BasePage {
     List<WebElement> modal;
 
     @FindBy(xpath = "//div[@class='modal-wrapper overlay']//footer")
-    @CacheLookup
-
     private WebElement modalCloseLocator;
     @FindBy(xpath = "//div[@class='modal-wrapper overlay']//button[@data-test='close-modal-btn']")
     @CacheLookup
@@ -90,12 +88,12 @@ public class BasePage {
     @CacheLookup
 
     private WebElement searchResultSongLocator;
+    @CacheLookup
     @FindBy(css = ".fa-sign-out")
-    @CacheLookup
+
     private WebElement logoutButtonLocator;
-    @FindBy(xpath = "//div[@class='modal-wrapper overlay']//button[@data-test='close-modal-btn']")
     @CacheLookup
-    private By closeModalButton;
+    private By closeModalButton = By.xpath("//div[@class='modal-wrapper overlay']//button[@data-test='close-modal-btn']");
 
 
     public BasePage(WebDriver givenDriver) {
@@ -181,7 +179,7 @@ public class BasePage {
        click(closeModalButton);
     }
     protected void closeModalAndLogout() {
-        actions.moveToElement(modalCloseLocator).perform();
+        wait.until(ExpectedConditions.visibilityOf(modalCloseLocator));
         click(closeModalButton);
         clickLogoutButton();
     }

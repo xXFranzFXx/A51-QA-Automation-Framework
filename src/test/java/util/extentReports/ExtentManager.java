@@ -31,9 +31,10 @@ public class ExtentManager {
         htmlReporter.config().setDocumentTitle("Extent Report");
         htmlReporter.config().setEncoding("utf-8");
         htmlReporter.config().setReportName("Koel Automation Tests");
-
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
+        extent.setSystemInfo("Environment", "TEST");
+        extent.setSystemInfo("Author", "Franz Fernando");
         return extent;
     }
     //Select the extent report file location based on platform
