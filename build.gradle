@@ -17,7 +17,6 @@ dependencies {
     implementation 'org.apache.poi:poi-ooxml:5.2.3'
     implementation 'org.mariadb.jdbc:mariadb-java-client:3.3.1'
 
-
     implementation 'io.cucumber:cucumber-testng:7.9.0'
     implementation 'io.cucumber:cucumber-core:7.9.0'
     implementation 'io.cucumber:cucumber-java:7.9.0'
@@ -30,8 +29,8 @@ dependencies {
 
 test {
     useTestNG() {
-        suites "src/test/resources/config/Sprint-10.xml"
-        suites "src/test/resources/config/Sprint-9.xml"
+        suites "src/test/resources/config/Sprint-1.xml"
+//        suites "src/test/resources/config/Sprint-9.xml"
 
 //        suites "src/test/resources/config/${suite}.xml"   //This is for testing with Jenkins
 //        suites "src/test/resources/config/SmokeTests.xml"
