@@ -18,8 +18,10 @@ public class AllSongsPage extends BasePage{
 
     @FindBy(xpath = "//nav[@id='sidebar']/section[@class='music']/ul/li[3]/a")
     private WebElement allSongsLocator;
+    @FindBy(xpath = "//section[@id='songsWrapper']//tr[@class='song-item']//button[@class='text-secondary']")
+    private List<WebElement> likeButtons;
     @FindBy(xpath = "//section[@id='songsWrapper']//tr[@class='song-item']//button[@class='text-secondary' and contains(@title, 'Like')]")
-    private List<WebElement> likeButton;
+    private List<WebElement> unLikedButton;
     @FindBy(xpath = "//section[@id='songsWrapper']//tr[@class='song-item']//button[@class='text-secondary' and contains(@title, 'Unlike')]")
     private List<WebElement> likedSongsButton;
 
@@ -43,6 +45,7 @@ public class AllSongsPage extends BasePage{
         contextClick(firstSongElementLocator);
         return this;
     }
+    //unlikes every liked song
     public AllSongsPage unlikeSongs() {
         if(likedSongsButton.isEmpty()) return this;
         for(WebElement l: likedSongsButton) {
@@ -50,6 +53,16 @@ public class AllSongsPage extends BasePage{
         }
         return this;
     }
+    //likes ever song
+    public AllSongsPage likeSongs() {
+        if(unLikedButton.isEmpty()) return this;
+        for(WebElement l: unLikedButton) {
+            l.click();
+        }
+        return this;
+    }
+
+    //checks if there are any songs that are marked as "liked"
     public boolean checkUnliked() {
         return likedSongsButton.isEmpty();
     }

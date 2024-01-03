@@ -223,6 +223,7 @@ public class HomePage extends BasePage {
                 try {
                     findElement(l).click();
                     contextClickFirstPlDelete();
+                    Assert.assertTrue(notificationMsg());
                     Reporter.log("Deleted playlist: " + l, true);
                 } catch (NoSuchElementException e) {
                     Reporter.log("cannot delete playlist" + e, true);

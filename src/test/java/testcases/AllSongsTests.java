@@ -26,7 +26,7 @@ public class AllSongsTests extends BaseTest {
         setupBrowser(baseURL);
         homePage = new HomePage(getDriver());
         loginPage = new LoginPage(getDriver());
-        allSongsPage = loginPage.loginValidCredentials().clickAllSongs();
+        allSongsPage = new AllSongsPage(getDriver());
     }
     @AfterMethod
     public void close() {
@@ -35,6 +35,7 @@ public class AllSongsTests extends BaseTest {
 
     @Test(description = "Play the first song on All Songs page")
     public void playFirstSong() {
+        loginPage.loginValidCredentials().clickAllSongs();
        allSongsPage
                 .checkHeaderTitle()
                 .contextClickFirstSong()
@@ -44,6 +45,8 @@ public class AllSongsTests extends BaseTest {
     }
     @Test(description = "Click on the Album Tab in the Info Panel")
     public void clickInfoPanelAlbumTab() {
+        loginPage.loginValidCredentials().clickAllSongs();
+
         allSongsPage
                 .checkHeaderTitle()
                 .contextClickFirstSong()
@@ -51,9 +54,18 @@ public class AllSongsTests extends BaseTest {
         homePage.clickAlbumTab();
         Assert.assertTrue(homePage.checkAlbumTabText());
     }
-    @Test(description="Unlike all liked songs")
+    @Test(description="Like all songs")
+    public void likeAll(){
+        loginPage.loginValidCredentials().clickAllSongs();
+
+        allSongsPage.likeSongs();
+        Assert.assertFalse(allSongsPage.checkUnliked());
+    }
+    @Test(description="Unlike all liked songs", dependsOnMethods = {"likeAll"})
     public void unlikeAll () {
-            allSongsPage.unlikeSongs();
+        loginPage.loginValidCredentials().clickAllSongs();
+
+        allSongsPage.unlikeSongs();
             Assert.assertTrue(allSongsPage.checkUnliked());
     }
 }
