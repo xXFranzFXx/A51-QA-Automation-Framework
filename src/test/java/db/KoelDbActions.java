@@ -1,11 +1,9 @@
 package db;
 
 import org.mariadb.jdbc.Connection;
-import org.mariadb.jdbc.client.result.Result;
-import org.testng.Reporter;
-import util.listeners.extentreports.ExtentManager;
 
-import java.sql.DriverManager;
+import util.listeners.TestListener;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -15,6 +13,9 @@ public class KoelDbActions extends KoelDb{
     private static Connection db ;
     private static PreparedStatement st;
     private static ResultSet rs;
+    private String getUserPwdInfo = """
+            SELECT password, updated_at FROM dbkoel.users u WHERE u.email = ?
+            """;
     private String getUserPlaylists = """
             SELECT * FROM dbkoel.users u JOIN dbkoel.playlists p ON u.id = p.user_id WHERE u.email = ?
             """;
@@ -34,13 +35,11 @@ public class KoelDbActions extends KoelDb{
         db = getDbConnection();
         st=db.prepareStatement(sql);
         rs=st.executeQuery();
-        ExtentManager.logInfoDetails("SQL statement: " + sql);
+        TestListener.logInfoDetails("SQL statement: " + sql);
         return rs;
     }
-    public ResultSet query(String sql, String[] args) throws SQLException {
-        ExtentManager.logInfoDetails("SQL statement: " + sql);
-
-
+    private ResultSet query(String sql, String[] args) throws SQLException {
+        TestListener.logInfoDetails("SQL statement: " + sql);
         db = getDbConnection();
         st = db.prepareStatement(sql);
         if (args.length > 1) {
@@ -57,7 +56,7 @@ public class KoelDbActions extends KoelDb{
         return rs;
     }
     public ResultSet artistQuery(String artist) throws SQLException {
-        ExtentManager.logInfoDetails("Artist " + artist);
+        TestListener.logInfoDetails("Artist " + artist);
         String[] str = new String[]{artist};
         return query(artistNameQuery, str);
     }
@@ -70,12 +69,14 @@ public class KoelDbActions extends KoelDb{
         return simpleQuery(getTotalSongCount);
     }
     public ResultSet getUserPlaylst(String user) throws SQLException {
-        ExtentManager.logInfoDetails("User " + user);
+        TestListener.logInfoDetails("User " + user);
 
         String[] str = new String[]{user};
         return query(getUserPlaylists, str);
     }
-
-
+    public ResultSet getPwdInfo(String user) throws SQLException {
+        String[] str = new String[]{user};
+        return query(getUserPwdInfo, str);
+    }
 
 }

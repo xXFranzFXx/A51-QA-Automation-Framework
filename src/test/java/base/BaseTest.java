@@ -119,7 +119,7 @@ public class BaseTest{
         };
     }
 
-    public void loadEnv() {
+    public static void loadEnv() {
         Dotenv dotenv = Dotenv.configure().directory("./src/test/resources").load();
         dotenv.entries().forEach(e -> System.setProperty(e.getKey(), e.getValue()));
 
@@ -130,6 +130,5 @@ public class BaseTest{
             threadDriver.remove();
         }
         threadDriver.get().quit();
-
     }
 }

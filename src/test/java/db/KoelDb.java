@@ -1,5 +1,6 @@
 package db;
 
+import base.BaseTest;
 import io.github.cdimascio.dotenv.Dotenv;
 import org.mariadb.jdbc.Connection;
 import org.mariadb.jdbc.Statement;
@@ -13,7 +14,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class KoelDb {
+public class KoelDb  {
     public static Connection connection;
     private static final ThreadLocal<Connection> threadDriver = new ThreadLocal<>();
     public static Connection getDbConnection() {

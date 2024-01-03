@@ -1,6 +1,8 @@
 package util.extentReports;
 
 import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.markuputils.ExtentColor;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import org.openqa.selenium.Platform;
@@ -85,4 +87,16 @@ public class ExtentManager {
         }
         return platform;
     }
+//    public static void logPassDetails(String log) {
+//        ExtentManager.getTest().pass(MarkupHelper.createLabel(log, ExtentColor.GREEN));
+//    }
+//    public static void logFailureDetails(String log) {
+//        ExtentTestManager.getTest().fail(MarkupHelper.createLabel(log, ExtentColor.RED));
+//    }
+//    public static void logExceptionDetails(String log) {
+//        ExtentTestManager.getTest().fail(log);
+//    }
+//    public static void logInfoDetails(String log) {
+//        ExtentTestManager.getTest().info(MarkupHelper.createLabel(log, ExtentColor.GREY));
+//    }
 }

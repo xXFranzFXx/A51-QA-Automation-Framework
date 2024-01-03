@@ -9,7 +9,6 @@ import pages.*;
 import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 
-import static util.extentReports.ExtentTestManager.startTest;
 
 public class HomeTests extends BaseTest {
     LoginPage loginPage;
