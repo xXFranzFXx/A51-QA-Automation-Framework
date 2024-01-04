@@ -32,6 +32,10 @@ public class RegistrationPage extends BasePage{
         return confirmationMsg.isEnabled();
 
     }
+    public String confirmationMsgText() {
+        return confirmationMsg.getText();
+    }
+
     public String getValidationMsg() {
         return findElement(emailInput).getAttribute("validationMessage");
     }

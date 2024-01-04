@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Koel Automation Tests For Sprint-1</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Jan 3, 2024 05:37:46 PM</span></a>
+<a href="#"><span class="badge badge-primary">Jan 3, 2024 09:03:34 PM</span></a>
 </li>
 </ul>
 </div>
@@ -79,9 +79,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">queryDbPwd</p>
+            <p class="name">regWithIncorrectEmailFmt</p>
             <p class="text-sm">
-              <span>5:37:51 PM</span> / <span>00:00:00:495</span>
+              <span>9:03:38 PM</span> / <span>00:00:00:249</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -89,11 +89,190 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">queryDbPwd</h5>
-<span class='badge badge-success'>01.03.2024 5:37:51 PM</span>
-<span class='badge badge-danger'>01.03.2024 5:37:51 PM</span>
-<span class='badge badge-default'>00:00:00:495</span>
+<h5 class="test-status text-pass">regWithIncorrectEmailFmt</h5>
+<span class='badge badge-success'>01.03.2024 9:03:38 PM</span>
+<span class='badge badge-danger'>01.03.2024 9:03:38 PM</span>
+<span class='badge badge-default'>00:00:00:249</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">Verify form validation messages when incorrectly formatted email used to register an account</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:03:38 PM</td>
+        <td>
+          <span class='badge white-text grey'>String email: ff</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:03:38 PM</td>
+        <td>
+          <span class='badge white-text grey'>Expected String: Please include an '@' in the email address. 'ff' is missing an '@'.</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:03:38 PM</td>
+        <td>
+          <span class='badge black-text white'>Actual String: Please include an '@' in the email address. 'ff' is missing an '@'.</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:03:38 PM</td>
+        <td>
+          <span class='badge white-text purple'>Expected String equals Actual String: true</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:03:38 PM</td>
+        <td>
+          <span class='badge white-text green'>Test Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="2"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">register</p>
+            <p class="text-sm">
+              <span>9:03:41 PM</span> / <span>00:00:01:186</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">register</h5>
+<span class='badge badge-success'>01.03.2024 9:03:41 PM</span>
+<span class='badge badge-danger'>01.03.2024 9:03:42 PM</span>
+<span class='badge badge-default'>00:00:01:186</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">User can register for a new account</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:03:41 PM</td>
+        <td>
+          <span class='badge white-text grey'>String koelNewUser: franz.fernando+1@testpro.io</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:03:42 PM</td>
+        <td>
+          <span class='badge black-text white'>Confirmation Message: We've sent a confirmation link to the email. Please continue by clicking on it</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:03:42 PM</td>
+        <td>
+          <span class='badge white-text purple'>Confirmation Message is displayed: true</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:03:42 PM</td>
+        <td>
+          <span class='badge white-text green'>Test Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="3"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyLogin</p>
+            <p class="text-sm">
+              <span>9:03:45 PM</span> / <span>00:00:01:353</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">verifyLogin</h5>
+<span class='badge badge-success'>01.03.2024 9:03:45 PM</span>
+<span class='badge badge-danger'>01.03.2024 9:03:46 PM</span>
+<span class='badge badge-default'>00:00:01:353</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">Verify user can log in with new account</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:03:45 PM</td>
+        <td>
+          <span class='badge white-text grey'>String koelNewUser: franz.fernando+1@testpro.io</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:03:46 PM</td>
+        <td>
+          <span class='badge white-text green'>Test Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="4"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">queryDbForNewUser</p>
+            <p class="text-sm">
+              <span>9:03:49 PM</span> / <span>00:00:00:443</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">queryDbForNewUser</h5>
+<span class='badge badge-success'>01.03.2024 9:03:49 PM</span>
+<span class='badge badge-danger'>01.03.2024 9:03:49 PM</span>
+<span class='badge badge-default'>00:00:00:443</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
@@ -105,21 +284,218 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:37:51 PM</td>
+        <td>9:03:49 PM</td>
+        <td>
+          <span class='badge white-text grey'>String user: franz.fernando+1@testpro.io</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:03:49 PM</td>
+        <td>
+          <span class='badge white-text grey'>SQL statement: SELECT * FROM dbkoel.users u WHERE u.email = ?
+</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:03:49 PM</td>
+        <td>
+          <span class='badge white-text green'>Results: 
+<br>encrypted password: $2y$10$id1BnKJ.ZO9j45/VQROG2.B6lvHyW9Rr/AX.SLBRMcvrqyashmUFq
+<br>updated_at: 2023-12-18 20:09:46
+<br>user: franz.fernando+1@testpro.io
+<br></span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:03:49 PM</td>
+        <td>
+          <span class='badge white-text purple'>Assertions: franz.fernando+1@testpro.io equals franz.fernando+1@testpro.io</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:03:49 PM</td>
+        <td>
+          <span class='badge white-text green'>Test Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="5"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">loginAndUpdatePwd</p>
+            <p class="text-sm">
+              <span>9:03:53 PM</span> / <span>00:00:17:101</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">loginAndUpdatePwd</h5>
+<span class='badge badge-success'>01.03.2024 9:03:53 PM</span>
+<span class='badge badge-danger'>01.03.2024 9:04:10 PM</span>
+<span class='badge badge-default'>00:00:17:101</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">Log in, update the password, log out</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:04:10 PM</td>
+        <td>
+          <span class='badge white-text green'>Test Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="6"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">loginWithOldPwd</p>
+            <p class="text-sm">
+              <span>9:04:14 PM</span> / <span>00:00:00:200</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">loginWithOldPwd</h5>
+<span class='badge badge-success'>01.03.2024 9:04:14 PM</span>
+<span class='badge badge-danger'>01.03.2024 9:04:14 PM</span>
+<span class='badge badge-default'>00:00:00:200</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">Attempt to log in with old password</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:04:14 PM</td>
+        <td>
+          <span class='badge white-text green'>Test Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="7"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">loginWithUpdatedPwd</p>
+            <p class="text-sm">
+              <span>9:04:17 PM</span> / <span>00:00:00:437</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">loginWithUpdatedPwd</h5>
+<span class='badge badge-success'>01.03.2024 9:04:17 PM</span>
+<span class='badge badge-danger'>01.03.2024 9:04:18 PM</span>
+<span class='badge badge-default'>00:00:00:437</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">Log in successfully with updated password</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:04:18 PM</td>
+        <td>
+          <span class='badge white-text green'>Test Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="8"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">queryDbPwd</p>
+            <p class="text-sm">
+              <span>9:04:21 PM</span> / <span>00:00:00:399</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">queryDbPwd</h5>
+<span class='badge badge-success'>01.03.2024 9:04:21 PM</span>
+<span class='badge badge-danger'>01.03.2024 9:04:21 PM</span>
+<span class='badge badge-default'>00:00:00:399</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">Execute SQL query to verify password is encrypted and has been updated in the Koel database</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:04:21 PM</td>
         <td>
           <span class='badge white-text grey'>Db connection: jdbc:mariadb://104.237.13.60/dbkoel?user=dbuser11&password=***</span>
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:37:51 PM</td>
+        <td>9:04:21 PM</td>
         <td>
           <span class='badge white-text grey'>String user: fake@fakeaccount.com</span>
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:37:51 PM</td>
+        <td>9:04:21 PM</td>
         <td>
           <span class='badge white-text grey'>SQL statement: SELECT password, updated_at FROM dbkoel.users u WHERE u.email = ?
 </span>
@@ -127,31 +503,72 @@
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:37:51 PM</td>
+        <td>9:04:21 PM</td>
         <td>
           <span class='badge black-text white'>Results: 
-<br>encrypted password: $2y$10$8m3Gi9ykPSI3gkoyoCD1feT2XPdxMu0Q3k.QmyvZhhaHd4UZ.xCaa
-<br>updated_at: 2024-01-03 21:08:15
+<br>encrypted password: $2y$10$0gb5DPdoBzkEsgZbjV0yuuLC4ttCgjYM7nc3BcUEoQd5yIqW6LPDC
+<br>updated_at: 2024-01-04 05:03:54
 <br>user: fake@fakeaccount.com</span>
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:37:51 PM</td>
+        <td>9:04:21 PM</td>
         <td>
-          <span class='badge white-text purple'>Assertion: 2024-01-03 21:08:15 contains 2024-01-03</span>
+          <span class='badge white-text purple'>Assertion: 2024-01-04 05:03:54 contains 2024-01-04</span>
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:37:51 PM</td>
+        <td>9:04:21 PM</td>
         <td>
-          <span class='badge white-text purple'>Assertion: $2y$10$8m3Gi9ykPSI3gkoyoCD1feT2XPdxMu0Q3k.QmyvZhhaHd4UZ.xCaa notSame te$t$tudent2</span>
+          <span class='badge white-text purple'>Assertion: $2y$10$0gb5DPdoBzkEsgZbjV0yuuLC4ttCgjYM7nc3BcUEoQd5yIqW6LPDC notSame te$t$tudent2</span>
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:37:51 PM</td>
+        <td>9:04:21 PM</td>
+        <td>
+          <span class='badge white-text green'>Test Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="9"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">resetProfile</p>
+            <p class="text-sm">
+              <span>9:04:25 PM</span> / <span>00:00:01:515</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">resetProfile</h5>
+<span class='badge badge-success'>01.03.2024 9:04:25 PM</span>
+<span class='badge badge-danger'>01.03.2024 9:04:26 PM</span>
+<span class='badge badge-default'>00:00:01:515</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:04:26 PM</td>
         <td>
           <span class='badge white-text green'>Test Passed</span>
         </td>
@@ -175,19 +592,19 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Jan 3, 2024 05:37:46 PM</h3>
+<h3>Jan 3, 2024 09:03:34 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Jan 3, 2024 05:37:52 PM</h3>
+<h3>Jan 3, 2024 09:04:26 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Tests Passed</p>
-<h3>1</h3>
+<h3>9</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -210,7 +627,7 @@
 </div>
 <div class="card-footer">
 <div><small data-tooltip='100%'>
-<b>1</b> tests passed
+<b>9</b> tests passed
 </small>
 </div>
 <div>
@@ -232,10 +649,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='14%'><b>1</b> events passed</small></div>
+<div><small data-tooltip='37%'><b>10</b> events passed</small></div>
 <div>
 <small data-tooltip='0%'><b>0</b> events failed,
-<b data-tooltip='%'>6</b> others
+<b data-tooltip='%'>17</b> others
 </small>
 </div>
 </div>
@@ -251,7 +668,7 @@
 </div></div>
 <script>
 var timeline = {
-"queryDbPwd":0.495
+"regWithIncorrectEmailFmt":0.249,"register":1.186,"verifyLogin":1.353,"queryDbForNewUser":0.443,"loginAndUpdatePwd":17.101,"loginWithOldPwd":0.2,"loginWithUpdatedPwd":0.437,"queryDbPwd":0.399,"resetProfile":1.515
 };
 </script>
 <div class="row">
@@ -286,7 +703,7 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 1,
+passParent: 9,
 failParent: 0,
 warningParent: 0,
 skipParent: 0,
@@ -303,11 +720,11 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 1,
+passEvents: 10,
 failEvents: 0,
 warningEvents: 0,
 skipEvents: 0,
-infoEvents: 6
+infoEvents: 17
 };
 </script>        </div>
       </div>

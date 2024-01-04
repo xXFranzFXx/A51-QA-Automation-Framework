@@ -32,8 +32,8 @@ public class ExtentManager {
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
         extent.setSystemInfo("Environment", "TEST");
-        extent.setSystemInfo("Test", "Web App, Database");
-        extent.setSystemInfo("Db", "MariaDb");
+//        extent.setSystemInfo("Test", "Web App, Database");
+//        extent.setSystemInfo("Db", "MariaDb");
         extent.setSystemInfo("Author", "Franz Fernando");
     }
     //Select the extent report file location based on platform

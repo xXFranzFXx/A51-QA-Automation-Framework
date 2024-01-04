@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.TimeZone;
 
 public class TestUtil extends BaseTest {
     public static long sysTime = System.currentTimeMillis();;
@@ -33,6 +34,7 @@ public class TestUtil extends BaseTest {
     }
     public static  String getDate() {
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+        df.setTimeZone(TimeZone.getTimeZone("Europe/London"));
         return df.format(new Date());
     }
 

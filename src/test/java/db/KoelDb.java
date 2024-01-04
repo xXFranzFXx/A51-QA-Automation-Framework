@@ -14,7 +14,8 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class KoelDb  {
+
+public class KoelDb extends BaseTest {
     public static Connection connection;
     private static final ThreadLocal<Connection> threadDriver = new ThreadLocal<>();
     public static Connection getDbConnection() {

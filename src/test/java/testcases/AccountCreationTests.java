@@ -52,6 +52,8 @@ public class AccountCreationTests extends BaseTest {
         registrationPage = new RegistrationPage(getDriver());
         registrationPage.provideEmail(koelNewUser)
                 .clickSubmit();
+        TestListener.logRsDetails("Confirmation Message: " + registrationPage.confirmationMsgText());
+        TestListener.logAssertionDetails("Confirmation Message is displayed: " + registrationPage.getConfirmationMsg());
         Assert.assertTrue(registrationPage.getConfirmationMsg());
     }
     @Test(description =  "Verify form validation messages when incorrectly formatted email used to register an account")
@@ -63,6 +65,10 @@ public class AccountCreationTests extends BaseTest {
                 .clickSubmit();
         String expected = "Please include an '@' in the email address. '"+email+"' is missing an '@'.";
         String validationMsg = registrationPage.getValidationMsg();
+        TestListener.logInfoDetails("Expected String: " + expected);
+        TestListener.logRsDetails("Actual String: " + validationMsg);
+        TestListener.logAssertionDetails("Expected String equals Actual String: " + expected.equals(validationMsg));
+
         Assert.assertEquals(expected, validationMsg);
     }
     @Test(description = "Verify user can log in with new account")
@@ -77,7 +83,7 @@ public class AccountCreationTests extends BaseTest {
                 .clickSubmitBtn();
         Assert.assertTrue(homePage.getUserAvatar());
     }
-    @Test(description = "Execute SQL query to verify password is encrypted and has been updated in the Koel database")
+    @Test(description = "Execute SQL query to verify password is encrypted and has been updated in the Koel database", priority=3)
     @Parameters({"koelNewUser", "password"})
     public void queryDbForNewUser(String koelNewUser, String password) throws SQLException, ClassNotFoundException {
         KoelDb.initializeDb();
@@ -93,7 +99,7 @@ public class AccountCreationTests extends BaseTest {
                             "updated_at: " + updated +"\n" +"<br>"+
                             "user: " + email +"\n" +"<br>"
             );
-            TestListener.logInfoDetails("Assertions: " +koelNewUser+ " equals " + email);
+            TestListener.logAssertionDetails("Assertions: " +koelNewUser+ " equals " + email);
             Assert.assertNotSame(ep, password);
             Assert.assertEquals(email, koelNewUser);
         }

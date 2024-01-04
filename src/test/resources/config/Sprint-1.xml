@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="Sprint-1" parallel="classes" thread-count="2">
+<suite name="Sprint-1"  parallel="classes" thread-count="2" verbose="1">
     <listeners>
         <listener class-name="util.listeners.TestListener"/>
         <listener class-name="util.listeners.AnnotationTransformer"/>
     </listeners>
-    <test name="Sprint-1" >
+    <test name="accountCreation" >
         <parameter name="baseURL" value="https://qa.koel.app/"/>
         <parameter name="registrationURL" value="https://qa.koel.app/registration"/>
         <parameter name="koelNewUser" value="franz.fernando+1@testpro.io"/>
@@ -14,6 +14,11 @@
         <parameter name="email" value="ff"/>
         <classes>
             <class name="testcases.AccountCreationTests"/>
+        </classes>
+    </test>
+    <test name="passwordUpdate">
+        <parameter name="baseURL" value="https://qa.koel.app/"/>
+        <classes>
             <class name="testcases.UpdatePasswordTests"/>
         </classes>
     </test>
