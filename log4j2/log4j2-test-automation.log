@@ -242,3 +242,35 @@
 [INFO ] 2024-01-03 16:21:41.839 [TestNG-tests-1] Log - verifyLogin started!
 [INFO ] 2024-01-03 16:21:43.556 [TestNG-tests-1] Log - verifyLogin passed!
 [INFO ] 2024-01-03 16:21:43.676 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-03 17:13:56.103 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-03 17:14:00.693 [TestNG-test=Sprint-1-1] Log - verifyLogin started!
+[INFO ] 2024-01-03 17:14:02.313 [TestNG-test=Sprint-1-1] Log - verifyLogin passed!
+[INFO ] 2024-01-03 17:14:02.423 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-03 17:18:58.822 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-03 17:19:03.020 [TestNG-test=Sprint-1-1] Log - queryDbPwd started!
+[INFO ] 2024-01-03 17:19:03.476 [TestNG-test=Sprint-1-1] Log - queryDbPwd passed!
+[INFO ] 2024-01-03 17:19:03.587 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-03 17:27:31.964 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-03 17:27:36.401 [TestNG-test=Sprint-1-1] Log - queryDbPwd started!
+[INFO ] 2024-01-03 17:27:36.883 [TestNG-test=Sprint-1-1] Log - queryDbPwd passed!
+[INFO ] 2024-01-03 17:27:36.996 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-03 17:29:32.239 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-03 17:29:36.596 [TestNG-test=Sprint-1-1] Log - queryDbPwd started!
+[INFO ] 2024-01-03 17:29:37.037 [TestNG-test=Sprint-1-1] Log - queryDbPwd passed!
+[INFO ] 2024-01-03 17:29:37.151 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-03 17:30:30.502 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-03 17:30:35.660 [TestNG-test=Sprint-1-1] Log - queryDbPwd started!
+[INFO ] 2024-01-03 17:30:36.132 [TestNG-test=Sprint-1-1] Log - queryDbPwd passed!
+[INFO ] 2024-01-03 17:30:36.284 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-03 17:31:10.672 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-03 17:31:15.498 [TestNG-test=Sprint-1-1] Log - queryDbPwd started!
+[INFO ] 2024-01-03 17:31:15.976 [TestNG-test=Sprint-1-1] Log - queryDbPwd passed!
+[INFO ] 2024-01-03 17:31:16.091 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-03 17:36:50.278 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-03 17:36:54.654 [TestNG-test=Sprint-1-1] Log - queryDbPwd started!
+[INFO ] 2024-01-03 17:36:55.108 [TestNG-test=Sprint-1-1] Log - queryDbPwd passed!
+[INFO ] 2024-01-03 17:36:55.234 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-03 17:37:47.035 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-03 17:37:51.473 [TestNG-test=Sprint-1-1] Log - queryDbPwd started!
+[INFO ] 2024-01-03 17:37:51.970 [TestNG-test=Sprint-1-1] Log - queryDbPwd passed!
+[INFO ] 2024-01-03 17:37:52.161 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!

@@ -72,18 +72,18 @@ public class KoelDbActions extends KoelDb{
         return simpleQuery(getTotalSongCount);
     }
     public ResultSet getUserPlaylst(String user) throws SQLException {
-        TestListener.logInfoDetails("User " + user);
+        TestListener.logInfoDetails("String user: " + user);
 
         String[] str = new String[]{user};
         return query(getUserPlaylists, str);
     }
     public ResultSet getPwdInfo(String user) throws SQLException {
-        TestListener.logInfoDetails("User " + user);
+        TestListener.logInfoDetails("String user: " + user);
         String[] str = new String[]{user};
         return query(getUserPwdInfo, str);
     }
     public ResultSet getUserInfo(String user) throws SQLException {
-        TestListener.logInfoDetails("User " + user);
+        TestListener.logInfoDetails("String user: " + user);
         String[] str = new String[]{user};
         return query(getNewUser, str);
     }

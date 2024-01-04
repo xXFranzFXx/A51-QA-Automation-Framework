@@ -1,8 +1,6 @@
 package util.extentReports;
 
 import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.markuputils.ExtentColor;
-import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import org.openqa.selenium.Platform;
@@ -12,32 +10,31 @@ import java.io.File;
 public class ExtentManager {
     private static ExtentReports extent;
     private static Platform platform;
-    private static String reportFileName = "Koel-Test-Automation-Extent-Report.html";
-    private static String macPath = System.getProperty("user.dir") + "/reports/extent-reports";
-    private static String windowsPath = System.getProperty("user.dir") + "\\reports\\extent-reports";
-    private static String macReportFileLoc = macPath + "/" + reportFileName;
-    private static String winReportFileLoc = windowsPath + "\\" + reportFileName;
+    private static final String reportFileName = "Koel-Test-Automation-Extent-Report.html";
+    private static final String macPath = System.getProperty("user.dir") + "/reports/extent-reports";
+    private static final String windowsPath = System.getProperty("user.dir") + "\\reports\\extent-reports";
+    private static final String macReportFileLoc = macPath + "/" + reportFileName;
+    private static final String winReportFileLoc = windowsPath + "\\" + reportFileName;
     public static ExtentReports getInstance() {
         if (extent == null)
             createInstance();
         return extent;
     }
 
-    public static ExtentReports createInstance() {
+    public static void createInstance() {
         platform = getCurrentPlatform();
         String fileName = getReportFileLocation(platform);
         ExtentSparkReporter htmlReporter = new ExtentSparkReporter(fileName);
-//        htmlReporter.config().setTestViewChartLocation(ChartLocation.BOTTOM);
-//        htmlReporter.config().setChartVisibilityOnOpen(true);
         htmlReporter.config().setTheme(Theme.DARK);
         htmlReporter.config().setDocumentTitle("Extent Report");
         htmlReporter.config().setEncoding("utf-8");
-        htmlReporter.config().setReportName("Koel Automation Tests");
+        htmlReporter.config().setReportName("Koel Automation Tests For Sprint-1");
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
         extent.setSystemInfo("Environment", "TEST");
+        extent.setSystemInfo("Test", "Web App, Database");
+        extent.setSystemInfo("Db", "MariaDb");
         extent.setSystemInfo("Author", "Franz Fernando");
-        return extent;
     }
     //Select the extent report file location based on platform
     private static String getReportFileLocation (Platform platform) {
@@ -87,16 +84,4 @@ public class ExtentManager {
         }
         return platform;
     }
-//    public static void logPassDetails(String log) {
-//        ExtentManager.getTest().pass(MarkupHelper.createLabel(log, ExtentColor.GREEN));
-//    }
-//    public static void logFailureDetails(String log) {
-//        ExtentTestManager.getTest().fail(MarkupHelper.createLabel(log, ExtentColor.RED));
-//    }
-//    public static void logExceptionDetails(String log) {
-//        ExtentTestManager.getTest().fail(log);
-//    }
-//    public static void logInfoDetails(String log) {
-//        ExtentTestManager.getTest().info(MarkupHelper.createLabel(log, ExtentColor.GREY));
-//    }
 }

@@ -3,6 +3,7 @@ package testcases;
 import base.BaseTest;
 import db.KoelDb;
 import db.KoelDbActions;
+import io.cucumber.java.sl.Ko;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.*;
@@ -33,7 +34,6 @@ import java.util.Date;
  * QA Notes: Verify that the password was actually updated in the Database (Table: users)
  */
 public class UpdatePasswordTests extends BaseTest {
-    private final String updatedPassword = "te$t$tudent2";
     ResultSet rs;
     ProfilePage profilePage;
     LoginPage loginPage;
@@ -56,7 +56,7 @@ public class UpdatePasswordTests extends BaseTest {
         profilePage = new ProfilePage(getDriver());
         homePage.clickAvatar();
         profilePage
-                .provideNewPassword(updatedPassword)
+                .provideNewPassword(System.getProperty("updatedPassword"))
                 .provideCurrentPassword(System.getProperty("koelPassword"))
                 .clickSaveButton()
                 .clickLogout();
@@ -73,7 +73,7 @@ public class UpdatePasswordTests extends BaseTest {
         loginPage = new LoginPage(getDriver());
         homePage = new HomePage(getDriver());
         loginPage.provideEmail(System.getProperty("koelUser"))
-                .providePassword(updatedPassword)
+                .providePassword(System.getProperty("updatedPassword"))
                 .clickSubmitBtn();
         Assert.assertTrue(homePage.getUserAvatar());
     }
@@ -81,19 +81,20 @@ public class UpdatePasswordTests extends BaseTest {
     public void queryDbPwd() throws SQLException, ClassNotFoundException {
         KoelDb.initializeDb();
         KoelDbActions koelDbActions = new KoelDbActions();
+        TestListener.logInfoDetails("Db connection: " + KoelDb.getDbConnection().getMetaData().getURL());
         rs = koelDbActions.getPwdInfo(System.getProperty("koelUser"));
         if (rs.next()) {
             String ep = rs.getString("password");
             String updated = rs.getString("updated_at");
-            TestListener.logPassDetails(
+            TestListener.logRsDetails(
                     "Results: " +"\n" +"<br>"+
                     "encrypted password: " + ep +"\n" +"<br>"+
                     "updated_at: " + updated +"\n" +"<br>"+
                     "user: " + System.getProperty("koelUser")
             );
-           TestListener.logInfoDetails("Assertion: " + updated + " contains " + TestUtil.getDate());
-           TestListener.logInfoDetails("Assertion: " + ep + " notSame " + updatedPassword);
-           Assert.assertNotSame(ep, updatedPassword);
+           TestListener.logAssertionDetails("Assertion: " + updated + " contains " + TestUtil.getDate());
+           TestListener.logAssertionDetails("Assertion: " + ep + " notSame " + System.getProperty("updatedPassword"));
+           Assert.assertNotSame(ep, System.getProperty("updatedPassword"));
            Assert.assertTrue(updated.contains(TestUtil.getDate()));
         }
         Assert.assertFalse(false);
@@ -109,12 +110,12 @@ public class UpdatePasswordTests extends BaseTest {
         String loginUrl = driver.getCurrentUrl();
         try {
             loginPage.provideEmail(System.getProperty("koelUser"))
-                    .providePassword(updatedPassword)
+                    .providePassword(System.getProperty("updatedPassword"))
                     .clickSubmitBtn();
 
                 homePage.clickAvatar();
                 profilePage
-                        .provideCurrentPassword(updatedPassword)
+                        .provideCurrentPassword(System.getProperty("updatedPassword"))
                         .provideNewPassword(System.getProperty("koelPassword"))
                         .clickSaveButton();
                 Assert.assertTrue(profilePage.notificationPopup());

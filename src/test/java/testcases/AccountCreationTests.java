@@ -3,6 +3,7 @@ package testcases;
 import base.BaseTest;
 import db.KoelDb;
 import db.KoelDbActions;
+import org.apache.poi.ss.formula.functions.T;
 import org.testng.Assert;
 import org.testng.annotations.*;
 import pages.HomePage;
@@ -47,6 +48,7 @@ public class AccountCreationTests extends BaseTest {
     @Test(description = "User can register for a new account")
     @Parameters({"koelNewUser"})
     public void register(String koelNewUser) {
+        TestListener.logInfoDetails("String koelNewUser: " + koelNewUser);
         registrationPage = new RegistrationPage(getDriver());
         registrationPage.provideEmail(koelNewUser)
                 .clickSubmit();
@@ -55,6 +57,7 @@ public class AccountCreationTests extends BaseTest {
     @Test(description =  "Verify form validation messages when incorrectly formatted email used to register an account")
     @Parameters({"email"})
     public void regWithIncorrectEmailFmt(String email){
+        TestListener.logInfoDetails("String email: " + email);
         registrationPage = new RegistrationPage(getDriver());
         registrationPage.provideEmail(email)
                 .clickSubmit();
@@ -65,6 +68,7 @@ public class AccountCreationTests extends BaseTest {
     @Test(description = "Verify user can log in with new account")
     @Parameters({"baseURL", "koelNewUser", "password"})
     public void verifyLogin(String baseURL, String koelNewUser, String password) {
+        TestListener.logInfoDetails("String koelNewUser: " + koelNewUser);
         driver.get(baseURL);
         loginPage = new LoginPage(getDriver());
         homePage = new HomePage(getDriver());

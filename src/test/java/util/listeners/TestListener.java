@@ -28,6 +28,12 @@ public class TestListener  implements ITestListener, WebDriverListener {
     public static void logPassDetails(String log) {
        test.get().pass(MarkupHelper.createLabel(log, ExtentColor.GREEN));
     }
+    public static void logRsDetails(String log) {
+        test.get().info(MarkupHelper.createLabel(log, ExtentColor.WHITE));
+    }
+    public static void logAssertionDetails(String log) {
+        test.get().info(MarkupHelper.createLabel(log, ExtentColor.PURPLE));
+    }
     public static void logFailureDetails(String log) {
        test.get().fail(MarkupHelper.createLabel(log, ExtentColor.RED));
     }

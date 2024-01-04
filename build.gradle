@@ -37,5 +37,6 @@ test {
         systemProperty "dbUrl", "jdbc:mariadb://104.237.13.60:3306/dbkoel"
         systemProperty "dbUser", "dbuser11"
         systemProperty "dbPassword", "pa\$\$11"
+        systemProperty "updatedPassword", "te\$t\$tudent2"
     }
 }

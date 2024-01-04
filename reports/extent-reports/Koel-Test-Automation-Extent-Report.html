@@ -32,10 +32,10 @@
 </ul>
 <ul class="nav-right">
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Koel Automation Tests</span></a>
+<a href="#"><span class="badge badge-primary">Koel Automation Tests For Sprint-1</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Jan 3, 2024 04:21:36 PM</span></a>
+<a href="#"><span class="badge badge-primary">Jan 3, 2024 05:37:46 PM</span></a>
 </li>
 </ul>
 </div>
@@ -79,9 +79,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">verifyLogin</p>
+            <p class="name">queryDbPwd</p>
             <p class="text-sm">
-              <span>4:21:41 PM</span> / <span>00:00:01:713</span>
+              <span>5:37:51 PM</span> / <span>00:00:00:495</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -89,23 +89,69 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">verifyLogin</h5>
-<span class='badge badge-success'>01.03.2024 4:21:41 PM</span>
-<span class='badge badge-danger'>01.03.2024 4:21:43 PM</span>
-<span class='badge badge-default'>00:00:01:713</span>
+<h5 class="test-status text-pass">queryDbPwd</h5>
+<span class='badge badge-success'>01.03.2024 5:37:51 PM</span>
+<span class='badge badge-danger'>01.03.2024 5:37:51 PM</span>
+<span class='badge badge-default'>00:00:00:495</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
-<div class="m-t-10 m-l-5">Verify user can log in with new account</div>
+<div class="m-t-10 m-l-5">Execute SQL query to verify password is encrypted and has been updated in the Koel database</div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:37:51 PM</td>
+        <td>
+          <span class='badge white-text grey'>Db connection: jdbc:mariadb://104.237.13.60/dbkoel?user=dbuser11&password=***</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:37:51 PM</td>
+        <td>
+          <span class='badge white-text grey'>String user: fake@fakeaccount.com</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:37:51 PM</td>
+        <td>
+          <span class='badge white-text grey'>SQL statement: SELECT password, updated_at FROM dbkoel.users u WHERE u.email = ?
+</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:37:51 PM</td>
+        <td>
+          <span class='badge black-text white'>Results: 
+<br>encrypted password: $2y$10$8m3Gi9ykPSI3gkoyoCD1feT2XPdxMu0Q3k.QmyvZhhaHd4UZ.xCaa
+<br>updated_at: 2024-01-03 21:08:15
+<br>user: fake@fakeaccount.com</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:37:51 PM</td>
+        <td>
+          <span class='badge white-text purple'>Assertion: 2024-01-03 21:08:15 contains 2024-01-03</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:37:51 PM</td>
+        <td>
+          <span class='badge white-text purple'>Assertion: $2y$10$8m3Gi9ykPSI3gkoyoCD1feT2XPdxMu0Q3k.QmyvZhhaHd4UZ.xCaa notSame te$t$tudent2</span>
+        </td>
+      </tr>
+      <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>4:21:43 PM</td>
+        <td>5:37:51 PM</td>
         <td>
           <span class='badge white-text green'>Test Passed</span>
         </td>
@@ -129,13 +175,13 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Jan 3, 2024 04:21:36 PM</h3>
+<h3>Jan 3, 2024 05:37:46 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Jan 3, 2024 04:21:43 PM</h3>
+<h3>Jan 3, 2024 05:37:52 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -186,10 +232,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>1</b> events passed</small></div>
+<div><small data-tooltip='14%'><b>1</b> events passed</small></div>
 <div>
 <small data-tooltip='0%'><b>0</b> events failed,
-<b data-tooltip='%'>0</b> others
+<b data-tooltip='%'>6</b> others
 </small>
 </div>
 </div>
@@ -205,7 +251,7 @@
 </div></div>
 <script>
 var timeline = {
-"verifyLogin":1.713
+"queryDbPwd":0.495
 };
 </script>
 <div class="row">
@@ -218,6 +264,14 @@ var timeline = {
 <tr>
 <td>Environment</td>
 <td>TEST</td>
+</tr>
+<tr>
+<td>Test</td>
+<td>Web App, Database</td>
+</tr>
+<tr>
+<td>Db</td>
+<td>MariaDb</td>
 </tr>
 <tr>
 <td>Author</td>
@@ -253,7 +307,7 @@ passEvents: 1,
 failEvents: 0,
 warningEvents: 0,
 skipEvents: 0,
-infoEvents: 0
+infoEvents: 6
 };
 </script>        </div>
       </div>
