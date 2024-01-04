@@ -21,10 +21,8 @@ import java.util.List;
 import java.util.Set;
 
 public class TestListener  implements ITestListener, WebDriverListener {
-    //Extent Report Declarations
     static ExtentReports extent = ExtentManager.getInstance();
     static ThreadLocal<ExtentTest> test = new ThreadLocal<>();
-    //use for logging database query test result
     public static void logPassDetails(String log) {
        test.get().pass(MarkupHelper.createLabel(log, ExtentColor.GREEN));
     }
@@ -40,7 +38,6 @@ public class TestListener  implements ITestListener, WebDriverListener {
     public static void logExceptionDetails(String log) {
         test.get().fail(log);
     }
-    //use for logging query arguments and assertions
     public static void logInfoDetails(String log) {
         test.get().info(MarkupHelper.createLabel(log, ExtentColor.GREY));
     }
