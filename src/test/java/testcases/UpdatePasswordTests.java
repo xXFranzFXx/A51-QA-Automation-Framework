@@ -60,12 +60,17 @@ public class UpdatePasswordTests extends BaseTest {
                 .provideCurrentPassword(System.getProperty("koelPassword"))
                 .clickSaveButton()
                 .clickLogout();
+        TestListener.logInfoDetails("New Password: " + System.getProperty("updatedPassword"));
+        TestListener.logInfoDetails("Old Password: " + System.getProperty("koelPassword"));
+        TestListener.logAssertionDetails("Log out after updating password: " + loginPage.getRegistrationLink());
         Assert.assertTrue(loginPage.getRegistrationLink());
     }
     @Test(description = "Attempt to log in with old password")
     public void loginWithOldPwd() {
         loginPage = new LoginPage(getDriver());
         loginPage.loginValidCredentials();
+        TestListener.logInfoDetails("Attempt logging in with password: " + System.getProperty("koelPassword"));
+        TestListener.logAssertionDetails("User should not be able to log in with old password: " + loginPage.getRegistrationLink());
         Assert.assertTrue(loginPage.getRegistrationLink());
     }
     @Test(description = "Log in successfully with updated password")
@@ -75,6 +80,8 @@ public class UpdatePasswordTests extends BaseTest {
         loginPage.provideEmail(System.getProperty("koelUser"))
                 .providePassword(System.getProperty("updatedPassword"))
                 .clickSubmitBtn();
+        TestListener.logInfoDetails("Attempt logging in with password: " + System.getProperty("updatedPassword"));
+        TestListener.logAssertionDetails("User should be able to log in with updated password: " + homePage.getUserAvatar());
         Assert.assertTrue(homePage.getUserAvatar());
     }
     @Test(description = "Execute SQL query to verify password is encrypted and has been updated in the Koel database")
@@ -118,6 +125,7 @@ public class UpdatePasswordTests extends BaseTest {
                         .provideCurrentPassword(System.getProperty("updatedPassword"))
                         .provideNewPassword(System.getProperty("koelPassword"))
                         .clickSaveButton();
+                TestListener.logAssertionDetails("Account has been reset: " + profilePage.notificationPopup());
                 Assert.assertTrue(profilePage.notificationPopup());
                 Reporter.log("Restored profile", true);
         } catch(Exception e) {

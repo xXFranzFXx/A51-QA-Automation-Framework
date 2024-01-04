@@ -9,11 +9,15 @@ import org.testng.annotations.*;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.RegistrationPage;
+import util.TestDataHandler;
 import util.listeners.TestListener;
 
 import java.net.MalformedURLException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Story:
@@ -31,6 +35,7 @@ import java.sql.SQLException;
  * QA Note: QA will need to request Database access
  */
 public class AccountCreationTests extends BaseTest {
+    TestDataHandler testDataHandler;
     LoginPage loginPage;
     HomePage homePage;
     RegistrationPage registrationPage;
@@ -81,9 +86,11 @@ public class AccountCreationTests extends BaseTest {
         loginPage.provideEmail(koelNewUser)
                 .providePassword(password)
                 .clickSubmitBtn();
+        TestListener.logAssertionDetails("Locate user avatar after logging in: " + homePage.getUserAvatar());
         Assert.assertTrue(homePage.getUserAvatar());
+
     }
-    @Test(description = "Execute SQL query to verify password is encrypted and has been updated in the Koel database", priority=3)
+    @Test(description = "Execute SQL query to verify new user info is stored correctly or updated in the Koel database", priority=3)
     @Parameters({"koelNewUser", "password"})
     public void queryDbForNewUser(String koelNewUser, String password) throws SQLException, ClassNotFoundException {
         KoelDb.initializeDb();
@@ -93,12 +100,15 @@ public class AccountCreationTests extends BaseTest {
             String ep = rs.getString("password");
             String updated = rs.getString("updated_at");
             String email = rs.getString("email");
-            TestListener.logPassDetails(
+            TestListener.logRsDetails(
                     "Results: " +"\n" +"<br>"+
                             "encrypted password: " + ep +"\n" +"<br>"+
                             "updated_at: " + updated +"\n" +"<br>"+
                             "user: " + email +"\n" +"<br>"
             );
+            Map<String, Object> sqlData = new HashMap<>();
+            sqlData.put("existingUser", email);
+            testDataHandler.setTestDataInMap(sqlData);
             TestListener.logAssertionDetails("Assertions: " +koelNewUser+ " equals " + email);
             Assert.assertNotSame(ep, password);
             Assert.assertEquals(email, koelNewUser);
@@ -106,5 +116,7 @@ public class AccountCreationTests extends BaseTest {
         Assert.assertFalse(false);
         KoelDb.closeDatabaseConnection();
     }
+    @Test(description = "Get existing user from database, attempt to register with that account")
+
 
 }

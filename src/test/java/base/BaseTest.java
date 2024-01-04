@@ -128,7 +128,8 @@ public class BaseTest{
         if (getDriver() == null) {
             threadDriver.get().close();
             threadDriver.remove();
+        } else {
+            threadDriver.get().quit();
         }
-        threadDriver.get().quit();
     }
 }

@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class TestDataHandler {
-        Map<String, Object> testDataInMap=new HashMap<String, Object>();
+        Map<String, Object> testDataInMap = new HashMap<String, Object>();
 
         public Map<String, Object> getTestDataInMap() {
             return testDataInMap;
