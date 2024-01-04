@@ -1,10 +1,7 @@
 package pages;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class RegistrationPage extends BasePage{
    @FindBy(xpath = "//input[@type='email']")
@@ -26,7 +23,6 @@ public class RegistrationPage extends BasePage{
 
     public boolean getConfirmationMsg() {
         return confirmationMsg.isEnabled();
-
     }
     public String confirmationMsgText() {
         return confirmationMsg.getText();
