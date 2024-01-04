@@ -44,3 +44,42 @@
 [INFO ] 2024-01-04 09:00:08.309 [TestNG-test=passwordUpdate-1] Log - resetProfile started!
 [INFO ] 2024-01-04 09:00:10.477 [TestNG-test=passwordUpdate-1] Log - resetProfile passed!
 [INFO ] 2024-01-04 09:00:10.590 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-04 09:22:19.081 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-04 09:22:22.825 [TestNG-test=accountCreation-1] Log - regWithIncorrectEmailFmt started!
+[INFO ] 2024-01-04 09:22:23.140 [TestNG-test=accountCreation-1] Log - regWithIncorrectEmailFmt passed!
+[INFO ] 2024-01-04 09:22:26.343 [TestNG-test=accountCreation-1] Log - register started!
+[INFO ] 2024-01-04 09:22:27.911 [TestNG-test=accountCreation-1] Log - register passed!
+[INFO ] 2024-01-04 09:22:30.826 [TestNG-test=accountCreation-1] Log - verifyLogin started!
+[INFO ] 2024-01-04 09:22:32.397 [TestNG-test=accountCreation-1] Log - verifyLogin passed!
+[INFO ] 2024-01-04 09:22:35.480 [TestNG-test=accountCreation-1] Log - queryDbForNewUser started!
+[INFO ] 2024-01-04 09:22:35.962 [TestNG-test=accountCreation-1] Log - queryDbForNewUser passed!
+[INFO ] 2024-01-04 09:22:38.959 [TestNG-test=accountCreation-1] Log - tryRegisteringExistingUser started!
+[INFO ] 2024-01-04 09:22:40.170 [TestNG-test=accountCreation-1] Log - tryRegisteringExistingUser passed!
+[INFO ] 2024-01-04 09:22:40.288 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-04 09:22:40.593 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-04 09:22:40.594 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-04 09:34:31.799 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-04 09:34:35.417 [TestNG-test=accountCreation-1] Log - regWithIncorrectEmailFmt started!
+[INFO ] 2024-01-04 09:34:35.686 [TestNG-test=accountCreation-1] Log - regWithIncorrectEmailFmt passed!
+[INFO ] 2024-01-04 09:34:38.419 [TestNG-test=accountCreation-1] Log - register started!
+[INFO ] 2024-01-04 09:34:39.643 [TestNG-test=accountCreation-1] Log - register passed!
+[INFO ] 2024-01-04 09:34:42.357 [TestNG-test=accountCreation-1] Log - verifyLogin started!
+[INFO ] 2024-01-04 09:34:43.891 [TestNG-test=accountCreation-1] Log - verifyLogin passed!
+[INFO ] 2024-01-04 09:34:46.830 [TestNG-test=accountCreation-1] Log - queryDbForNewUser started!
+[INFO ] 2024-01-04 09:34:47.326 [TestNG-test=accountCreation-1] Log - queryDbForNewUser passed!
+[INFO ] 2024-01-04 09:34:50.202 [TestNG-test=accountCreation-1] Log - tryRegisteringExistingUser started!
+[INFO ] 2024-01-04 09:34:51.534 [TestNG-test=accountCreation-1] Log - tryRegisteringExistingUser passed!
+[INFO ] 2024-01-04 09:34:51.709 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-04 09:34:51.941 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-04 09:34:55.360 [TestNG-test=passwordUpdate-1] Log - loginAndUpdatePwd started!
+[FATAL] 2024-01-04 09:35:12.414 [TestNG-test=passwordUpdate-1] Log - Error while calling method: findElement - null
+[INFO ] 2024-01-04 09:35:12.928 [TestNG-test=passwordUpdate-1] Log - loginAndUpdatePwd passed!
+[INFO ] 2024-01-04 09:35:16.857 [TestNG-test=passwordUpdate-1] Log - loginWithOldPwd started!
+[INFO ] 2024-01-04 09:35:17.096 [TestNG-test=passwordUpdate-1] Log - loginWithOldPwd passed!
+[INFO ] 2024-01-04 09:35:20.681 [TestNG-test=passwordUpdate-1] Log - loginWithUpdatedPwd started!
+[INFO ] 2024-01-04 09:35:21.101 [TestNG-test=passwordUpdate-1] Log - loginWithUpdatedPwd passed!
+[INFO ] 2024-01-04 09:35:25.574 [TestNG-test=passwordUpdate-1] Log - queryDbPwd started!
+[INFO ] 2024-01-04 09:35:26.014 [TestNG-test=passwordUpdate-1] Log - queryDbPwd passed!
+[INFO ] 2024-01-04 09:35:29.783 [TestNG-test=passwordUpdate-1] Log - resetProfile started!
+[INFO ] 2024-01-04 09:35:32.236 [TestNG-test=passwordUpdate-1] Log - resetProfile passed!
+[INFO ] 2024-01-04 09:35:32.345 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!

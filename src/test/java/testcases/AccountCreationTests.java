@@ -35,11 +35,32 @@ import java.util.Map;
  * QA Note: QA will need to request Database access
  */
 public class AccountCreationTests extends BaseTest {
-    TestDataHandler testDataHandler;
+
     LoginPage loginPage;
     HomePage homePage;
     RegistrationPage registrationPage;
     ResultSet rs;
+    TestDataHandler testData =new TestDataHandler();
+    Map<String,Object> dataMap = new HashMap<>();
+    //Verify the data saved in previous test is correct
+    public boolean verifyData(String key1, String key2) {
+        Map<String, Object> testDataInMap = testData.getTestDataInMap();
+        Object dataKey1 = testDataInMap.get(key1);
+        Object dataKey2 = testDataInMap.get(key2);
+        System.out.println("dataKey1 " + dataKey1);
+        System.out.println("dataKey2 " + dataKey2);
+        return dataKey1.equals(dataKey2);
+    }
+    public Object getDataValue(String key) {
+        Map<String, Object> testDataInMap = testData.getTestDataInMap();
+        Object value = testDataInMap.get(key);
+        System.out.println("value is: " + value);
+        return value;
+    }
+    public void addDataFromTest(String key, Object value) {
+        dataMap.put(key, value);
+        testData.setTestDataInMap(dataMap);
+    }
     @BeforeMethod
     @Parameters({"registrationURL"})
     public void setup(String registrationURL) throws MalformedURLException {
@@ -106,9 +127,8 @@ public class AccountCreationTests extends BaseTest {
                             "updated_at: " + updated +"\n" +"<br>"+
                             "user: " + email +"\n" +"<br>"
             );
-            Map<String, Object> sqlData = new HashMap<>();
-            sqlData.put("existingUser", email);
-            testDataHandler.setTestDataInMap(sqlData);
+
+            addDataFromTest("existingUser", email);   //store the account email to use for the next test
             TestListener.logAssertionDetails("Assertions: " +koelNewUser+ " equals " + email);
             Assert.assertNotSame(ep, password);
             Assert.assertEquals(email, koelNewUser);
@@ -116,7 +136,19 @@ public class AccountCreationTests extends BaseTest {
         Assert.assertFalse(false);
         KoelDb.closeDatabaseConnection();
     }
-    @Test(description = "Get existing user from database, attempt to register with that account")
+    //use the account from the previous db query
+    @Test(description = "Get existing user from database, attempt to register with that account", priority=4)
+    public void tryRegisteringExistingUser() {
+        String existingUser = getDataValue("existingUser").toString();
+        TestListener.logInfoDetails("Existing Account : " + existingUser);
+        registrationPage = new RegistrationPage(getDriver());
+        registrationPage.provideEmail(existingUser)
+                .clickSubmit();
+        TestListener.logRsDetails("Confirmation Message: " + registrationPage.confirmationMsgText());
+        TestListener.logAssertionDetails("Confirmation Message is displayed: " + registrationPage.getConfirmationMsg());
+        dataMap.clear();
+        Assert.assertTrue(registrationPage.getConfirmationMsg());
 
+    }
 
 }
