@@ -13,22 +13,22 @@ public class KoelDbActions extends KoelDb{
     private static Connection db ;
     private static PreparedStatement st;
     private static ResultSet rs;
-    private String getUserPwdInfo = """
+    private final String getUserPwdInfo = """
             SELECT password, updated_at FROM dbkoel.users u WHERE u.email = ?
             """;
-    private String getNewUser = """
+    private final String getNewUser = """
             SELECT * FROM dbkoel.users u WHERE u.email = ?
             """;
-    private String getUserPlaylists = """
+    private final String getUserPlaylists = """
             SELECT * FROM dbkoel.users u JOIN dbkoel.playlists p ON u.id = p.user_id WHERE u.email = ?
             """;
-    private String getTotalSongCount = """
+    private final String getTotalSongCount = """
             SELECT COUNT(*) as count FROM dbkoel.songs
             """;
-    private String artistNameQuery = """
+    private final String artistNameQuery = """
         SELECT * FROM artists WHERE name = ?
         """;
-   private String getSongByArtist = """
+   private final String getSongByArtist = """
             SELECT * FROM dbkoel.songs s
             LEFT JOIN dbkoel.artists a
             ON a.id = s.artist_id WHERE a.name = ?
@@ -78,10 +78,12 @@ public class KoelDbActions extends KoelDb{
         return query(getUserPlaylists, str);
     }
     public ResultSet getPwdInfo(String user) throws SQLException {
+        TestListener.logInfoDetails("User " + user);
         String[] str = new String[]{user};
         return query(getUserPwdInfo, str);
     }
     public ResultSet getUserInfo(String user) throws SQLException {
+        TestListener.logInfoDetails("User " + user);
         String[] str = new String[]{user};
         return query(getNewUser, str);
     }

@@ -20,7 +20,6 @@ public class KoelDb  {
     public static Connection getDbConnection() {
         return threadDriver.get();
     }
-
     public static String DB_URL = System.getProperty("dbUrl");
     public static String DB_USER = System.getProperty("dbUser");
     public static String DB_PASS = System.getProperty("dbPassword");
