@@ -1,9 +1,7 @@
 package testcases;
-
 import base.BaseTest;
 import db.KoelDb;
 import db.KoelDbActions;
-import org.apache.poi.ss.formula.functions.T;
 import org.testng.Assert;
 import org.testng.annotations.*;
 import pages.HomePage;
@@ -11,12 +9,10 @@ import pages.LoginPage;
 import pages.RegistrationPage;
 import util.TestDataHandler;
 import util.listeners.TestListener;
-
 import java.net.MalformedURLException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -35,14 +31,13 @@ import java.util.Map;
  * QA Note: QA will need to request Database access
  */
 public class AccountCreationTests extends BaseTest {
-
     LoginPage loginPage;
     HomePage homePage;
     RegistrationPage registrationPage;
     ResultSet rs;
     TestDataHandler testData =new TestDataHandler();
     Map<String,Object> dataMap = new HashMap<>();
-    //Verify the data saved in previous test is correct
+
     public boolean verifyData(String key1, String key2) {
         Map<String, Object> testDataInMap = testData.getTestDataInMap();
         Object dataKey1 = testDataInMap.get(key1);
@@ -55,11 +50,21 @@ public class AccountCreationTests extends BaseTest {
         Map<String, Object> testDataInMap = testData.getTestDataInMap();
         Object value = testDataInMap.get(key);
         System.out.println("value is: " + value);
+        TestListener.logInfoDetails("Retrieved stored data: " + value);
         return value;
     }
     public void addDataFromTest(String key, Object value) {
         dataMap.put(key, value);
         testData.setTestDataInMap(dataMap);
+        TestListener.logInfoDetails("Storing data: " + dataMap.toString());
+    }
+    public void clearDataFromTest() {
+        dataMap.clear();
+        testData.setTestDataInMap(dataMap);
+    }
+    @AfterClass
+    public void clearStoredData() {
+        clearDataFromTest();
     }
     @BeforeMethod
     @Parameters({"registrationURL"})
@@ -128,8 +133,9 @@ public class AccountCreationTests extends BaseTest {
                             "user: " + email +"\n" +"<br>"
             );
 
+
             addDataFromTest("existingUser", email);   //store the account email to use for the next test
-            TestListener.logAssertionDetails("Assertions: " +koelNewUser+ " equals " + email);
+            TestListener.logAssertionDetails("New user data has been saved correctly in the database: " + email.equals(koelNewUser));
             Assert.assertNotSame(ep, password);
             Assert.assertEquals(email, koelNewUser);
         }
@@ -139,14 +145,13 @@ public class AccountCreationTests extends BaseTest {
     //use the account from the previous db query
     @Test(description = "Get existing user from database, attempt to register with that account", priority=4)
     public void tryRegisteringExistingUser() {
-        String existingUser = getDataValue("existingUser").toString();
+        String existingUser = getDataValue("existingUser").toString(); //this value comes from the previous db query
         TestListener.logInfoDetails("Existing Account : " + existingUser);
         registrationPage = new RegistrationPage(getDriver());
         registrationPage.provideEmail(existingUser)
                 .clickSubmit();
         TestListener.logRsDetails("Confirmation Message: " + registrationPage.confirmationMsgText());
         TestListener.logAssertionDetails("Confirmation Message is displayed: " + registrationPage.getConfirmationMsg());
-        dataMap.clear();
         Assert.assertTrue(registrationPage.getConfirmationMsg());
 
     }

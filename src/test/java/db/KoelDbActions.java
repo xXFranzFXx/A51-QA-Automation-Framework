@@ -1,9 +1,6 @@
 package db;
-
 import org.mariadb.jdbc.Connection;
-
 import util.listeners.TestListener;
-
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;

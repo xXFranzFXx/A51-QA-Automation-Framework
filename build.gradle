@@ -31,8 +31,8 @@ test {
     useTestNG() {
         suites "src/test/resources/config/Sprint-1.xml"
         systemProperty "browser", System.getProperty("browser")
-        systemProperty "koelUser", "fake@fakeaccount.com"
-        systemProperty "koelNewUser", "franz.fernando+1@testpro.io"
+        systemProperty "koelUser", "franz.fernando+1"
+        systemProperty "koelNewUser", "franz.fernando+2@testpro.io"
         systemProperty "koelPassword", "te\$t\$tudent1"
         systemProperty "dbUrl", "jdbc:mariadb://104.237.13.60:3306/dbkoel"
         systemProperty "dbUser", "dbuser11"

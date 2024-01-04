@@ -8,7 +8,7 @@
     <test name="accountCreation" >
         <parameter name="baseURL" value="https://qa.koel.app/"/>
         <parameter name="registrationURL" value="https://qa.koel.app/registration"/>
-        <parameter name="koelNewUser" value="franz.fernando+1@testpro.io"/>
+        <parameter name="koelNewUser" value="franz.fernando+2@testpro.io"/>
         <parameter name="password" value="te$t$tudent1"/>
         <parameter name="email" value="ff"/>
         <classes>
