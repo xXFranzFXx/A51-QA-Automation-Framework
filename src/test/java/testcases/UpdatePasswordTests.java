@@ -1,6 +1,6 @@
 package testcases;
 import base.BaseTest;
-import db.KoelDb;
+import db.KoelDbBase;
 import db.KoelDbActions;
 import org.testng.Assert;
 import org.testng.Reporter;
@@ -176,9 +176,9 @@ public class UpdatePasswordTests extends BaseTest {
     }
     @Test(description = "Execute SQL query to verify password is encrypted and has been updated in the Koel database")
     public void queryDbPwd() throws SQLException, ClassNotFoundException {
-        KoelDb.initializeDb();
+        KoelDbBase.initializeDb();
         KoelDbActions koelDbActions = new KoelDbActions();
-        TestListener.logInfoDetails("Db connection: " + KoelDb.getDbConnection().getMetaData().getURL());
+        TestListener.logInfoDetails("Db connection: " + KoelDbBase.getDbConnection().getMetaData().getURL());
         rs = koelDbActions.getPwdInfo(System.getProperty("koelUser"));
         if (rs.next()) {
             String ep = rs.getString("password");
@@ -194,7 +194,7 @@ public class UpdatePasswordTests extends BaseTest {
            Assert.assertNotSame(ep, System.getProperty("updatedPassword"));
            Assert.assertTrue(updated.contains(TestUtil.getDate()));
         }
-        KoelDb.closeDatabaseConnection();
+        KoelDbBase.closeDatabaseConnection();
     }
 
     @Test(description = "Reset the Koel user profile")//(description = "resets user profile", dependsOnMethods = {"loginWithUpdatedPwd, queryDbPwd"})

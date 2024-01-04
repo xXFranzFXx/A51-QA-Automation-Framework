@@ -1,19 +1,17 @@
 package db;
 import base.BaseTest;
-import io.github.cdimascio.dotenv.Dotenv;
 import org.mariadb.jdbc.Connection;
 import java.lang.reflect.InvocationTargetException;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
 
-public class KoelDb extends BaseTest {
+public class KoelDbBase {
     public static Connection connection;
     private static final ThreadLocal<Connection> threadDriver = new ThreadLocal<>();
     public static Connection getDbConnection() {
         return threadDriver.get();
     }
-
     public static void initializeDb() throws SQLException, ClassNotFoundException {
         threadDriver.set(setupDB());
     }

@@ -1,6 +1,6 @@
 package testcases;
 import base.BaseTest;
-import db.KoelDb;
+import db.KoelDbBase;
 import db.KoelDbActions;
 import org.testng.Assert;
 import org.testng.annotations.*;
@@ -119,7 +119,7 @@ public class AccountCreationTests extends BaseTest {
     @Test(description = "Execute SQL query to verify new user info is stored correctly or updated in the Koel database", priority=3)
     @Parameters({"koelNewUser", "password"})
     public void queryDbForNewUser(String koelNewUser, String password) throws SQLException, ClassNotFoundException {
-        KoelDb.initializeDb();
+        KoelDbBase.initializeDb();
         KoelDbActions koelDbActions = new KoelDbActions();
         rs = koelDbActions.getUserInfo(koelNewUser);
         if (rs.next()) {
@@ -140,7 +140,7 @@ public class AccountCreationTests extends BaseTest {
             Assert.assertEquals(email, koelNewUser);
         }
 
-        KoelDb.closeDatabaseConnection();
+        KoelDbBase.closeDatabaseConnection();
     }
     //use the account from the previous db query
     @Test(description = "Get existing user from database, attempt to register with that account", priority=4)

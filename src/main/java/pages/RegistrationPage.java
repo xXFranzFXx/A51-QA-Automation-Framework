@@ -23,11 +23,7 @@ public class RegistrationPage extends BasePage{
     public void clickSubmit() {
         submitButton.click();
     }
-    public void registerNewAccount(String newEmail) {
-        provideEmail(newEmail)
-                .clickSubmit();
 
-    }
     public boolean getConfirmationMsg() {
         return confirmationMsg.isEnabled();
 
@@ -39,6 +35,5 @@ public class RegistrationPage extends BasePage{
     public String getValidationMsg() {
         return findElement(emailInput).getAttribute("validationMessage");
     }
-    String errMsg = driver.findElement(By.cssSelector("form div.errors")).getText();
-    String regMsg = driver.findElement(By.cssSelector("form div.messages")).getText();
+
 }

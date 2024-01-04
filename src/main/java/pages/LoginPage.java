@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class LoginPage extends BasePage{
-    HomePage homePage;
+
     //locators
     @CacheLookup
     @FindBy(css = "[type='submit']")
@@ -22,8 +22,7 @@ public class LoginPage extends BasePage{
     @FindBy(xpath = "//form[@data-testid='login-form']//a[@href='registration']")
     private WebElement registrationLinkLocator;
 
-    //constructor method
-    private By emailInput = By.cssSelector("[type='email']");
+
     public LoginPage(WebDriver givenDriver) {
         super(givenDriver);
     }
@@ -31,10 +30,7 @@ public class LoginPage extends BasePage{
     public void clickSubmitBtn() {
        submitButtonLocator.click();
     }
-    public void enterEmail(String email) {
-      driver.findElement(emailInput).sendKeys(email);
 
-    }
     public LoginPage provideEmail(String email) {
         emailField.sendKeys(email);
         return this;
@@ -49,15 +45,7 @@ public class LoginPage extends BasePage{
         clickSubmitBtn();
         return new HomePage(driver);
     }
-    public void loginAsNewUser() {
-        provideEmail(System.getProperty("koelNewUser"));
-        providePassword(System.getProperty("koelPassword"));
-        clickSubmitBtn();
-    }
 
-    public void clickRegistrationLink() {
-        actions.moveToElement(registrationLinkLocator).perform();
-    }
     public boolean getRegistrationLink() {
      WebElement registrationLink =  wait.until(ExpectedConditions.visibilityOf(registrationLinkLocator));
      return registrationLink.isDisplayed();
