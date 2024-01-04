@@ -33,7 +33,7 @@ public class BaseTest{
     public static WebDriver getDriver() {
         return threadDriver.get();
     }
-    public static void navigateToLogin(String baseURL) {
+    public static void navigateTo(String baseURL) {
         getDriver().get(baseURL);
     }
 
@@ -42,7 +42,7 @@ public class BaseTest{
         Reporter.log("browser is: " + System.getProperty("browser"));
         getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         getDriver().manage().deleteAllCookies();
-        navigateToLogin(baseURL);
+        navigateTo(baseURL);
     }
     public static  WebDriver pickBrowser(String browser) throws MalformedURLException {
         DesiredCapabilities caps = new DesiredCapabilities();

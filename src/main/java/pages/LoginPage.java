@@ -19,7 +19,7 @@ public class LoginPage extends BasePage{
     @CacheLookup
     @FindBy(css = "[type='password']")
     private WebElement passwordField;
-    @FindBy(xpath = "//a[@href='registration']")
+    @FindBy(xpath = "//form[@data-testid='login-form']//a[@href='registration']")
     private WebElement registrationLinkLocator;
 
     //constructor method
@@ -56,7 +56,7 @@ public class LoginPage extends BasePage{
     }
 
     public void clickRegistrationLink() {
-        registrationLinkLocator.click();
+        actions.moveToElement(registrationLinkLocator).perform();
     }
     public boolean getRegistrationLink() {
      WebElement registrationLink =  wait.until(ExpectedConditions.visibilityOf(registrationLinkLocator));

@@ -30,12 +30,12 @@ dependencies {
 test {
     useTestNG() {
         suites "src/test/resources/config/Sprint-1.xml"
-//        suites "src/test/resources/config/Sprint-9.xml"
-
-//        suites "src/test/resources/config/${suite}.xml"   //This is for testing with Jenkins
-//        suites "src/test/resources/config/SmokeTests.xml"
-//        suites "src/test/resources/config/RegressionTests.xml"
-//        suites "src/test/resources/config/TestNG.xml"
         systemProperty "browser", System.getProperty("browser")
+        systemProperty "koelUser", "fake@fakeaccount.com"
+        systemProperty "koelNewUser", "franz.fernando+1@testpro.io"
+        systemProperty "koelPassword", "te\$t\$tudent1"
+        systemProperty "dbUrl", "jdbc:mariadb://104.237.13.60:3306/dbkoel"
+        systemProperty "dbUser", "dbuser11"
+        systemProperty "dbPassword", "pa\$\$11"
     }
 }

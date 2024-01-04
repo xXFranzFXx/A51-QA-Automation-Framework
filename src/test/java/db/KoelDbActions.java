@@ -16,6 +16,9 @@ public class KoelDbActions extends KoelDb{
     private String getUserPwdInfo = """
             SELECT password, updated_at FROM dbkoel.users u WHERE u.email = ?
             """;
+    private String getNewUser = """
+            SELECT * FROM dbkoel.users u WHERE u.email = ?
+            """;
     private String getUserPlaylists = """
             SELECT * FROM dbkoel.users u JOIN dbkoel.playlists p ON u.id = p.user_id WHERE u.email = ?
             """;
@@ -77,6 +80,10 @@ public class KoelDbActions extends KoelDb{
     public ResultSet getPwdInfo(String user) throws SQLException {
         String[] str = new String[]{user};
         return query(getUserPwdInfo, str);
+    }
+    public ResultSet getUserInfo(String user) throws SQLException {
+        String[] str = new String[]{user};
+        return query(getNewUser, str);
     }
 
 }

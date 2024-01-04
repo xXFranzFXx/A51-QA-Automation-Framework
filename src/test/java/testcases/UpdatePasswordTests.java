@@ -9,6 +9,7 @@ import org.testng.annotations.*;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.ProfilePage;
+import pages.RegistrationPage;
 import util.listeners.TestListener;
 import java.net.MalformedURLException;
 import java.sql.ResultSet;
@@ -30,21 +31,14 @@ import java.util.Date;
  *
  * QA Notes: Verify that the password was actually updated in the Database (Table: users)
  */
-public class Sprint1Tests extends BaseTest {
-    private final String registerEmail = System.getProperty("koelNewUser");
-    private final String testEmail = System.getProperty("koelUser");
-    private final String updatedEmail = "updated.email@testpro.io";
-    private final String defaultPassword = System.getProperty("koelPassword");
+public class UpdatePasswordTests extends BaseTest {
     private final String updatedPassword = "te$t$tudent2";
     ResultSet rs;
     ProfilePage profilePage;
     LoginPage loginPage;
     HomePage homePage;
+    RegistrationPage regPage;
 
-    @BeforeClass
-    public void getEnv() {
-        loadEnv();
-    }
     @BeforeMethod
     @Parameters({"baseURL"})
     public void setup(String baseURL) throws MalformedURLException{
@@ -59,7 +53,6 @@ public class Sprint1Tests extends BaseTest {
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
         return df.format(new Date());
     }
-
     @Test(description = "Log in, update the password, log out")
     public void loginAndUpdatePwd() {
         loginPage = new LoginPage(getDriver());
@@ -111,7 +104,7 @@ public class Sprint1Tests extends BaseTest {
         KoelDb.closeDatabaseConnection();
     }
 
-    @Test(description = "resets user profile", dependsOnMethods = {"loginWithUpdatedPwd, queryDbPwd"})
+    @Test//(description = "resets user profile", dependsOnMethods = {"loginWithUpdatedPwd, queryDbPwd"})
     public void resetProfile() {
         loginPage = new LoginPage(getDriver());
         homePage = new HomePage(getDriver());

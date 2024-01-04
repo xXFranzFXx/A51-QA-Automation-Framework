@@ -1,15 +1,15 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class RegistrationPage extends BasePage{
-
-
-   @FindBy(xpath = "//*[@type=\"email\"]")
+   @FindBy(xpath = "//input[@type='email']")
    private WebElement emailInput;
-   @FindBy(xpath = "//input[@id=\"button\"]")
+   @FindBy(xpath = "//input[@id='button']")
    private WebElement submitButton;
    @FindBy(xpath = "//div[text()= \"We've sent a confirmation link to the email. Please continue by clicking on it\"]")
    private WebElement confirmationMsg;
@@ -32,5 +32,9 @@ public class RegistrationPage extends BasePage{
         return confirmationMsg.isEnabled();
 
     }
-
+    public String getValidationMsg() {
+        return findElement(emailInput).getAttribute("validationMessage");
+    }
+    String errMsg = driver.findElement(By.cssSelector("form div.errors")).getText();
+    String regMsg = driver.findElement(By.cssSelector("form div.messages")).getText();
 }
