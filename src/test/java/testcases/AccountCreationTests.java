@@ -139,7 +139,7 @@ public class AccountCreationTests extends BaseTest {
             Assert.assertNotSame(ep, password);
             Assert.assertEquals(email, koelNewUser);
         }
-        Assert.assertFalse(false);
+
         KoelDb.closeDatabaseConnection();
     }
     //use the account from the previous db query

@@ -43,9 +43,101 @@ public class UpdatePasswordTests extends BaseTest {
     public void close() {
         closeBrowser();
     }
-
-    @Test(description = "Log in, update the password, log out")
-    public void loginAndUpdatePwd() {
+    @Test(description = "Verify error message when updating password less than 10 characters long")
+    public void loginAndUpdatePwdIncorrectLength() {
+        String newPassword = "fff";
+        loginPage = new LoginPage(getDriver());
+        homePage = loginPage.loginValidCredentials();
+        profilePage = new ProfilePage(getDriver());
+        try {
+            homePage.clickAvatar();
+            profilePage
+                    .provideNewPassword(newPassword)
+                    .provideCurrentPassword(System.getProperty("koelPassword"))
+                    .clickSaveButton();
+            TestListener.logInfoDetails("New password length: " + newPassword.length());
+            String errorMsgText = profilePage.getErrorNotificationText();
+            TestListener.logInfoDetails("Notification text: " + errorMsgText);
+            TestListener.logAssertionDetails("Error message notification is displayed: " + profilePage.errorNotificationPopup());
+            Assert.assertTrue(profilePage.errorNotificationPopup());
+        } catch (Exception e) {
+            TestListener.logExceptionDetails("Error " + e);
+        }
+    }
+    @Test(description = "Verify error message or updating password with no number requirement")
+    public void loginAndUpdatePwdNoNumbers() {
+        String newPassword = "fffffffffff@";
+        String expected = "The new password must contain at least one number.";
+        loginPage = new LoginPage(getDriver());
+        homePage = loginPage.loginValidCredentials();
+        profilePage = new ProfilePage(getDriver());
+        try {
+            homePage.clickAvatar();
+            profilePage
+                    .provideNewPassword(newPassword)
+                    .provideCurrentPassword(System.getProperty("koelPassword"))
+                    .clickSaveButton();
+            TestListener.logInfoDetails("New password: " + newPassword);
+            TestListener.logInfoDetails("New password length: " + newPassword.length());
+            String errorMsgText = profilePage.getErrorNotificationText();
+            TestListener.logInfoDetails("Notification text: " + errorMsgText);
+            TestListener.logAssertionDetails("Error message notification is displayed: " + profilePage.errorNotificationPopup());
+            Assert.assertTrue(profilePage.errorNotificationPopup());
+            Assert.assertEquals(expected.toLowerCase(), profilePage.getErrorNotificationText().toLowerCase());
+        } catch (Exception e) {
+            TestListener.logExceptionDetails("Error" + e);
+        }
+    }
+    @Test(description = "Verify error message or updating password with no symbol requirement")
+    public void loginAndUpdatePwdNoSymbols() {
+        String newPassword = "fffffffffff1";
+        String expected = "The new password must contain at least one symbol.";
+        loginPage = new LoginPage(getDriver());
+        homePage = loginPage.loginValidCredentials();
+        profilePage = new ProfilePage(getDriver());
+        try {
+            homePage.clickAvatar();
+            profilePage
+                    .provideNewPassword(newPassword)
+                    .provideCurrentPassword(System.getProperty("koelPassword"))
+                    .clickSaveButton();
+            TestListener.logInfoDetails("New password: " + newPassword);
+            TestListener.logInfoDetails("New password length: " + newPassword.length());
+            String errorMsgText = profilePage.getErrorNotificationText();
+            TestListener.logInfoDetails("Notification text: " + errorMsgText);
+            TestListener.logAssertionDetails("Error message notification is displayed: " + profilePage.errorNotificationPopup());
+            Assert.assertTrue(profilePage.errorNotificationPopup());
+            Assert.assertEquals(expected.toLowerCase(), profilePage.getErrorNotificationText().toLowerCase());
+        } catch (Exception e) {
+            TestListener.logExceptionDetails("Error " + e);
+        }
+    }
+    @Test(description = "Verify error message or updating password that has appeared in data leak")
+    public void loginAndUpdatePwdLeaked() {
+        String newPassword = "newpassword!1";
+        String expected = "The given new password has appeared in a data leak. Please choose a different new password.";
+        loginPage = new LoginPage(getDriver());
+        homePage = loginPage.loginValidCredentials();
+        profilePage = new ProfilePage(getDriver());
+        try {
+            homePage.clickAvatar();
+            profilePage
+                    .provideNewPassword(newPassword)
+                    .provideCurrentPassword(System.getProperty("koelPassword"))
+                    .clickSaveButton();
+            TestListener.logInfoDetails("New password: " + newPassword);
+            TestListener.logInfoDetails("New password length: " + newPassword.length());
+            String errorMsgText = profilePage.getErrorNotificationText();
+            TestListener.logInfoDetails("Notification text: " + errorMsgText);
+            TestListener.logAssertionDetails("Error message notification is displayed: " + profilePage.errorNotificationPopup());
+            Assert.assertTrue(profilePage.errorNotificationPopup());
+            Assert.assertEquals(expected.toLowerCase(), profilePage.getErrorNotificationText().toLowerCase());
+        } catch (Exception e) {
+            TestListener.logExceptionDetails("Error " + e);
+        }
+    }
+    @Test(description = "Log in and update the password successfully")
+    public void loginUpdatePwd() {
         loginPage = new LoginPage(getDriver());
         homePage = loginPage.loginValidCredentials();
         profilePage = new ProfilePage(getDriver());
@@ -78,7 +170,7 @@ public class UpdatePasswordTests extends BaseTest {
         loginPage.provideEmail(System.getProperty("koelUser"))
                 .providePassword(System.getProperty("updatedPassword"))
                 .clickSubmitBtn();
-        TestListener.logInfoDetails("Attempt logging in with password: " + System.getProperty("updatedPassword"));
+        TestListener.logInfoDetails("Updated password: " + System.getProperty("updatedPassword"));
         TestListener.logAssertionDetails("User should be able to log in with updated password: " + homePage.getUserAvatar());
         Assert.assertTrue(homePage.getUserAvatar());
     }
@@ -102,7 +194,6 @@ public class UpdatePasswordTests extends BaseTest {
            Assert.assertNotSame(ep, System.getProperty("updatedPassword"));
            Assert.assertTrue(updated.contains(TestUtil.getDate()));
         }
-        Assert.assertFalse(false);
         KoelDb.closeDatabaseConnection();
     }
 

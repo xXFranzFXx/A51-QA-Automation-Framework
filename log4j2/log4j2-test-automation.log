@@ -188,3 +188,121 @@
 [INFO ] 2024-01-04 10:46:21.203 [TestNG-test=passwordUpdate-1] Log - resetProfile started!
 [INFO ] 2024-01-04 10:46:22.765 [TestNG-test=passwordUpdate-1] Log - resetProfile passed!
 [INFO ] 2024-01-04 10:46:22.869 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-04 14:09:53.028 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-04 14:09:53.032 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-04 14:09:53.171 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-04 14:10:02.029 [TestNG-test=passwordUpdate-1] Log - loginAndUpdatePwdIncorrect started!
+[INFO ] 2024-01-04 14:10:03.629 [TestNG-test=passwordUpdate-1] Log - loginAndUpdatePwdIncorrect passed!
+[INFO ] 2024-01-04 14:10:03.744 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-04 14:12:31.241 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-04 14:12:31.245 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-04 14:12:31.383 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-04 14:12:35.524 [TestNG-test=passwordUpdate-1] Log - loginAndUpdatePwdNoNumbers started!
+[INFO ] 2024-01-04 14:12:37.065 [TestNG-test=passwordUpdate-1] Log - loginAndUpdatePwdNoNumbers passed!
+[INFO ] 2024-01-04 14:12:37.176 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-04 14:17:57.315 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-04 14:17:57.319 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-04 14:17:57.453 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-04 14:18:01.684 [TestNG-test=passwordUpdate-1] Log - loginAndUpdatePwdNoSymbols started!
+[INFO ] 2024-01-04 14:18:03.276 [TestNG-test=passwordUpdate-1] Log - loginAndUpdatePwdNoSymbols passed!
+[INFO ] 2024-01-04 14:18:03.388 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-04 14:20:33.936 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-04 14:20:33.941 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-04 14:20:34.076 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-04 14:20:38.231 [TestNG-test=passwordUpdate-1] Log - loginAndUpdatePwdNoNumbers started!
+[INFO ] 2024-01-04 14:20:39.760 [TestNG-test=passwordUpdate-1] Log - loginAndUpdatePwdNoNumbers passed!
+[INFO ] 2024-01-04 14:20:39.881 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-04 14:21:43.489 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-04 14:21:43.492 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-04 14:21:43.630 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-04 14:21:47.733 [TestNG-test=passwordUpdate-1] Log - loginAndUpdatePwdNoNumbers started!
+[INFO ] 2024-01-04 14:21:49.331 [TestNG-test=passwordUpdate-1] Log - loginAndUpdatePwdNoNumbers passed!
+[INFO ] 2024-01-04 14:21:49.438 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-04 14:24:00.143 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-04 14:24:00.148 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-04 14:24:00.284 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-04 14:24:04.770 [TestNG-test=passwordUpdate-1] Log - loginAndUpdatePwdBreached started!
+[INFO ] 2024-01-04 14:24:06.751 [TestNG-test=passwordUpdate-1] Log - loginAndUpdatePwdBreached passed!
+[INFO ] 2024-01-04 14:24:06.864 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-04 14:25:27.386 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-04 14:25:27.390 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-04 14:25:27.530 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-04 14:25:32.222 [TestNG-test=passwordUpdate-1] Log - loginAndUpdatePwdLeaked started!
+[FATAL] 2024-01-04 14:25:43.673 [TestNG-test=passwordUpdate-1] Log - Error while calling method: findElement - null
+[FATAL] 2024-01-04 14:25:53.738 [TestNG-test=passwordUpdate-1] Log - Error while calling method: findElement - null
+[FATAL] 2024-01-04 14:26:04.049 [TestNG-test=passwordUpdate-1] Log - Error while calling method: findElement - null
+[FATAL] 2024-01-04 14:26:14.087 [TestNG-test=passwordUpdate-1] Log - Error while calling method: findElement - null
+[FATAL] 2024-01-04 14:26:24.109 [TestNG-test=passwordUpdate-1] Log - Error while calling method: findElement - null
+[FATAL] 2024-01-04 14:26:34.369 [TestNG-test=passwordUpdate-1] Log - Error while calling method: findElement - null
+[INFO ] 2024-01-04 14:26:34.375 [TestNG-test=passwordUpdate-1] Log - loginAndUpdatePwdLeaked passed!
+[INFO ] 2024-01-04 14:26:34.578 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-04 14:27:42.413 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-04 14:27:42.417 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-04 14:27:42.555 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-04 14:27:46.981 [TestNG-test=passwordUpdate-1] Log - loginAndUpdatePwdLeaked started!
+[INFO ] 2024-01-04 14:27:48.783 [TestNG-test=passwordUpdate-1] Log - loginAndUpdatePwdLeaked passed!
+[INFO ] 2024-01-04 14:27:48.890 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-04 14:32:38.347 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-04 14:32:42.072 [TestNG-test=accountCreation-1] Log - regWithIncorrectEmailFmt started!
+[INFO ] 2024-01-04 14:32:42.354 [TestNG-test=accountCreation-1] Log - regWithIncorrectEmailFmt passed!
+[INFO ] 2024-01-04 14:32:44.999 [TestNG-test=accountCreation-1] Log - register started!
+[INFO ] 2024-01-04 14:32:46.144 [TestNG-test=accountCreation-1] Log - register passed!
+[INFO ] 2024-01-04 14:32:48.602 [TestNG-test=accountCreation-1] Log - verifyLogin started!
+[INFO ] 2024-01-04 14:32:50.080 [TestNG-test=accountCreation-1] Log - verifyLogin passed!
+[INFO ] 2024-01-04 14:32:52.680 [TestNG-test=accountCreation-1] Log - queryDbForNewUser started!
+[INFO ] 2024-01-04 14:32:53.138 [TestNG-test=accountCreation-1] Log - queryDbForNewUser passed!
+[INFO ] 2024-01-04 14:32:55.566 [TestNG-test=accountCreation-1] Log - tryRegisteringExistingUser started!
+[INFO ] 2024-01-04 14:32:56.606 [TestNG-test=accountCreation-1] Log - tryRegisteringExistingUser passed!
+[INFO ] 2024-01-04 14:32:56.736 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-04 14:32:56.988 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-04 14:33:00.158 [TestNG-test=passwordUpdate-1] Log - loginAndUpdatePwdIncorrectLength started!
+[INFO ] 2024-01-04 14:33:01.599 [TestNG-test=passwordUpdate-1] Log - loginAndUpdatePwdIncorrectLength passed!
+[INFO ] 2024-01-04 14:33:05.097 [TestNG-test=passwordUpdate-1] Log - loginAndUpdatePwdLeaked started!
+[INFO ] 2024-01-04 14:33:06.649 [TestNG-test=passwordUpdate-1] Log - loginAndUpdatePwdLeaked passed!
+[INFO ] 2024-01-04 14:33:09.768 [TestNG-test=passwordUpdate-1] Log - loginAndUpdatePwdNoNumbers started!
+[INFO ] 2024-01-04 14:33:11.648 [TestNG-test=passwordUpdate-1] Log - loginAndUpdatePwdNoNumbers passed!
+[INFO ] 2024-01-04 14:33:14.607 [TestNG-test=passwordUpdate-1] Log - loginAndUpdatePwdNoSymbols started!
+[INFO ] 2024-01-04 14:33:15.879 [TestNG-test=passwordUpdate-1] Log - loginAndUpdatePwdNoSymbols passed!
+[INFO ] 2024-01-04 14:33:19.204 [TestNG-test=passwordUpdate-1] Log - loginUpdatePwd started!
+[INFO ] 2024-01-04 14:33:20.831 [TestNG-test=passwordUpdate-1] Log - loginUpdatePwd passed!
+[INFO ] 2024-01-04 14:33:24.172 [TestNG-test=passwordUpdate-1] Log - loginWithOldPwd started!
+[INFO ] 2024-01-04 14:33:24.409 [TestNG-test=passwordUpdate-1] Log - loginWithOldPwd passed!
+[INFO ] 2024-01-04 14:33:27.543 [TestNG-test=passwordUpdate-1] Log - loginWithUpdatedPwd started!
+[INFO ] 2024-01-04 14:33:27.986 [TestNG-test=passwordUpdate-1] Log - loginWithUpdatedPwd passed!
+[INFO ] 2024-01-04 14:33:31.326 [TestNG-test=passwordUpdate-1] Log - queryDbPwd started!
+[INFO ] 2024-01-04 14:33:31.761 [TestNG-test=passwordUpdate-1] Log - queryDbPwd passed!
+[INFO ] 2024-01-04 14:33:34.893 [TestNG-test=passwordUpdate-1] Log - resetProfile started!
+[INFO ] 2024-01-04 14:33:36.430 [TestNG-test=passwordUpdate-1] Log - resetProfile passed!
+[INFO ] 2024-01-04 14:33:36.543 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-04 14:36:08.213 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-04 14:36:11.949 [TestNG-test=accountCreation-1] Log - regWithIncorrectEmailFmt started!
+[INFO ] 2024-01-04 14:36:12.270 [TestNG-test=accountCreation-1] Log - regWithIncorrectEmailFmt passed!
+[INFO ] 2024-01-04 14:36:14.724 [TestNG-test=accountCreation-1] Log - register started!
+[INFO ] 2024-01-04 14:36:16.150 [TestNG-test=accountCreation-1] Log - register passed!
+[INFO ] 2024-01-04 14:36:18.980 [TestNG-test=accountCreation-1] Log - verifyLogin started!
+[INFO ] 2024-01-04 14:36:20.566 [TestNG-test=accountCreation-1] Log - verifyLogin passed!
+[INFO ] 2024-01-04 14:36:23.267 [TestNG-test=accountCreation-1] Log - queryDbForNewUser started!
+[INFO ] 2024-01-04 14:36:23.740 [TestNG-test=accountCreation-1] Log - queryDbForNewUser passed!
+[INFO ] 2024-01-04 14:36:26.123 [TestNG-test=accountCreation-1] Log - tryRegisteringExistingUser started!
+[INFO ] 2024-01-04 14:36:27.037 [TestNG-test=accountCreation-1] Log - tryRegisteringExistingUser passed!
+[INFO ] 2024-01-04 14:36:27.148 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-04 14:36:27.477 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-04 14:36:30.413 [TestNG-test=passwordUpdate-1] Log - loginAndUpdatePwdIncorrectLength started!
+[INFO ] 2024-01-04 14:36:31.816 [TestNG-test=passwordUpdate-1] Log - loginAndUpdatePwdIncorrectLength passed!
+[INFO ] 2024-01-04 14:36:34.708 [TestNG-test=passwordUpdate-1] Log - loginAndUpdatePwdLeaked started!
+[INFO ] 2024-01-04 14:36:36.172 [TestNG-test=passwordUpdate-1] Log - loginAndUpdatePwdLeaked passed!
+[INFO ] 2024-01-04 14:36:39.280 [TestNG-test=passwordUpdate-1] Log - loginAndUpdatePwdNoNumbers started!
+[INFO ] 2024-01-04 14:36:40.589 [TestNG-test=passwordUpdate-1] Log - loginAndUpdatePwdNoNumbers passed!
+[INFO ] 2024-01-04 14:36:43.781 [TestNG-test=passwordUpdate-1] Log - loginAndUpdatePwdNoSymbols started!
+[INFO ] 2024-01-04 14:36:45.090 [TestNG-test=passwordUpdate-1] Log - loginAndUpdatePwdNoSymbols passed!
+[INFO ] 2024-01-04 14:36:48.411 [TestNG-test=passwordUpdate-1] Log - loginUpdatePwd started!
+[INFO ] 2024-01-04 14:36:50.506 [TestNG-test=passwordUpdate-1] Log - loginUpdatePwd passed!
+[INFO ] 2024-01-04 14:36:53.593 [TestNG-test=passwordUpdate-1] Log - loginWithOldPwd started!
+[INFO ] 2024-01-04 14:36:53.820 [TestNG-test=passwordUpdate-1] Log - loginWithOldPwd passed!
+[INFO ] 2024-01-04 14:36:56.881 [TestNG-test=passwordUpdate-1] Log - loginWithUpdatedPwd started!
+[INFO ] 2024-01-04 14:36:57.299 [TestNG-test=passwordUpdate-1] Log - loginWithUpdatedPwd passed!
+[INFO ] 2024-01-04 14:37:00.369 [TestNG-test=passwordUpdate-1] Log - queryDbPwd started!
+[INFO ] 2024-01-04 14:37:00.793 [TestNG-test=passwordUpdate-1] Log - queryDbPwd passed!
+[INFO ] 2024-01-04 14:37:03.871 [TestNG-test=passwordUpdate-1] Log - resetProfile started!
+[INFO ] 2024-01-04 14:37:05.351 [TestNG-test=passwordUpdate-1] Log - resetProfile passed!
+[INFO ] 2024-01-04 14:37:05.460 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!

@@ -14,6 +14,8 @@ public class ProfilePage extends BasePage{
     private WebElement logoutButton;
     @FindBy(css = ".success.show")
     private WebElement updateNotification;
+    @FindBy(css = ".error.show")
+    private WebElement errorNotification;
     @FindBy(css = "[data-testid=\"view-profile-link\"] .name")
     private WebElement avatarLocator;
 
@@ -46,10 +48,7 @@ public class ProfilePage extends BasePage{
     }
 
 
-    public boolean clickSave() {
-      findElement(saveButton).click();
-      return updateNotification.isDisplayed();
-    }
+
     public String getProfileName() {
        return findElement(actualProfileName).getText();
     }
@@ -72,6 +71,14 @@ public class ProfilePage extends BasePage{
     public boolean notificationPopup() {
        WebElement notification = wait.until(ExpectedConditions.visibilityOf(updateNotification));
         return notification.isDisplayed();
+    }
+    public boolean errorNotificationPopup() {
+        WebElement errorMsg = wait.until(ExpectedConditions.visibilityOf(errorNotification));
+        return errorMsg.isDisplayed();
+    }
+    public String getErrorNotificationText() {
+        WebElement errorMsg = wait.until(ExpectedConditions.visibilityOf(errorNotification));
+        return errorMsg.getText();
     }
     public boolean notificationHasDisappeared() {
         return wait.until(ExpectedConditions.invisibilityOf(updateNotification));
