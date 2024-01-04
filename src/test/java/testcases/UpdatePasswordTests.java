@@ -10,6 +10,7 @@ import pages.HomePage;
 import pages.LoginPage;
 import pages.ProfilePage;
 import pages.RegistrationPage;
+import util.TestUtil;
 import util.listeners.TestListener;
 import java.net.MalformedURLException;
 import java.sql.ResultSet;
@@ -37,7 +38,6 @@ public class UpdatePasswordTests extends BaseTest {
     ProfilePage profilePage;
     LoginPage loginPage;
     HomePage homePage;
-    RegistrationPage regPage;
 
     @BeforeMethod
     @Parameters({"baseURL"})
@@ -49,10 +49,6 @@ public class UpdatePasswordTests extends BaseTest {
         closeBrowser();
     }
 
-    public String getDate() {
-        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-        return df.format(new Date());
-    }
     @Test(description = "Log in, update the password, log out")
     public void loginAndUpdatePwd() {
         loginPage = new LoginPage(getDriver());
@@ -95,10 +91,10 @@ public class UpdatePasswordTests extends BaseTest {
                     "updated_at: " + updated +"\n" +"<br>"+
                     "user: " + System.getProperty("koelUser")
             );
-           TestListener.logInfoDetails("Assertion: " + updated + " contains " + getDate());
+           TestListener.logInfoDetails("Assertion: " + updated + " contains " + TestUtil.getDate());
            TestListener.logInfoDetails("Assertion: " + ep + " notSame " + updatedPassword);
            Assert.assertNotSame(ep, updatedPassword);
-           Assert.assertTrue(updated.contains(getDate()));
+           Assert.assertTrue(updated.contains(TestUtil.getDate()));
         }
         Assert.assertFalse(false);
         KoelDb.closeDatabaseConnection();
