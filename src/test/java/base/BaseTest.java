@@ -26,9 +26,6 @@ import java.time.Duration;
 public class BaseTest{
 
     public static WebDriver driver;
-    public JavascriptExecutor getJs() {
-        return (JavascriptExecutor) driver;
-    }
     private static final ThreadLocal <WebDriver> threadDriver = new ThreadLocal<>();
     public static WebDriver getDriver() {
         return threadDriver.get();
@@ -85,13 +82,6 @@ public class BaseTest{
                 driver = new ChromeDriver(service, options);
                 EventFiringDecorator<WebDriver> decorator = new EventFiringDecorator<>(eventListener);
                 return decorator.decorate(driver);
-
-//            default:
-//                WebDriverManager.chromedriver().setup();
-//                ChromeOptions options1 = new ChromeOptions();
-//                options1.addArguments("--remote-allow-origins=*", "--disable-notifications", "--start-maximized", "--incognito");
-//                return driver = new ChromeDriver(options1);
-
         }
     }
     public static WebDriver lambdaTest() throws MalformedURLException {

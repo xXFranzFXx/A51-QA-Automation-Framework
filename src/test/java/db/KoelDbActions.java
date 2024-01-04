@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 
-public class KoelDbActions extends KoelDb{
+public class KoelDbActions extends KoelDbBase {
     private static Connection db ;
     private static PreparedStatement st;
     private static ResultSet rs;
@@ -16,21 +16,6 @@ public class KoelDbActions extends KoelDb{
     private final String getNewUser = """
             SELECT * FROM dbkoel.users u WHERE u.email = ?
             """;
-    private final String getUserPlaylists = """
-            SELECT * FROM dbkoel.users u JOIN dbkoel.playlists p ON u.id = p.user_id WHERE u.email = ?
-            """;
-    private final String getTotalSongCount = """
-            SELECT COUNT(*) as count FROM dbkoel.songs
-            """;
-    private final String artistNameQuery = """
-        SELECT * FROM artists WHERE name = ?
-        """;
-   private final String getSongByArtist = """
-            SELECT * FROM dbkoel.songs s
-            LEFT JOIN dbkoel.artists a
-            ON a.id = s.artist_id WHERE a.name = ?
-            """;
-
     private ResultSet simpleQuery(String sql) throws SQLException {
         db = getDbConnection();
         st=db.prepareStatement(sql);
@@ -55,25 +40,7 @@ public class KoelDbActions extends KoelDb{
         rs = st.executeQuery();
         return rs;
     }
-    public ResultSet artistQuery(String artist) throws SQLException {
-        TestListener.logInfoDetails("Artist " + artist);
-        String[] str = new String[]{artist};
-        return query(artistNameQuery, str);
-    }
-
-    public ResultSet songByArtistJoinStmt(String artist) throws SQLException {
-        String[] str = new String[]{artist};
-        return query(getSongByArtist, str);
-    }
-    public ResultSet totalSongCount() throws SQLException {
-        return simpleQuery(getTotalSongCount);
-    }
-    public ResultSet getUserPlaylst(String user) throws SQLException {
-        TestListener.logInfoDetails("String user: " + user);
-
-        String[] str = new String[]{user};
-        return query(getUserPlaylists, str);
-    }
+   
     public ResultSet getPwdInfo(String user) throws SQLException {
         TestListener.logInfoDetails("String user: " + user);
         String[] str = new String[]{user};
