@@ -1,13 +1,17 @@
 package util.extentReports;
 
+import base.BaseTest;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
+import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.Platform;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.io.File;
 
-public class ExtentManager {
+public class ExtentManager extends BaseTest{
     private static ExtentReports extent;
     private static Platform platform;
     private static final String reportFileName = "Koel-Test-Automation-Extent-Report.html";
@@ -23,6 +27,7 @@ public class ExtentManager {
 
     public static void createInstance() {
         platform = getCurrentPlatform();
+//        System.getProperties().list(System.out);
         String fileName = getReportFileLocation(platform);
         ExtentSparkReporter htmlReporter = new ExtentSparkReporter(fileName);
         htmlReporter.config().setTheme(Theme.DARK);
@@ -32,7 +37,11 @@ public class ExtentManager {
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
         extent.setSystemInfo("Environment", "TEST");
-        extent.setSystemInfo("Author", "Franz Fernando");
+        extent.setSystemInfo("Operating System", System.getProperty("os.name"));
+        extent.setSystemInfo("OS Version", System.getProperty("os.version"));
+        extent.setSystemInfo("Java Version", System.getProperty("java.version"));
+        extent.setSystemInfo("Application Url: ", System.getProperty("baseURL"));
+        extent.setSystemInfo("Database: ", System.getProperty("dbUrl"));
     }
     //Select the extent report file location based on platform
     private static String getReportFileLocation (Platform platform) {

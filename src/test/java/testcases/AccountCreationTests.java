@@ -76,7 +76,8 @@ public class AccountCreationTests extends BaseTest {
         closeBrowser();
     }
 
-    @Test(description = "User can register for a new account")
+
+    @Test(description = "User can register for a new account", groups = {"Account Creation"})
     @Parameters({"koelNewUser"})
     public void register(String koelNewUser) {
         TestListener.logInfoDetails("String koelNewUser: " + koelNewUser);
@@ -87,7 +88,8 @@ public class AccountCreationTests extends BaseTest {
         TestListener.logAssertionDetails("Confirmation Message is displayed: " + registrationPage.getConfirmationMsg());
         Assert.assertTrue(registrationPage.getConfirmationMsg());
     }
-    @Test(description =  "Verify form validation messages when incorrectly formatted email used to register an account")
+
+    @Test(description =  "Verify form validation messages when incorrectly formatted email used to register an account", groups = {"Account Creation"})
     @Parameters({"email"})
     public void regWithIncorrectEmailFmt(String email){
         TestListener.logInfoDetails("String email: " + email);
@@ -102,7 +104,7 @@ public class AccountCreationTests extends BaseTest {
 
         Assert.assertEquals(expected, validationMsg);
     }
-    @Test(description = "Verify user can log in with new account")
+    @Test(description = "Verify user can log in with new account", groups = {"Account Creation"})
     @Parameters({"baseURL", "koelNewUser", "password"})
     public void verifyLogin(String baseURL, String koelNewUser, String password) {
         TestListener.logInfoDetails("String koelNewUser: " + koelNewUser);
@@ -116,7 +118,7 @@ public class AccountCreationTests extends BaseTest {
         Assert.assertTrue(homePage.getUserAvatar());
 
     }
-    @Test(description = "Execute SQL query to verify new user info is stored correctly or updated in the Koel database", priority=3)
+    @Test(description = "Execute SQL query to verify new user info is stored correctly or updated in the Koel database", groups = {"Account Creation"}, priority=3)
     @Parameters({"koelNewUser", "password"})
     public void queryDbForNewUser(String koelNewUser, String password) throws SQLException, ClassNotFoundException {
         KoelDbBase.initializeDb();
@@ -143,7 +145,7 @@ public class AccountCreationTests extends BaseTest {
         KoelDbBase.closeDatabaseConnection();
     }
     //use the account from the previous db query
-    @Test(description = "Get existing user from database, attempt to register with that account", priority=4)
+    @Test(description = "Get existing user from database, attempt to register with that account", groups = {"Account Creation"}, priority=4)
     public void tryRegisteringExistingUser() {
         String existingUser = getDataValue("existingUser").toString(); //this value comes from the previous db query
         TestListener.logInfoDetails("Existing Account : " + existingUser);

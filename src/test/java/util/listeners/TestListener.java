@@ -53,7 +53,7 @@ public class TestListener  implements ITestListener, WebDriverListener {
     @Override
     public synchronized void onTestStart(ITestResult result) {
         Log.info(result.getMethod().getMethodName() + " started!");
-        ExtentTest extentTest = extent.createTest(result.getMethod().getMethodName(),result.getMethod().getDescription());
+        ExtentTest extentTest = extent.createTest(result.getMethod().getMethodName(),result.getMethod().getDescription()).assignAuthor(System.getProperty("author"));
         test.set(extentTest);
     }
     @Override
