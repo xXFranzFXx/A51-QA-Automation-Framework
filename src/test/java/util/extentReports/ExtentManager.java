@@ -37,6 +37,7 @@ public class ExtentManager extends BaseTest{
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
         extent.setSystemInfo("Environment", "TEST");
+        extent.setSystemInfo("User Story Links", System.getProperty("userStoryLinks"));
         extent.setSystemInfo("Operating System", System.getProperty("os.name"));
         extent.setSystemInfo("OS Version", System.getProperty("os.version"));
         extent.setSystemInfo("Java Version", System.getProperty("java.version"));
