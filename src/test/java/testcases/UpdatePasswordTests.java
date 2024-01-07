@@ -64,7 +64,7 @@ public class UpdatePasswordTests extends BaseTest {
             TestListener.logExceptionDetails("Error " + e);
         }
     }
-    @Test(description = "Verify error message or updating password with no number requirement", groups = {"Update password"})
+    @Test(description = "Verify error message for updating password with no number requirement", groups = {"Update password"})
     public void loginAndUpdatePwdNoNumbers() {
         String newPassword = "fffffffffff@";
         String expected = "The new password must contain at least one number.";
@@ -88,7 +88,7 @@ public class UpdatePasswordTests extends BaseTest {
             TestListener.logExceptionDetails("Error" + e);
         }
     }
-    @Test(description = "Verify error message or updating password with no symbol requirement", groups = {"Update password"})
+    @Test(description = "Verify error message for updating password with no symbol requirement", groups = {"Update password"})
     public void loginAndUpdatePwdNoSymbols() {
         String newPassword = "fffffffffff1";
         String expected = "The new password must contain at least one symbol.";
@@ -112,7 +112,7 @@ public class UpdatePasswordTests extends BaseTest {
             TestListener.logExceptionDetails("Error " + e);
         }
     }
-    @Test(description = "Verify error message or updating password that has appeared in data leak", groups = {"Update password"})
+    @Test(description = "Verify error message for updating password that has appeared in data leak", groups = {"Update password"})
     public void loginAndUpdatePwdLeaked() {
         String newPassword = "newpassword!1";
         String expected = "The given new password has appeared in a data leak. Please choose a different new password.";
