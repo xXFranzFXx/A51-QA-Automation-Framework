@@ -4,6 +4,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class RegistrationPage extends BasePage{
+    @FindBy(css = ".errors")
+    private WebElement errors;
    @FindBy(xpath = "//input[@type='email']")
    private WebElement emailInput;
    @FindBy(xpath = "//input[@id='button']")
@@ -30,6 +32,9 @@ public class RegistrationPage extends BasePage{
 
     public String getValidationMsg() {
         return findElement(emailInput).getAttribute("validationMessage");
+    }
+    public String getPersonalEmailMsg() {
+        return findElement(errors).getText();
     }
 
 }

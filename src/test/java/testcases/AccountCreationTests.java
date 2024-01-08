@@ -157,5 +157,19 @@ public class AccountCreationTests extends BaseTest {
         Assert.assertTrue(registrationPage.getConfirmationMsg());
 
     }
+    @Test(description = "Try registering with personal email account", groups = {"Account Creation"}, priority=4)
+    public void tryRegisteringPersonalEmail() {
+        String personalEmail = "ff@hotmail.com";
+        String expectedErrorMsg = "Sorry, only certain emails are allowed, please do not use your personal email";
+        TestListener.logInfoDetails("Personal email : " + personalEmail);
+        registrationPage = new RegistrationPage(getDriver());
+        registrationPage.provideEmail(personalEmail)
+                .clickSubmit();
+        TestListener.logInfoDetails("Expected Error Message: " + expectedErrorMsg);
+        TestListener.logRsDetails("Error Message: " + registrationPage.getPersonalEmailMsg());
+        TestListener.logAssertionDetails("Expected Error matches Error Message: " + expectedErrorMsg.equalsIgnoreCase(registrationPage.getPersonalEmailMsg()));
+        Assert.assertEquals(expectedErrorMsg.toLowerCase(), registrationPage.getPersonalEmailMsg().toLowerCase());
+
+    }
 
 }
