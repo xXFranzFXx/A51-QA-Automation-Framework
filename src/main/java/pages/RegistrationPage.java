@@ -22,7 +22,7 @@ public class RegistrationPage extends BasePage{
     public void clickSubmit() {
         submitButton.click();
     }
-
+    //confirmation messages
     public boolean getConfirmationMsg() {
         return confirmationMsg.isEnabled();
     }
