@@ -312,3 +312,37 @@
 [INFO ] 2024-01-09 20:26:07.195 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
 [INFO ] 2024-01-09 20:26:07.399 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
 [INFO ] 2024-01-09 20:26:07.400 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 21:39:35.193 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 21:39:40.524 [TestNG-test=accountCreation-1] Log - queryDbForExistingUser started!
+[INFO ] 2024-01-09 21:39:41.009 [TestNG-test=accountCreation-1] Log - queryDbForExistingUser passed!
+[INFO ] 2024-01-09 21:39:45.395 [TestNG-test=accountCreation-1] Log - updateWithIncompleteEmail started!
+[INFO ] 2024-01-09 21:39:46.974 [TestNG-test=accountCreation-1] Log - updateWithIncompleteEmail passed!
+[INFO ] 2024-01-09 21:39:51.097 [TestNG-test=accountCreation-1] Log - updateWithIncorrectDot started!
+[INFO ] 2024-01-09 21:39:52.459 [TestNG-test=accountCreation-1] Log - updateWithIncorrectDot passed!
+[INFO ] 2024-01-09 21:39:56.489 [TestNG-test=accountCreation-1] Log - updateWithIncorrectEmailFmt started!
+[INFO ] 2024-01-09 21:39:57.913 [TestNG-test=accountCreation-1] Log - updateWithIncorrectEmailFmt passed!
+[INFO ] 2024-01-09 21:40:02.066 [TestNG-test=accountCreation-1] Log - updateEmailWithExisting started!
+[INFO ] 2024-01-09 21:40:03.661 [TestNG-test=accountCreation-1] Log - updateEmailWithExisting passed!
+[INFO ] 2024-01-09 21:40:07.622 [TestNG-test=accountCreation-1] Log - updateWithProperEmail started!
+[FATAL] 2024-01-09 21:40:07.834 [TestNG-test=accountCreation-1] Log - Error while calling method: findElement - null
+[ERROR] 2024-01-09 21:40:07.835 [TestNG-test=accountCreation-1] Log - updateWithProperEmail failed!
+[INFO ] 2024-01-09 21:40:08.145 [TestNG-test=accountCreation-1] Log - screen shot taken for failed test updateWithProperEmail
+[INFO ] 2024-01-09 21:40:12.616 [TestNG-test=accountCreation-1] Log - queryDbForUpdatedEmail started!
+[INFO ] 2024-01-09 21:40:13.039 [TestNG-test=accountCreation-1] Log - queryDbForUpdatedEmail passed!
+[INFO ] 2024-01-09 21:40:17.333 [TestNG-test=accountCreation-1] Log - useUpdatedEmailToLogin started!
+[FATAL] 2024-01-09 21:40:28.638 [TestNG-test=accountCreation-1] Log - Error while calling method: findElement - null
+[FATAL] 2024-01-09 21:40:38.732 [TestNG-test=accountCreation-1] Log - Error while calling method: findElement - null
+[FATAL] 2024-01-09 21:40:49.009 [TestNG-test=accountCreation-1] Log - Error while calling method: findElement - null
+[ERROR] 2024-01-09 21:40:49.012 [TestNG-test=accountCreation-1] Log - useUpdatedEmailToLogin failed!
+[INFO ] 2024-01-09 21:40:49.357 [TestNG-test=accountCreation-1] Log - screen shot taken for failed test useUpdatedEmailToLogin
+[INFO ] 2024-01-09 21:40:53.616 [TestNG-test=accountCreation-1] Log - resetProfile started!
+[FATAL] 2024-01-09 21:41:03.844 [TestNG-test=accountCreation-1] Log - Error while calling method: findElement - null
+[FATAL] 2024-01-09 21:41:13.857 [TestNG-test=accountCreation-1] Log - Error while calling method: findElement - null
+[FATAL] 2024-01-09 21:41:24.159 [TestNG-test=accountCreation-1] Log - Error while calling method: findElement - null
+[FATAL] 2024-01-09 21:41:34.195 [TestNG-test=accountCreation-1] Log - Error while calling method: findElement - null
+[FATAL] 2024-01-09 21:41:44.205 [TestNG-test=accountCreation-1] Log - Error while calling method: findElement - null
+[FATAL] 2024-01-09 21:41:54.503 [TestNG-test=accountCreation-1] Log - Error while calling method: findElement - null
+[INFO ] 2024-01-09 21:41:54.507 [TestNG-test=accountCreation-1] Log - resetProfile passed!
+[INFO ] 2024-01-09 21:41:54.691 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 21:41:54.938 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 21:41:54.939 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!

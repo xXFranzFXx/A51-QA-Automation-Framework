@@ -9,10 +9,12 @@
         <parameter name="baseURL" value="https://qa.koel.app/"/>
         <parameter name="registrationURL" value="https://qa.koel.app/registration"/>
         <parameter name="koelNewUser" value="franz.fernando+2@testpro.io"/>
+        <parameter name="oldEmail" value="franz.fernando+1@testpro.io"/>
         <parameter name="koelExistingUser" value="fake@fakeaccount.com"/>
         <parameter name="password" value="te$t$tudent1"/>
         <parameter name="incompleteEmail" value="franz.fernando+1@"/>
         <parameter name="incorrectDotEmail" value="franz.fernando+1@.io"/>
+        <parameter name="properEmail" value="franz+1@testpro.io"/>
         <parameter name="email" value="ff"/>
         <classes>
             <class name="testcases.UpdateEmailTests"/>

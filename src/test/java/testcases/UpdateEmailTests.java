@@ -3,13 +3,16 @@ package testcases;
 import base.BaseTest;
 import db.KoelDbActions;
 import db.KoelDbBase;
+import org.openqa.selenium.ElementClickInterceptedException;
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.*;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.ProfilePage;
 import pages.RegistrationPage;
 import util.TestDataHandler;
+import util.TestUtil;
 import util.listeners.TestListener;
 
 import java.net.MalformedURLException;
@@ -67,7 +70,7 @@ public class UpdateEmailTests extends BaseTest {
     public void close() {
         closeBrowser();
     }
-    @Test(description = "Execute SQL query to verify new user info is stored correctly or updated in the Koel database")
+    @Test(description = "Execute SQL query to verify new user info is stored correctly or updated in the Koel database", priority=0)
     @Parameters({"koelExistingUser"})
     public void queryDbForExistingUser(String koelExistingUser) throws SQLException, ClassNotFoundException {
         KoelDbBase.initializeDb();
@@ -161,18 +164,75 @@ public class UpdateEmailTests extends BaseTest {
         TestListener.logAssertionDetails("Correct error message was displayed: " + errorMsg.contains(expected));
         Assert.assertTrue(errorMsg.contains(expected));
     }
-    @Test(description =  "Verify form validation error message when updating email with incorrect '.' placement")
-    @Parameters({"updatedEmail", "password"})
-    public void updateWithProperEmail(String updatedEmail, String password){
-        TestListener.logInfoDetails("String email: " + updatedEmail);
-        homePage = new HomePage(getDriver());
+    @Test(description =  "Update email with valid email address, log out, try to log in with old email address", priority=5)
+    @Parameters({"properEmail", "password", "oldEmail"})
+    public void updateWithProperEmail(String properEmail, String password, String oldEmail){
         loginPage = new LoginPage(getDriver());
         profilePage = new ProfilePage(getDriver());
         loginPage.loginValidCredentials();
         homePage.clickAvatar();
-        profilePage.provideCurrentPassword(password)
-                .provideEmail(updatedEmail)
-                .clickSaveButton();
-        
+            try {
+                profilePage
+                        .provideCurrentPassword(password)
+                        .provideEmail(properEmail)
+                        .clickSaveButton()
+                                .clickLogoutButton();
+                loginPage.provideEmail(oldEmail)
+                        .providePassword(password)
+                        .clickSubmitBtn();
+                Assert.assertTrue(loginPage.getRegistrationLink());
+                Reporter.log("User has updated email and attempted to log in with old email", true);
+            } catch (Exception e) {
+                Reporter.log("There is a problem updating email" + e, true);
+            }
+        }
+    @Test(description = "Execute SQL query to verify new user info is stored correctly or updated in the Koel database", priority = 6)
+    @Parameters({"properEmail"})
+    public void queryDbForUpdatedEmail(String properEmail) throws SQLException, ClassNotFoundException {
+        KoelDbBase.initializeDb();
+        KoelDbActions koelDbActions = new KoelDbActions();
+        rs = koelDbActions.getUserInfo(properEmail);
+        if (rs.next()) {
+            String email = rs.getString("email");
+            TestListener.logRsDetails(
+                    "Results: " + "\n" + "<br>" +
+                            "user: " + email + "\n" + "<br>"
+            );
+            TestListener.logAssertionDetails("New user data has been saved correctly in the database: " + email.equals(properEmail));
+            Assert.assertEquals(email, properEmail);
+        }
+        KoelDbBase.closeDatabaseConnection();
     }
-}
+
+    @Test(description="Use updated email to log in", priority=7)
+    @Parameters({"properEmail", "password"})
+    public void useUpdatedEmailToLogin(String properEmail, String password) {
+        loginPage = new LoginPage(getDriver());
+        homePage = new HomePage(getDriver());
+        loginPage.provideEmail(properEmail)
+                .providePassword(password)
+                .clickSubmitBtn();
+        Assert.assertTrue(homePage.getUserAvatar());
+    }
+    @Test(description = "reset profile", priority=8)
+    @Parameters({"properEmail", "password", "oldEmail"})
+    public void resetProfile(String properEmail, String password, String oldEmail) {
+        homePage = new HomePage(getDriver());
+        loginPage = new LoginPage(getDriver());
+        profilePage = new ProfilePage(getDriver());
+        try {
+            loginPage.provideEmail(properEmail)
+                    .providePassword(password)
+                    .clickSubmitBtn();
+            homePage.clickAvatar();
+                profilePage
+                        .provideCurrentPassword(password)
+                        .provideEmail(oldEmail)
+                        .clickSaveButton();
+                Assert.assertTrue(profilePage.notificationPopup());
+                Reporter.log("Reset profile", true);
+        } catch(Exception e) {
+            Reporter.log("Unable to reset profile" + e, true);
+        }
+    }
+    }
