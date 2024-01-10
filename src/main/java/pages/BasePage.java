@@ -12,6 +12,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.Reporter;
 import java.time.Duration;
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -137,30 +139,30 @@ public class BasePage {
         return soundBarVisualizer.isDisplayed();
     }
 
-    protected void currentQueuePage () {
+    public void currentQueuePage () {
         actions.moveToElement(currentQueueLocator).perform();
         clickElement(currentQueueLocator);    }
-    protected void recentlyPlayedPage() {
+    public void recentlyPlayedPage() {
         actions.moveToElement(recentlyPlayedLocator).perform();
             clickElement(recentlyPlayedLocator);
     }
-    protected void artistsPage() {
+    public void artistsPage() {
         actions.moveToElement(artistsLocator).perform();
         clickElement(artistsLocator);    }
-    protected void albumsPage() {
+    public void albumsPage() {
         actions.moveToElement(albumsLocator).perform();
         clickElement(albumsLocator);
     }
-    protected void allSongsPage() {  actions.moveToElement(allSongsLocator).perform();
+    public void allSongsPage() {  actions.moveToElement(allSongsLocator).perform();
         clickElement(allSongsLocator);
     }
-    protected void homePage() {  actions.moveToElement(homeLocator).perform();
+    public void homePage() {  actions.moveToElement(homeLocator).perform();
         clickElement(homeLocator);
     }
-    protected void about() { actions.moveToElement(aboutBtnLocator).perform();
+    public void about() { actions.moveToElement(aboutBtnLocator).perform();
             clickElement(aboutBtnLocator);
     }
-    protected void favorites() {actions.moveToElement(favoritesLocator).perform();
+    public void favorites() {actions.moveToElement(favoritesLocator).perform();
         clickElement(favoritesLocator);
     }
     public void clickLogoutButton() {
@@ -184,6 +186,20 @@ public class BasePage {
     protected boolean modalIsClosed() {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(0));
         return modal.contains(closeModalBtn);
+    }
+    protected void doesNotExists(WebElement webElement) {
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(0));
+        boolean elementDNE = false;
+        try {
+            webElement.click();
+        } catch (NoSuchElementException e) {
+            elementDNE = true;
+        }
+        finally {
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+            Assert.assertTrue(elementDNE);
+        }
+
     }
 
 }
