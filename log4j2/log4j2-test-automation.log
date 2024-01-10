@@ -466,3 +466,97 @@
 [INFO ] 2024-01-10 09:16:18.526 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
 [INFO ] 2024-01-10 09:16:18.731 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
 [INFO ] 2024-01-10 09:16:18.732 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 10:50:30.046 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 10:50:40.460 [TestNG-test=updateEmail-1] Log - likeSongs started!
+[INFO ] 2024-01-10 10:50:41.467 [TestNG-test=updateEmail-1] Log - likeSongs passed!
+[INFO ] 2024-01-10 10:50:45.661 [TestNG-test=updateEmail-1] Log - downloadSong started!
+[INFO ] 2024-01-10 10:50:46.813 [TestNG-test=updateEmail-1] Log - downloadSong passed!
+[INFO ] 2024-01-10 10:50:51.044 [TestNG-test=updateEmail-1] Log - unlikeAllSongs started!
+[INFO ] 2024-01-10 10:50:51.896 [TestNG-test=updateEmail-1] Log - unlikeAllSongs passed!
+[INFO ] 2024-01-10 10:50:52.002 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 10:50:52.235 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 10:50:56.063 [TestNG-test=favoritesPlaylistPage-1] Log - likeSongs started!
+[INFO ] 2024-01-10 10:50:56.954 [TestNG-test=favoritesPlaylistPage-1] Log - likeSongs passed!
+[INFO ] 2024-01-10 10:51:01.073 [TestNG-test=favoritesPlaylistPage-1] Log - downloadSong started!
+[INFO ] 2024-01-10 10:51:02.169 [TestNG-test=favoritesPlaylistPage-1] Log - downloadSong passed!
+[INFO ] 2024-01-10 10:51:06.304 [TestNG-test=favoritesPlaylistPage-1] Log - unlikeAllSongs started!
+[INFO ] 2024-01-10 10:51:07.191 [TestNG-test=favoritesPlaylistPage-1] Log - unlikeAllSongs passed!
+[INFO ] 2024-01-10 10:51:07.302 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 10:51:47.742 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 10:51:52.533 [TestNG-test=updateEmail-1] Log - queryDbForExistingUser started!
+[INFO ] 2024-01-10 10:51:52.985 [TestNG-test=updateEmail-1] Log - queryDbForExistingUser passed!
+[INFO ] 2024-01-10 10:51:57.222 [TestNG-test=updateEmail-1] Log - updateWithIncompleteEmail started!
+[INFO ] 2024-01-10 10:51:58.556 [TestNG-test=updateEmail-1] Log - updateWithIncompleteEmail passed!
+[INFO ] 2024-01-10 10:52:02.766 [TestNG-test=updateEmail-1] Log - updateWithIncorrectDot started!
+[INFO ] 2024-01-10 10:52:04.002 [TestNG-test=updateEmail-1] Log - updateWithIncorrectDot passed!
+[INFO ] 2024-01-10 10:52:08.277 [TestNG-test=updateEmail-1] Log - updateWithIncorrectEmailFmt started!
+[INFO ] 2024-01-10 10:52:09.567 [TestNG-test=updateEmail-1] Log - updateWithIncorrectEmailFmt passed!
+[INFO ] 2024-01-10 10:52:13.981 [TestNG-test=updateEmail-1] Log - updateEmailWithExisting started!
+[INFO ] 2024-01-10 10:52:15.305 [TestNG-test=updateEmail-1] Log - updateEmailWithExisting passed!
+[INFO ] 2024-01-10 10:52:19.633 [TestNG-test=updateEmail-1] Log - updateWithProperEmail started!
+[FATAL] 2024-01-10 10:52:36.335 [TestNG-test=updateEmail-1] Log - Error while calling method: findElement - null
+[FATAL] 2024-01-10 10:52:36.426 [TestNG-test=updateEmail-1] Log - Error while calling method: sendKeys - null
+[INFO ] 2024-01-10 10:52:36.430 [TestNG-test=updateEmail-1] Log - updateWithProperEmail passed!
+[INFO ] 2024-01-10 10:52:40.765 [TestNG-test=updateEmail-1] Log - queryDbForUpdatedEmail started!
+[INFO ] 2024-01-10 10:52:41.192 [TestNG-test=updateEmail-1] Log - queryDbForUpdatedEmail passed!
+[INFO ] 2024-01-10 10:52:45.332 [TestNG-test=updateEmail-1] Log - useUpdatedEmailToLogin started!
+[INFO ] 2024-01-10 10:52:45.770 [TestNG-test=updateEmail-1] Log - useUpdatedEmailToLogin passed!
+[INFO ] 2024-01-10 10:52:49.808 [TestNG-test=updateEmail-1] Log - resetProfile started!
+[INFO ] 2024-01-10 10:52:51.689 [TestNG-test=updateEmail-1] Log - resetProfile passed!
+[INFO ] 2024-01-10 10:52:51.793 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 10:52:52.029 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 10:52:56.060 [TestNG-test=favoritesPlaylistPage-1] Log - likeSongs started!
+[INFO ] 2024-01-10 10:52:56.967 [TestNG-test=favoritesPlaylistPage-1] Log - likeSongs passed!
+[INFO ] 2024-01-10 10:53:01.247 [TestNG-test=favoritesPlaylistPage-1] Log - downloadSong started!
+[INFO ] 2024-01-10 10:53:02.292 [TestNG-test=favoritesPlaylistPage-1] Log - downloadSong passed!
+[INFO ] 2024-01-10 10:53:06.685 [TestNG-test=favoritesPlaylistPage-1] Log - unlikeAllSongs started!
+[INFO ] 2024-01-10 10:53:07.555 [TestNG-test=favoritesPlaylistPage-1] Log - unlikeAllSongs passed!
+[INFO ] 2024-01-10 10:53:07.667 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 11:00:17.866 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 11:00:22.449 [TestNG-test=updateEmail-1] Log - queryDbForExistingUser started!
+[INFO ] 2024-01-10 11:00:22.912 [TestNG-test=updateEmail-1] Log - queryDbForExistingUser passed!
+[INFO ] 2024-01-10 11:00:27.345 [TestNG-test=updateEmail-1] Log - updateWithIncompleteEmail started!
+[INFO ] 2024-01-10 11:00:28.826 [TestNG-test=updateEmail-1] Log - updateWithIncompleteEmail passed!
+[INFO ] 2024-01-10 11:00:32.802 [TestNG-test=updateEmail-1] Log - updateWithIncorrectDot started!
+[INFO ] 2024-01-10 11:00:34.073 [TestNG-test=updateEmail-1] Log - updateWithIncorrectDot passed!
+[INFO ] 2024-01-10 11:00:37.989 [TestNG-test=updateEmail-1] Log - updateWithIncorrectEmailFmt started!
+[INFO ] 2024-01-10 11:00:39.371 [TestNG-test=updateEmail-1] Log - updateWithIncorrectEmailFmt passed!
+[INFO ] 2024-01-10 11:00:43.350 [TestNG-test=updateEmail-1] Log - updateEmailWithExisting started!
+[INFO ] 2024-01-10 11:00:44.736 [TestNG-test=updateEmail-1] Log - updateEmailWithExisting passed!
+[INFO ] 2024-01-10 11:00:48.852 [TestNG-test=updateEmail-1] Log - updateWithProperEmail started!
+[FATAL] 2024-01-10 11:01:05.618 [TestNG-test=updateEmail-1] Log - Error while calling method: findElement - null
+[FATAL] 2024-01-10 11:01:05.719 [TestNG-test=updateEmail-1] Log - Error while calling method: sendKeys - null
+[INFO ] 2024-01-10 11:01:05.723 [TestNG-test=updateEmail-1] Log - updateWithProperEmail passed!
+[INFO ] 2024-01-10 11:01:09.791 [TestNG-test=updateEmail-1] Log - queryDbForUpdatedEmail started!
+[INFO ] 2024-01-10 11:01:10.173 [TestNG-test=updateEmail-1] Log - queryDbForUpdatedEmail passed!
+[INFO ] 2024-01-10 11:01:14.160 [TestNG-test=updateEmail-1] Log - useUpdatedEmailToLogin started!
+[INFO ] 2024-01-10 11:01:14.596 [TestNG-test=updateEmail-1] Log - useUpdatedEmailToLogin passed!
+[INFO ] 2024-01-10 11:01:18.600 [TestNG-test=updateEmail-1] Log - resetProfile started!
+[INFO ] 2024-01-10 11:01:20.065 [TestNG-test=updateEmail-1] Log - resetProfile passed!
+[INFO ] 2024-01-10 11:01:20.179 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 11:01:20.395 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 11:01:20.396 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 11:07:46.698 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 11:07:51.287 [TestNG-test=updateEmail-1] Log - queryDbForExistingUser started!
+[INFO ] 2024-01-10 11:07:51.742 [TestNG-test=updateEmail-1] Log - queryDbForExistingUser passed!
+[INFO ] 2024-01-10 11:07:56.077 [TestNG-test=updateEmail-1] Log - updateWithIncompleteEmail started!
+[INFO ] 2024-01-10 11:07:57.530 [TestNG-test=updateEmail-1] Log - updateWithIncompleteEmail passed!
+[INFO ] 2024-01-10 11:08:01.708 [TestNG-test=updateEmail-1] Log - updateWithIncorrectDot started!
+[INFO ] 2024-01-10 11:08:03.100 [TestNG-test=updateEmail-1] Log - updateWithIncorrectDot passed!
+[INFO ] 2024-01-10 11:08:07.072 [TestNG-test=updateEmail-1] Log - updateWithIncorrectEmailFmt started!
+[INFO ] 2024-01-10 11:08:08.404 [TestNG-test=updateEmail-1] Log - updateWithIncorrectEmailFmt passed!
+[INFO ] 2024-01-10 11:08:12.366 [TestNG-test=updateEmail-1] Log - updateEmailWithExisting started!
+[INFO ] 2024-01-10 11:08:13.730 [TestNG-test=updateEmail-1] Log - updateEmailWithExisting passed!
+[INFO ] 2024-01-10 11:08:17.894 [TestNG-test=updateEmail-1] Log - updateWithProperEmail started!
+[INFO ] 2024-01-10 11:08:19.362 [TestNG-test=updateEmail-1] Log - updateWithProperEmail passed!
+[INFO ] 2024-01-10 11:08:23.386 [TestNG-test=updateEmail-1] Log - loginWithOldEmail started!
+[INFO ] 2024-01-10 11:08:23.689 [TestNG-test=updateEmail-1] Log - loginWithOldEmail passed!
+[INFO ] 2024-01-10 11:08:27.733 [TestNG-test=updateEmail-1] Log - queryDbForUpdatedEmail started!
+[INFO ] 2024-01-10 11:08:28.122 [TestNG-test=updateEmail-1] Log - queryDbForUpdatedEmail passed!
+[INFO ] 2024-01-10 11:08:32.135 [TestNG-test=updateEmail-1] Log - useUpdatedEmailToLogin started!
+[INFO ] 2024-01-10 11:08:32.610 [TestNG-test=updateEmail-1] Log - useUpdatedEmailToLogin passed!
+[INFO ] 2024-01-10 11:08:36.505 [TestNG-test=updateEmail-1] Log - resetProfile started!
+[INFO ] 2024-01-10 11:08:38.481 [TestNG-test=updateEmail-1] Log - resetProfile passed!
+[INFO ] 2024-01-10 11:08:38.592 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 11:08:38.846 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 11:08:38.848 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!

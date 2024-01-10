@@ -51,7 +51,7 @@ public class ProfilePage extends BasePage{
     }
     public void clickLogout() {
         wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector(".success.show")));
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath( "//*[@data-testid=\"btn-logout\"]/i"))).click();
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath( "//a[@data-testid=\"btn-logout\"]/i"))).click();
     }
     public String getValidationMsg() {
         return findElement(emailInput).getAttribute("validationMessage");

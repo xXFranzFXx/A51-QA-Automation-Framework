@@ -3,16 +3,12 @@ package testcases;
 import base.BaseTest;
 import db.KoelDbActions;
 import db.KoelDbBase;
-import org.openqa.selenium.ElementClickInterceptedException;
 import org.testng.Assert;
-import org.testng.Reporter;
 import org.testng.annotations.*;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.ProfilePage;
-import pages.RegistrationPage;
 import util.TestDataHandler;
-import util.TestUtil;
 import util.listeners.TestListener;
 
 import java.net.MalformedURLException;
@@ -177,20 +173,26 @@ public class UpdateEmailTests extends BaseTest {
                 profilePage
                         .provideCurrentPassword(password)
                         .provideEmail(properEmail)
-                        .clickSaveButton()
-                        .clickLogout();
+                        .clickSaveButton();
                 TestListener.logInfoDetails("Updated  email to: " + properEmail);
-                loginPage.provideEmail(oldEmail)
-                        .providePassword(password)
-                        .clickSubmitBtn();
-                TestListener.logRsDetails("User has updated email and attempted to log in with old email: " + oldEmail);
-                TestListener.logAssertionDetails("User cannot login with old email: " + loginPage.getRegistrationLink());
-                Assert.assertTrue(loginPage.getRegistrationLink());
+                Assert.assertTrue(profilePage.notificationPopup());
+
             } catch (Exception e) {
                 TestListener.logExceptionDetails("There was a problem with this test: " + e);
             }
         }
-    @Test(description = "Execute SQL query to verify new user info is stored correctly or updated in the Koel database", priority = 6)
+     @Test(description = "Attempt to log in with old email after updating", priority=6)
+     @Parameters({"oldEmail", "password"})
+     public void loginWithOldEmail(String oldEmail, String password) {
+         loginPage = new LoginPage(getDriver());
+         loginPage.provideEmail(oldEmail)
+                 .providePassword(password)
+                 .clickSubmitBtn();
+         TestListener.logRsDetails("Attempting to log in with old email: " + oldEmail);
+         TestListener.logAssertionDetails("User cannot login with old email: " + loginPage.getRegistrationLink());
+         Assert.assertTrue(loginPage.getRegistrationLink());
+     }
+    @Test(description = "Execute SQL query to verify new user info is stored correctly or updated in the Koel database", priority = 7)
     @Parameters({"properEmail"})
     public void queryDbForUpdatedEmail(String properEmail) throws SQLException, ClassNotFoundException {
         KoelDbBase.initializeDb();
@@ -202,14 +204,13 @@ public class UpdateEmailTests extends BaseTest {
                     "Results: " + "\n" + "<br>" +
                             "user: " + email + "\n" + "<br>"
             );
-            TestListener.logRsDetails("Result: " + email);
             TestListener.logAssertionDetails("New user data has been saved correctly in the database: " + email.equals(properEmail));
             Assert.assertEquals(email, properEmail);
         }
         KoelDbBase.closeDatabaseConnection();
     }
 
-    @Test(description="Use updated email to log in", priority=7)
+    @Test(description="Use updated email to log in", priority=8)
     @Parameters({"properEmail", "password"})
     public void useUpdatedEmailToLogin(String properEmail, String password) {
         loginPage = new LoginPage(getDriver());
@@ -221,7 +222,7 @@ public class UpdateEmailTests extends BaseTest {
         TestListener.logAssertionDetails("Successfully logged in with updated email: " + homePage.getUserAvatar());
         Assert.assertTrue(homePage.getUserAvatar());
     }
-    @Test(description = "reset profile", priority=8)
+    @Test(description = "reset profile", priority=9)
     @Parameters({"properEmail", "password", "oldEmail"})
     public void resetProfile(String properEmail, String password, String oldEmail) {
         homePage = new HomePage(getDriver());
