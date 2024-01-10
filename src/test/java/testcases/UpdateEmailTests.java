@@ -167,6 +167,7 @@ public class UpdateEmailTests extends BaseTest {
     @Test(description =  "Update email with valid email address, log out, try to log in with old email address", priority=5)
     @Parameters({"properEmail", "password", "oldEmail"})
     public void updateWithProperEmail(String properEmail, String password, String oldEmail){
+        homePage = new HomePage(getDriver());
         loginPage = new LoginPage(getDriver());
         profilePage = new ProfilePage(getDriver());
         loginPage.loginValidCredentials();
@@ -176,7 +177,7 @@ public class UpdateEmailTests extends BaseTest {
                         .provideCurrentPassword(password)
                         .provideEmail(properEmail)
                         .clickSaveButton()
-                                .clickLogoutButton();
+                        .clickLogout();
                 loginPage.provideEmail(oldEmail)
                         .providePassword(password)
                         .clickSubmitBtn();
