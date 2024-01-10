@@ -139,30 +139,30 @@ public class BasePage {
         return soundBarVisualizer.isDisplayed();
     }
 
-    protected void currentQueuePage () {
+    public void currentQueuePage () {
         actions.moveToElement(currentQueueLocator).perform();
         clickElement(currentQueueLocator);    }
-    protected void recentlyPlayedPage() {
+    public void recentlyPlayedPage() {
         actions.moveToElement(recentlyPlayedLocator).perform();
             clickElement(recentlyPlayedLocator);
     }
-    protected void artistsPage() {
+    public void artistsPage() {
         actions.moveToElement(artistsLocator).perform();
         clickElement(artistsLocator);    }
-    protected void albumsPage() {
+    public void albumsPage() {
         actions.moveToElement(albumsLocator).perform();
         clickElement(albumsLocator);
     }
-    protected void allSongsPage() {  actions.moveToElement(allSongsLocator).perform();
+    public void allSongsPage() {  actions.moveToElement(allSongsLocator).perform();
         clickElement(allSongsLocator);
     }
-    protected void homePage() {  actions.moveToElement(homeLocator).perform();
+    public void homePage() {  actions.moveToElement(homeLocator).perform();
         clickElement(homeLocator);
     }
-    protected void about() { actions.moveToElement(aboutBtnLocator).perform();
+    public void about() { actions.moveToElement(aboutBtnLocator).perform();
             clickElement(aboutBtnLocator);
     }
-    protected void favorites() {actions.moveToElement(favoritesLocator).perform();
+    public void favorites() {actions.moveToElement(favoritesLocator).perform();
         clickElement(favoritesLocator);
     }
     public void clickLogoutButton() {

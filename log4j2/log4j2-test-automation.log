@@ -358,3 +358,108 @@
 [INFO ] 2024-01-02 18:53:43.201 [TestNG-tests-1] Log - checkRecentlyAdded started!
 [INFO ] 2024-01-02 18:53:46.434 [TestNG-tests-1] Log - checkRecentlyAdded passed!
 [INFO ] 2024-01-02 18:53:46.617 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 11:24:35.004 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 11:24:35.007 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 11:24:35.168 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 11:24:35.170 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 11:25:30.543 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 11:25:30.546 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 11:25:30.688 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite started!
+[FATAL] 2024-01-09 11:25:36.261 [TestNG-tests-1] Log - Error while calling method: sendKeys - null
+[INFO ] 2024-01-09 11:25:36.267 [TestNG-tests-1] Log - likeSongs started!
+[WARN ] 2024-01-09 11:25:36.273 [TestNG-tests-1] Log - likeSongs skipped
+[INFO ] 2024-01-09 11:25:36.286 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 11:27:10.507 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 11:27:10.511 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 11:27:10.653 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 11:27:24.335 [TestNG-tests-1] Log - likeSongs started!
+[INFO ] 2024-01-09 11:27:38.636 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 11:27:38.639 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 11:27:38.790 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 11:27:47.184 [TestNG-tests-1] Log - likeSongs started!
+[ERROR] 2024-01-09 11:28:36.579 [TestNG-tests-1] Log - likeSongs failed!
+[INFO ] 2024-01-09 11:28:37.249 [TestNG-tests-1] Log - screen shot taken for failed test likeSongs
+[INFO ] 2024-01-09 11:28:37.841 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 11:29:26.806 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 11:29:26.809 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 11:29:26.952 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 11:29:32.765 [TestNG-tests-1] Log - likeSongs started!
+[ERROR] 2024-01-09 11:30:08.007 [TestNG-tests-1] Log - likeSongs failed!
+[INFO ] 2024-01-09 11:30:08.681 [TestNG-tests-1] Log - screen shot taken for failed test likeSongs
+[INFO ] 2024-01-09 11:30:08.902 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 11:31:20.134 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 11:31:20.138 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 11:31:20.283 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 11:31:25.899 [TestNG-tests-1] Log - likeSongs started!
+[INFO ] 2024-01-09 11:31:59.770 [TestNG-tests-1] Log - likeSongs passed!
+[INFO ] 2024-01-09 11:31:59.984 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 11:34:21.075 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 11:34:21.081 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 11:34:21.224 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 11:34:26.323 [TestNG-tests-1] Log - unlikeAllSongs started!
+[ERROR] 2024-01-09 11:34:48.507 [TestNG-tests-1] Log - unlikeAllSongs failed!
+[INFO ] 2024-01-09 11:34:49.120 [TestNG-tests-1] Log - screen shot taken for failed test unlikeAllSongs
+[INFO ] 2024-01-09 11:34:49.302 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 11:38:00.047 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 11:38:00.051 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 11:38:00.193 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 11:38:04.281 [TestNG-tests-1] Log - unlikeAllSongs started!
+[FATAL] 2024-01-09 11:38:05.738 [TestNG-tests-1] Log - Error while calling method: click - null
+[ERROR] 2024-01-09 11:38:05.740 [TestNG-tests-1] Log - unlikeAllSongs failed!
+[INFO ] 2024-01-09 11:38:06.008 [TestNG-tests-1] Log - screen shot taken for failed test unlikeAllSongs
+[INFO ] 2024-01-09 11:38:06.116 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 11:40:17.196 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 11:40:17.199 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 11:40:17.341 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 11:40:21.392 [TestNG-tests-1] Log - unlikeAllSongs started!
+[FATAL] 2024-01-09 11:40:22.508 [TestNG-tests-1] Log - Error while calling method: click - null
+[ERROR] 2024-01-09 11:40:22.510 [TestNG-tests-1] Log - unlikeAllSongs failed!
+[INFO ] 2024-01-09 11:40:22.768 [TestNG-tests-1] Log - screen shot taken for failed test unlikeAllSongs
+[INFO ] 2024-01-09 11:40:22.880 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 15:24:34.439 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 15:24:34.442 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 15:24:34.589 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 15:24:39.599 [TestNG-tests-1] Log - unlikeAllSongs started!
+[FATAL] 2024-01-09 15:24:40.679 [TestNG-tests-1] Log - Error while calling method: click - null
+[ERROR] 2024-01-09 15:24:40.681 [TestNG-tests-1] Log - unlikeAllSongs failed!
+[INFO ] 2024-01-09 15:24:40.946 [TestNG-tests-1] Log - screen shot taken for failed test unlikeAllSongs
+[INFO ] 2024-01-09 15:24:41.054 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 15:28:44.438 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 15:28:44.442 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 15:28:44.579 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 15:28:48.788 [TestNG-tests-1] Log - unlikeAllSongs started!
+[FATAL] 2024-01-09 15:28:49.821 [TestNG-tests-1] Log - Error while calling method: isDisplayed - null
+[ERROR] 2024-01-09 15:28:49.823 [TestNG-tests-1] Log - unlikeAllSongs failed!
+[INFO ] 2024-01-09 15:28:50.082 [TestNG-tests-1] Log - screen shot taken for failed test unlikeAllSongs
+[INFO ] 2024-01-09 15:28:50.234 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 15:33:14.712 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 15:33:14.716 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 15:33:14.856 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 15:33:19.373 [TestNG-tests-1] Log - unlikeAllSongs started!
+[FATAL] 2024-01-09 15:33:20.287 [TestNG-tests-1] Log - Error while calling method: isDisplayed - null
+[ERROR] 2024-01-09 15:33:20.289 [TestNG-tests-1] Log - unlikeAllSongs failed!
+[INFO ] 2024-01-09 15:33:20.542 [TestNG-tests-1] Log - screen shot taken for failed test unlikeAllSongs
+[INFO ] 2024-01-09 15:33:20.654 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 15:37:01.794 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 15:37:01.798 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 15:37:01.951 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 15:37:06.235 [TestNG-tests-1] Log - unlikeAllSongs started!
+[INFO ] 2024-01-09 15:37:07.156 [TestNG-tests-1] Log - unlikeAllSongs passed!
+[INFO ] 2024-01-09 15:37:07.273 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 15:49:11.239 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 15:49:11.242 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 15:49:11.388 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 15:49:15.643 [TestNG-tests-1] Log - likeSongs started!
+[INFO ] 2024-01-09 15:49:18.405 [TestNG-tests-1] Log - likeSongs passed!
+[INFO ] 2024-01-09 15:49:18.532 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 15:49:33.102 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 15:49:33.106 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 15:49:33.248 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 15:49:37.195 [TestNG-tests-1] Log - downloadSong started!
+[FATAL] 2024-01-09 15:49:47.231 [Forwarding actions on session b4ddc6c252745bf1ae09633741262fda to remote] Log - Error while calling method: findElement - null
+[INFO ] 2024-01-09 15:50:34.360 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 15:50:34.364 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 15:50:34.505 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 15:50:39.623 [TestNG-tests-1] Log - downloadSong started!
+[INFO ] 2024-01-09 15:50:41.005 [TestNG-tests-1] Log - downloadSong passed!
+[INFO ] 2024-01-09 15:50:41.126 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite ending!

@@ -18,7 +18,7 @@
             <class name="testcases.AlbumsTests"/>
             <class name="testcases.AllSongsTests"/>
             <class name="testcases.ArtistsTests"/>
-
+            <class name="testcases.FavoritesTests"/>
         </classes>
     </test>
 </suite>
