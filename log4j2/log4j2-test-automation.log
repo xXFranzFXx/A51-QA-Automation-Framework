@@ -219,3 +219,96 @@
 [INFO ] 2024-01-05 14:25:27.172 [TestNG-test=passwordUpdate-1] Log - resetProfile started!
 [INFO ] 2024-01-05 14:25:28.700 [TestNG-test=passwordUpdate-1] Log - resetProfile passed!
 [INFO ] 2024-01-05 14:25:28.810 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 18:17:47.603 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 18:17:47.634 [TestNG-test=accountCreation-1] Log - updateEmailWithExisting started!
+[WARN ] 2024-01-09 18:17:47.639 [TestNG-test=accountCreation-1] Log - updateEmailWithExisting skipped
+[INFO ] 2024-01-09 18:17:47.647 [TestNG-test=accountCreation-1] Log - queryDbForExistingUser started!
+[WARN ] 2024-01-09 18:17:47.649 [TestNG-test=accountCreation-1] Log - queryDbForExistingUser skipped
+[INFO ] 2024-01-09 18:17:47.653 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 18:17:47.939 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 18:17:47.941 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 18:20:04.822 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 18:20:11.237 [TestNG-test=accountCreation-1] Log - updateEmailWithExisting started!
+[ERROR] 2024-01-09 18:20:11.264 [TestNG-test=accountCreation-1] Log - updateEmailWithExisting failed!
+[INFO ] 2024-01-09 18:20:11.612 [TestNG-test=accountCreation-1] Log - screen shot taken for failed test updateEmailWithExisting
+[INFO ] 2024-01-09 18:20:17.131 [TestNG-test=accountCreation-1] Log - queryDbForExistingUser started!
+[INFO ] 2024-01-09 18:20:17.579 [TestNG-test=accountCreation-1] Log - queryDbForExistingUser passed!
+[INFO ] 2024-01-09 18:20:17.689 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 18:20:18.220 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 18:20:18.221 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 18:20:57.840 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 18:21:02.162 [TestNG-test=accountCreation-1] Log - updateEmailWithExisting started!
+[ERROR] 2024-01-09 18:21:02.172 [TestNG-test=accountCreation-1] Log - updateEmailWithExisting failed!
+[INFO ] 2024-01-09 18:21:02.422 [TestNG-test=accountCreation-1] Log - screen shot taken for failed test updateEmailWithExisting
+[INFO ] 2024-01-09 18:21:07.020 [TestNG-test=accountCreation-1] Log - queryDbForExistingUser started!
+[INFO ] 2024-01-09 18:21:07.431 [TestNG-test=accountCreation-1] Log - queryDbForExistingUser passed!
+[INFO ] 2024-01-09 18:21:07.553 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 18:21:07.807 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 18:21:07.808 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 18:21:48.345 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 18:21:52.350 [TestNG-test=accountCreation-1] Log - queryDbForExistingUser started!
+[INFO ] 2024-01-09 18:21:52.722 [TestNG-test=accountCreation-1] Log - queryDbForExistingUser passed!
+[INFO ] 2024-01-09 18:21:57.084 [TestNG-test=accountCreation-1] Log - updateEmailWithExisting started!
+[ERROR] 2024-01-09 18:21:58.680 [TestNG-test=accountCreation-1] Log - updateEmailWithExisting failed!
+[INFO ] 2024-01-09 18:21:59.202 [TestNG-test=accountCreation-1] Log - screen shot taken for failed test updateEmailWithExisting
+[INFO ] 2024-01-09 18:21:59.310 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 18:21:59.540 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 18:21:59.540 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 18:25:38.814 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 18:25:43.230 [TestNG-test=accountCreation-1] Log - queryDbForExistingUser started!
+[INFO ] 2024-01-09 18:25:43.610 [TestNG-test=accountCreation-1] Log - queryDbForExistingUser passed!
+[INFO ] 2024-01-09 18:25:48.022 [TestNG-test=accountCreation-1] Log - updateEmailWithExisting started!
+[ERROR] 2024-01-09 18:25:49.630 [TestNG-test=accountCreation-1] Log - updateEmailWithExisting failed!
+[INFO ] 2024-01-09 18:25:49.959 [TestNG-test=accountCreation-1] Log - screen shot taken for failed test updateEmailWithExisting
+[INFO ] 2024-01-09 18:25:50.074 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 18:25:50.288 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 18:25:50.289 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 18:26:55.540 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 18:26:59.615 [TestNG-test=accountCreation-1] Log - queryDbForExistingUser started!
+[INFO ] 2024-01-09 18:27:00.011 [TestNG-test=accountCreation-1] Log - queryDbForExistingUser passed!
+[INFO ] 2024-01-09 18:27:04.328 [TestNG-test=accountCreation-1] Log - updateEmailWithExisting started!
+[INFO ] 2024-01-09 18:27:05.856 [TestNG-test=accountCreation-1] Log - updateEmailWithExisting passed!
+[INFO ] 2024-01-09 18:27:05.990 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 18:27:06.303 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 18:27:06.304 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 20:03:13.506 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 20:03:18.900 [TestNG-test=accountCreation-1] Log - regWithIncorrectEmailFmt started!
+[FATAL] 2024-01-09 20:03:31.222 [TestNG-test=accountCreation-1] Log - Error while calling method: findElement - null
+[INFO ] 2024-01-09 20:04:08.971 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 20:04:13.717 [TestNG-test=accountCreation-1] Log - regWithIncorrectEmailFmt started!
+[FATAL] 2024-01-09 20:04:25.397 [TestNG-test=accountCreation-1] Log - Error while calling method: findElement - null
+[INFO ] 2024-01-09 20:05:28.694 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 20:05:34.006 [TestNG-test=accountCreation-1] Log - regWithIncorrectEmailFmt started!
+[INFO ] 2024-01-09 20:05:36.026 [TestNG-test=accountCreation-1] Log - regWithIncorrectEmailFmt passed!
+[INFO ] 2024-01-09 20:05:36.150 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 20:05:36.451 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 20:05:36.451 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 20:14:02.168 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 20:14:06.380 [TestNG-test=accountCreation-1] Log - regWithIncompleteEmail started!
+[ERROR] 2024-01-09 20:14:07.954 [TestNG-test=accountCreation-1] Log - regWithIncompleteEmail failed!
+[INFO ] 2024-01-09 20:14:08.378 [TestNG-test=accountCreation-1] Log - screen shot taken for failed test regWithIncompleteEmail
+[INFO ] 2024-01-09 20:14:08.500 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 20:14:08.750 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 20:14:08.751 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 20:16:13.092 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[ERROR] 2024-01-09 20:16:13.107 [TestNG-test=accountCreation-1] Log - regWithIncompleteEmail failed!
+[INFO ] 2024-01-09 20:16:13.109 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 20:16:13.257 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 20:16:13.257 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 20:16:32.666 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[ERROR] 2024-01-09 20:16:32.680 [TestNG-test=accountCreation-1] Log - regWithIncompleteEmail failed!
+[INFO ] 2024-01-09 20:16:32.682 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 20:16:32.829 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 20:16:32.830 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 20:17:35.045 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 20:17:39.137 [TestNG-test=accountCreation-1] Log - regWithIncompleteEmail started!
+[INFO ] 2024-01-09 20:17:40.656 [TestNG-test=accountCreation-1] Log - regWithIncompleteEmail passed!
+[INFO ] 2024-01-09 20:17:40.772 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 20:17:41.004 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 20:17:41.005 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 20:26:01.234 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 20:26:05.482 [TestNG-test=accountCreation-1] Log - updateWithIncorrectDot started!
+[INFO ] 2024-01-09 20:26:07.071 [TestNG-test=accountCreation-1] Log - updateWithIncorrectDot passed!
+[INFO ] 2024-01-09 20:26:07.195 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-09 20:26:07.399 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-09 20:26:07.400 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!

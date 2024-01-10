@@ -14,6 +14,8 @@ public class ProfilePage extends BasePage{
     private WebElement errorNotification;
     @FindBy(css = "button.btn-submit")
     private WebElement saveButton;
+    @FindBy(css = "#inputProfileEmail")
+    private WebElement emailInput;
 
     public ProfilePage(WebDriver givenDriver) {
         super(givenDriver);
@@ -29,6 +31,12 @@ public class ProfilePage extends BasePage{
         currentPassword.sendKeys(password);
         return this;
     }
+    public ProfilePage provideEmail(String email) {
+        WebElement currentEmail = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#inputProfileEmail")));
+        currentEmail.clear();
+        currentEmail.sendKeys(email);
+        return this;
+    }
     public boolean notificationPopup() {
        WebElement notification = wait.until(ExpectedConditions.visibilityOf(updateNotification));
         return notification.isDisplayed();
@@ -41,7 +49,9 @@ public class ProfilePage extends BasePage{
         WebElement errorMsg = wait.until(ExpectedConditions.visibilityOf(errorNotification));
         return errorMsg.getText();
     }
-
+    public String getValidationMsg() {
+        return findElement(emailInput).getAttribute("validationMessage");
+    }
     public ProfilePage provideNewPassword(String newPassword) {
         WebElement currentPassword = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#inputProfileNewPassword")));
         currentPassword.clear();
