@@ -70,7 +70,7 @@ public class UpdateEmailTests extends BaseTest {
     public void close() {
         closeBrowser();
     }
-    @Test(description = "Execute SQL query to verify new user info is stored correctly or updated in the Koel database", priority=0)
+    @Test(description = "Execute SQL query to find an existing user", priority=0)
     @Parameters({"koelExistingUser"})
     public void queryDbForExistingUser(String koelExistingUser) throws SQLException, ClassNotFoundException {
         KoelDbBase.initializeDb();
@@ -83,7 +83,8 @@ public class UpdateEmailTests extends BaseTest {
                             "user: " + email + "\n" + "<br>"
             );
             addDataFromTest("existingUser", email);   //store the account email to use for the next test
-            TestListener.logAssertionDetails("New user data has been saved correctly in the database: " + email.equals(koelExistingUser));
+            TestListener.logRsDetails("Existing user: " + email);
+            TestListener.logAssertionDetails("User already exists in database: " + email.equals(koelExistingUser));
             Assert.assertEquals(email, koelExistingUser);
         }
         KoelDbBase.closeDatabaseConnection();
@@ -178,13 +179,15 @@ public class UpdateEmailTests extends BaseTest {
                         .provideEmail(properEmail)
                         .clickSaveButton()
                         .clickLogout();
+                TestListener.logInfoDetails("Updated  email to: " + properEmail);
                 loginPage.provideEmail(oldEmail)
                         .providePassword(password)
                         .clickSubmitBtn();
+                TestListener.logRsDetails("User has updated email and attempted to log in with old email: " + oldEmail);
+                TestListener.logAssertionDetails("User cannot login with old email: " + loginPage.getRegistrationLink());
                 Assert.assertTrue(loginPage.getRegistrationLink());
-                Reporter.log("User has updated email and attempted to log in with old email", true);
             } catch (Exception e) {
-                Reporter.log("There is a problem updating email" + e, true);
+                TestListener.logExceptionDetails("There was a problem with this test: " + e);
             }
         }
     @Test(description = "Execute SQL query to verify new user info is stored correctly or updated in the Koel database", priority = 6)
@@ -199,6 +202,7 @@ public class UpdateEmailTests extends BaseTest {
                     "Results: " + "\n" + "<br>" +
                             "user: " + email + "\n" + "<br>"
             );
+            TestListener.logRsDetails("Result: " + email);
             TestListener.logAssertionDetails("New user data has been saved correctly in the database: " + email.equals(properEmail));
             Assert.assertEquals(email, properEmail);
         }
@@ -213,6 +217,8 @@ public class UpdateEmailTests extends BaseTest {
         loginPage.provideEmail(properEmail)
                 .providePassword(password)
                 .clickSubmitBtn();
+        TestListener.logInfoDetails("Logging in with: " + properEmail);
+        TestListener.logAssertionDetails("Successfully logged in with updated email: " + homePage.getUserAvatar());
         Assert.assertTrue(homePage.getUserAvatar());
     }
     @Test(description = "reset profile", priority=8)
@@ -230,10 +236,11 @@ public class UpdateEmailTests extends BaseTest {
                         .provideCurrentPassword(password)
                         .provideEmail(oldEmail)
                         .clickSaveButton();
+                TestListener.logInfoDetails("Reset email to: " + oldEmail);
+                TestListener.logAssertionDetails("Email was successfully reset: " + profilePage.notificationPopup());
                 Assert.assertTrue(profilePage.notificationPopup());
-                Reporter.log("Reset profile", true);
         } catch(Exception e) {
-            Reporter.log("Unable to reset profile" + e, true);
+           TestListener.logExceptionDetails("Unable to reset profile: " + e);
         }
     }
     }

@@ -22,6 +22,8 @@ public class AllSongsPage extends BasePage{
     private List<WebElement> likeButtons;
     @FindBy(xpath = "//section[@id='songsWrapper']//tr[@class='song-item']//button[@class='text-secondary' and contains(@title, 'Like')]")
     private List<WebElement> unLikedButton;
+    @FindBy(xpath = "//section[@id='songsWrapper']//tr[@class='song-item']//button[@class='text-secondary' and contains(@title, 'Like')]")
+    private WebElement singleLikeButton;
     @FindBy(xpath = "//section[@id='songsWrapper']//tr[@class='song-item']//button[@class='text-secondary' and contains(@title, 'Unlike')]")
     private List<WebElement> likedSongsButton;
 
@@ -60,6 +62,10 @@ public class AllSongsPage extends BasePage{
             l.click();
         }
         return this;
+    }
+    public AllSongsPage likeOneSong() {
+       findElement(singleLikeButton).click();
+       return this;
     }
     public int countLikedSongs() {
         return likedSongsButton.size();

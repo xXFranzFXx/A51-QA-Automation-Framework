@@ -28,6 +28,7 @@ public class FavoritesTests extends BaseTest {
     AllSongsPage allSongsPage;
     FavoritesPage favoritesPage;
 
+    //The download directory is reset and used to verify when songs download to it. If the file extension contains ".mp3" then it completed downloading.  If it contains ".crdownload", then it is in the process of downloading
     private boolean checkDownloadedFiles() {
         File rootFolder = new File(System.getProperty("java.io.tmpdir"));
         File[] downloadedFiles = rootFolder.listFiles(file ->
@@ -35,10 +36,10 @@ public class FavoritesTests extends BaseTest {
         );
         return downloadedFiles != null;
     }
-    @BeforeClass
-    public void setEnv() {
-        loadEnv();
-    }
+//    @BeforeClass
+//    public void setEnv() {
+//        loadEnv();
+//    }
     @BeforeMethod
     @Parameters({"baseURL"})
     public void setUp(String baseURL) throws MalformedURLException {
@@ -55,8 +56,9 @@ public class FavoritesTests extends BaseTest {
         favoritesPage = new FavoritesPage(getDriver());
         allSongsPage = new AllSongsPage(getDriver());
         allSongsPage.allSongsPage();
-        allSongsPage.likeSongs();
+        allSongsPage.likeOneSong();
         allSongsPage.favorites();
+        TestListener.logAssertionDetails("Songs appear in favorites list after being 'liked': " + !favoritesPage.isFavoritesEmpty());
         Assert.assertFalse(favoritesPage.isFavoritesEmpty());
     }
     @Test(description = "Remove all songs from favorites playlist and verify no songs are displayed", priority=2)
@@ -64,6 +66,7 @@ public class FavoritesTests extends BaseTest {
         favoritesPage = new FavoritesPage(getDriver());
         favoritesPage.favorites();
         favoritesPage.unlikeAllSongs();
+        TestListener.logAssertionDetails("User can remove songs from Favorites playlist page: " + favoritesPage.checkPlaylistEmptyIcon());
         Assert.assertTrue(favoritesPage.checkPlaylistEmptyIcon());
     }
     @Test(description = "Download a song from the favorites playlist page and verify that the song is downloading", priority=1)
@@ -72,6 +75,7 @@ public class FavoritesTests extends BaseTest {
         favoritesPage.favorites();
         favoritesPage.contextClickFirstSong()
                 .selectDownloadFromCM();
+        TestListener.logAssertionDetails("User can download songs from Favorites playlist page: " + checkDownloadedFiles());
         Assert.assertTrue(checkDownloadedFiles());
     }
 

@@ -17,7 +17,7 @@
         <parameter name="properEmail" value="franz+1@testpro.io"/>
         <parameter name="email" value="ff"/>
         <classes>
-            <class name="testcases.UpdateEmailTests"/>
+            <class name="testcases.FavoritesTests"/>
         </classes>
     </test>
     <test name="passwordUpdate">

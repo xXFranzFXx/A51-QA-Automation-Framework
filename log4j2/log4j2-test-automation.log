@@ -390,3 +390,79 @@
 [INFO ] 2024-01-09 21:54:17.197 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
 [INFO ] 2024-01-09 21:54:17.441 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
 [INFO ] 2024-01-09 21:54:17.441 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 09:06:02.379 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 09:06:02.383 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 09:06:02.562 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 09:06:02.563 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 09:06:17.044 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 09:06:17.047 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 09:06:17.188 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 09:06:17.188 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 09:06:29.002 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 09:06:29.006 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 09:06:29.143 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 09:06:29.143 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 09:07:03.568 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 09:07:03.594 [TestNG-test=accountCreation-1] Log - likeSongs started!
+[WARN ] 2024-01-10 09:07:03.599 [TestNG-test=accountCreation-1] Log - likeSongs skipped
+[INFO ] 2024-01-10 09:07:03.605 [TestNG-test=accountCreation-1] Log - downloadSong started!
+[WARN ] 2024-01-10 09:07:03.605 [TestNG-test=accountCreation-1] Log - downloadSong skipped
+[INFO ] 2024-01-10 09:07:03.607 [TestNG-test=accountCreation-1] Log - unlikeAllSongs started!
+[WARN ] 2024-01-10 09:07:03.608 [TestNG-test=accountCreation-1] Log - unlikeAllSongs skipped
+[INFO ] 2024-01-10 09:07:03.610 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 09:07:03.800 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 09:07:03.801 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 09:07:42.626 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 09:07:47.975 [TestNG-test=accountCreation-1] Log - likeSongs started!
+[INFO ] 2024-01-10 09:07:49.401 [TestNG-test=accountCreation-1] Log - likeSongs passed!
+[INFO ] 2024-01-10 09:07:53.668 [TestNG-test=accountCreation-1] Log - downloadSong started!
+[ERROR] 2024-01-10 09:07:54.900 [TestNG-test=accountCreation-1] Log - downloadSong failed!
+[INFO ] 2024-01-10 09:07:55.184 [TestNG-test=accountCreation-1] Log - screen shot taken for failed test downloadSong
+[INFO ] 2024-01-10 09:07:59.582 [TestNG-test=accountCreation-1] Log - unlikeAllSongs started!
+[ERROR] 2024-01-10 09:08:12.072 [TestNG-test=accountCreation-1] Log - unlikeAllSongs failed!
+[INFO ] 2024-01-10 09:08:12.365 [TestNG-test=accountCreation-1] Log - screen shot taken for failed test unlikeAllSongs
+[INFO ] 2024-01-10 09:08:12.496 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 09:08:12.791 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 09:08:12.792 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 09:08:49.625 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 09:08:54.157 [TestNG-test=accountCreation-1] Log - unlikeAllSongs started!
+[FATAL] 2024-01-10 09:08:55.657 [TestNG-test=accountCreation-1] Log - Error while calling method: isDisplayed - null
+[ERROR] 2024-01-10 09:09:05.687 [TestNG-test=accountCreation-1] Log - unlikeAllSongs failed!
+[INFO ] 2024-01-10 09:09:05.955 [TestNG-test=accountCreation-1] Log - screen shot taken for failed test unlikeAllSongs
+[INFO ] 2024-01-10 09:09:06.080 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 09:09:06.271 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 09:09:06.272 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 09:12:21.099 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 09:12:25.416 [TestNG-test=accountCreation-1] Log - likeSongs started!
+[INFO ] 2024-01-10 09:12:26.498 [TestNG-test=accountCreation-1] Log - likeSongs passed!
+[INFO ] 2024-01-10 09:12:31.090 [TestNG-test=accountCreation-1] Log - downloadSong started!
+[ERROR] 2024-01-10 09:12:32.130 [TestNG-test=accountCreation-1] Log - downloadSong failed!
+[INFO ] 2024-01-10 09:12:32.438 [TestNG-test=accountCreation-1] Log - screen shot taken for failed test downloadSong
+[INFO ] 2024-01-10 09:12:36.507 [TestNG-test=accountCreation-1] Log - unlikeAllSongs started!
+[FATAL] 2024-01-10 09:12:37.735 [TestNG-test=accountCreation-1] Log - Error while calling method: isDisplayed - null
+[ERROR] 2024-01-10 09:12:47.802 [TestNG-test=accountCreation-1] Log - unlikeAllSongs failed!
+[INFO ] 2024-01-10 09:12:48.081 [TestNG-test=accountCreation-1] Log - screen shot taken for failed test unlikeAllSongs
+[INFO ] 2024-01-10 09:12:48.196 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 09:12:48.415 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 09:12:48.415 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 09:13:29.615 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 09:13:33.982 [TestNG-test=accountCreation-1] Log - likeSongs started!
+[INFO ] 2024-01-10 09:13:34.946 [TestNG-test=accountCreation-1] Log - likeSongs passed!
+[INFO ] 2024-01-10 09:13:39.147 [TestNG-test=accountCreation-1] Log - downloadSong started!
+[INFO ] 2024-01-10 09:13:40.268 [TestNG-test=accountCreation-1] Log - downloadSong passed!
+[INFO ] 2024-01-10 09:13:44.223 [TestNG-test=accountCreation-1] Log - unlikeAllSongs started!
+[FATAL] 2024-01-10 09:13:45.208 [TestNG-test=accountCreation-1] Log - Error while calling method: isDisplayed - null
+[INFO ] 2024-01-10 09:13:51.304 [TestNG-test=accountCreation-1] Log - unlikeAllSongs passed!
+[INFO ] 2024-01-10 09:13:51.417 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 09:13:51.635 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 09:13:51.636 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 09:16:03.102 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 09:16:07.539 [TestNG-test=accountCreation-1] Log - likeSongs started!
+[INFO ] 2024-01-10 09:16:08.508 [TestNG-test=accountCreation-1] Log - likeSongs passed!
+[INFO ] 2024-01-10 09:16:12.528 [TestNG-test=accountCreation-1] Log - downloadSong started!
+[INFO ] 2024-01-10 09:16:13.600 [TestNG-test=accountCreation-1] Log - downloadSong passed!
+[INFO ] 2024-01-10 09:16:17.554 [TestNG-test=accountCreation-1] Log - unlikeAllSongs started!
+[INFO ] 2024-01-10 09:16:18.410 [TestNG-test=accountCreation-1] Log - unlikeAllSongs passed!
+[INFO ] 2024-01-10 09:16:18.526 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 09:16:18.731 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 09:16:18.732 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
