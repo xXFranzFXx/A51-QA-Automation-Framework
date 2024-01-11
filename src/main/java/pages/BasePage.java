@@ -2,6 +2,7 @@ package pages;
 
 import org.checkerframework.checker.units.qual.C;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -26,6 +27,7 @@ public class BasePage {
     protected WebDriver driver;
     protected WebDriverWait wait;
     protected Actions actions;
+    protected JavascriptExecutor javascriptExecutor;
 
     private int timeSeconds = 5;
     public static String durationRe = "[^\\W•]+([1-9][0-99]+|[01]?[0-9]):([0-5]?[0-9]):([0-5]?[0-9])";
@@ -100,6 +102,7 @@ public class BasePage {
         driver = givenDriver;
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         actions = new Actions(driver);
+        javascriptExecutor = (JavascriptExecutor)driver;
         PageFactory.initElements(driver, this);
         PageFactory.initElements(new AjaxElementLocatorFactory(driver, 10), this);
     }

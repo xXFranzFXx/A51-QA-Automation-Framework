@@ -463,3 +463,197 @@
 [INFO ] 2024-01-09 15:50:39.623 [TestNG-tests-1] Log - downloadSong started!
 [INFO ] 2024-01-09 15:50:41.005 [TestNG-tests-1] Log - downloadSong passed!
 [INFO ] 2024-01-09 15:50:41.126 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 14:07:21.684 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 14:07:21.687 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 14:07:21.833 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 14:07:21.834 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 14:07:50.696 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 14:07:50.699 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 14:07:50.845 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 14:07:56.399 [TestNG-tests-1] Log - checkSongResults started!
+[FATAL] 2024-01-10 14:08:06.767 [TestNG-tests-1] Log - Error while calling method: findElement - null
+[FATAL] 2024-01-10 14:08:16.817 [TestNG-tests-1] Log - Error while calling method: findElement - null
+[FATAL] 2024-01-10 14:08:27.100 [TestNG-tests-1] Log - Error while calling method: findElement - null
+[ERROR] 2024-01-10 14:08:27.107 [TestNG-tests-1] Log - checkSongResults failed!
+[INFO ] 2024-01-10 14:08:28.197 [TestNG-tests-1] Log - screen shot taken for failed test checkSongResults
+[INFO ] 2024-01-10 14:08:28.316 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 14:09:02.311 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 14:09:02.316 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 14:09:02.459 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 14:09:06.830 [TestNG-tests-1] Log - checkSongResults started!
+[ERROR] 2024-01-10 14:09:17.258 [TestNG-tests-1] Log - checkSongResults failed!
+[INFO ] 2024-01-10 14:09:18.323 [TestNG-tests-1] Log - screen shot taken for failed test checkSongResults
+[INFO ] 2024-01-10 14:09:18.451 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 14:09:54.551 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 14:09:54.554 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 14:09:54.717 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 14:09:59.399 [TestNG-tests-1] Log - checkSongResults started!
+[INFO ] 2024-01-10 14:10:31.227 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 14:10:31.230 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 14:10:31.372 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 14:10:35.451 [TestNG-tests-1] Log - checkSongResults started!
+[ERROR] 2024-01-10 14:10:36.358 [TestNG-tests-1] Log - checkSongResults failed!
+[INFO ] 2024-01-10 14:10:36.648 [TestNG-tests-1] Log - screen shot taken for failed test checkSongResults
+[INFO ] 2024-01-10 14:10:36.762 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 14:11:46.191 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 14:11:46.194 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 14:11:46.334 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 14:11:50.548 [TestNG-tests-1] Log - checkSongResults started!
+[ERROR] 2024-01-10 14:12:00.965 [TestNG-tests-1] Log - checkSongResults failed!
+[INFO ] 2024-01-10 14:12:01.890 [TestNG-tests-1] Log - screen shot taken for failed test checkSongResults
+[INFO ] 2024-01-10 14:12:02.114 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 14:12:57.079 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 14:12:57.083 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 14:12:57.283 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 14:13:01.690 [TestNG-tests-1] Log - checkSongResults started!
+[ERROR] 2024-01-10 14:13:12.082 [TestNG-tests-1] Log - checkSongResults failed!
+[INFO ] 2024-01-10 14:13:13.048 [TestNG-tests-1] Log - screen shot taken for failed test checkSongResults
+[INFO ] 2024-01-10 14:13:13.170 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 14:16:04.892 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 14:16:04.896 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 14:16:05.046 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 14:16:09.315 [TestNG-tests-1] Log - checkSongResults started!
+[ERROR] 2024-01-10 14:16:19.683 [TestNG-tests-1] Log - checkSongResults failed!
+[INFO ] 2024-01-10 14:16:20.751 [TestNG-tests-1] Log - screen shot taken for failed test checkSongResults
+[INFO ] 2024-01-10 14:16:20.949 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 14:16:39.072 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 14:16:39.076 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 14:16:39.237 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 14:16:43.387 [TestNG-tests-1] Log - checkSongResults started!
+[ERROR] 2024-01-10 14:16:54.458 [TestNG-tests-1] Log - checkSongResults failed!
+[INFO ] 2024-01-10 14:16:55.578 [TestNG-tests-1] Log - screen shot taken for failed test checkSongResults
+[INFO ] 2024-01-10 14:16:55.745 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 14:19:24.352 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 14:19:24.361 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 14:19:24.595 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 14:19:29.031 [TestNG-tests-1] Log - checkSongResults started!
+[ERROR] 2024-01-10 14:19:40.116 [TestNG-tests-1] Log - checkSongResults failed!
+[INFO ] 2024-01-10 14:19:41.129 [TestNG-tests-1] Log - screen shot taken for failed test checkSongResults
+[INFO ] 2024-01-10 14:19:41.323 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 14:27:35.798 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 14:27:35.802 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 14:27:35.940 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 14:27:40.190 [TestNG-tests-1] Log - checkSongResults started!
+[INFO ] 2024-01-10 14:27:41.188 [TestNG-tests-1] Log - checkSongResults passed!
+[INFO ] 2024-01-10 14:27:41.316 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 14:29:02.715 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 14:29:02.722 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 14:29:02.899 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 14:29:06.980 [TestNG-tests-1] Log - checkEmptyResults started!
+[INFO ] 2024-01-10 14:29:07.843 [TestNG-tests-1] Log - checkEmptyResults passed!
+[INFO ] 2024-01-10 14:29:07.955 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 14:34:38.492 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 14:34:38.496 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 14:34:38.637 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 14:34:42.880 [TestNG-tests-1] Log - checkEmptyResults started!
+[INFO ] 2024-01-10 14:34:43.845 [TestNG-tests-1] Log - checkEmptyResults passed!
+[INFO ] 2024-01-10 14:34:43.959 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 14:39:58.489 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 14:39:58.493 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 14:39:58.637 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 14:40:02.952 [TestNG-tests-1] Log - checkEmptyResults started!
+[INFO ] 2024-01-10 14:40:03.934 [TestNG-tests-1] Log - checkEmptyResults passed!
+[INFO ] 2024-01-10 14:40:08.861 [TestNG-tests-1] Log - checkSearchResults started!
+[INFO ] 2024-01-10 14:40:09.888 [TestNG-tests-1] Log - checkSearchResults passed!
+[INFO ] 2024-01-10 14:40:09.999 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 16:19:05.077 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 16:19:05.081 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 16:19:05.231 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 16:19:10.457 [TestNG-tests-1] Log - cancelButton started!
+[ERROR] 2024-01-10 16:19:10.874 [TestNG-tests-1] Log - cancelButton failed!
+[INFO ] 2024-01-10 16:19:11.151 [TestNG-tests-1] Log - screen shot taken for failed test cancelButton
+[INFO ] 2024-01-10 16:19:11.288 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 16:20:05.988 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 16:20:05.992 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 16:20:06.141 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 16:20:10.187 [TestNG-tests-1] Log - cancelButton started!
+[ERROR] 2024-01-10 16:20:10.646 [TestNG-tests-1] Log - cancelButton failed!
+[INFO ] 2024-01-10 16:20:10.986 [TestNG-tests-1] Log - screen shot taken for failed test cancelButton
+[INFO ] 2024-01-10 16:20:11.097 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 16:30:35.495 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 16:30:35.499 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 16:30:35.643 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 16:30:39.967 [TestNG-tests-1] Log - cancelButton started!
+[FATAL] 2024-01-10 16:30:50.388 [TestNG-tests-1] Log - Error while calling method: findElement - null
+[ERROR] 2024-01-10 16:30:50.394 [TestNG-tests-1] Log - cancelButton failed!
+[INFO ] 2024-01-10 16:30:51.533 [TestNG-tests-1] Log - screen shot taken for failed test cancelButton
+[INFO ] 2024-01-10 16:30:51.716 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 16:31:35.038 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 16:31:35.043 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 16:31:35.206 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 16:31:39.354 [TestNG-tests-1] Log - cancelButton started!
+[FATAL] 2024-01-10 16:31:49.924 [TestNG-tests-1] Log - Error while calling method: findElement - null
+[ERROR] 2024-01-10 16:31:49.932 [TestNG-tests-1] Log - cancelButton failed!
+[INFO ] 2024-01-10 16:31:50.236 [TestNG-tests-1] Log - screen shot taken for failed test cancelButton
+[INFO ] 2024-01-10 16:31:50.417 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 16:38:58.422 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 16:38:58.425 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 16:38:58.572 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 16:39:03.127 [TestNG-tests-1] Log - cancelButton started!
+[FATAL] 2024-01-10 16:39:13.511 [TestNG-tests-1] Log - Error while calling method: findElement - null
+[ERROR] 2024-01-10 16:39:13.518 [TestNG-tests-1] Log - cancelButton failed!
+[INFO ] 2024-01-10 16:39:13.794 [TestNG-tests-1] Log - screen shot taken for failed test cancelButton
+[INFO ] 2024-01-10 16:39:13.906 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 16:40:29.441 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 16:40:29.446 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 16:40:29.594 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 16:40:33.904 [TestNG-tests-1] Log - cancelButton started!
+[ERROR] 2024-01-10 16:40:34.270 [TestNG-tests-1] Log - cancelButton failed!
+[INFO ] 2024-01-10 16:40:34.574 [TestNG-tests-1] Log - screen shot taken for failed test cancelButton
+[INFO ] 2024-01-10 16:40:34.744 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 16:44:16.251 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 16:44:16.255 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 16:44:16.399 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 16:44:20.679 [TestNG-tests-1] Log - cancelButton started!
+[FATAL] 2024-01-10 16:44:21.054 [TestNG-tests-1] Log - Error while calling method: getShadowRoot - null
+[ERROR] 2024-01-10 16:44:21.057 [TestNG-tests-1] Log - cancelButton failed!
+[INFO ] 2024-01-10 16:44:21.331 [TestNG-tests-1] Log - screen shot taken for failed test cancelButton
+[INFO ] 2024-01-10 16:44:21.524 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 17:01:49.929 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 17:01:49.933 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 17:01:50.082 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 17:01:54.070 [TestNG-tests-1] Log - cancelButton started!
+[FATAL] 2024-01-10 17:01:54.470 [TestNG-tests-1] Log - Error while calling method: getShadowRoot - null
+[ERROR] 2024-01-10 17:01:54.472 [TestNG-tests-1] Log - cancelButton failed!
+[INFO ] 2024-01-10 17:01:54.760 [TestNG-tests-1] Log - screen shot taken for failed test cancelButton
+[INFO ] 2024-01-10 17:01:54.878 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 17:04:40.354 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 17:04:40.358 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 17:04:40.504 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 17:04:44.451 [TestNG-tests-1] Log - cancelButton started!
+[FATAL] 2024-01-10 17:04:44.830 [TestNG-tests-1] Log - Error while calling method: findElement - null
+[ERROR] 2024-01-10 17:04:44.833 [TestNG-tests-1] Log - cancelButton failed!
+[INFO ] 2024-01-10 17:04:45.124 [TestNG-tests-1] Log - screen shot taken for failed test cancelButton
+[INFO ] 2024-01-10 17:04:45.236 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 17:06:51.964 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 17:06:51.968 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 17:06:52.122 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 17:06:55.937 [TestNG-tests-1] Log - cancelButton started!
+[FATAL] 2024-01-10 17:06:56.344 [TestNG-tests-1] Log - Error while calling method: getShadowRoot - null
+[ERROR] 2024-01-10 17:06:56.346 [TestNG-tests-1] Log - cancelButton failed!
+[INFO ] 2024-01-10 17:06:56.626 [TestNG-tests-1] Log - screen shot taken for failed test cancelButton
+[INFO ] 2024-01-10 17:06:56.793 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 17:09:01.655 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 17:09:01.659 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 17:09:01.804 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 17:09:05.507 [TestNG-tests-1] Log - cancelButton started!
+[FATAL] 2024-01-10 17:09:05.878 [TestNG-tests-1] Log - Error while calling method: getShadowRoot - null
+[ERROR] 2024-01-10 17:09:05.879 [TestNG-tests-1] Log - cancelButton failed!
+[INFO ] 2024-01-10 17:09:06.154 [TestNG-tests-1] Log - screen shot taken for failed test cancelButton
+[INFO ] 2024-01-10 17:09:06.328 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 17:10:41.036 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 17:10:41.040 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 17:10:41.187 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 17:10:45.024 [TestNG-tests-1] Log - cancelButton started!
+[FATAL] 2024-01-10 17:10:45.365 [TestNG-tests-1] Log - Error while calling method: getShadowRoot - null
+[ERROR] 2024-01-10 17:10:45.366 [TestNG-tests-1] Log - cancelButton failed!
+[INFO ] 2024-01-10 17:10:45.664 [TestNG-tests-1] Log - screen shot taken for failed test cancelButton
+[INFO ] 2024-01-10 17:10:45.835 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 17:30:06.637 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 17:30:06.642 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-10 17:30:06.784 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-10 17:30:11.807 [TestNG-tests-1] Log - cancelButton started!
+[FATAL] 2024-01-10 17:30:12.234 [TestNG-tests-1] Log - Error while calling method: getShadowRoot - null
+[ERROR] 2024-01-10 17:30:12.237 [TestNG-tests-1] Log - cancelButton failed!
+[INFO ] 2024-01-10 17:30:12.590 [TestNG-tests-1] Log - screen shot taken for failed test cancelButton
+[INFO ] 2024-01-10 17:30:12.705 [TestNG-tests-1] Log - Extent Reports for Koel Automation Test Suite ending!
