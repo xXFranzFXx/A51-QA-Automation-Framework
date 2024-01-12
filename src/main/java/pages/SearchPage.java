@@ -57,7 +57,7 @@ public class SearchPage extends BasePage{
         System.out.println(height);
         int center = width/2;
         int xOffset = center - 10;
-        actions.moveToElement(searchInputLocator, 99, -1).click().perform();
+        actions.moveToElement(searchInputLocator, xOffset, -1).click().perform();
     }
 
     public void useKeyBoardClear() {
