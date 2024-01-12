@@ -15,6 +15,7 @@ public class DataProviderUtil {
                 {"",""}
         };
     }
+    
     @DataProvider(name="SearchData")
     public Object[][] getSearchData(Method method){
         if(method.getName().equalsIgnoreCase("checkWhiteSpace")) {
