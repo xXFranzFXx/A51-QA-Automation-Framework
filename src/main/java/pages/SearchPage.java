@@ -7,22 +7,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import java.util.List;
 
 public class SearchPage extends BasePage{
-    HomePage homePage;
-    JavascriptExecutor javascriptExecutor;
-    @FindBy(xpath = "//section[@data-testid='song-excerpts']//p")
-    private WebElement noSongsText;
     @FindBy(css = "#searchExcerptsWrapper  span > strong")
     private WebElement searchResultHeaderText;
     @FindBy(css ="#searchForm input[type='search']")
     private WebElement searchInputLocator;
-    @FindBy(xpath = "#searchExcerptsWrapper div[@class='text']")
-    private WebElement emptyResultsPlaceholder;
-    @FindBy(xpath = "//section[data-testid='song-excerpts']//ul")
-    private WebElement songResult;
-    @FindBy(xpath = "//section[data-testid='artist-excerpts']//ul")
-    private WebElement artistResult;
-    @FindBy(xpath = "//section[data-testid='album-excerpts']//ul")
-    private WebElement albumResult;
+
 
 
     public SearchPage(WebDriver givenDriver) {

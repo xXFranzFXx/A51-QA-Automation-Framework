@@ -31,5 +31,6 @@ public class KoelDbBase {
             System.out.println("Connection to Koel database closed: " + getDbConnection().isClosed());
         }
         threadDriver.remove();
+
     }
 }
