@@ -92,15 +92,7 @@ public class BaseTest{
         return new RemoteWebDriver(new URL("https://" + username + ":" + authKey + hub), caps);
     }
 
-    @DataProvider(name="LoginData")
-    public Object[][] getDataFromDataProvider(){
-        return new Object[][]{
-                {"demo@class.com", "te$t$tudent"},
-                {"invalidemail@class.com", "te$t$tudent"},
-                {"demo@class.com", "InvalidPassword"},
-                {"",""}
-        };
-    }
+
 
     private static WebDriver setupDefaultBrowser() {
         WebDriverManager.chromedriver().setup();
@@ -110,7 +102,7 @@ public class BaseTest{
         TestListener eventListener = new TestListener();
         driver = new ChromeDriver(service, options);
         Capabilities cap = ((RemoteWebDriver) driver).getCapabilities();
-        System.out.println(cap);
+//        System.out.println(cap);
         System.setProperty("browserName", cap.getBrowserName());
         System.setProperty("browserVersion", cap.getBrowserVersion());
         EventFiringDecorator<WebDriver> decorator = new EventFiringDecorator<>(eventListener);

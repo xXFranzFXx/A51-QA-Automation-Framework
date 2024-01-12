@@ -560,3 +560,107 @@
 [INFO ] 2024-01-10 11:08:38.592 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
 [INFO ] 2024-01-10 11:08:38.846 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
 [INFO ] 2024-01-10 11:08:38.848 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-11 18:54:46.239 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-11 18:54:46.243 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-11 18:54:46.376 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-11 18:54:52.448 [TestNG-test=favoritesPlaylistPage-1] Log - checkWhiteSpace started!
+[INFO ] 2024-01-11 18:54:53.429 [TestNG-test=favoritesPlaylistPage-1] Log - checkWhiteSpace passed!
+[INFO ] 2024-01-11 18:54:58.220 [TestNG-test=favoritesPlaylistPage-1] Log - checkWhiteSpace started!
+[INFO ] 2024-01-11 18:54:59.103 [TestNG-test=favoritesPlaylistPage-1] Log - checkWhiteSpace passed!
+[INFO ] 2024-01-11 18:55:03.439 [TestNG-test=favoritesPlaylistPage-1] Log - checkWhiteSpace started!
+[INFO ] 2024-01-11 18:55:04.364 [TestNG-test=favoritesPlaylistPage-1] Log - checkWhiteSpace passed!
+[INFO ] 2024-01-11 18:55:09.562 [TestNG-test=favoritesPlaylistPage-1] Log - checkWhiteSpace started!
+[INFO ] 2024-01-11 18:55:10.741 [TestNG-test=favoritesPlaylistPage-1] Log - checkWhiteSpace passed!
+[INFO ] 2024-01-11 18:55:10.854 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-11 19:03:18.322 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-11 19:03:18.325 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-11 19:03:18.473 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-11 19:03:22.769 [TestNG-test=favoritesPlaylistPage-1] Log - cancelButton started!
+[INFO ] 2024-01-11 19:03:24.059 [TestNG-test=favoritesPlaylistPage-1] Log - cancelButton passed!
+[INFO ] 2024-01-11 19:03:28.295 [TestNG-test=favoritesPlaylistPage-1] Log - checkEmptyResults started!
+[INFO ] 2024-01-11 19:03:29.277 [TestNG-test=favoritesPlaylistPage-1] Log - checkEmptyResults passed!
+[INFO ] 2024-01-11 19:03:33.151 [TestNG-test=favoritesPlaylistPage-1] Log - checkSearchResults started!
+[INFO ] 2024-01-11 19:03:34.205 [TestNG-test=favoritesPlaylistPage-1] Log - checkSearchResults passed!
+[INFO ] 2024-01-11 19:03:37.719 [TestNG-test=favoritesPlaylistPage-1] Log - checkWhiteSpace started!
+[INFO ] 2024-01-11 19:03:38.639 [TestNG-test=favoritesPlaylistPage-1] Log - checkWhiteSpace passed!
+[INFO ] 2024-01-11 19:03:42.486 [TestNG-test=favoritesPlaylistPage-1] Log - checkWhiteSpace started!
+[INFO ] 2024-01-11 19:03:43.408 [TestNG-test=favoritesPlaylistPage-1] Log - checkWhiteSpace passed!
+[INFO ] 2024-01-11 19:03:47.394 [TestNG-test=favoritesPlaylistPage-1] Log - checkWhiteSpace started!
+[INFO ] 2024-01-11 19:03:48.353 [TestNG-test=favoritesPlaylistPage-1] Log - checkWhiteSpace passed!
+[INFO ] 2024-01-11 19:03:52.424 [TestNG-test=favoritesPlaylistPage-1] Log - checkWhiteSpace started!
+[INFO ] 2024-01-11 19:03:53.321 [TestNG-test=favoritesPlaylistPage-1] Log - checkWhiteSpace passed!
+[INFO ] 2024-01-11 19:03:57.332 [TestNG-test=favoritesPlaylistPage-1] Log - invokeSearchByKeybd started!
+[INFO ] 2024-01-11 19:03:57.897 [TestNG-test=favoritesPlaylistPage-1] Log - invokeSearchByKeybd passed!
+[INFO ] 2024-01-11 19:04:01.799 [TestNG-test=favoritesPlaylistPage-1] Log - keyboardClear started!
+[INFO ] 2024-01-11 19:04:02.894 [TestNG-test=favoritesPlaylistPage-1] Log - keyboardClear passed!
+[INFO ] 2024-01-11 19:04:03.004 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-11 19:14:36.077 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-11 19:14:36.081 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-11 19:14:36.279 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-11 19:14:40.627 [TestNG-test=favoritesPlaylistPage-1] Log - cancelButton started!
+[INFO ] 2024-01-11 19:14:41.925 [TestNG-test=favoritesPlaylistPage-1] Log - cancelButton passed!
+[INFO ] 2024-01-11 19:14:45.618 [TestNG-test=favoritesPlaylistPage-1] Log - checkEmptyResults started!
+[INFO ] 2024-01-11 19:14:46.598 [TestNG-test=favoritesPlaylistPage-1] Log - checkEmptyResults passed!
+[INFO ] 2024-01-11 19:14:50.275 [TestNG-test=favoritesPlaylistPage-1] Log - checkSearchResults started!
+[INFO ] 2024-01-11 19:14:51.372 [TestNG-test=favoritesPlaylistPage-1] Log - checkSearchResults passed!
+[INFO ] 2024-01-11 19:14:55.016 [TestNG-test=favoritesPlaylistPage-1] Log - checkWhiteSpace started!
+[INFO ] 2024-01-11 19:14:55.976 [TestNG-test=favoritesPlaylistPage-1] Log - checkWhiteSpace passed!
+[INFO ] 2024-01-11 19:15:00.062 [TestNG-test=favoritesPlaylistPage-1] Log - checkWhiteSpace started!
+[INFO ] 2024-01-11 19:15:00.966 [TestNG-test=favoritesPlaylistPage-1] Log - checkWhiteSpace passed!
+[INFO ] 2024-01-11 19:15:04.367 [TestNG-test=favoritesPlaylistPage-1] Log - checkWhiteSpace started!
+[INFO ] 2024-01-11 19:15:05.284 [TestNG-test=favoritesPlaylistPage-1] Log - checkWhiteSpace passed!
+[INFO ] 2024-01-11 19:15:08.927 [TestNG-test=favoritesPlaylistPage-1] Log - checkWhiteSpace started!
+[INFO ] 2024-01-11 19:15:09.806 [TestNG-test=favoritesPlaylistPage-1] Log - checkWhiteSpace passed!
+[INFO ] 2024-01-11 19:15:13.426 [TestNG-test=favoritesPlaylistPage-1] Log - invokeSearchByKeybd started!
+[INFO ] 2024-01-11 19:15:13.993 [TestNG-test=favoritesPlaylistPage-1] Log - invokeSearchByKeybd passed!
+[INFO ] 2024-01-11 19:15:17.700 [TestNG-test=favoritesPlaylistPage-1] Log - keyboardClear started!
+[INFO ] 2024-01-11 19:15:18.818 [TestNG-test=favoritesPlaylistPage-1] Log - keyboardClear passed!
+[INFO ] 2024-01-11 19:15:18.929 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-11 19:19:30.878 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-11 19:19:34.628 [TestNG-test=updateEmail-1] Log - queryDbForExistingUser started!
+[INFO ] 2024-01-11 19:19:34.976 [TestNG-test=updateEmail-1] Log - queryDbForExistingUser passed!
+[INFO ] 2024-01-11 19:19:38.730 [TestNG-test=updateEmail-1] Log - updateWithIncompleteEmail started!
+[INFO ] 2024-01-11 19:19:40.026 [TestNG-test=updateEmail-1] Log - updateWithIncompleteEmail passed!
+[INFO ] 2024-01-11 19:19:43.558 [TestNG-test=updateEmail-1] Log - updateWithIncorrectDot started!
+[INFO ] 2024-01-11 19:19:44.704 [TestNG-test=updateEmail-1] Log - updateWithIncorrectDot passed!
+[INFO ] 2024-01-11 19:19:48.309 [TestNG-test=updateEmail-1] Log - updateWithIncorrectEmailFmt started!
+[INFO ] 2024-01-11 19:19:49.505 [TestNG-test=updateEmail-1] Log - updateWithIncorrectEmailFmt passed!
+[INFO ] 2024-01-11 19:19:52.799 [TestNG-test=updateEmail-1] Log - updateEmailWithExisting started!
+[INFO ] 2024-01-11 19:19:54.011 [TestNG-test=updateEmail-1] Log - updateEmailWithExisting passed!
+[INFO ] 2024-01-11 19:19:57.478 [TestNG-test=updateEmail-1] Log - updateWithProperEmail started!
+[INFO ] 2024-01-11 19:19:58.840 [TestNG-test=updateEmail-1] Log - updateWithProperEmail passed!
+[INFO ] 2024-01-11 19:20:02.499 [TestNG-test=updateEmail-1] Log - loginWithOldEmail started!
+[INFO ] 2024-01-11 19:20:02.757 [TestNG-test=updateEmail-1] Log - loginWithOldEmail passed!
+[INFO ] 2024-01-11 19:20:06.430 [TestNG-test=updateEmail-1] Log - queryDbForUpdatedEmail started!
+[INFO ] 2024-01-11 19:20:06.733 [TestNG-test=updateEmail-1] Log - queryDbForUpdatedEmail passed!
+[INFO ] 2024-01-11 19:20:09.946 [TestNG-test=updateEmail-1] Log - useUpdatedEmailToLogin started!
+[INFO ] 2024-01-11 19:20:10.341 [TestNG-test=updateEmail-1] Log - useUpdatedEmailToLogin passed!
+[INFO ] 2024-01-11 19:20:13.522 [TestNG-test=updateEmail-1] Log - resetProfile started!
+[INFO ] 2024-01-11 19:20:14.840 [TestNG-test=updateEmail-1] Log - resetProfile passed!
+[INFO ] 2024-01-11 19:20:14.959 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-01-11 19:20:15.172 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-01-11 19:20:19.425 [TestNG-test=favoritesPlaylistPage-2] Log - likeSongs started!
+[INFO ] 2024-01-11 19:20:19.534 [TestNG-test=favoritesPlaylistPage-1] Log - cancelButton started!
+[INFO ] 2024-01-11 19:20:20.578 [TestNG-test=favoritesPlaylistPage-2] Log - likeSongs passed!
+[INFO ] 2024-01-11 19:20:21.334 [TestNG-test=favoritesPlaylistPage-1] Log - cancelButton passed!
+[INFO ] 2024-01-11 19:20:26.033 [TestNG-test=favoritesPlaylistPage-1] Log - checkEmptyResults started!
+[INFO ] 2024-01-11 19:20:26.036 [TestNG-test=favoritesPlaylistPage-2] Log - downloadSong started!
+[INFO ] 2024-01-11 19:20:27.083 [TestNG-test=favoritesPlaylistPage-2] Log - downloadSong passed!
+[INFO ] 2024-01-11 19:20:27.257 [TestNG-test=favoritesPlaylistPage-1] Log - checkEmptyResults passed!
+[INFO ] 2024-01-11 19:20:31.762 [TestNG-test=favoritesPlaylistPage-1] Log - checkSearchResults started!
+[INFO ] 2024-01-11 19:20:31.859 [TestNG-test=favoritesPlaylistPage-2] Log - unlikeAllSongs started!
+[INFO ] 2024-01-11 19:20:32.638 [TestNG-test=favoritesPlaylistPage-2] Log - unlikeAllSongs passed!
+[INFO ] 2024-01-11 19:20:32.886 [TestNG-test=favoritesPlaylistPage-1] Log - checkSearchResults passed!
+[INFO ] 2024-01-11 19:20:36.385 [TestNG-test=favoritesPlaylistPage-1] Log - checkWhiteSpace started!
+[INFO ] 2024-01-11 19:20:37.295 [TestNG-test=favoritesPlaylistPage-1] Log - checkWhiteSpace passed!
+[INFO ] 2024-01-11 19:20:40.846 [TestNG-test=favoritesPlaylistPage-1] Log - checkWhiteSpace started!
+[INFO ] 2024-01-11 19:20:41.770 [TestNG-test=favoritesPlaylistPage-1] Log - checkWhiteSpace passed!
+[INFO ] 2024-01-11 19:20:45.336 [TestNG-test=favoritesPlaylistPage-1] Log - checkWhiteSpace started!
+[INFO ] 2024-01-11 19:20:46.277 [TestNG-test=favoritesPlaylistPage-1] Log - checkWhiteSpace passed!
+[INFO ] 2024-01-11 19:20:50.139 [TestNG-test=favoritesPlaylistPage-1] Log - checkWhiteSpace started!
+[INFO ] 2024-01-11 19:20:51.084 [TestNG-test=favoritesPlaylistPage-1] Log - checkWhiteSpace passed!
+[INFO ] 2024-01-11 19:20:54.830 [TestNG-test=favoritesPlaylistPage-1] Log - invokeSearchByKeybd started!
+[INFO ] 2024-01-11 19:20:55.376 [TestNG-test=favoritesPlaylistPage-1] Log - invokeSearchByKeybd passed!
+[INFO ] 2024-01-11 19:20:58.947 [TestNG-test=favoritesPlaylistPage-1] Log - keyboardClear started!
+[INFO ] 2024-01-11 19:20:59.979 [TestNG-test=favoritesPlaylistPage-1] Log - keyboardClear passed!
+[INFO ] 2024-01-11 19:21:00.092 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!

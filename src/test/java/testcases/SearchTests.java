@@ -6,6 +6,7 @@ import org.testng.annotations.*;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.SearchPage;
+import util.DataProviderUtil;
 import util.listeners.TestListener;
 
 import java.net.MalformedURLException;
@@ -71,43 +72,47 @@ public class SearchTests extends BaseTest {
         Assert.assertTrue(searchPage.noneFoundTextExists("artist"));
         Assert.assertTrue(searchPage.noneFoundTextExists("album"));
     }
-    @Test(description="Test 'x' button in search field")
-        public void cancelButton() {
-            String firstSearch = "a";
-            String secondSearch = "d";
+    @Test(description="Test 'x' button in search field: type a letter, click 'x', then enter a different letter", dataProvider = "SearchData", dataProviderClass = DataProviderUtil.class)
+        public void cancelButton(String firstSearch, String secondSearch) {
             homePage = new HomePage(getDriver());
             searchPage = new SearchPage(getDriver());
-            homePage.searchSong("a");
+            homePage.searchSong(firstSearch);
             searchPage.clickCancelBtn();
             homePage.searchSong(secondSearch);
             String searchText = searchPage.getSearchResultHeaderText();
+            TestListener.logInfoDetails("Search string used before cancelling: " + firstSearch);
+            TestListener.logRsDetails("Search string that appears on search page results after clicking cancel button: " + searchText);
             Assert.assertEquals(secondSearch, searchText);
     }
-    @Test(description="Use keyboard to clear the search field")
-    public void keyboardClear() {
-        String firstSearch = "a";
-        String secondSearch = "d";
+    @Test(description="Use keyboard to clear the search field: type a letter, clear input by keyboard, then enter a different letter",  dataProvider = "SearchData", dataProviderClass = DataProviderUtil.class)
+    public void keyboardClear(String firstSearch, String secondSearch) {
         homePage = new HomePage(getDriver());
         searchPage = new SearchPage(getDriver());
-        homePage.searchSong("a");
+        homePage.searchSong(firstSearch);
         searchPage.useKeyBoardClear();
         homePage.searchSong(secondSearch);
         String searchText = searchPage.getSearchResultHeaderText();
+        TestListener.logInfoDetails("Search string used before cancelling: " + firstSearch);
+        TestListener.logRsDetails("Search string that appears on search page results after clearing by keyboard: " + searchText);
         Assert.assertEquals(secondSearch, searchText);
     }
-    @Test(description = "Verify trailing/heading whitespaces are ignored for search input")
+    @Test(description = "Verify trailing/heading whitespaces are ignored for search input", dataProvider = "SearchData", dataProviderClass = DataProviderUtil.class)
     public void checkWhiteSpace(String str) {
         homePage = new HomePage(getDriver());
         searchPage = new SearchPage(getDriver());
         homePage.searchSong(str);
         String searchText = searchPage.getSearchResultHeaderText();
+        TestListener.logInfoDetails("Search string: " + str);
+        TestListener.logRsDetails("Search string that appears on search page results: " + searchText);
         Assert.assertEquals(str.trim(), searchText);
     }
-    @Test(description = "Verify search page can be invoked with keyboard shortcut")
+    @Test(description = "Verify search page can be invoked with keyboard shortcut, by pressing 'F' key")
     public void invokeSearchByKeybd() {
         searchPage = new SearchPage(getDriver());
+        TestListener.logInfoDetails("URL before invoking search feature: " + getDriver().getCurrentUrl());
         searchPage.invokeSearchFromKeybd();
         String expectedUrl = "https://qa.koel.app/#!/search";
+        TestListener.logRsDetails("URL after invoking search feature: " + getDriver().getCurrentUrl());
         Assert.assertEquals(expectedUrl, getDriver().getCurrentUrl());
     }
 }
