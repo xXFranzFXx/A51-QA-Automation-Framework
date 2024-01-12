@@ -36,10 +36,6 @@ public class FavoritesTests extends BaseTest {
         );
         return downloadedFiles != null;
     }
-//    @BeforeClass
-//    public void setEnv() {
-//        loadEnv();
-//    }
     @BeforeMethod
     @Parameters({"baseURL"})
     public void setUp(String baseURL) throws MalformedURLException {
