@@ -19,7 +19,7 @@
             <class name="testcases.UpdateEmailTests"/>
         </classes>
     </test>
-    <test name="favoritesPlaylistPage">
+    <test name="favoritesAndSearch">
         <parameter name="baseURL" value="https://qa.koel.app/"/>
         <parameter name="searchString" value="dar"/>
         <parameter name="searchString2" value="a"/>
