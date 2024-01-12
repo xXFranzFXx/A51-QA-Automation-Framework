@@ -7,9 +7,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import java.util.List;
 
 public class SearchPage extends BasePage{
+    HomePage homePage;
+    JavascriptExecutor javascriptExecutor;
     @FindBy(xpath = "//section[@data-testid='song-excerpts']//p")
     private WebElement noSongsText;
-
+    @FindBy(css = "#searchExcerptsWrapper  span > strong")
+    private WebElement searchResultHeaderText;
     @FindBy(css ="#searchForm input[type='search']")
     private WebElement searchInputLocator;
     @FindBy(xpath = "#searchExcerptsWrapper div[@class='text']")
@@ -38,20 +41,31 @@ public class SearchPage extends BasePage{
     }
     public WebElement getShadowCancelBtn() {
 
-//        WebElement host = this.driver.findElement(By.xpath("//div[@id='searchForm']//input"));
-       SearchContext shadowRoot = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@id='searchForm']//input"))).getShadowRoot();
-        return shadowRoot.findElement(By.cssSelector("div [@role='button']"));
-    }
-    public WebElement getSearchPlaceholderTxt() {
-        WebElement root = findElement(searchInputLocator);
 
-        WebElement shadow = getShadowDOM(root, this.driver);
-        return shadow.findElement(By.cssSelector("div [@pseudo='placeholder']"));
+           WebElement host = driver.findElement(By.cssSelector("#searchForm > input[type='search']"));
+            SearchContext shadowRoot = host.getShadowRoot();
+            return shadowRoot.findElement(By.cssSelector("#text-field-container #search-clear"));
+
     }
-    public SearchContext expandRootElement (WebElement webElement) {
-        return (SearchContext) javascriptExecutor.executeScript("return arguments[0].shadowRoot", webElement);
+    public String getSearchResultHeaderText() {
+        return findElement(searchResultHeaderText).getText();
     }
-    public WebElement getShadowDOM(WebElement webElement, WebDriver givenDriver) {
-        return (WebElement) javascriptExecutor.executeScript("return arguments[0].shadowRoot", webElement);
+    public void clickCancelBtn() {
+        int width = searchInputLocator.getSize().getWidth();
+        int height = searchInputLocator.getSize().getHeight();
+        System.out.println(width);
+        System.out.println(height);
+        int center = width/2;
+        int xOffset = center - 10;
+        actions.moveToElement(searchInputLocator, 99, -1).click().perform();
+    }
+
+    public void useKeyBoardClear() {
+        searchInputLocator.sendKeys(Keys.chord(Keys.CONTROL, Keys.SHIFT, "A"));
+        searchInputLocator.sendKeys(Keys.BACK_SPACE);
+    }
+    public void invokeSearchFromKeybd() {
+        wait.until(ExpectedConditions.urlContains("https://qa.koel.app/#!"));
+        actions.sendKeys("f").perform();
     }
 }
