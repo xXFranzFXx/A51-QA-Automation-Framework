@@ -23,6 +23,7 @@ import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URL;
 import java.time.Duration;
+import java.util.HashMap;
 
 public class BaseTest{
     public static WebDriver driver;
@@ -99,6 +100,7 @@ public class BaseTest{
         ChromeDriverService service = new ChromeDriverService.Builder().usingAnyFreePort().build();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*", "--disable-notifications", "--start-maximized", "--incognito");
+        options.setExperimentalOption("prefs", setDownloadDir());
         TestListener eventListener = new TestListener();
         driver = new ChromeDriver(service, options);
         Capabilities cap = ((RemoteWebDriver) driver).getCapabilities();
@@ -108,6 +110,13 @@ public class BaseTest{
         EventFiringDecorator<WebDriver> decorator = new EventFiringDecorator<>(eventListener);
         return decorator.decorate(driver);
     }
+    public static HashMap<String, Object> setDownloadDir() {
+        HashMap<String, Object> chromePref = new HashMap<>();
+        chromePref.put("profile.default_content_settings.popups", 0);
+        chromePref.put("download.default_directory", System.getProperty("java.io.tmpdir"));
+        return chromePref;
+    }
+
 
     public static void loadEnv() {
         Dotenv dotenv = Dotenv.configure().directory("./src/test/resources").load();
@@ -124,3 +133,5 @@ public class BaseTest{
             threadDriver.get().quit();
     }
 }
+
+
