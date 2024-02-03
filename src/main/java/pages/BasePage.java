@@ -30,7 +30,8 @@ public class BasePage {
     @FindBy(xpath = "//nav[@id='sidebar']//a[@class='songs']")
     @CacheLookup
     private WebElement allSongsLocator;
-
+    @FindBy(xpath = "//nav[@id='sidebar']//a[@class='albums']")
+    private WebElement albumsLocator;
     @FindBy(xpath = "//section[@id='playlists']//li[@class='playlist favorites']/a")
     @CacheLookup
     private WebElement favoritesLocator;
@@ -80,12 +81,19 @@ public class BasePage {
     }
 
 
-    public void allSongsPage() {  actions.moveToElement(allSongsLocator).perform();
+    public AllSongsPage navigateToAllSongsPage() {
+        actions.moveToElement(allSongsLocator).perform();
         clickElement(allSongsLocator);
+        return new AllSongsPage(driver);
     }
 
     public void favorites() {actions.moveToElement(favoritesLocator).perform();
         clickElement(favoritesLocator);
+    }
+    public AlbumsPage navigateToAlbumsPage() {
+        actions.moveToElement(albumsLocator).perform();
+        clickElement(albumsLocator);
+        return new AlbumsPage(driver);
     }
 
 

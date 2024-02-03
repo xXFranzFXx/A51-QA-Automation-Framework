@@ -16,6 +16,12 @@ public class KoelDbActions extends KoelDbBase {
     private final String getNewUser = """
             SELECT * FROM dbkoel.users u WHERE u.email = ?
             """;
+    private String getTotalSongCount = """
+            SELECT COUNT(*) as count FROM dbkoel.songs
+            """;
+    private String getUserPlaylists = """
+            SELECT * FROM dbkoel.users u JOIN dbkoel.playlists p ON u.id = p.user_id WHERE u.email = ?
+            """;
     private ResultSet simpleQuery(String sql) throws SQLException {
         db = getDbConnection();
         st=db.prepareStatement(sql);
@@ -50,6 +56,14 @@ public class KoelDbActions extends KoelDbBase {
         TestListener.logInfoDetails("String user: " + user);
         String[] str = new String[]{user};
         return query(getNewUser, str);
+    }
+    public ResultSet totalSongCount() throws SQLException {
+        return simpleQuery(getTotalSongCount);
+    }
+    public ResultSet getUserPlaylst(String user) throws SQLException {
+        TestListener.logInfoDetails("User " + user);
+        String[] str = new String[]{user};
+        return query(getUserPlaylists, str);
     }
 
 }

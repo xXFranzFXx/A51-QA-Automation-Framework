@@ -5,27 +5,20 @@
         <listener class-name="util.listeners.TestListener"/>
         <listener class-name="util.listeners.AnnotationTransformer"/>
     </listeners>
-    <test name="updateEmail" >
-        <parameter name="baseURL" value="https://qa.koel.app/"/>
-        <parameter name="koelNewUser" value="franz.fernando+2@testpro.io"/>
-        <parameter name="oldEmail" value="franz.fernando+1@testpro.io"/>
-        <parameter name="koelExistingUser" value="fake@fakeaccount.com"/>
-        <parameter name="password" value="te$t$tudent1"/>
-        <parameter name="incompleteEmail" value="franz.fernando+1@"/>
-        <parameter name="incorrectDotEmail" value="franz.fernando+1@.io"/>
-        <parameter name="properEmail" value="franz+1@testpro.io"/>
-        <parameter name="email" value="ff"/>
-        <classes>
-            <class name="testcases.UpdateEmailTests"/>
-        </classes>
-    </test>
+
     <test name="favoritesAndSearch">
         <parameter name="baseURL" value="https://qa.koel.app/"/>
         <parameter name="searchString" value="dar"/>
         <parameter name="searchString2" value="a"/>
         <classes>
-            <class name="testcases.FavoritesTests"/>
-            <class name="testcases.SearchTests"/>
+            <class name="testcases.AllSongsTests"/>
+        </classes>
+    </test>
+    <test name="albumsTest">
+        <parameter name="baseURL" value="https://qa.koel.app/"/>
+        <classes>
+            <class name="testcases.PlaylistsTests"/>
+            <class name="testcases.AlbumsTests"/>
         </classes>
     </test>
 </suite>
