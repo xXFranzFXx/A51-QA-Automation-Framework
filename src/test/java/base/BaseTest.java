@@ -103,8 +103,6 @@ public class BaseTest{
         return new RemoteWebDriver(new URL("https://" + username + ":" + authKey + hub), caps);
     }
 
-
-
     private static WebDriver setupDefaultBrowser() {
         WebDriverManager.chromedriver().setup();
         ChromeDriverService service = new ChromeDriverService.Builder().usingAnyFreePort().build();
@@ -127,19 +125,16 @@ public class BaseTest{
         return chromePref;
     }
 
-
     public static void loadEnv() {
         Dotenv dotenv = Dotenv.configure().directory("./src/test/resources").load();
         dotenv.entries().forEach(e -> System.setProperty(e.getKey(), e.getValue()));
-
     }
-
+    @AfterMethod
     public static void closeBrowser() {
         if (getDriver() == null) {
             threadDriver.get().close();
             threadDriver.remove();
         }
-
             threadDriver.get().quit();
     }
 }

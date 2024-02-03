@@ -15,7 +15,7 @@ public class KoelDbActions extends KoelDbBase {
             SELECT password, updated_at FROM dbkoel.users u WHERE u.email = ?
             """;
     private final String getTotalDuration = """
-             SELECT SUM(length/60/60) as duration FROM dbkoel.songs
+             SELECT SUM(length) as duration FROM dbkoel.songs
              """;
     private final String getDuration = """
             SELECT SUM(duration.length/60/60) FROM (SELECT * FROM dbkoel.songs  LIMIT = ?) as duration
@@ -28,6 +28,12 @@ public class KoelDbActions extends KoelDbBase {
             """;
     private String getUserPlaylists = """
             SELECT * FROM dbkoel.users u JOIN dbkoel.playlists p ON u.id = p.user_id WHERE u.email = ?
+            """;
+    private String checkNewPlaylistName = """
+            SELECT p.name FROM dbkoel.users u JOIN dbkoel.playlists p ON u.id = p.user_id WHERE u.email = ? AND p.name = ?
+            """;
+    private String getSongsInPlaylist = """
+            SELECT s.title FROM dbkoel.songs s JOIN dbkoel.playlist_song ps ON s.id = ps.song_id JOIN dbkoel.playlists p ON ps.playlist_id  = p.id  JOIN dbkoel.users u ON p.user_id = u.id WHERE u.email = ?
             """;
     private ResultSet simpleQuery(String sql) throws SQLException {
         db = getDbConnection();
@@ -80,5 +86,15 @@ public class KoelDbActions extends KoelDbBase {
         String[] str = new String[]{songTotal};
         return query(getDuration, str);
     }
+    public ResultSet checkNewPlaylist(String user, String playlist) throws SQLException {
+        TestListener.logInfoDetails("User: " + user);
+        TestListener.logInfoDetails("New playlist name: " + playlist);
+        String[] str = new String[]{user, playlist};
+        return query(checkNewPlaylistName, str);
+    }
+    public ResultSet checkSongsInPlaylist(String user) throws SQLException {
 
+        String[] str = new String[]{user};
+        return query(getSongsInPlaylist, str);
+    }
 }

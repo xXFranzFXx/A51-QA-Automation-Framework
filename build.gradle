@@ -28,12 +28,10 @@ test {
         systemProperty "author", "Franz Fernando"
         systemProperty "browser", System.getProperty("browser")
         systemProperty "koelUser", "franz.fernando+1@testpro.io"
-        systemProperty "koelNewUser", "franz.fernando+2@testpro.io"
         systemProperty "koelPassword", "te\$t\$tudent1"
         systemProperty "dbUrl", "jdbc:mariadb://104.237.13.60:3306/dbkoel"
         systemProperty "dbUser", "dbuser11"
         systemProperty "dbPassword", "pa\$\$11"
-        systemProperty "updatedPassword", "te\$t\$tudent2"
         systemProperty "baseURL", "https://qa.koel.app/"
     }
 }

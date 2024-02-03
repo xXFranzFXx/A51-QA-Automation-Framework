@@ -50,11 +50,11 @@ public class AllSongsPage extends BasePage{
         super(givenDriver);
     }
 
-    public AllSongsPage findSongRows() {
+    public boolean findSongInfo() {
         for(WebElement el: columns) {
-            System.out.println(el.getText());
+            return (!el.getText().isEmpty());
         }
-        return this;
+        return false;
     }
     //unlikes every liked song
     public AllSongsPage unlikeSongs() {

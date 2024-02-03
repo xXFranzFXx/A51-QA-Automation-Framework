@@ -10,6 +10,7 @@ import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
+import java.time.LocalTime;
 import java.util.*;
 
 public class TestUtil extends BaseTest {
@@ -28,6 +29,9 @@ public class TestUtil extends BaseTest {
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
         df.setTimeZone(TimeZone.getTimeZone("Europe/London"));
         return df.format(new Date());
+    }
+   public static String convertSecondToHHMMSSString(int nSecondTime) {
+        return LocalTime.MIN.plusSeconds(nSecondTime).toString();
     }
     public static  Map<String, Map<String, LinkedHashMap<String, String>>>createProcessedResultSetMap(Map<String, ResultSet> dataMap) throws SQLException {
         Map<String, Map<String, LinkedHashMap<String, String>>> multiRsMap = new LinkedHashMap<>();

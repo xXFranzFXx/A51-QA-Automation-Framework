@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 import pages.AllSongsPage;
 import pages.LoginPage;
 import util.TestDataHandler;
+import util.TestUtil;
 import util.listeners.TestListener;
 
 import java.io.IOException;
@@ -33,59 +34,64 @@ public class AllSongsTests extends BaseTest {
     LoginPage loginPage;
     AllSongsPage allSongsPage;
     ResultSet rs;
-    Map<String, Object> testData = new HashMap<>();
 
     @BeforeMethod
-    @Parameters({"baseURL"})
-    public void setUp(String baseURL) throws MalformedURLException {
-        setupBrowser(baseURL);
+    public void setUp() throws MalformedURLException {
+        setupBrowser(System.getProperty("baseURL"));
         loginPage = new LoginPage(getDriver());
         allSongsPage = new AllSongsPage(getDriver());
         loginPage.loginValidCredentials();
         allSongsPage.navigateToAllSongsPage();
     }
-    @AfterMethod
-    public void close() {
-        closeBrowser();
-    }
 
-    @Test
-    public void checkRows() {
-      allSongsPage.findSongRows();
+    @Test(description = "Verify TITLE, ARTIST, ALBUM, and TIME columns are correctly displayed for each song")
+    public void checkSongInfo() {
+      Assert.assertTrue(allSongsPage.findSongInfo(), "Info is missing in one or more songs, check songs in All Songs page");
     }
-    @Test
-    public void getSongTotalFromHeader() {
-        Assert.assertEquals(Integer.valueOf(allSongsPage.getSongTotalFromHeader()), 66);
+    @Test(description = "Count the total number of playable songs and compare that to the total number of songs displayed in header")
+    public void totalPlayableSongsCount() {
+        int manualCount = allSongsPage.getTotalSongsCount();
+        int countDisplayedInHeader = Integer.parseInt(allSongsPage.getSongTotalFromHeader());
+        TestListener.logInfoDetails("Total songs displayed in All Songs page header: " + countDisplayedInHeader);
+        TestListener.logRsDetails("Manual count of songs listed in All Songs page: " + manualCount);
+        TestListener.logAssertionDetails("Song total from header matches manual count: " + (countDisplayedInHeader == manualCount));
+        Assert.assertNotEquals(manualCount, countDisplayedInHeader, "Double check the assertion, both counts now match");
     }
-    @Test
+    @Test(description = "Verify song total is displayed in the page header")
     public void songTotalIsDisplayed() {
-       Assert.assertTrue(allSongsPage.songTotalIsDisplayed());
-
+       Assert.assertTrue(allSongsPage.songTotalIsDisplayed(), "Song total not found");
     }
-    @Test
-    public void totalDurationInHeader() {
-        Assert.assertTrue(allSongsPage.totalDurationIsDisplayed());
+    @Test(description = "Verify total duration of songs is displayed in the page header")
+    public void durationInHeader() {
+        Assert.assertTrue(allSongsPage.totalDurationIsDisplayed(), "Total song duration not found");
     }
-    @Test(description = "get the total amount of songs in the database")
-    public void getSongTotalFromDb() throws SQLException, IOException, ClassNotFoundException {
+    @Test(description = "Verify total song count displayed in app matches the total song count from the database")
+    public void verifyTotalSongTracks() throws SQLException, IOException, ClassNotFoundException {
         KoelDbBase.initializeDb();
         KoelDbActions koelDbActions = new KoelDbActions();
         rs = koelDbActions.totalSongCount();
         if(rs.next()) {
             int count = rs.getInt("count");
-            testData.put("count", rs.getString("count"));
-            Assert.assertEquals(count, 66);
+            int totalSongsInApp = Integer.parseInt(allSongsPage.getSongTotalFromHeader());
+            TestListener.logInfoDetails("Total song tracks displayed on All Songs page header: " + totalSongsInApp);
+            TestListener.logInfoDetails("Total song tracks in database: " + count);
+            TestListener.logAssertionDetails("Total songs in app matches total songs in database: " + (count == totalSongsInApp));
+            Assert.assertEquals(count, totalSongsInApp, "Total song count displayed in app does not match the total song count from database");
         }
-        Assert.assertFalse(false);
     }
-    @Test
-    public void getTotalDurationFromDb() throws SQLException, ClassNotFoundException {
+    @Test(description = "Verify the total duration displayed in All Songs Page matches the sum of all durations in database")
+    public void verifyTotalDuration() throws SQLException, ClassNotFoundException {
         KoelDbBase.initializeDb();
         KoelDbActions koelDbActions = new KoelDbActions();
         rs = koelDbActions.totalDuration();
         if(rs.next()) {
-            double duration = rs.getDouble("duration");
+            int durationFromDb = rs.getInt("duration");
+            String convertedDurationFromDb = TestUtil.convertSecondToHHMMSSString(durationFromDb);
+            String durationInApp = allSongsPage.getDurationFromHeader();
+            TestListener.logInfoDetails("Total duration displayed on All Songs page: " + durationInApp);
+            TestListener.logInfoDetails("Total duration from database: " + convertedDurationFromDb);
+            TestListener.logAssertionDetails("Total duration in app matches total duration in database: " + durationInApp.equals(convertedDurationFromDb));
+            Assert.assertEquals(convertedDurationFromDb, durationInApp, "Duration displayed in app does not match total durtion in database");
         }
     }
-
 }

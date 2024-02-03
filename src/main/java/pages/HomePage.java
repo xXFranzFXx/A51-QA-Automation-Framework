@@ -86,10 +86,6 @@ public class HomePage extends BasePage {
         findElement(firstSearchSong).click();
         return this;
     }
-    public void clickAvatar() {
-        findElement(profilePageLink).click();
-        new ProfilePage(driver);
-    }
     public HomePage clickCreateNewPlaylist() {
         actions.moveToElement(createNewPlaylistBtnLocator).perform();
         createNewPlaylistBtn.click();
@@ -175,7 +171,7 @@ public class HomePage extends BasePage {
         return this;
     }
     public String getSearchInputValidationMsg() {
-        return findElement(searchSongInput).getAttribute("validationMessage");
+        return findElement(newPlaylistInput).getAttribute("validationMessage");
     }
 
 }
