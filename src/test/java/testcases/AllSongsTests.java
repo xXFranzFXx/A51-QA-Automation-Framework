@@ -78,5 +78,14 @@ public class AllSongsTests extends BaseTest {
         }
         Assert.assertFalse(false);
     }
+    @Test
+    public void getTotalDurationFromDb() throws SQLException, ClassNotFoundException {
+        KoelDbBase.initializeDb();
+        KoelDbActions koelDbActions = new KoelDbActions();
+        rs = koelDbActions.totalDuration();
+        if(rs.next()) {
+            double duration = rs.getDouble("duration");
+        }
+    }
 
 }

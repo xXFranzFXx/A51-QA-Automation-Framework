@@ -10,8 +10,15 @@ public class KoelDbActions extends KoelDbBase {
     private static Connection db ;
     private static PreparedStatement st;
     private static ResultSet rs;
+
     private final String getUserPwdInfo = """
             SELECT password, updated_at FROM dbkoel.users u WHERE u.email = ?
+            """;
+    private final String getTotalDuration = """
+             SELECT SUM(length/60/60) as duration FROM dbkoel.songs
+             """;
+    private final String getDuration = """
+            SELECT SUM(duration.length/60/60) FROM (SELECT * FROM dbkoel.songs  LIMIT = ?) as duration
             """;
     private final String getNewUser = """
             SELECT * FROM dbkoel.users u WHERE u.email = ?
@@ -60,10 +67,18 @@ public class KoelDbActions extends KoelDbBase {
     public ResultSet totalSongCount() throws SQLException {
         return simpleQuery(getTotalSongCount);
     }
+    public ResultSet totalDuration() throws SQLException {
+        return simpleQuery(getTotalDuration);
+    }
     public ResultSet getUserPlaylst(String user) throws SQLException {
         TestListener.logInfoDetails("User " + user);
         String[] str = new String[]{user};
         return query(getUserPlaylists, str);
+    }
+    public ResultSet getSpecificDuration(String songTotal) throws SQLException {
+        TestListener.logInfoDetails("String songTotal: " + songTotal);
+        String[] str = new String[]{songTotal};
+        return query(getDuration, str);
     }
 
 }
