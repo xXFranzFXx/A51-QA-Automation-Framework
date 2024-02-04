@@ -11,18 +11,14 @@ public class KoelDbActions extends KoelDbBase {
     private static PreparedStatement st;
     private static ResultSet rs;
 
-    private final String getUserPwdInfo = """
-            SELECT password, updated_at FROM dbkoel.users u WHERE u.email = ?
-            """;
+
     private final String getTotalDuration = """
              SELECT SUM(length) as duration FROM dbkoel.songs
              """;
     private final String getDuration = """
             SELECT SUM(duration.length/60/60) FROM (SELECT * FROM dbkoel.songs  LIMIT = ?) as duration
             """;
-    private final String getNewUser = """
-            SELECT * FROM dbkoel.users u WHERE u.email = ?
-            """;
+
     private String getTotalSongCount = """
             SELECT COUNT(*) as count FROM dbkoel.songs
             """;
@@ -34,6 +30,9 @@ public class KoelDbActions extends KoelDbBase {
             """;
     private String getSongsInPlaylist = """
             SELECT s.title FROM dbkoel.songs s JOIN dbkoel.playlist_song ps ON s.id = ps.song_id JOIN dbkoel.playlists p ON ps.playlist_id  = p.id  JOIN dbkoel.users u ON p.user_id = u.id WHERE u.email = ?
+            """;
+    private String getDuplicatePlaylistNames = """
+            SELECT COUNT(*) as count FROM dbkoel.playlists p JOIN dbkoel.users u ON p.user_id = u.id WHERE u.email = ? AND p.name = ?
             """;
     private ResultSet simpleQuery(String sql) throws SQLException {
         db = getDbConnection();
@@ -59,17 +58,6 @@ public class KoelDbActions extends KoelDbBase {
         rs = st.executeQuery();
         return rs;
     }
-   
-    public ResultSet getPwdInfo(String user) throws SQLException {
-        TestListener.logInfoDetails("String user: " + user);
-        String[] str = new String[]{user};
-        return query(getUserPwdInfo, str);
-    }
-    public ResultSet getUserInfo(String user) throws SQLException {
-        TestListener.logInfoDetails("String user: " + user);
-        String[] str = new String[]{user};
-        return query(getNewUser, str);
-    }
     public ResultSet totalSongCount() throws SQLException {
         return simpleQuery(getTotalSongCount);
     }
@@ -93,8 +81,11 @@ public class KoelDbActions extends KoelDbBase {
         return query(checkNewPlaylistName, str);
     }
     public ResultSet checkSongsInPlaylist(String user) throws SQLException {
-
         String[] str = new String[]{user};
         return query(getSongsInPlaylist, str);
+    }
+    public ResultSet checkDuplicatePlaylistNames(String user, String playlist) throws SQLException {
+        String[] str = new String[]{user, playlist};
+        return query(getDuplicatePlaylistNames, str);
     }
 }

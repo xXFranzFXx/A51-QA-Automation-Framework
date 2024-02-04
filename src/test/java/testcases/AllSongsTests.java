@@ -4,13 +4,10 @@ import base.BaseTest;
 import db.KoelDbActions;
 import db.KoelDbBase;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pages.AllSongsPage;
 import pages.LoginPage;
-import util.TestDataHandler;
 import util.TestUtil;
 import util.listeners.TestListener;
 
@@ -18,10 +15,9 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.HashMap;
-import java.util.Map;
+
 /**
- *
+ * INTERNSHIP-82825
  * Story:
  * As a user, I want to be able to open All Songs page to be able to see all existing songs
  * Acceptance Criteria:
@@ -48,7 +44,7 @@ public class AllSongsTests extends BaseTest {
     public void checkSongInfo() {
       Assert.assertTrue(allSongsPage.findSongInfo(), "Info is missing in one or more songs, check songs in All Songs page");
     }
-    @Test(description = "Count the total number of playable songs and compare that to the total number of songs displayed in header")
+    @Test(description = "Count the total number of playable songs and compare that to the total number of songs displayed in All Songs page header")
     public void totalPlayableSongsCount() {
         int manualCount = allSongsPage.getTotalSongsCount();
         int countDisplayedInHeader = Integer.parseInt(allSongsPage.getSongTotalFromHeader());
@@ -57,11 +53,11 @@ public class AllSongsTests extends BaseTest {
         TestListener.logAssertionDetails("Song total from header matches manual count: " + (countDisplayedInHeader == manualCount));
         Assert.assertNotEquals(manualCount, countDisplayedInHeader, "Double check the assertion, both counts now match");
     }
-    @Test(description = "Verify song total is displayed in the page header")
+    @Test(description = "Verify song total is displayed in the All Songs page header")
     public void songTotalIsDisplayed() {
        Assert.assertTrue(allSongsPage.songTotalIsDisplayed(), "Song total not found");
     }
-    @Test(description = "Verify total duration of songs is displayed in the page header")
+    @Test(description = "Verify total duration of songs is displayed in the All Songs page header")
     public void durationInHeader() {
         Assert.assertTrue(allSongsPage.totalDurationIsDisplayed(), "Total song duration not found");
     }
@@ -78,6 +74,7 @@ public class AllSongsTests extends BaseTest {
             TestListener.logAssertionDetails("Total songs in app matches total songs in database: " + (count == totalSongsInApp));
             Assert.assertEquals(count, totalSongsInApp, "Total song count displayed in app does not match the total song count from database");
         }
+        KoelDbBase.closeDatabaseConnection();
     }
     @Test(description = "Verify the total duration displayed in All Songs Page matches the sum of all durations in database")
     public void verifyTotalDuration() throws SQLException, ClassNotFoundException {
@@ -93,5 +90,7 @@ public class AllSongsTests extends BaseTest {
             TestListener.logAssertionDetails("Total duration in app matches total duration in database: " + durationInApp.equals(convertedDurationFromDb));
             Assert.assertEquals(convertedDurationFromDb, durationInApp, "Duration displayed in app does not match total durtion in database");
         }
+        KoelDbBase.closeDatabaseConnection();
+
     }
 }

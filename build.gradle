@@ -33,5 +33,6 @@ test {
         systemProperty "dbUser", "dbuser11"
         systemProperty "dbPassword", "pa\$\$11"
         systemProperty "baseURL", "https://qa.koel.app/"
+        systemProperty "Jira Issues", "INTERNSHIP-82853, INTERNSHIP-82779, INTERNSHIP-82825"
     }
 }

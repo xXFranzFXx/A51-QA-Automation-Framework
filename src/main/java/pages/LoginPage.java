@@ -45,9 +45,5 @@ public class LoginPage extends BasePage{
         return new HomePage(driver);
     }
 
-    public boolean getRegistrationLink() {
-     WebElement registrationLink =  wait.until(ExpectedConditions.visibilityOf(registrationLinkLocator));
-     return registrationLink.isDisplayed();
 
-    }
 }

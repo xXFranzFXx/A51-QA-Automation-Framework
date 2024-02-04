@@ -32,8 +32,6 @@ public class AlbumsPage extends BasePage{
     private List<WebElement> albumTitles;
     @FindBy(css = "article.item.full footer .info .artist")
     private List<WebElement> albumArtists;
-    @FindBy(css = "article.item.full footer .info")
-    private List<WebElement> albumFooter;
     @FindBy(css="#albumsWrapper p.meta")
     private List <WebElement> footerInfoContainer;
     @FindBy(css = "#albumsWrapper p.meta i.fa.fa-download")
@@ -48,18 +46,6 @@ public class AlbumsPage extends BasePage{
         super(givenDriver);
     }
 
-    public boolean checkHeaderTitle() {
-        return albumsPageTitleLocator.isDisplayed();
-    }
-
-    public AlbumsPage rightClickAlbum() {
-        contextClick(firstAlbumLocator);
-        return this;
-    }
-    public void selectPlayAll() {
-        findElement(playAll);
-        playAll.click();
-    }
     public boolean albumsArePresent() {
         return !albumTiles.isEmpty();
     }
@@ -86,10 +72,7 @@ public class AlbumsPage extends BasePage{
         }
         return check;
     }
-    public boolean checkAlbumText(WebElement element) {
-        Optional<WebElement> albumElement = Optional.ofNullable(element);
-        return albumElement.map(WebElement::getText).isPresent();
-    }
+
     public boolean checkAllAlbumText(List<WebElement> list) {
         boolean check = true;
         int count = 0;
@@ -128,9 +111,6 @@ public class AlbumsPage extends BasePage{
     }
     public boolean checkAlbumArtists() {
         return checkAllAlbumText(albumArtists);
-    }
-    public boolean checkAlbumSongPlaying() {
-        return isSongPlaying();
     }
     public boolean checkShuffleButtons() {
        return checkHoveredElements(shuffleBtn);

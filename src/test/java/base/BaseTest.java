@@ -16,17 +16,13 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.events.EventFiringDecorator;
 import org.testng.Reporter;
 import org.testng.annotations.*;
-import util.ConfigFileReader;
-import util.TestDataHandler;
 import util.listeners.TestListener;
 
 import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URL;
-import java.sql.ResultSet;
 import java.time.Duration;
 import java.util.HashMap;
-import java.util.Map;
 
 public class BaseTest{
     public static WebDriver driver;
@@ -35,12 +31,6 @@ public class BaseTest{
         return threadDriver.get();
     }
 
-    TestDataHandler testData =new TestDataHandler();
-    Map<String, ResultSet> dbMap = new HashMap<>();
-    public void addDataFromTest(String key, ResultSet rs) {
-        dbMap.put(key, rs);
-        testData.setDbDataInMap(dbMap);
-    }
     public static void navigateTo(String baseURL) {
         getDriver().get(baseURL);
     }

@@ -25,22 +25,10 @@ public class AllSongsPage extends BasePage{
     private List<WebElement> columns;
     @FindBy(css = "#songsWrapper table.items tr.song-item")
     private List<WebElement> tableRows;
-    @FindBy(css = "td.track-number.text-secondary")
-    private WebElement trackNumberLocator;
-    @FindBy(css = "td.title")
-    private WebElement titleLocator;
-    @FindBy(css = "td.artist")
-    private WebElement artistLocator;
-    @FindBy(css = "td.album")
-    private WebElement albumLocator;
-    @FindBy(css = "td.time.text-secondary")
-    private WebElement timeLocator;
     @FindBy(xpath = "//section[@id='songsWrapper']//tr[@class='song-item']//button[@class='text-secondary' and contains(@title, 'Like')]")
     private WebElement singleLikeButton;
     @FindBy(xpath = "//section[@id='songsWrapper']//tr[@class='song-item']//button[@class='text-secondary' and contains(@title, 'Unlike')]")
     private List<WebElement> likedSongsButton;
-//    @FindBy(xpath="//section[@id='songsWrapper']//table[@class='items']/tr")
-//    private List<WebElement> tableRows;
     @FindBy(css = "#songsWrapper span.meta.text-secondary span")
     private WebElement headerTotalDurationText;
     private final String durationRe = "[^\\W•]+([1-9][0-99]+|[01]?[0-9]):([0-5]?[0-9]):([0-5]?[0-9])";
@@ -55,20 +43,6 @@ public class AllSongsPage extends BasePage{
             return (!el.getText().isEmpty());
         }
         return false;
-    }
-    //unlikes every liked song
-    public AllSongsPage unlikeSongs() {
-        if(likedSongsButton.isEmpty()) return this;
-        for(WebElement l: likedSongsButton) {
-                l.click();
-        }
-        return this;
-    }
-
-
-    public AllSongsPage likeOneSong() {
-       findElement(singleLikeButton).click();
-       return this;
     }
     public int getTotalSongsCount() {
         System.out.println(tableRows.size());

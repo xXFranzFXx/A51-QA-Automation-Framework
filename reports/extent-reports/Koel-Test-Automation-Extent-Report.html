@@ -32,10 +32,10 @@
 </ul>
 <ul class="nav-right">
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Koel Automation Tests For Sprint-1</span></a>
+<a href="#"><span class="badge badge-primary">Koel Automation Tests For Sprint-5</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Feb 3, 2024 03:05:06 PM</span></a>
+<a href="#"><span class="badge badge-primary">Feb 4, 2024 09:54:04 AM</span></a>
 </li>
 </ul>
 </div>
@@ -45,6 +45,11 @@
 <li class="nav-item dropdown" onclick="toggleView('test-view')">
 <a id="nav-test" class="dropdown-toggle" href="#">
 <span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
 </a>
 </li>
 <li class="nav-item dropdown" onclick="toggleView('author-view')">
@@ -72,6 +77,7 @@
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
 <a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -90,9 +96,1414 @@
           tag=""
           device="">
           <div class="test-detail">
+            <p class="name">checkSongInfo</p>
+            <p class="text-sm">
+              <span>9:54:07 AM</span> / <span>00:00:00:532</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">checkSongInfo</h5>
+<span class='badge badge-success'>02.04.2024 9:54:07 AM</span>
+<span class='badge badge-danger'>02.04.2024 9:54:08 AM</span>
+<span class='badge badge-default'>00:00:00:532</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">FranzFernando</span></div>
+<div class="m-t-10 m-l-5">Verify TITLE, ARTIST, ALBUM, and TIME columns are correctly displayed for each song</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:54:08 AM</td>
+        <td>
+          <span class='badge white-text green'>Test Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="2"
+          author="FranzFernando"
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">durationInHeader</p>
+            <p class="text-sm">
+              <span>9:54:10 AM</span> / <span>00:00:00:057</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">durationInHeader</h5>
+<span class='badge badge-success'>02.04.2024 9:54:10 AM</span>
+<span class='badge badge-danger'>02.04.2024 9:54:10 AM</span>
+<span class='badge badge-default'>00:00:00:057</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">FranzFernando</span></div>
+<div class="m-t-10 m-l-5">Verify total duration of songs is displayed in the All Songs page header</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:54:10 AM</td>
+        <td>
+          <span class='badge white-text green'>Test Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="3"
+          author="FranzFernando"
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">songTotalIsDisplayed</p>
+            <p class="text-sm">
+              <span>9:54:12 AM</span> / <span>00:00:00:062</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">songTotalIsDisplayed</h5>
+<span class='badge badge-success'>02.04.2024 9:54:12 AM</span>
+<span class='badge badge-danger'>02.04.2024 9:54:12 AM</span>
+<span class='badge badge-default'>00:00:00:062</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">FranzFernando</span></div>
+<div class="m-t-10 m-l-5">Verify song total is displayed in the All Songs page header</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:54:12 AM</td>
+        <td>
+          <span class='badge white-text green'>Test Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="4"
+          author="FranzFernando"
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">totalPlayableSongsCount</p>
+            <p class="text-sm">
+              <span>9:54:14 AM</span> / <span>00:00:00:218</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">totalPlayableSongsCount</h5>
+<span class='badge badge-success'>02.04.2024 9:54:14 AM</span>
+<span class='badge badge-danger'>02.04.2024 9:54:15 AM</span>
+<span class='badge badge-default'>00:00:00:218</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">FranzFernando</span></div>
+<div class="m-t-10 m-l-5">Count the total number of playable songs and compare that to the total number of songs displayed in All Songs page header</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:54:15 AM</td>
+        <td>
+          <span class='badge white-text grey'>Total songs displayed in All Songs page header: 66</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:54:15 AM</td>
+        <td>
+          <span class='badge black-text white'>Manual count of songs listed in All Songs page: 63</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:54:15 AM</td>
+        <td>
+          <span class='badge white-text purple'>Song total from header matches manual count: false</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:54:15 AM</td>
+        <td>
+          <span class='badge white-text green'>Test Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="5"
+          author="FranzFernando"
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyTotalDuration</p>
+            <p class="text-sm">
+              <span>9:54:17 AM</span> / <span>00:00:00:364</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">verifyTotalDuration</h5>
+<span class='badge badge-success'>02.04.2024 9:54:17 AM</span>
+<span class='badge badge-danger'>02.04.2024 9:54:17 AM</span>
+<span class='badge badge-default'>00:00:00:364</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">FranzFernando</span></div>
+<div class="m-t-10 m-l-5">Verify the total duration displayed in All Songs Page matches the sum of all durations in database</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:54:17 AM</td>
+        <td>
+          <span class='badge white-text grey'>SQL statement: SELECT SUM(length) as duration FROM dbkoel.songs
+</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:54:17 AM</td>
+        <td>
+          <span class='badge white-text grey'>Total duration displayed on All Songs page: 04:32:57</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:54:17 AM</td>
+        <td>
+          <span class='badge white-text grey'>Total duration from database: 04:32:57</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:54:17 AM</td>
+        <td>
+          <span class='badge white-text purple'>Total duration in app matches total duration in database: true</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:54:17 AM</td>
+        <td>
+          <span class='badge white-text green'>Test Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="6"
+          author="FranzFernando"
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyTotalSongTracks</p>
+            <p class="text-sm">
+              <span>9:54:20 AM</span> / <span>00:00:00:318</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">verifyTotalSongTracks</h5>
+<span class='badge badge-success'>02.04.2024 9:54:20 AM</span>
+<span class='badge badge-danger'>02.04.2024 9:54:20 AM</span>
+<span class='badge badge-default'>00:00:00:318</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">FranzFernando</span></div>
+<div class="m-t-10 m-l-5">Verify total song count displayed in app matches the total song count from the database</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:54:20 AM</td>
+        <td>
+          <span class='badge white-text grey'>SQL statement: SELECT COUNT(*) as count FROM dbkoel.songs
+</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:54:20 AM</td>
+        <td>
+          <span class='badge white-text grey'>Total song tracks displayed on All Songs page header: 66</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:54:20 AM</td>
+        <td>
+          <span class='badge white-text grey'>Total song tracks in database: 66</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:54:20 AM</td>
+        <td>
+          <span class='badge white-text purple'>Total songs in app matches total songs in database: true</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:54:20 AM</td>
+        <td>
+          <span class='badge white-text green'>Test Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="7"
+          author="FranzFernando"
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">albumsAreDisplayed</p>
+            <p class="text-sm">
+              <span>9:54:22 AM</span> / <span>00:00:00:125</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">albumsAreDisplayed</h5>
+<span class='badge badge-success'>02.04.2024 9:54:22 AM</span>
+<span class='badge badge-danger'>02.04.2024 9:54:22 AM</span>
+<span class='badge badge-default'>00:00:00:125</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">FranzFernando</span></div>
+<div class="m-t-10 m-l-5">Verify albums are displayed</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:54:22 AM</td>
+        <td>
+          <span class='badge white-text purple'>All albums are present: true</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:54:22 AM</td>
+        <td>
+          <span class='badge white-text green'>Test Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="8"
+          author="FranzFernando"
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">checkAlbumArtist</p>
+            <p class="text-sm">
+              <span>9:54:25 AM</span> / <span>00:00:02:243</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">checkAlbumArtist</h5>
+<span class='badge badge-success'>02.04.2024 9:54:25 AM</span>
+<span class='badge badge-danger'>02.04.2024 9:54:27 AM</span>
+<span class='badge badge-default'>00:00:02:243</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">FranzFernando</span></div>
+<div class="m-t-10 m-l-5">Verify albums have album artist</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:54:26 AM</td>
+        <td>
+          <span class='badge white-text purple'>All albums have an artist: true</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:54:27 AM</td>
+        <td>
+          <span class='badge white-text green'>Test Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="9"
+          author="FranzFernando"
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">checkAlbumCoverImages</p>
+            <p class="text-sm">
+              <span>9:54:29 AM</span> / <span>00:00:23:652</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">checkAlbumCoverImages</h5>
+<span class='badge badge-success'>02.04.2024 9:54:29 AM</span>
+<span class='badge badge-danger'>02.04.2024 9:54:53 AM</span>
+<span class='badge badge-default'>00:00:23:652</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">FranzFernando</span></div>
+<div class="m-t-10 m-l-5">Verify albums have a cover image</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:54:41 AM</td>
+        <td>
+          <span class='badge white-text purple'>All albums have a cover image: true</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:54:53 AM</td>
+        <td>
+          <span class='badge white-text green'>Test Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="10"
+          author="FranzFernando"
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">checkAlbumSongDurtation</p>
+            <p class="text-sm">
+              <span>9:54:55 AM</span> / <span>00:00:24:012</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">checkAlbumSongDurtation</h5>
+<span class='badge badge-success'>02.04.2024 9:54:55 AM</span>
+<span class='badge badge-danger'>02.04.2024 9:55:19 AM</span>
+<span class='badge badge-default'>00:00:24:012</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=10</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">FranzFernando</span></div>
+<div class="m-t-10 m-l-5">Verify albums have song duration total</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:55:07 AM</td>
+        <td>
+          <span class='badge white-text purple'>All albums have song duration total: true</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:55:19 AM</td>
+        <td>
+          <span class='badge white-text green'>Test Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="11"
+          author="FranzFernando"
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">checkAlbumSongTrackTotal</p>
+            <p class="text-sm">
+              <span>9:55:21 AM</span> / <span>00:00:23:983</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">checkAlbumSongTrackTotal</h5>
+<span class='badge badge-success'>02.04.2024 9:55:21 AM</span>
+<span class='badge badge-danger'>02.04.2024 9:55:45 AM</span>
+<span class='badge badge-default'>00:00:23:983</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">FranzFernando</span></div>
+<div class="m-t-10 m-l-5">Verify albums have song track total</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:55:33 AM</td>
+        <td>
+          <span class='badge white-text purple'>All albums have total song count: true</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:55:45 AM</td>
+        <td>
+          <span class='badge white-text green'>Test Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="12"
+          author="FranzFernando"
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">checkAlbumTitles</p>
+            <p class="text-sm">
+              <span>9:55:47 AM</span> / <span>00:00:24:355</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">checkAlbumTitles</h5>
+<span class='badge badge-success'>02.04.2024 9:55:47 AM</span>
+<span class='badge badge-danger'>02.04.2024 9:56:11 AM</span>
+<span class='badge badge-default'>00:00:24:355</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=12</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">FranzFernando</span></div>
+<div class="m-t-10 m-l-5">Verify all albums display album titles</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:55:59 AM</td>
+        <td>
+          <span class='badge white-text purple'>All albums display album titles: true</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:56:11 AM</td>
+        <td>
+          <span class='badge white-text green'>Test Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="13"
+          author="FranzFernando"
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">checkDownloadButton</p>
+            <p class="text-sm">
+              <span>9:56:14 AM</span> / <span>00:00:00:252</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">checkDownloadButton</h5>
+<span class='badge badge-success'>02.04.2024 9:56:14 AM</span>
+<span class='badge badge-danger'>02.04.2024 9:56:14 AM</span>
+<span class='badge badge-default'>00:00:00:252</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=13</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">FranzFernando</span></div>
+<div class="m-t-10 m-l-5">Verify each album has a download button</div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='/reports/extent-reports/screenshots' src="/reports/extent-reports/screenshots">
+    <div class="title">checkDownloadButton.png</div>
+    </div></div>
+<div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>9:56:14 AM</td>
+        <td>
+          Test Failed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>9:56:14 AM</td>
+        <td>
+          <span class='badge white-text amber'>Skipped</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>9:56:14 AM</td>
+        <td>
+          <textarea readonly class="code-block">org.openqa.selenium.ElementNotInteractableException: element not interactable: [object HTMLElement] has no size and location
+  (Session info: chrome=121.0.6167.139)
+Build info: version: '4.5.0', revision: 'fe167b119a'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.2.1', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6007a841c95081f69f0c361205a38f2d, actions {actions=[org.openqa.selenium.interactions.Sequence@44c4519]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.139, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: /var/folders/zq/q7s0y3_s5yz...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53114}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:53114/devtoo..., se:cdpVersion: 121.0.6167.139, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6007a841c95081f69f0c361205a38f2d
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:615)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.openqa.selenium.support.decorators.WebDriverDecorator.call(WebDriverDecorator.java:247)
+	at org.openqa.selenium.support.decorators.DefaultDecorated.call(DefaultDecorated.java:48)
+	at org.openqa.selenium.support.decorators.WebDriverDecorator.lambda$createProxy$0(WebDriverDecorator.java:309)
+	at net.bytebuddy.renamed.java.lang.Object$ByteBuddy$SsTVtfTf.perform(Unknown Source)
+	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:567)
+	at org.openqa.selenium.interactions.Actions.perform(Actions.java:536)
+	at pages.AlbumsPage.checkHoveredElements(AlbumsPage.java:100)
+	at pages.AlbumsPage.checkDownloadButtons(AlbumsPage.java:119)
+	at testcases.AlbumsTests.checkDownloadButton(AlbumsTests.java:71)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+</textarea>
+          
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="14"
+          author="FranzFernando"
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">checkDownloadButton</p>
+            <p class="text-sm">
+              <span>9:56:16 AM</span> / <span>00:00:12:374</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">checkDownloadButton</h5>
+<span class='badge badge-success'>02.04.2024 9:56:16 AM</span>
+<span class='badge badge-danger'>02.04.2024 9:56:29 AM</span>
+<span class='badge badge-default'>00:00:12:374</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=14</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">FranzFernando</span></div>
+<div class="m-t-10 m-l-5">Verify each album has a download button</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:56:22 AM</td>
+        <td>
+          <span class='badge white-text purple'>All albums have a download button: true</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:56:29 AM</td>
+        <td>
+          <span class='badge white-text green'>Test Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="15"
+          author="FranzFernando"
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">checkShuffleButton</p>
+            <p class="text-sm">
+              <span>9:56:31 AM</span> / <span>00:00:12:182</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">checkShuffleButton</h5>
+<span class='badge badge-success'>02.04.2024 9:56:31 AM</span>
+<span class='badge badge-danger'>02.04.2024 9:56:43 AM</span>
+<span class='badge badge-default'>00:00:12:182</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=15</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">FranzFernando</span></div>
+<div class="m-t-10 m-l-5">Verify each album has a shuffle button</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:56:36 AM</td>
+        <td>
+          <span class='badge white-text purple'>All albums have a shuffle button: true</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:56:43 AM</td>
+        <td>
+          <span class='badge white-text green'>Test Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="16"
+          author="FranzFernando"
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">createBlankPlaylistName</p>
+            <p class="text-sm">
+              <span>9:56:45 AM</span> / <span>00:00:00:853</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">createBlankPlaylistName</h5>
+<span class='badge badge-success'>02.04.2024 9:56:45 AM</span>
+<span class='badge badge-danger'>02.04.2024 9:56:46 AM</span>
+<span class='badge badge-default'>00:00:00:853</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=16</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">FranzFernando</span></div>
+<div class="m-t-10 m-l-5">Verify user cannot create a playlist with blank name</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:56:45 AM</td>
+        <td>
+          <span class='badge white-text grey'>Form validation message: Please fill out this field.</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:56:46 AM</td>
+        <td>
+          <span class='badge white-text purple'>User cannot create playlist with blank name: true</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:56:46 AM</td>
+        <td>
+          <span class='badge white-text green'>Test Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="17"
+          author="FranzFernando"
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">createLongPlaylistName</p>
+            <p class="text-sm">
+              <span>9:56:47 AM</span> / <span>00:00:01:131</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">createLongPlaylistName</h5>
+<span class='badge badge-success'>02.04.2024 9:56:47 AM</span>
+<span class='badge badge-danger'>02.04.2024 9:56:49 AM</span>
+<span class='badge badge-default'>00:00:01:131</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=17</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">FranzFernando</span></div>
+<div class="m-t-10 m-l-5">Create a playlist with over 256 characters and check if it is saved to the database</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:56:48 AM</td>
+        <td>
+          <span class='badge white-text grey'>User: franz.fernando+1@testpro.io</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:56:48 AM</td>
+        <td>
+          <span class='badge white-text grey'>New playlist name: jAcd75vui4JMkh8v5PmR9y43L5lUquUnW6PrykVocXqEJhGBlS8B1TmVi8kfISaBrq69scE7PeYypoCetGEdOd3tTZDx0Akpaszk8XbYykSvsJPqtqOKimOCY4iqdjzPpJQZAVQpQEBVZSgNbYnrVS1zpvbtBE4Yg4ghgmGXUEgdVj065uJds35UmxEWMDpKrlHS8G1jRozK48J1sGGVibTUmXDRNE4yvKACPI1VOcL3mZm2zIVhG7zYMZWlEpbs</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:56:48 AM</td>
+        <td>
+          <span class='badge white-text grey'>SQL statement: SELECT p.name FROM dbkoel.users u JOIN dbkoel.playlists p ON u.id = p.user_id WHERE u.email = ? AND p.name = ?
+</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:56:48 AM</td>
+        <td>
+          <span class='badge white-text grey'>Playlist in database: jAcd75vui4JMkh8v5PmR9y43L5lUquUnW6PrykVocXqEJhGBlS8B1TmVi8kfISaBrq69scE7PeYypoCetGEdOd3tTZDx0Akpaszk8XbYykSvsJPqtqOKimOCY4iqdjzPpJQZAVQpQEBVZSgNbYnrVS1zpvbtBE4Yg4ghgmGXUEgdVj065uJds35UmxEWMDpKrlHS8G1jRozK48J1sGGVibTUmXDRNE4yvKACPI1VOcL3mZm2zIVhG7zYMZWlEpbs</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:56:48 AM</td>
+        <td>
+          <span class='badge white-text purple'>Created playlist exists in database: true</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:56:49 AM</td>
+        <td>
+          <span class='badge white-text green'>Test Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="18"
+          author="FranzFernando"
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">createOneCharacterPlaylistName</p>
+            <p class="text-sm">
+              <span>9:56:50 AM</span> / <span>00:00:01:085</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">createOneCharacterPlaylistName</h5>
+<span class='badge badge-success'>02.04.2024 9:56:50 AM</span>
+<span class='badge badge-danger'>02.04.2024 9:56:51 AM</span>
+<span class='badge badge-default'>00:00:01:085</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=18</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">FranzFernando</span></div>
+<div class="m-t-10 m-l-5">Create a playlist with a name containing one character and verify it is in the database</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:56:51 AM</td>
+        <td>
+          <span class='badge white-text grey'>User: franz.fernando+1@testpro.io</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:56:51 AM</td>
+        <td>
+          <span class='badge white-text grey'>New playlist name: a</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:56:51 AM</td>
+        <td>
+          <span class='badge white-text grey'>SQL statement: SELECT p.name FROM dbkoel.users u JOIN dbkoel.playlists p ON u.id = p.user_id WHERE u.email = ? AND p.name = ?
+</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:56:51 AM</td>
+        <td>
+          <span class='badge white-text grey'>Playlist in database: a</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:56:51 AM</td>
+        <td>
+          <span class='badge white-text purple'>Created playlist exists in database: true</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:56:51 AM</td>
+        <td>
+          <span class='badge white-text green'>Test Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="19"
+          author="FranzFernando"
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">createPlaylist</p>
+            <p class="text-sm">
+              <span>9:56:53 AM</span> / <span>00:00:00:918</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">createPlaylist</h5>
+<span class='badge badge-success'>02.04.2024 9:56:53 AM</span>
+<span class='badge badge-danger'>02.04.2024 9:56:54 AM</span>
+<span class='badge badge-default'>00:00:00:918</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=19</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">FranzFernando</span></div>
+<div class="m-t-10 m-l-5">User can create a playlist</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:56:54 AM</td>
+        <td>
+          <span class='badge white-text green'>Test Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="20"
+          author="FranzFernando"
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">createPlaylistDuplicateName</p>
+            <p class="text-sm">
+              <span>9:56:56 AM</span> / <span>00:00:01:035</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">createPlaylistDuplicateName</h5>
+<span class='badge badge-success'>02.04.2024 9:56:56 AM</span>
+<span class='badge badge-danger'>02.04.2024 9:56:57 AM</span>
+<span class='badge badge-default'>00:00:01:035</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=20</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">FranzFernando</span></div>
+<div class="m-t-10 m-l-5">Verify user can create playlists with duplicate names, check database for multiple playlists with same name</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:56:57 AM</td>
+        <td>
+          <span class='badge white-text grey'>SQL statement: SELECT COUNT(*) as count FROM dbkoel.playlists p JOIN dbkoel.users u ON p.user_id = u.id WHERE u.email = ? AND p.name = ?
+</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:56:57 AM</td>
+        <td>
+          <span class='badge white-text grey'>Total playlists with same name: 2</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:56:57 AM</td>
+        <td>
+          <span class='badge white-text purple'>User can create playlists with duplicate names: true</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:56:57 AM</td>
+        <td>
+          <span class='badge white-text green'>Test Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="21"
+          author="FranzFernando"
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">addSongToPlaylist</p>
+            <p class="text-sm">
+              <span>9:56:58 AM</span> / <span>00:00:01:517</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">addSongToPlaylist</h5>
+<span class='badge badge-success'>02.04.2024 9:56:58 AM</span>
+<span class='badge badge-danger'>02.04.2024 9:57:00 AM</span>
+<span class='badge badge-default'>00:00:01:517</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=21</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">FranzFernando</span></div>
+<div class="m-t-10 m-l-5">Add a song to a playlist</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:57:00 AM</td>
+        <td>
+          <span class='badge white-text grey'>SQL statement: SELECT s.title FROM dbkoel.songs s JOIN dbkoel.playlist_song ps ON s.id = ps.song_id JOIN dbkoel.playlists p ON ps.playlist_id  = p.id  JOIN dbkoel.users u ON p.user_id = u.id WHERE u.email = ?
+</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:57:00 AM</td>
+        <td>
+          <span class='badge white-text grey'>Searching for song containing the word 'dark' </span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:57:00 AM</td>
+        <td>
+          <span class='badge white-text grey'>Playlist song found: holiznacc0 - somewhere in the dark</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:57:00 AM</td>
+        <td>
+          <span class='badge white-text purple'>Song added to playlist matches playlist song found in database: true</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:57:00 AM</td>
+        <td>
+          <span class='badge white-text green'>Test Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="22"
+          author="FranzFernando"
+          tag=""
+          device="">
+          <div class="test-detail">
             <p class="name">deleteAllPlaylists</p>
             <p class="text-sm">
-              <span>3:05:09 PM</span> / <span>00:02:21:595</span>
+              <span>9:57:02 AM</span> / <span>00:00:36:076</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">deleteAllPlaylists</h5>
+<span class='badge badge-success'>02.04.2024 9:57:02 AM</span>
+<span class='badge badge-danger'>02.04.2024 9:57:38 AM</span>
+<span class='badge badge-default'>00:00:36:076</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=22</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">FranzFernando</span></div>
+<div class="m-t-10 m-l-5">delete all playlists</div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='/reports/extent-reports/screenshots' src="/reports/extent-reports/screenshots">
+    <div class="title">deleteAllPlaylists.png</div>
+    </div></div>
+<div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>9:57:38 AM</td>
+        <td>
+          Test Failed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>9:57:38 AM</td>
+        <td>
+          <span class='badge white-text amber'>Skipped</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>9:57:38 AM</td>
+        <td>
+          <textarea readonly class="code-block">org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
+Build info: version: '4.5.0', revision: 'fe167b119a'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.2.1', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0dbb7960b7184e70a285e20f711f718d, actions {actions=[org.openqa.selenium.interactions.Sequence@13e8bc84]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.139, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: /var/folders/zq/q7s0y3_s5yz...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53340}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:53340/devtoo..., se:cdpVersion: 121.0.6167.139, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0dbb7960b7184e70a285e20f711f718d
+	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:362)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$16(JsonOutput.java:154)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:287)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$22(JsonOutput.java:169)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1845)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$23(JsonOutput.java:169)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:287)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$24(JsonOutput.java:182)
+	at com.google.common.collect.SingletonImmutableBiMap.forEach(SingletonImmutableBiMap.java:68)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$25(JsonOutput.java:177)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:287)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:278)
+	at org.openqa.selenium.json.Json.toJson(Json.java:42)
+	at org.openqa.selenium.remote.codec.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:259)
+	at org.openqa.selenium.remote.codec.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:122)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:172)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:615)
+	at jdk.internal.reflect.GeneratedMethodAccessor54.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.openqa.selenium.support.decorators.WebDriverDecorator.call(WebDriverDecorator.java:247)
+	at org.openqa.selenium.support.decorators.DefaultDecorated.call(DefaultDecorated.java:48)
+	at org.openqa.selenium.support.decorators.WebDriverDecorator.lambda$createProxy$0(WebDriverDecorator.java:309)
+	at net.bytebuddy.renamed.java.lang.Object$ByteBuddy$oSi14FBc.perform(Unknown Source)
+	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:567)
+	at org.openqa.selenium.interactions.Actions.perform(Actions.java:536)
+	at pages.HomePage.deleteAllPlaylists(HomePage.java:122)
+	at testcases.PlaylistsTests.deleteAllPlaylists(PlaylistsTests.java:131)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+	Suppressed: org.openqa.selenium.json.JsonException: Attempting to close incomplete json stream
+Build info: version: '4.5.0', revision: 'fe167b119a'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.2.1', java.version: '17.0.9'
+Driver info: driver.version: RemoteWebDriver
+		at org.openqa.selenium.json.JsonOutput.close(JsonOutput.java:303)
+		at org.openqa.selenium.json.Json.toJson(Json.java:40)
+		... 33 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at jdk.internal.reflect.GeneratedMethodAccessor55.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:358)
+	... 54 more
+Caused by: org.openqa.selenium.NoSuchElementException: Timed out after 10 seconds. Unable to locate the element
+	at org.openqa.selenium.support.pagefactory.AjaxElementLocator.findElement(AjaxElementLocator.java:99)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy56.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.interactions.PointerInput$Origin.asArg(PointerInput.java:260)
+	at org.openqa.selenium.interactions.PointerInput$Move.encode(PointerInput.java:209)
+	at org.openqa.selenium.interactions.Sequence.encode(Sequence.java:73)
+	at org.openqa.selenium.interactions.Sequence.toJson(Sequence.java:82)
+	... 58 more
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//section[@id='playlists']/ul/li[3]/nav/ul/li[2]"}
+  (Session info: chrome=121.0.6167.139)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.5.0', revision: 'fe167b119a'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.2.1', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0dbb7960b7184e70a285e20f711f718d, findElement {using=xpath, value=//section[@id='playlists']/ul/li[3]/nav/ul/li[2]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.139, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: /var/folders/zq/q7s0y3_s5yz...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53340}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:53340/devtoo..., se:cdpVersion: 121.0.6167.139, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0dbb7960b7184e70a285e20f711f718d
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at jdk.internal.reflect.GeneratedMethodAccessor12.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.openqa.selenium.support.decorators.WebDriverDecorator.call(WebDriverDecorator.java:247)
+	at org.openqa.selenium.support.decorators.DefaultDecorated.call(DefaultDecorated.java:48)
+	at org.openqa.selenium.support.decorators.WebDriverDecorator.lambda$createProxy$0(WebDriverDecorator.java:309)
+	at net.bytebuddy.renamed.java.lang.Object$ByteBuddy$oSi14FBc.findElement(Unknown Source)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.AjaxElementLocator.access$001(AjaxElementLocator.java:39)
+	at org.openqa.selenium.support.pagefactory.AjaxElementLocator$SlowLoadingElement.isLoaded(AjaxElementLocator.java:165)
+	at org.openqa.selenium.support.ui.SlowLoadableComponent.get(SlowLoadableComponent.java:72)
+	at org.openqa.selenium.support.pagefactory.AjaxElementLocator.findElement(AjaxElementLocator.java:95)
+	... 64 more
+</textarea>
+          
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="23"
+          author="FranzFernando"
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">deleteAllPlaylists</p>
+            <p class="text-sm">
+              <span>9:57:40 AM</span> / <span>00:00:40:573</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -101,10 +1512,10 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">deleteAllPlaylists</h5>
-<span class='badge badge-success'>02.03.2024 3:05:09 PM</span>
-<span class='badge badge-danger'>02.03.2024 3:07:31 PM</span>
-<span class='badge badge-default'>00:02:21:595</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span class='badge badge-success'>02.04.2024 9:57:40 AM</span>
+<span class='badge badge-danger'>02.04.2024 9:58:20 AM</span>
+<span class='badge badge-default'>00:00:40:573</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=23</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
@@ -117,7 +1528,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>3:07:31 PM</td>
+        <td>9:58:20 AM</td>
         <td>
           <span class='badge white-text green'>Test Passed</span>
         </td>
@@ -136,7 +1547,89 @@
 </div>
 <div class="test-content-detail"><div class="detail-body"></div></div>
 </div></div>
-<div class="test-wrapper row view author-view attributes-view">
+<div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">2</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">org.openqa.selenium.ElementNotInteractableException</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.openqa.selenium.ElementNotInteractableException</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>09:56:14 AM</td>
+<td>
+<a href="#" class="linked" test-id='13' id='13'>checkDownloadButton</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">org.openqa.selenium.json.JsonException</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.openqa.selenium.json.JsonException</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>09:57:02 AM</td>
+<td>
+<a href="#" class="linked" test-id='22' id='22'>deleteAllPlaylists</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view author-view attributes-view">
 <div class="test-list">
 <div class="test-list-tools">
 <ul class="tools pull-left"><li><a href=""><span class="font-size-14">Author</span></a></li></ul>
@@ -147,15 +1640,17 @@
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log pass-bg'>1</span>
+<span class='badge log pass-bg'>21</span>
+<span class='badge log badge-danger'>2</span>
 </span>
 <p class="name">FranzFernando</p>
-<p class="duration text-sm">1 tests</p>
+<p class="duration text-sm">23 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
 <h4>FranzFernando</h4>
-<span status="pass" class='badge log pass-bg'>1 passed</span>
+<span status="pass" class='badge log pass-bg'>21 passed</span>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -168,9 +1663,163 @@
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>15:05:09 PM</td>
+<td>09:54:07 AM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='1'>deleteAllPlaylists</a>
+<a href="#" class="linked" test-id='1' id='1'>checkSongInfo</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:54:10 AM</td>
+<td>
+<a href="#" class="linked" test-id='2' id='2'>durationInHeader</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:54:12 AM</td>
+<td>
+<a href="#" class="linked" test-id='3' id='3'>songTotalIsDisplayed</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:54:14 AM</td>
+<td>
+<a href="#" class="linked" test-id='4' id='4'>totalPlayableSongsCount</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:54:17 AM</td>
+<td>
+<a href="#" class="linked" test-id='5' id='5'>verifyTotalDuration</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:54:20 AM</td>
+<td>
+<a href="#" class="linked" test-id='6' id='6'>verifyTotalSongTracks</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:54:22 AM</td>
+<td>
+<a href="#" class="linked" test-id='7' id='7'>albumsAreDisplayed</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:54:25 AM</td>
+<td>
+<a href="#" class="linked" test-id='8' id='8'>checkAlbumArtist</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:54:29 AM</td>
+<td>
+<a href="#" class="linked" test-id='9' id='9'>checkAlbumCoverImages</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:54:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='10' id='10'>checkAlbumSongDurtation</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:55:21 AM</td>
+<td>
+<a href="#" class="linked" test-id='11' id='11'>checkAlbumSongTrackTotal</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:55:47 AM</td>
+<td>
+<a href="#" class="linked" test-id='12' id='12'>checkAlbumTitles</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>09:56:14 AM</td>
+<td>
+<a href="#" class="linked" test-id='13' id='13'>checkDownloadButton</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:56:16 AM</td>
+<td>
+<a href="#" class="linked" test-id='14' id='14'>checkDownloadButton</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:56:31 AM</td>
+<td>
+<a href="#" class="linked" test-id='15' id='15'>checkShuffleButton</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:56:45 AM</td>
+<td>
+<a href="#" class="linked" test-id='16' id='16'>createBlankPlaylistName</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:56:47 AM</td>
+<td>
+<a href="#" class="linked" test-id='17' id='17'>createLongPlaylistName</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:56:50 AM</td>
+<td>
+<a href="#" class="linked" test-id='18' id='18'>createOneCharacterPlaylistName</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:56:53 AM</td>
+<td>
+<a href="#" class="linked" test-id='19' id='19'>createPlaylist</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:56:56 AM</td>
+<td>
+<a href="#" class="linked" test-id='20' id='20'>createPlaylistDuplicateName</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:56:58 AM</td>
+<td>
+<a href="#" class="linked" test-id='21' id='21'>addSongToPlaylist</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>09:57:02 AM</td>
+<td>
+<a href="#" class="linked" test-id='22' id='22'>deleteAllPlaylists</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:57:40 AM</td>
+<td>
+<a href="#" class="linked" test-id='23' id='23'>deleteAllPlaylists</a>
 </td>
 </tr>
 </tbody>
@@ -190,25 +1839,25 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Feb 3, 2024 03:05:06 PM</h3>
+<h3>Feb 4, 2024 09:54:04 AM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Feb 3, 2024 03:07:31 PM</h3>
+<h3>Feb 4, 2024 09:58:20 AM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Tests Passed</p>
-<h3>1</h3>
+<h3>21</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Tests Failed</p>
-<h3>0</h3>
+<h3>2</h3>
 </div></div>
 </div>
 </div>
@@ -224,12 +1873,12 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'>
-<b>1</b> tests passed
+<div><small data-tooltip='91%'>
+<b>21</b> tests passed
 </small>
 </div>
 <div>
-<small data-tooltip='0%'><b>0</b> tests failed,
+<small data-tooltip='8%'><b>2</b> tests failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -247,10 +1896,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>1</b> events passed</small></div>
+<div><small data-tooltip='32%'><b>21</b> events passed</small></div>
 <div>
-<small data-tooltip='0%'><b>0</b> events failed,
-<b data-tooltip='%'>0</b> others
+<small data-tooltip='3%'><b>2</b> events failed,
+<b data-tooltip='%'>42</b> others
 </small>
 </div>
 </div>
@@ -266,7 +1915,7 @@
 </div></div>
 <script>
 var timeline = {
-"deleteAllPlaylists":141.595
+"checkSongInfo":0.532,"durationInHeader":0.057,"songTotalIsDisplayed":0.062,"totalPlayableSongsCount":0.218,"verifyTotalDuration":0.364,"verifyTotalSongTracks":0.318,"albumsAreDisplayed":0.125,"checkAlbumArtist":2.243,"checkAlbumCoverImages":23.652,"checkAlbumSongDurtation":24.012,"checkAlbumSongTrackTotal":23.983,"checkAlbumTitles":24.355,"checkDownloadButton":0.252,"checkDownloadButton":12.374,"checkShuffleButton":12.182,"createBlankPlaylistName":0.853,"createLongPlaylistName":1.131,"createOneCharacterPlaylistName":1.085,"createPlaylist":0.918,"createPlaylistDuplicateName":1.035,"addSongToPlaylist":1.517,"deleteAllPlaylists":36.076,"deleteAllPlaylists":40.573
 };
 </script>
 <div class="row">
@@ -278,11 +1927,11 @@ var timeline = {
 <tbody>
 <tr>
 <td>FranzFernando</td>
-<td>1</td>
+<td>21</td>
+<td>2</td>
 <td>0</td>
 <td>0</td>
-<td>0</td>
-<td>100%</td>
+<td>91.304%</td>
 </tr>
 </tbody>
 </table></div>
@@ -297,10 +1946,6 @@ var timeline = {
 <tr>
 <td>Environment</td>
 <td>TEST</td>
-</tr>
-<tr>
-<td>User Story Links</td>
-<td></td>
 </tr>
 <tr>
 <td>Operating System</td>
@@ -322,6 +1967,10 @@ var timeline = {
 <td>Database: </td>
 <td>jdbc:mariadb://104.237.13.60:3306/dbkoel</td>
 </tr>
+<tr>
+<td>Features Tested</td>
+<td>Albums Page, All Songs Page, Playlists</td>
+</tr>
 </tbody>
 </table></div>
 </div>
@@ -331,8 +1980,8 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 1,
-failParent: 0,
+passParent: 21,
+failParent: 2,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
@@ -348,11 +1997,11 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 1,
-failEvents: 0,
+passEvents: 21,
+failEvents: 2,
 warningEvents: 0,
-skipEvents: 0,
-infoEvents: 0
+skipEvents: 4,
+infoEvents: 38
 };
 </script>        </div>
       </div>

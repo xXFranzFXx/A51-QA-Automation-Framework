@@ -48,7 +48,6 @@ public class BasePage {
         PageFactory.initElements(new AjaxElementLocatorFactory(driver, 10), this);
     }
 
-
     protected WebElement find(By locator) {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
@@ -80,21 +79,16 @@ public class BasePage {
         return soundBarVisualizer.isDisplayed();
     }
 
-
     public AllSongsPage navigateToAllSongsPage() {
         actions.moveToElement(allSongsLocator).perform();
         clickElement(allSongsLocator);
         return new AllSongsPage(driver);
     }
 
-    public void favorites() {actions.moveToElement(favoritesLocator).perform();
-        clickElement(favoritesLocator);
-    }
     public AlbumsPage navigateToAlbumsPage() {
         actions.moveToElement(albumsLocator).perform();
         clickElement(albumsLocator);
         return new AlbumsPage(driver);
     }
-
 
 }
