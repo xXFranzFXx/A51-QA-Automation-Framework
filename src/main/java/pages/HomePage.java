@@ -38,7 +38,8 @@ public class HomePage extends BasePage {
     private WebElement playlistsMenuFirstPl;
   @FindBy(xpath = "//section[@id='playlists']//li[@class='playlist playlist']/a")
     private List<WebElement> allPlaylists ;
-    @FindBy(xpath = "//section[@id='playlists']/ul/li[3]/nav/ul/li[2]")
+//    @FindBy(xpath = "//section[@id='playlists']/ul/li[3]/nav/ul/li[2]")
+    @FindBy(xpath="//section[@id='playlists']//ul/li[@class='playlist playlist']//li[text()[contains(.,'Delete')]]")
     private WebElement plDeleteBtn;
     @FindBy(xpath = "//div[@class='alertify']//nav/button[@class='ok']")
     private WebElement ok;
@@ -101,7 +102,7 @@ public class HomePage extends BasePage {
         List<WebElement> ele2 = driver.findElements(okBtn);
         if (!ele2.isEmpty()) {
             wait.until(ExpectedConditions.elementToBeClickable(findElement(ok)));
-            actions.moveToElement(ok).click().pause(1500).perform();
+            actions.moveToElement(ok).click().pause(1000).perform();
         } else {
             deleteAllPlaylists();
         }
@@ -109,17 +110,16 @@ public class HomePage extends BasePage {
     public HomePage contextClickFirstPlDelete() {
         WebElement firstPl = wait.until(ExpectedConditions.elementToBeClickable(playlistsMenuFirstPl));
         contextClick(findElement(firstPl));
-        actions.moveToElement(plDeleteBtn).click().perform();
+        wait.until(ExpectedConditions.elementToBeClickable(plDeleteBtn)).click();
         checkOkModal();
-
         return this;
     }
     public HomePage deleteAllPlaylists() {
         try {
             for (int i = 2; i < playlistsSection.size(); i ++) {
-                clickElement(playlistsSection.get(i));
+//                clickElement(playlistsSection.get(i));
                 contextClick(findElement(playlistsSection.get(i)));
-                actions.moveToElement(plDeleteBtn).click().pause(3000).perform();
+                actions.moveToElement(plDeleteBtn).click().pause(1000).perform();
                 checkOkModal();
             }
         } catch (StaleElementReferenceException e) {

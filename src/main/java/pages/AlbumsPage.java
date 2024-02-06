@@ -26,20 +26,22 @@ public class AlbumsPage extends BasePage{
     private WebElement albumsPageTitleLocator;
     @FindBy(css = "#albumsWrapper article.item.full")
     private List<WebElement> albumTiles;
-    @FindBy(css="article.item.full span.cover")
+    @FindBy(css="#albumsWrapper article.item.full span.cover")
     private List<WebElement> albumCoverPics;
-    @FindBy(css ="article.item.full footer .info .name")
+    @FindBy(css ="#albumsWrapper article.item.full footer .info .name")
     private List<WebElement> albumTitles;
-    @FindBy(css = "article.item.full footer .info .artist")
+    @FindBy(css = "#albumsWrapper article.item.full footer .info .artist")
     private List<WebElement> albumArtists;
-    @FindBy(css="#albumsWrapper p.meta")
+    @FindBy(css="#albumsWrapper footer p.meta")
     private List <WebElement> footerInfoContainer;
     @FindBy(css = "#albumsWrapper p.meta i.fa.fa-download")
     private List <WebElement> downloadBtn;
     @FindBy(css = "#albumsWrapper p.meta i.fa.fa-random")
     private List <WebElement> shuffleBtn;
-    @FindBy(css = "article.item.full footer .meta .left")
+    @FindBy(css = "#albumsWrapper article.item.full footer .meta .left")
     private List<WebElement> trackInfo;
+    @FindBy(css="#albumsWrapper .fa.fa-list")
+    private WebElement listViewButton;
     private static final String durationRe = "[^\\W•]+([1-9][0-99]+|[01]?[0-9]):([0-5]?[0-9])";
     private static final String songTotalRe = "^\\d{1,}|[^\\W•]";
     public AlbumsPage(WebDriver givenDriver) {
@@ -53,6 +55,9 @@ public class AlbumsPage extends BasePage{
     public boolean checkAlbumImage(WebElement element) {
         return element.getAttribute("style").contains("https://qa.koel.app/img/covers");
     }
+    public void clickListView() {
+        findElement(listViewButton).click();
+    }
     public boolean checkAllAlbumCoverImage() {
         boolean check = true;
         int count = 0;
@@ -63,6 +68,7 @@ public class AlbumsPage extends BasePage{
                     check = checkAlbumImage(pic);
                     count++;
                     if (count == albumCoverPics.size()) {
+                        Reporter.log("Albums counted with cover images: " + count, true);
                         return check;
                     }
                 }
@@ -83,6 +89,7 @@ public class AlbumsPage extends BasePage{
                     check = !getTrackInfo(title).isEmpty();
                     count++;
                     if (count == list.size()) {
+                        Reporter.log("Albums counted displaying correct text: " + count, true);
                         return check;
                     }
                 }
@@ -94,8 +101,9 @@ public class AlbumsPage extends BasePage{
     }
     public boolean checkHoveredElements(List<WebElement> hoveredElement) {
         boolean check = true;
-        int limit = footerInfoContainer.size();
-            for(int i =0; i < limit; i++) {
+        int limit = albumTiles.size();
+        Reporter.log("limit: " + limit, true);
+        for(int i = 0; i < limit; i++) {
                 actions.moveToElement(footerInfoContainer.get(i)).perform();
                 actions.moveToElement(hoveredElement.get(i)).perform();
                 check = hoveredElement.get(i).isDisplayed();
@@ -119,7 +127,7 @@ public class AlbumsPage extends BasePage{
         return checkHoveredElements(downloadBtn);
     }
     public String getTrackInfo(WebElement element) {
-        System.out.println("Album track info: " + findElement(element).getText());
+        Reporter.log("Album track info: " + findElement(element).getText(), true);
         return findElement(element).getText();
     }
 

@@ -31,6 +31,7 @@ public class PlaylistsTests extends BaseTest {
     LoginPage loginPage;
     HomePage homePage;
     ResultSet rs;
+    private final int maxLength = 256;
 
     @BeforeMethod
     public void setup() throws MalformedURLException {
@@ -99,7 +100,7 @@ public class PlaylistsTests extends BaseTest {
                 .enterPlaylistName(playlist);
         Assert.assertTrue(homePage.playlistAddedToMenu(playlist));
     }
-    @Test(description = "Verify user can create playlists with duplicate names, check database for multiple playlists with same name", dataProvider="PlaylistData", dataProviderClass = DataProviderUtil.class)
+    @Test(description = "Verify user can create playlists with duplicate names, check database for multiple playlists with same name", dataProvider="PlaylistData", dataProviderClass = DataProviderUtil.class, dependsOnMethods = {"createPlaylist"})
     public void createPlaylistDuplicateName(String playlist) throws SQLException, ClassNotFoundException {
         homePage = new HomePage(getDriver());
         homePage.clickCreateNewPlaylist()
@@ -128,7 +129,7 @@ public class PlaylistsTests extends BaseTest {
     }
     @Test(description = "Create a playlist with over 256 characters and check if it is saved to the database")
     public void createLongPlaylistName() throws SQLException, ClassNotFoundException {
-        String playlistName = generatePlaylistName(256);
+        String playlistName = generatePlaylistName(maxLength);
         homePage = new HomePage(getDriver());
         homePage.clickCreateNewPlaylist()
                 .contextMenuNewPlaylist()
