@@ -26,7 +26,7 @@ public class TestUtil extends BaseTest {
         return calendar.getTime();
     }
     public static  String getDate() {
-        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat df = new SimpleDateFormat("MM/dd/yyyy");
         df.setTimeZone(TimeZone.getTimeZone("Europe/London"));
         return df.format(new Date());
     }

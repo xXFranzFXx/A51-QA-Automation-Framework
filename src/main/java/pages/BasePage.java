@@ -90,5 +90,8 @@ public class BasePage {
         clickElement(albumsLocator);
         return new AlbumsPage(driver);
     }
+    public void pause(int seconds) {
+        actions.pause(Duration.ofSeconds(seconds)).perform();
+    }
 
 }

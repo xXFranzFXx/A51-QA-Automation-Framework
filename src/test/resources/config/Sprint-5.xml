@@ -5,11 +5,6 @@
         <listener class-name="util.listeners.TestListener"/>
         <listener class-name="util.listeners.AnnotationTransformer"/>
     </listeners>
-    <test name="AllSongsTests">
-        <classes>
-            <class name="testcases.AllSongsTests"/>
-        </classes>
-    </test>
     <test name="AlbumsTest">
         <classes>
             <class name="testcases.AlbumsTests"/>
@@ -18,7 +13,7 @@
     <test name="PlaylistTests">
         <parameter name="song" value="dark"/>
         <classes>
-            <class name="testcases.PlaylistsTests"/>
+            <class name="testcases.SmartPlaylistsTests"/>
         </classes>
     </test>
 </suite>

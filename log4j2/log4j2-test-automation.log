@@ -1,664 +1,701 @@
-[INFO ] 2024-02-06 10:52:32.632 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 10:52:32.637 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 10:52:32.770 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 10:52:36.783 [Test worker] Log - albumsAreDisplayed started!
-[INFO ] 2024-02-06 10:52:37.055 [Test worker] Log - albumsAreDisplayed passed!
-[INFO ] 2024-02-06 10:52:39.696 [Test worker] Log - checkAlbumArtist started!
-[INFO ] 2024-02-06 10:52:42.792 [Test worker] Log - checkAlbumArtist passed!
-[INFO ] 2024-02-06 10:52:45.312 [Test worker] Log - checkAlbumCoverImages started!
-[INFO ] 2024-02-06 10:52:47.329 [Test worker] Log - checkAlbumCoverImages passed!
-[INFO ] 2024-02-06 10:52:49.858 [Test worker] Log - checkAlbumSongDurtation started!
-[INFO ] 2024-02-06 10:52:52.302 [Test worker] Log - checkAlbumSongDurtation passed!
-[INFO ] 2024-02-06 10:52:54.802 [Test worker] Log - checkAlbumSongTrackTotal started!
-[INFO ] 2024-02-06 10:52:57.181 [Test worker] Log - checkAlbumSongTrackTotal passed!
-[INFO ] 2024-02-06 10:52:59.685 [Test worker] Log - checkAlbumTitles started!
-[INFO ] 2024-02-06 10:53:02.059 [Test worker] Log - checkAlbumTitles passed!
-[INFO ] 2024-02-06 10:53:04.606 [Test worker] Log - checkDownloadButton started!
-[INFO ] 2024-02-06 10:53:17.327 [Test worker] Log - checkDownloadButton passed!
-[INFO ] 2024-02-06 10:53:19.775 [Test worker] Log - checkShuffleButton started!
-[INFO ] 2024-02-06 10:53:32.314 [Test worker] Log - checkShuffleButton passed!
-[INFO ] 2024-02-06 10:53:32.429 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 10:53:32.470 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 10:53:32.471 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:02:34.404 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:02:34.409 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:02:34.548 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:02:37.701 [Test worker] Log - albumsAreDisplayed started!
-[INFO ] 2024-02-06 11:02:37.900 [Test worker] Log - albumsAreDisplayed passed!
-[INFO ] 2024-02-06 11:02:40.415 [Test worker] Log - checkAlbumArtist started!
-[INFO ] 2024-02-06 11:02:43.545 [Test worker] Log - checkAlbumArtist passed!
-[INFO ] 2024-02-06 11:02:46.163 [Test worker] Log - checkAlbumCoverImages started!
-[INFO ] 2024-02-06 11:02:48.124 [Test worker] Log - checkAlbumCoverImages passed!
-[INFO ] 2024-02-06 11:02:50.743 [Test worker] Log - checkAlbumSongDurtation started!
-[INFO ] 2024-02-06 11:02:53.214 [Test worker] Log - checkAlbumSongDurtation passed!
-[INFO ] 2024-02-06 11:02:55.698 [Test worker] Log - checkAlbumSongTrackTotal started!
-[INFO ] 2024-02-06 11:02:58.110 [Test worker] Log - checkAlbumSongTrackTotal passed!
-[INFO ] 2024-02-06 11:03:00.664 [Test worker] Log - checkAlbumTitles started!
-[INFO ] 2024-02-06 11:03:03.073 [Test worker] Log - checkAlbumTitles passed!
-[INFO ] 2024-02-06 11:03:05.576 [Test worker] Log - checkDownloadButton started!
-[INFO ] 2024-02-06 11:03:18.216 [Test worker] Log - checkDownloadButton passed!
-[INFO ] 2024-02-06 11:03:20.717 [Test worker] Log - checkShuffleButton started!
-[INFO ] 2024-02-06 11:03:33.213 [Test worker] Log - checkShuffleButton passed!
-[INFO ] 2024-02-06 11:03:33.339 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:03:33.385 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:03:33.385 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:05:18.940 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:05:21.890 [Test worker] Log - checkSongInfo started!
-[INFO ] 2024-02-06 11:05:22.472 [Test worker] Log - checkSongInfo passed!
-[INFO ] 2024-02-06 11:05:24.937 [Test worker] Log - durationInHeader started!
-[INFO ] 2024-02-06 11:05:24.995 [Test worker] Log - durationInHeader passed!
-[INFO ] 2024-02-06 11:05:27.487 [Test worker] Log - songTotalIsDisplayed started!
-[INFO ] 2024-02-06 11:05:27.531 [Test worker] Log - songTotalIsDisplayed passed!
-[INFO ] 2024-02-06 11:05:29.960 [Test worker] Log - totalPlayableSongsCount started!
-[INFO ] 2024-02-06 11:05:30.169 [Test worker] Log - totalPlayableSongsCount passed!
-[INFO ] 2024-02-06 11:05:32.658 [Test worker] Log - verifyTotalDuration started!
-[INFO ] 2024-02-06 11:05:33.118 [Test worker] Log - verifyTotalDuration passed!
-[INFO ] 2024-02-06 11:05:35.513 [Test worker] Log - verifyTotalSongTracks started!
-[INFO ] 2024-02-06 11:05:35.938 [Test worker] Log - verifyTotalSongTracks passed!
-[INFO ] 2024-02-06 11:05:36.046 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:05:36.236 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:05:38.590 [Test worker] Log - albumsAreDisplayed started!
-[INFO ] 2024-02-06 11:05:38.705 [Test worker] Log - albumsAreDisplayed passed!
-[INFO ] 2024-02-06 11:05:41.275 [Test worker] Log - checkAlbumArtist started!
-[INFO ] 2024-02-06 11:05:43.629 [Test worker] Log - checkAlbumArtist passed!
-[INFO ] 2024-02-06 11:05:46.123 [Test worker] Log - checkAlbumCoverImages started!
-[INFO ] 2024-02-06 11:05:47.838 [Test worker] Log - checkAlbumCoverImages passed!
-[INFO ] 2024-02-06 11:05:50.304 [Test worker] Log - checkAlbumSongDurtation started!
-[INFO ] 2024-02-06 11:05:52.362 [Test worker] Log - checkAlbumSongDurtation passed!
-[INFO ] 2024-02-06 11:05:54.772 [Test worker] Log - checkAlbumSongTrackTotal started!
-[INFO ] 2024-02-06 11:05:56.825 [Test worker] Log - checkAlbumSongTrackTotal passed!
-[INFO ] 2024-02-06 11:05:59.274 [Test worker] Log - checkAlbumTitles started!
-[INFO ] 2024-02-06 11:06:01.378 [Test worker] Log - checkAlbumTitles passed!
-[INFO ] 2024-02-06 11:06:03.737 [Test worker] Log - checkDownloadButton started!
-[INFO ] 2024-02-06 11:06:16.083 [Test worker] Log - checkDownloadButton passed!
-[INFO ] 2024-02-06 11:06:18.588 [Test worker] Log - checkShuffleButton started!
-[INFO ] 2024-02-06 11:06:30.862 [Test worker] Log - checkShuffleButton passed!
-[INFO ] 2024-02-06 11:06:30.969 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:06:30.995 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:06:32.827 [Test worker] Log - createPlaylist started!
-[INFO ] 2024-02-06 11:06:33.859 [Test worker] Log - createPlaylist passed!
-[INFO ] 2024-02-06 11:06:35.807 [Test worker] Log - createBlankPlaylistName started!
-[INFO ] 2024-02-06 11:06:36.719 [Test worker] Log - createBlankPlaylistName passed!
-[INFO ] 2024-02-06 11:06:38.653 [Test worker] Log - createLongPlaylistName started!
-[INFO ] 2024-02-06 11:06:39.953 [Test worker] Log - createLongPlaylistName passed!
-[INFO ] 2024-02-06 11:06:41.954 [Test worker] Log - createOneCharacterPlaylistName started!
-[INFO ] 2024-02-06 11:06:43.240 [Test worker] Log - createOneCharacterPlaylistName passed!
-[INFO ] 2024-02-06 11:06:45.146 [Test worker] Log - createPlaylistDuplicateName started!
-[INFO ] 2024-02-06 11:06:46.411 [Test worker] Log - createPlaylistDuplicateName passed!
-[INFO ] 2024-02-06 11:06:48.240 [Test worker] Log - addSongToPlaylist started!
-[INFO ] 2024-02-06 11:06:49.879 [Test worker] Log - addSongToPlaylist passed!
-[INFO ] 2024-02-06 11:06:49.990 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:11:12.884 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:11:16.074 [TestNG-test=AllSongsTests-1] Log - checkSongInfo started!
-[INFO ] 2024-02-06 11:11:16.657 [TestNG-test=AllSongsTests-1] Log - checkSongInfo passed!
-[INFO ] 2024-02-06 11:11:19.212 [TestNG-test=AllSongsTests-1] Log - durationInHeader started!
-[INFO ] 2024-02-06 11:11:19.272 [TestNG-test=AllSongsTests-1] Log - durationInHeader passed!
-[INFO ] 2024-02-06 11:11:21.801 [TestNG-test=AllSongsTests-1] Log - songTotalIsDisplayed started!
-[INFO ] 2024-02-06 11:11:21.909 [TestNG-test=AllSongsTests-1] Log - songTotalIsDisplayed passed!
-[INFO ] 2024-02-06 11:11:24.363 [TestNG-test=AllSongsTests-1] Log - totalPlayableSongsCount started!
-[INFO ] 2024-02-06 11:11:24.595 [TestNG-test=AllSongsTests-1] Log - totalPlayableSongsCount passed!
-[INFO ] 2024-02-06 11:11:27.078 [TestNG-test=AllSongsTests-1] Log - verifyTotalDuration started!
-[INFO ] 2024-02-06 11:11:27.553 [TestNG-test=AllSongsTests-1] Log - verifyTotalDuration passed!
-[INFO ] 2024-02-06 11:11:30.045 [TestNG-test=AllSongsTests-1] Log - verifyTotalSongTracks started!
-[INFO ] 2024-02-06 11:11:30.478 [TestNG-test=AllSongsTests-1] Log - verifyTotalSongTracks passed!
-[INFO ] 2024-02-06 11:11:30.588 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:11:30.775 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:11:33.033 [TestNG-test=AlbumsTest-1] Log - albumsAreDisplayed started!
-[INFO ] 2024-02-06 11:11:33.221 [TestNG-test=AlbumsTest-1] Log - albumsAreDisplayed passed!
-[INFO ] 2024-02-06 11:11:35.785 [TestNG-test=AlbumsTest-1] Log - checkAlbumArtist started!
-[INFO ] 2024-02-06 11:11:38.096 [TestNG-test=AlbumsTest-1] Log - checkAlbumArtist passed!
-[INFO ] 2024-02-06 11:11:40.455 [TestNG-test=AlbumsTest-1] Log - checkAlbumCoverImages started!
-[INFO ] 2024-02-06 11:11:42.223 [TestNG-test=AlbumsTest-1] Log - checkAlbumCoverImages passed!
-[INFO ] 2024-02-06 11:11:44.785 [TestNG-test=AlbumsTest-1] Log - checkAlbumSongDurtation started!
-[INFO ] 2024-02-06 11:11:46.908 [TestNG-test=AlbumsTest-1] Log - checkAlbumSongDurtation passed!
-[INFO ] 2024-02-06 11:11:49.448 [TestNG-test=AlbumsTest-1] Log - checkAlbumSongTrackTotal started!
-[INFO ] 2024-02-06 11:11:51.583 [TestNG-test=AlbumsTest-1] Log - checkAlbumSongTrackTotal passed!
-[INFO ] 2024-02-06 11:11:53.978 [TestNG-test=AlbumsTest-1] Log - checkAlbumTitles started!
-[INFO ] 2024-02-06 11:11:56.046 [TestNG-test=AlbumsTest-1] Log - checkAlbumTitles passed!
-[INFO ] 2024-02-06 11:11:58.570 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton started!
-[INFO ] 2024-02-06 11:12:10.893 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton passed!
-[INFO ] 2024-02-06 11:12:13.433 [TestNG-test=AlbumsTest-1] Log - checkShuffleButton started!
-[INFO ] 2024-02-06 11:12:25.781 [TestNG-test=AlbumsTest-1] Log - checkShuffleButton passed!
-[INFO ] 2024-02-06 11:12:25.893 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:12:25.930 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:12:27.729 [TestNG-test=PlaylistTests-1] Log - createPlaylist started!
-[INFO ] 2024-02-06 11:12:28.591 [TestNG-test=PlaylistTests-1] Log - createPlaylist passed!
-[INFO ] 2024-02-06 11:12:30.495 [TestNG-test=PlaylistTests-1] Log - createBlankPlaylistName started!
-[INFO ] 2024-02-06 11:12:31.504 [TestNG-test=PlaylistTests-1] Log - createBlankPlaylistName passed!
-[INFO ] 2024-02-06 11:12:33.519 [TestNG-test=PlaylistTests-1] Log - createLongPlaylistName started!
-[INFO ] 2024-02-06 11:12:34.791 [TestNG-test=PlaylistTests-1] Log - createLongPlaylistName passed!
-[INFO ] 2024-02-06 11:12:36.724 [TestNG-test=PlaylistTests-1] Log - createOneCharacterPlaylistName started!
-[INFO ] 2024-02-06 11:12:37.926 [TestNG-test=PlaylistTests-1] Log - createOneCharacterPlaylistName passed!
-[INFO ] 2024-02-06 11:12:39.957 [TestNG-test=PlaylistTests-1] Log - createPlaylistDuplicateName started!
-[INFO ] 2024-02-06 11:12:41.203 [TestNG-test=PlaylistTests-1] Log - createPlaylistDuplicateName passed!
-[INFO ] 2024-02-06 11:12:43.212 [TestNG-test=PlaylistTests-2] Log - addSongToPlaylist started!
-[INFO ] 2024-02-06 11:12:44.845 [TestNG-test=PlaylistTests-2] Log - addSongToPlaylist passed!
-[INFO ] 2024-02-06 11:12:44.957 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:13:11.706 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:13:11.709 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:13:11.831 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:13:11.831 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:13:11.837 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:13:14.416 [TestNG-test=PlaylistTests-1] Log - createBlankPlaylistName started!
-[INFO ] 2024-02-06 11:13:15.471 [TestNG-test=PlaylistTests-1] Log - createBlankPlaylistName passed!
-[INFO ] 2024-02-06 11:13:17.521 [TestNG-test=PlaylistTests-1] Log - createLongPlaylistName started!
-[INFO ] 2024-02-06 11:13:18.972 [TestNG-test=PlaylistTests-1] Log - createLongPlaylistName passed!
-[INFO ] 2024-02-06 11:13:20.995 [TestNG-test=PlaylistTests-1] Log - createOneCharacterPlaylistName started!
-[INFO ] 2024-02-06 11:13:22.318 [TestNG-test=PlaylistTests-1] Log - createOneCharacterPlaylistName passed!
-[INFO ] 2024-02-06 11:13:24.407 [TestNG-test=PlaylistTests-1] Log - createPlaylist started!
-[INFO ] 2024-02-06 11:13:25.311 [TestNG-test=PlaylistTests-1] Log - createPlaylist passed!
-[INFO ] 2024-02-06 11:13:27.278 [TestNG-test=PlaylistTests-1] Log - createPlaylistDuplicateName started!
-[INFO ] 2024-02-06 11:13:28.536 [TestNG-test=PlaylistTests-1] Log - createPlaylistDuplicateName passed!
-[INFO ] 2024-02-06 11:13:30.479 [TestNG-test=PlaylistTests-2] Log - addSongToPlaylist started!
-[INFO ] 2024-02-06 11:13:32.156 [TestNG-test=PlaylistTests-2] Log - addSongToPlaylist passed!
-[INFO ] 2024-02-06 11:13:34.128 [TestNG-test=PlaylistTests-2] Log - deleteAllPlaylists started!
-[INFO ] 2024-02-06 11:14:47.239 [TestNG-test=PlaylistTests-2] Log - deleteAllPlaylists passed!
-[INFO ] 2024-02-06 11:14:47.405 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:15:01.422 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:15:04.508 [TestNG-test=AllSongsTests-1] Log - checkSongInfo started!
-[INFO ] 2024-02-06 11:15:05.046 [TestNG-test=AllSongsTests-1] Log - checkSongInfo passed!
-[INFO ] 2024-02-06 11:15:07.533 [TestNG-test=AllSongsTests-1] Log - durationInHeader started!
-[INFO ] 2024-02-06 11:15:07.585 [TestNG-test=AllSongsTests-1] Log - durationInHeader passed!
-[INFO ] 2024-02-06 11:15:10.030 [TestNG-test=AllSongsTests-1] Log - songTotalIsDisplayed started!
-[INFO ] 2024-02-06 11:15:10.138 [TestNG-test=AllSongsTests-1] Log - songTotalIsDisplayed passed!
-[INFO ] 2024-02-06 11:15:12.575 [TestNG-test=AllSongsTests-1] Log - totalPlayableSongsCount started!
-[INFO ] 2024-02-06 11:15:12.836 [TestNG-test=AllSongsTests-1] Log - totalPlayableSongsCount passed!
-[INFO ] 2024-02-06 11:15:15.238 [TestNG-test=AllSongsTests-1] Log - verifyTotalDuration started!
-[INFO ] 2024-02-06 11:15:15.706 [TestNG-test=AllSongsTests-1] Log - verifyTotalDuration passed!
-[INFO ] 2024-02-06 11:15:18.158 [TestNG-test=AllSongsTests-1] Log - verifyTotalSongTracks started!
-[INFO ] 2024-02-06 11:15:18.596 [TestNG-test=AllSongsTests-1] Log - verifyTotalSongTracks passed!
-[INFO ] 2024-02-06 11:15:18.712 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:15:18.891 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:15:21.141 [TestNG-test=AlbumsTest-1] Log - albumsAreDisplayed started!
-[INFO ] 2024-02-06 11:15:21.312 [TestNG-test=AlbumsTest-1] Log - albumsAreDisplayed passed!
-[INFO ] 2024-02-06 11:15:23.848 [TestNG-test=AlbumsTest-1] Log - checkAlbumArtist started!
-[INFO ] 2024-02-06 11:15:26.116 [TestNG-test=AlbumsTest-1] Log - checkAlbumArtist passed!
-[INFO ] 2024-02-06 11:15:28.540 [TestNG-test=AlbumsTest-1] Log - checkAlbumCoverImages started!
-[INFO ] 2024-02-06 11:15:30.246 [TestNG-test=AlbumsTest-1] Log - checkAlbumCoverImages passed!
-[INFO ] 2024-02-06 11:15:32.640 [TestNG-test=AlbumsTest-1] Log - checkAlbumSongDurtation started!
-[INFO ] 2024-02-06 11:15:34.750 [TestNG-test=AlbumsTest-1] Log - checkAlbumSongDurtation passed!
-[INFO ] 2024-02-06 11:15:37.303 [TestNG-test=AlbumsTest-1] Log - checkAlbumSongTrackTotal started!
-[INFO ] 2024-02-06 11:15:39.377 [TestNG-test=AlbumsTest-1] Log - checkAlbumSongTrackTotal passed!
-[INFO ] 2024-02-06 11:15:41.895 [TestNG-test=AlbumsTest-1] Log - checkAlbumTitles started!
-[INFO ] 2024-02-06 11:15:43.954 [TestNG-test=AlbumsTest-1] Log - checkAlbumTitles passed!
-[INFO ] 2024-02-06 11:15:46.318 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton started!
-[INFO ] 2024-02-06 11:15:58.617 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton passed!
-[INFO ] 2024-02-06 11:16:00.994 [TestNG-test=AlbumsTest-1] Log - checkShuffleButton started!
-[INFO ] 2024-02-06 11:16:13.353 [TestNG-test=AlbumsTest-1] Log - checkShuffleButton passed!
-[INFO ] 2024-02-06 11:16:13.461 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:16:13.495 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:16:15.237 [TestNG-test=PlaylistTests-1] Log - createBlankPlaylistName started!
-[INFO ] 2024-02-06 11:16:16.174 [TestNG-test=PlaylistTests-1] Log - createBlankPlaylistName passed!
-[INFO ] 2024-02-06 11:16:18.060 [TestNG-test=PlaylistTests-1] Log - createLongPlaylistName started!
-[INFO ] 2024-02-06 11:16:19.433 [TestNG-test=PlaylistTests-1] Log - createLongPlaylistName passed!
-[INFO ] 2024-02-06 11:16:21.254 [TestNG-test=PlaylistTests-1] Log - createOneCharacterPlaylistName started!
-[INFO ] 2024-02-06 11:16:22.526 [TestNG-test=PlaylistTests-1] Log - createOneCharacterPlaylistName passed!
-[INFO ] 2024-02-06 11:16:24.483 [TestNG-test=PlaylistTests-1] Log - createPlaylist started!
-[INFO ] 2024-02-06 11:16:25.475 [TestNG-test=PlaylistTests-1] Log - createPlaylist passed!
-[INFO ] 2024-02-06 11:16:27.389 [TestNG-test=PlaylistTests-1] Log - createPlaylistDuplicateName started!
-[FATAL] 2024-02-06 11:16:33.080 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
-[FATAL] 2024-02-06 11:16:38.089 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
-[FATAL] 2024-02-06 11:16:43.349 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
-[FATAL] 2024-02-06 11:16:48.401 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
-[FATAL] 2024-02-06 11:16:53.449 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
-[FATAL] 2024-02-06 11:16:58.744 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
-[WARN ] 2024-02-06 11:16:58.748 [TestNG-test=PlaylistTests-1] Log - createPlaylistDuplicateName skipped
-[INFO ] 2024-02-06 11:17:00.668 [TestNG-test=PlaylistTests-1] Log - createPlaylistDuplicateName started!
-[INFO ] 2024-02-06 11:17:01.913 [TestNG-test=PlaylistTests-1] Log - createPlaylistDuplicateName passed!
-[INFO ] 2024-02-06 11:17:03.742 [TestNG-test=PlaylistTests-2] Log - addSongToPlaylist started!
-[INFO ] 2024-02-06 11:17:05.377 [TestNG-test=PlaylistTests-2] Log - addSongToPlaylist passed!
-[INFO ] 2024-02-06 11:17:07.370 [TestNG-test=PlaylistTests-2] Log - deleteAllPlaylists started!
-[INFO ] 2024-02-06 11:17:29.391 [TestNG-test=PlaylistTests-2] Log - deleteAllPlaylists passed!
-[INFO ] 2024-02-06 11:17:29.506 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:18:48.994 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:18:52.102 [TestNG-test=AllSongsTests-1] Log - checkSongInfo started!
-[INFO ] 2024-02-06 11:18:52.684 [TestNG-test=AllSongsTests-1] Log - checkSongInfo passed!
-[INFO ] 2024-02-06 11:18:55.247 [TestNG-test=AllSongsTests-1] Log - durationInHeader started!
-[INFO ] 2024-02-06 11:18:55.294 [TestNG-test=AllSongsTests-1] Log - durationInHeader passed!
-[INFO ] 2024-02-06 11:18:57.967 [TestNG-test=AllSongsTests-1] Log - songTotalIsDisplayed started!
-[INFO ] 2024-02-06 11:18:58.033 [TestNG-test=AllSongsTests-1] Log - songTotalIsDisplayed passed!
-[INFO ] 2024-02-06 11:19:00.458 [TestNG-test=AllSongsTests-1] Log - totalPlayableSongsCount started!
-[INFO ] 2024-02-06 11:19:00.724 [TestNG-test=AllSongsTests-1] Log - totalPlayableSongsCount passed!
-[INFO ] 2024-02-06 11:19:03.239 [TestNG-test=AllSongsTests-1] Log - verifyTotalDuration started!
-[INFO ] 2024-02-06 11:19:03.755 [TestNG-test=AllSongsTests-1] Log - verifyTotalDuration passed!
-[INFO ] 2024-02-06 11:19:06.239 [TestNG-test=AllSongsTests-1] Log - verifyTotalSongTracks started!
-[INFO ] 2024-02-06 11:19:06.680 [TestNG-test=AllSongsTests-1] Log - verifyTotalSongTracks passed!
-[INFO ] 2024-02-06 11:19:06.789 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:19:06.980 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:19:09.429 [TestNG-test=AlbumsTest-1] Log - albumsAreDisplayed started!
-[INFO ] 2024-02-06 11:19:09.548 [TestNG-test=AlbumsTest-1] Log - albumsAreDisplayed passed!
-[INFO ] 2024-02-06 11:19:12.095 [TestNG-test=AlbumsTest-1] Log - checkAlbumArtist started!
-[INFO ] 2024-02-06 11:19:14.380 [TestNG-test=AlbumsTest-1] Log - checkAlbumArtist passed!
-[INFO ] 2024-02-06 11:19:16.911 [TestNG-test=AlbumsTest-1] Log - checkAlbumCoverImages started!
-[INFO ] 2024-02-06 11:19:18.619 [TestNG-test=AlbumsTest-1] Log - checkAlbumCoverImages passed!
-[INFO ] 2024-02-06 11:19:21.010 [TestNG-test=AlbumsTest-1] Log - checkAlbumSongDurtation started!
-[INFO ] 2024-02-06 11:19:23.100 [TestNG-test=AlbumsTest-1] Log - checkAlbumSongDurtation passed!
-[INFO ] 2024-02-06 11:19:25.538 [TestNG-test=AlbumsTest-1] Log - checkAlbumSongTrackTotal started!
-[INFO ] 2024-02-06 11:19:27.609 [TestNG-test=AlbumsTest-1] Log - checkAlbumSongTrackTotal passed!
-[INFO ] 2024-02-06 11:19:30.078 [TestNG-test=AlbumsTest-1] Log - checkAlbumTitles started!
-[INFO ] 2024-02-06 11:19:32.137 [TestNG-test=AlbumsTest-1] Log - checkAlbumTitles passed!
-[INFO ] 2024-02-06 11:19:34.575 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton started!
-[INFO ] 2024-02-06 11:19:46.901 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton passed!
-[INFO ] 2024-02-06 11:19:49.422 [TestNG-test=AlbumsTest-1] Log - checkShuffleButton started!
-[INFO ] 2024-02-06 11:20:01.703 [TestNG-test=AlbumsTest-1] Log - checkShuffleButton passed!
-[INFO ] 2024-02-06 11:20:01.825 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:20:01.853 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:20:03.747 [TestNG-test=PlaylistTests-1] Log - createBlankPlaylistName started!
-[INFO ] 2024-02-06 11:20:04.663 [TestNG-test=PlaylistTests-1] Log - createBlankPlaylistName passed!
-[INFO ] 2024-02-06 11:20:06.920 [TestNG-test=PlaylistTests-1] Log - createLongPlaylistName started!
-[INFO ] 2024-02-06 11:20:08.229 [TestNG-test=PlaylistTests-1] Log - createLongPlaylistName passed!
-[INFO ] 2024-02-06 11:20:10.176 [TestNG-test=PlaylistTests-1] Log - createOneCharacterPlaylistName started!
-[INFO ] 2024-02-06 11:20:11.447 [TestNG-test=PlaylistTests-1] Log - createOneCharacterPlaylistName passed!
-[INFO ] 2024-02-06 11:20:13.449 [TestNG-test=PlaylistTests-1] Log - createPlaylist started!
-[INFO ] 2024-02-06 11:20:14.510 [TestNG-test=PlaylistTests-1] Log - createPlaylist passed!
-[INFO ] 2024-02-06 11:20:16.434 [TestNG-test=PlaylistTests-2] Log - addSongToPlaylist started!
-[INFO ] 2024-02-06 11:20:18.089 [TestNG-test=PlaylistTests-2] Log - addSongToPlaylist passed!
-[INFO ] 2024-02-06 11:20:20.105 [TestNG-test=PlaylistTests-2] Log - createPlaylistDuplicateName started!
-[INFO ] 2024-02-06 11:20:21.350 [TestNG-test=PlaylistTests-2] Log - createPlaylistDuplicateName passed!
-[INFO ] 2024-02-06 11:20:23.346 [TestNG-test=PlaylistTests-2] Log - deleteAllPlaylists started!
-[INFO ] 2024-02-06 11:20:45.493 [TestNG-test=PlaylistTests-2] Log - deleteAllPlaylists passed!
-[INFO ] 2024-02-06 11:20:45.606 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:24:15.364 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:24:15.367 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:24:15.495 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:24:18.657 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton started!
-[WARN ] 2024-02-06 11:24:18.868 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton skipped
-[INFO ] 2024-02-06 11:24:21.553 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton started!
-[ERROR] 2024-02-06 11:24:21.778 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton failed!
-[INFO ] 2024-02-06 11:24:21.996 [TestNG-test=AlbumsTest-1] Log - screen shot taken for failed test checkDownloadButton
-[INFO ] 2024-02-06 11:24:22.106 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:24:22.159 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:24:22.159 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:29:05.559 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:29:05.562 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:29:05.685 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:29:08.819 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton started!
-[FATAL] 2024-02-06 11:29:21.025 [TestNG-test=AlbumsTest-1] Log - Error while calling method: perform - null
-[WARN ] 2024-02-06 11:29:21.029 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton skipped
-[INFO ] 2024-02-06 11:29:23.848 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton started!
-[ERROR] 2024-02-06 11:29:27.850 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton failed!
-[INFO ] 2024-02-06 11:29:28.160 [TestNG-test=AlbumsTest-1] Log - screen shot taken for failed test checkDownloadButton
-[INFO ] 2024-02-06 11:29:28.270 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:29:28.320 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:29:28.320 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:29:50.237 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:29:53.461 [TestNG-test=AllSongsTests-1] Log - checkSongInfo started!
-[INFO ] 2024-02-06 11:29:54.043 [TestNG-test=AllSongsTests-1] Log - checkSongInfo passed!
-[INFO ] 2024-02-06 11:29:56.526 [TestNG-test=AllSongsTests-1] Log - durationInHeader started!
-[INFO ] 2024-02-06 11:29:56.573 [TestNG-test=AllSongsTests-1] Log - durationInHeader passed!
-[INFO ] 2024-02-06 11:29:59.049 [TestNG-test=AllSongsTests-1] Log - songTotalIsDisplayed started!
-[INFO ] 2024-02-06 11:29:59.102 [TestNG-test=AllSongsTests-1] Log - songTotalIsDisplayed passed!
-[INFO ] 2024-02-06 11:30:01.765 [TestNG-test=AllSongsTests-1] Log - totalPlayableSongsCount started!
-[INFO ] 2024-02-06 11:30:01.974 [TestNG-test=AllSongsTests-1] Log - totalPlayableSongsCount passed!
-[INFO ] 2024-02-06 11:30:04.446 [TestNG-test=AllSongsTests-1] Log - verifyTotalDuration started!
-[INFO ] 2024-02-06 11:30:04.902 [TestNG-test=AllSongsTests-1] Log - verifyTotalDuration passed!
-[INFO ] 2024-02-06 11:30:07.385 [TestNG-test=AllSongsTests-1] Log - verifyTotalSongTracks started!
-[INFO ] 2024-02-06 11:30:07.817 [TestNG-test=AllSongsTests-1] Log - verifyTotalSongTracks passed!
-[INFO ] 2024-02-06 11:30:07.926 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:30:08.118 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:30:10.497 [TestNG-test=AlbumsTest-1] Log - albumsAreDisplayed started!
-[INFO ] 2024-02-06 11:30:10.673 [TestNG-test=AlbumsTest-1] Log - albumsAreDisplayed passed!
-[INFO ] 2024-02-06 11:30:13.117 [TestNG-test=AlbumsTest-1] Log - checkAlbumArtist started!
-[INFO ] 2024-02-06 11:30:15.406 [TestNG-test=AlbumsTest-1] Log - checkAlbumArtist passed!
-[INFO ] 2024-02-06 11:30:17.797 [TestNG-test=AlbumsTest-1] Log - checkAlbumCoverImages started!
-[INFO ] 2024-02-06 11:30:19.498 [TestNG-test=AlbumsTest-1] Log - checkAlbumCoverImages passed!
-[INFO ] 2024-02-06 11:30:21.897 [TestNG-test=AlbumsTest-1] Log - checkAlbumSongDurtation started!
-[INFO ] 2024-02-06 11:30:23.982 [TestNG-test=AlbumsTest-1] Log - checkAlbumSongDurtation passed!
-[INFO ] 2024-02-06 11:30:26.404 [TestNG-test=AlbumsTest-1] Log - checkAlbumSongTrackTotal started!
-[INFO ] 2024-02-06 11:30:28.496 [TestNG-test=AlbumsTest-1] Log - checkAlbumSongTrackTotal passed!
-[INFO ] 2024-02-06 11:30:30.867 [TestNG-test=AlbumsTest-1] Log - checkAlbumTitles started!
-[INFO ] 2024-02-06 11:30:32.962 [TestNG-test=AlbumsTest-1] Log - checkAlbumTitles passed!
-[INFO ] 2024-02-06 11:30:35.329 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton started!
-[INFO ] 2024-02-06 11:30:48.663 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton passed!
-[INFO ] 2024-02-06 11:30:51.054 [TestNG-test=AlbumsTest-1] Log - checkShuffleButton started!
-[INFO ] 2024-02-06 11:31:04.448 [TestNG-test=AlbumsTest-1] Log - checkShuffleButton passed!
-[INFO ] 2024-02-06 11:31:04.573 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:31:04.609 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:31:06.458 [TestNG-test=PlaylistTests-1] Log - createBlankPlaylistName started!
-[INFO ] 2024-02-06 11:31:07.377 [TestNG-test=PlaylistTests-1] Log - createBlankPlaylistName passed!
-[INFO ] 2024-02-06 11:31:09.351 [TestNG-test=PlaylistTests-1] Log - createLongPlaylistName started!
-[INFO ] 2024-02-06 11:31:10.715 [TestNG-test=PlaylistTests-1] Log - createLongPlaylistName passed!
-[INFO ] 2024-02-06 11:31:12.661 [TestNG-test=PlaylistTests-1] Log - createOneCharacterPlaylistName started!
-[INFO ] 2024-02-06 11:31:13.932 [TestNG-test=PlaylistTests-1] Log - createOneCharacterPlaylistName passed!
-[INFO ] 2024-02-06 11:31:15.920 [TestNG-test=PlaylistTests-1] Log - createPlaylist started!
-[INFO ] 2024-02-06 11:31:16.923 [TestNG-test=PlaylistTests-1] Log - createPlaylist passed!
-[INFO ] 2024-02-06 11:31:18.957 [TestNG-test=PlaylistTests-2] Log - addSongToPlaylist started!
-[INFO ] 2024-02-06 11:31:20.609 [TestNG-test=PlaylistTests-2] Log - addSongToPlaylist passed!
-[INFO ] 2024-02-06 11:31:22.532 [TestNG-test=PlaylistTests-2] Log - createPlaylistDuplicateName started!
-[INFO ] 2024-02-06 11:31:23.774 [TestNG-test=PlaylistTests-2] Log - createPlaylistDuplicateName passed!
-[INFO ] 2024-02-06 11:31:25.707 [TestNG-test=PlaylistTests-2] Log - deleteAllPlaylists started!
-[INFO ] 2024-02-06 11:31:47.754 [TestNG-test=PlaylistTests-2] Log - deleteAllPlaylists passed!
-[INFO ] 2024-02-06 11:31:47.868 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:32:17.278 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:32:17.281 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:32:17.405 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:32:20.594 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton started!
-[INFO ] 2024-02-06 11:32:34.069 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton passed!
-[INFO ] 2024-02-06 11:32:34.178 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:32:34.209 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:32:34.210 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:35:09.043 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:35:09.046 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:35:09.175 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:35:12.314 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton started!
-[INFO ] 2024-02-06 11:35:25.903 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton passed!
-[INFO ] 2024-02-06 11:35:26.032 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:35:26.073 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:35:26.074 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:35:57.195 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:35:57.198 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:35:57.320 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:36:00.383 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton started!
-[INFO ] 2024-02-06 11:36:00.657 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton passed!
-[INFO ] 2024-02-06 11:36:00.781 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:36:00.816 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:36:00.817 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:37:32.014 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:37:32.018 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:37:32.141 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:37:35.242 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton started!
-[INFO ] 2024-02-06 11:37:35.486 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton passed!
-[INFO ] 2024-02-06 11:37:35.592 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:37:35.623 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:37:35.623 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:38:19.144 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:38:19.148 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:38:19.267 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:38:22.342 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton started!
-[WARN ] 2024-02-06 11:38:28.645 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton skipped
-[INFO ] 2024-02-06 11:38:31.206 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton started!
-[ERROR] 2024-02-06 11:38:31.405 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton failed!
-[INFO ] 2024-02-06 11:38:31.630 [TestNG-test=AlbumsTest-1] Log - screen shot taken for failed test checkDownloadButton
-[INFO ] 2024-02-06 11:38:31.747 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:38:31.797 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:38:31.798 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:40:15.415 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:40:15.418 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:40:15.538 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:40:18.629 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton started!
-[WARN ] 2024-02-06 11:40:27.825 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton skipped
-[INFO ] 2024-02-06 11:40:30.583 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton started!
-[FATAL] 2024-02-06 11:40:33.830 [TestNG-test=AlbumsTest-1] Log - Error while calling method: perform - null
-[ERROR] 2024-02-06 11:40:33.831 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton failed!
-[INFO ] 2024-02-06 11:40:34.164 [TestNG-test=AlbumsTest-1] Log - screen shot taken for failed test checkDownloadButton
-[INFO ] 2024-02-06 11:40:34.285 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:40:34.337 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:40:34.338 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:41:39.864 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:41:39.868 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:41:39.999 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:41:43.113 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton started!
-[WARN ] 2024-02-06 11:41:50.599 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton skipped
-[INFO ] 2024-02-06 11:41:53.314 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton started!
-[ERROR] 2024-02-06 11:42:00.433 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton failed!
-[INFO ] 2024-02-06 11:42:00.767 [TestNG-test=AlbumsTest-1] Log - screen shot taken for failed test checkDownloadButton
-[INFO ] 2024-02-06 11:42:00.883 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:42:00.932 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:42:00.933 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:43:11.485 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:43:11.489 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:43:11.609 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:43:14.731 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton started!
-[INFO ] 2024-02-06 11:43:29.381 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton passed!
-[INFO ] 2024-02-06 11:43:29.507 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:43:29.591 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:43:29.591 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:44:59.168 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:44:59.171 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:44:59.291 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:45:02.307 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton started!
-[FATAL] 2024-02-06 11:45:03.845 [TestNG-test=AlbumsTest-1] Log - Error while calling method: perform - null
-[WARN ] 2024-02-06 11:45:03.849 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton skipped
-[INFO ] 2024-02-06 11:45:06.725 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton started!
-[INFO ] 2024-02-06 11:45:21.220 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton passed!
-[INFO ] 2024-02-06 11:45:21.323 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:45:21.373 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:45:21.378 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:46:33.384 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:46:33.388 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:46:33.511 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:46:36.635 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton started!
-[INFO ] 2024-02-06 11:46:51.285 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton passed!
-[INFO ] 2024-02-06 11:46:51.408 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:46:51.454 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:46:51.455 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:48:40.170 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:48:40.173 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:48:40.294 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:48:43.365 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton started!
-[INFO ] 2024-02-06 11:48:59.174 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton passed!
-[INFO ] 2024-02-06 11:48:59.312 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:48:59.358 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:48:59.358 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:49:35.797 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:49:35.800 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:49:35.918 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:49:38.981 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton started!
-[INFO ] 2024-02-06 11:49:53.434 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton passed!
-[INFO ] 2024-02-06 11:49:53.568 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:49:53.607 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:49:53.607 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:51:41.613 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:51:41.616 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:51:41.742 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:51:45.297 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton started!
-[INFO ] 2024-02-06 11:51:59.880 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton passed!
-[INFO ] 2024-02-06 11:51:59.994 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:52:00.031 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:52:00.031 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:54:33.240 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:54:33.243 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:54:33.361 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:54:36.737 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton started!
-[INFO ] 2024-02-06 11:54:59.736 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton passed!
-[INFO ] 2024-02-06 11:54:59.847 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:54:59.869 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:54:59.869 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:56:53.707 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:56:53.710 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:56:53.842 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:56:57.009 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton started!
-[INFO ] 2024-02-06 11:59:06.334 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:59:06.338 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:59:06.463 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:59:09.633 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton started!
-[FATAL] 2024-02-06 11:59:54.066 [TestNG-test=AlbumsTest-1] Log - Error while calling method: perform - null
-[WARN ] 2024-02-06 11:59:54.068 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton skipped
-[INFO ] 2024-02-06 11:59:57.002 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton started!
-[FATAL] 2024-02-06 11:59:57.365 [TestNG-test=AlbumsTest-1] Log - Error while calling method: perform - null
-[ERROR] 2024-02-06 11:59:57.366 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton failed!
-[INFO ] 2024-02-06 11:59:57.612 [TestNG-test=AlbumsTest-1] Log - screen shot taken for failed test checkDownloadButton
-[INFO ] 2024-02-06 11:59:57.718 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 11:59:57.774 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 11:59:57.776 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 12:01:25.033 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 12:01:25.037 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 12:01:25.168 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 12:01:28.321 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton started!
-[WARN ] 2024-02-06 12:01:28.457 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton skipped
-[INFO ] 2024-02-06 12:01:31.301 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton started!
-[ERROR] 2024-02-06 12:01:31.434 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton failed!
-[INFO ] 2024-02-06 12:01:31.658 [TestNG-test=AlbumsTest-1] Log - screen shot taken for failed test checkDownloadButton
-[INFO ] 2024-02-06 12:01:31.767 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 12:01:31.829 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 12:01:31.830 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 12:02:35.840 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 12:02:35.843 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 12:02:35.972 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 12:02:39.144 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton started!
-[WARN ] 2024-02-06 12:02:39.281 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton skipped
-[INFO ] 2024-02-06 12:02:41.951 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton started!
-[ERROR] 2024-02-06 12:02:42.118 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton failed!
-[INFO ] 2024-02-06 12:02:42.341 [TestNG-test=AlbumsTest-1] Log - screen shot taken for failed test checkDownloadButton
-[INFO ] 2024-02-06 12:02:42.450 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 12:02:42.503 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 12:02:42.503 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 12:07:55.970 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 12:07:55.973 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 12:07:56.099 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 12:07:59.255 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton started!
-[FATAL] 2024-02-06 12:07:59.556 [TestNG-test=AlbumsTest-1] Log - Error while calling method: perform - null
-[WARN ] 2024-02-06 12:07:59.559 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton skipped
-[INFO ] 2024-02-06 12:08:02.355 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton started!
-[FATAL] 2024-02-06 12:08:02.635 [TestNG-test=AlbumsTest-1] Log - Error while calling method: perform - null
-[ERROR] 2024-02-06 12:08:02.636 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton failed!
-[INFO ] 2024-02-06 12:08:02.992 [TestNG-test=AlbumsTest-1] Log - screen shot taken for failed test checkDownloadButton
-[INFO ] 2024-02-06 12:08:03.106 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 12:08:03.159 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 12:08:03.159 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 12:09:41.597 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 12:09:41.600 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 12:09:41.727 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 12:09:44.831 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton started!
-[INFO ] 2024-02-06 12:09:58.110 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton passed!
-[INFO ] 2024-02-06 12:09:58.240 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 12:09:58.286 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 12:09:58.286 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 12:10:36.314 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 12:10:36.317 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 12:10:36.438 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 12:10:39.584 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton started!
-[INFO ] 2024-02-06 12:10:52.847 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton passed!
-[INFO ] 2024-02-06 12:10:52.961 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 12:10:53.007 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 12:10:53.007 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 12:12:01.024 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 12:12:04.216 [TestNG-test=AllSongsTests-1] Log - checkSongInfo started!
-[INFO ] 2024-02-06 12:12:04.752 [TestNG-test=AllSongsTests-1] Log - checkSongInfo passed!
-[INFO ] 2024-02-06 12:12:07.193 [TestNG-test=AllSongsTests-1] Log - durationInHeader started!
-[INFO ] 2024-02-06 12:12:07.243 [TestNG-test=AllSongsTests-1] Log - durationInHeader passed!
-[INFO ] 2024-02-06 12:12:09.781 [TestNG-test=AllSongsTests-1] Log - songTotalIsDisplayed started!
-[INFO ] 2024-02-06 12:12:09.836 [TestNG-test=AllSongsTests-1] Log - songTotalIsDisplayed passed!
-[INFO ] 2024-02-06 12:12:12.341 [TestNG-test=AllSongsTests-1] Log - totalPlayableSongsCount started!
-[INFO ] 2024-02-06 12:12:12.619 [TestNG-test=AllSongsTests-1] Log - totalPlayableSongsCount passed!
-[INFO ] 2024-02-06 12:12:15.239 [TestNG-test=AllSongsTests-1] Log - verifyTotalDuration started!
-[INFO ] 2024-02-06 12:12:15.719 [TestNG-test=AllSongsTests-1] Log - verifyTotalDuration passed!
-[INFO ] 2024-02-06 12:12:18.258 [TestNG-test=AllSongsTests-1] Log - verifyTotalSongTracks started!
-[INFO ] 2024-02-06 12:12:18.705 [TestNG-test=AllSongsTests-1] Log - verifyTotalSongTracks passed!
-[INFO ] 2024-02-06 12:12:18.824 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 12:12:19.004 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 12:12:21.499 [TestNG-test=AlbumsTest-1] Log - albumsAreDisplayed started!
-[INFO ] 2024-02-06 12:12:21.660 [TestNG-test=AlbumsTest-1] Log - albumsAreDisplayed passed!
-[INFO ] 2024-02-06 12:12:24.108 [TestNG-test=AlbumsTest-1] Log - checkAlbumArtist started!
-[INFO ] 2024-02-06 12:12:26.373 [TestNG-test=AlbumsTest-1] Log - checkAlbumArtist passed!
-[INFO ] 2024-02-06 12:12:28.830 [TestNG-test=AlbumsTest-1] Log - checkAlbumCoverImages started!
-[INFO ] 2024-02-06 12:12:30.522 [TestNG-test=AlbumsTest-1] Log - checkAlbumCoverImages passed!
-[INFO ] 2024-02-06 12:12:33.015 [TestNG-test=AlbumsTest-1] Log - checkAlbumSongDurtation started!
-[INFO ] 2024-02-06 12:12:35.136 [TestNG-test=AlbumsTest-1] Log - checkAlbumSongDurtation passed!
-[INFO ] 2024-02-06 12:12:37.550 [TestNG-test=AlbumsTest-1] Log - checkAlbumSongTrackTotal started!
-[INFO ] 2024-02-06 12:12:39.610 [TestNG-test=AlbumsTest-1] Log - checkAlbumSongTrackTotal passed!
-[INFO ] 2024-02-06 12:12:42.183 [TestNG-test=AlbumsTest-1] Log - checkAlbumTitles started!
-[INFO ] 2024-02-06 12:12:44.268 [TestNG-test=AlbumsTest-1] Log - checkAlbumTitles passed!
-[INFO ] 2024-02-06 12:12:46.705 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton started!
-[INFO ] 2024-02-06 12:12:59.034 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton passed!
-[INFO ] 2024-02-06 12:13:01.441 [TestNG-test=AlbumsTest-1] Log - checkShuffleButton started!
-[INFO ] 2024-02-06 12:13:13.671 [TestNG-test=AlbumsTest-1] Log - checkShuffleButton passed!
-[INFO ] 2024-02-06 12:13:13.783 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 12:13:13.808 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 12:13:15.632 [TestNG-test=PlaylistTests-1] Log - createBlankPlaylistName started!
-[INFO ] 2024-02-06 12:13:16.565 [TestNG-test=PlaylistTests-1] Log - createBlankPlaylistName passed!
-[INFO ] 2024-02-06 12:13:18.462 [TestNG-test=PlaylistTests-1] Log - createLongPlaylistName started!
-[INFO ] 2024-02-06 12:13:19.815 [TestNG-test=PlaylistTests-1] Log - createLongPlaylistName passed!
-[INFO ] 2024-02-06 12:13:21.811 [TestNG-test=PlaylistTests-1] Log - createOneCharacterPlaylistName started!
-[INFO ] 2024-02-06 12:13:23.072 [TestNG-test=PlaylistTests-1] Log - createOneCharacterPlaylistName passed!
-[INFO ] 2024-02-06 12:13:25.089 [TestNG-test=PlaylistTests-1] Log - createPlaylist started!
-[FATAL] 2024-02-06 12:13:30.705 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
-[FATAL] 2024-02-06 12:13:35.734 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
-[FATAL] 2024-02-06 12:13:41.046 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
-[FATAL] 2024-02-06 12:13:46.072 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
-[INFO ] 2024-02-06 12:16:34.227 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 12:16:37.407 [TestNG-test=AllSongsTests-1] Log - checkSongInfo started!
-[INFO ] 2024-02-06 12:16:37.988 [TestNG-test=AllSongsTests-1] Log - checkSongInfo passed!
-[INFO ] 2024-02-06 12:16:40.396 [TestNG-test=AllSongsTests-1] Log - durationInHeader started!
-[INFO ] 2024-02-06 12:16:40.455 [TestNG-test=AllSongsTests-1] Log - durationInHeader passed!
-[INFO ] 2024-02-06 12:16:42.981 [TestNG-test=AllSongsTests-1] Log - songTotalIsDisplayed started!
-[INFO ] 2024-02-06 12:16:43.031 [TestNG-test=AllSongsTests-1] Log - songTotalIsDisplayed passed!
-[INFO ] 2024-02-06 12:16:45.445 [TestNG-test=AllSongsTests-1] Log - totalPlayableSongsCount started!
-[INFO ] 2024-02-06 12:16:45.660 [TestNG-test=AllSongsTests-1] Log - totalPlayableSongsCount passed!
-[INFO ] 2024-02-06 12:16:48.121 [TestNG-test=AllSongsTests-1] Log - verifyTotalDuration started!
-[INFO ] 2024-02-06 12:16:48.591 [TestNG-test=AllSongsTests-1] Log - verifyTotalDuration passed!
-[INFO ] 2024-02-06 12:16:50.962 [TestNG-test=AllSongsTests-1] Log - verifyTotalSongTracks started!
-[INFO ] 2024-02-06 12:16:51.397 [TestNG-test=AllSongsTests-1] Log - verifyTotalSongTracks passed!
-[INFO ] 2024-02-06 12:16:51.510 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 12:16:51.693 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 12:16:54.344 [TestNG-test=AlbumsTest-1] Log - albumsAreDisplayed started!
-[INFO ] 2024-02-06 12:16:54.515 [TestNG-test=AlbumsTest-1] Log - albumsAreDisplayed passed!
-[INFO ] 2024-02-06 12:16:57.014 [TestNG-test=AlbumsTest-1] Log - checkAlbumArtist started!
-[INFO ] 2024-02-06 12:16:59.321 [TestNG-test=AlbumsTest-1] Log - checkAlbumArtist passed!
-[INFO ] 2024-02-06 12:17:01.722 [TestNG-test=AlbumsTest-1] Log - checkAlbumCoverImages started!
-[INFO ] 2024-02-06 12:17:03.478 [TestNG-test=AlbumsTest-1] Log - checkAlbumCoverImages passed!
-[INFO ] 2024-02-06 12:17:06.036 [TestNG-test=AlbumsTest-1] Log - checkAlbumSongDurtation started!
-[INFO ] 2024-02-06 12:17:08.170 [TestNG-test=AlbumsTest-1] Log - checkAlbumSongDurtation passed!
-[INFO ] 2024-02-06 12:17:10.556 [TestNG-test=AlbumsTest-1] Log - checkAlbumSongTrackTotal started!
-[INFO ] 2024-02-06 12:17:12.670 [TestNG-test=AlbumsTest-1] Log - checkAlbumSongTrackTotal passed!
-[INFO ] 2024-02-06 12:17:15.251 [TestNG-test=AlbumsTest-1] Log - checkAlbumTitles started!
-[INFO ] 2024-02-06 12:17:17.324 [TestNG-test=AlbumsTest-1] Log - checkAlbumTitles passed!
-[INFO ] 2024-02-06 12:17:19.824 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton started!
-[INFO ] 2024-02-06 12:17:32.123 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton passed!
-[INFO ] 2024-02-06 12:17:34.598 [TestNG-test=AlbumsTest-1] Log - checkShuffleButton started!
-[INFO ] 2024-02-06 12:17:46.893 [TestNG-test=AlbumsTest-1] Log - checkShuffleButton passed!
-[INFO ] 2024-02-06 12:17:46.998 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 12:17:47.033 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 12:17:49.041 [TestNG-test=PlaylistTests-1] Log - createBlankPlaylistName started!
-[INFO ] 2024-02-06 12:17:49.950 [TestNG-test=PlaylistTests-1] Log - createBlankPlaylistName passed!
-[INFO ] 2024-02-06 12:17:51.885 [TestNG-test=PlaylistTests-1] Log - createLongPlaylistName started!
-[INFO ] 2024-02-06 12:17:53.239 [TestNG-test=PlaylistTests-1] Log - createLongPlaylistName passed!
-[INFO ] 2024-02-06 12:17:55.358 [TestNG-test=PlaylistTests-1] Log - createOneCharacterPlaylistName started!
-[INFO ] 2024-02-06 12:17:56.636 [TestNG-test=PlaylistTests-1] Log - createOneCharacterPlaylistName passed!
-[INFO ] 2024-02-06 12:17:58.596 [TestNG-test=PlaylistTests-1] Log - createPlaylist started!
-[INFO ] 2024-02-06 12:17:59.613 [TestNG-test=PlaylistTests-1] Log - createPlaylist passed!
-[INFO ] 2024-02-06 12:18:01.573 [TestNG-test=PlaylistTests-2] Log - addSongToPlaylist started!
-[INFO ] 2024-02-06 12:18:03.262 [TestNG-test=PlaylistTests-2] Log - addSongToPlaylist passed!
-[INFO ] 2024-02-06 12:18:05.115 [TestNG-test=PlaylistTests-2] Log - createPlaylistDuplicateName started!
-[INFO ] 2024-02-06 12:18:06.390 [TestNG-test=PlaylistTests-2] Log - createPlaylistDuplicateName passed!
-[INFO ] 2024-02-06 12:18:08.251 [TestNG-test=PlaylistTests-3] Log - deleteAllPlaylists started!
-[INFO ] 2024-02-06 12:18:43.003 [TestNG-test=PlaylistTests-3] Log - deleteAllPlaylists passed!
-[INFO ] 2024-02-06 12:18:43.115 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 12:18:47.637 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 12:18:50.879 [TestNG-test=AllSongsTests-1] Log - checkSongInfo started!
-[INFO ] 2024-02-06 12:18:51.469 [TestNG-test=AllSongsTests-1] Log - checkSongInfo passed!
-[INFO ] 2024-02-06 12:18:53.920 [TestNG-test=AllSongsTests-1] Log - durationInHeader started!
-[INFO ] 2024-02-06 12:18:53.972 [TestNG-test=AllSongsTests-1] Log - durationInHeader passed!
-[INFO ] 2024-02-06 12:18:56.553 [TestNG-test=AllSongsTests-1] Log - songTotalIsDisplayed started!
-[INFO ] 2024-02-06 12:18:56.608 [TestNG-test=AllSongsTests-1] Log - songTotalIsDisplayed passed!
-[INFO ] 2024-02-06 12:18:59.196 [TestNG-test=AllSongsTests-1] Log - totalPlayableSongsCount started!
-[INFO ] 2024-02-06 12:18:59.410 [TestNG-test=AllSongsTests-1] Log - totalPlayableSongsCount passed!
-[INFO ] 2024-02-06 12:19:01.944 [TestNG-test=AllSongsTests-1] Log - verifyTotalDuration started!
-[INFO ] 2024-02-06 12:19:02.416 [TestNG-test=AllSongsTests-1] Log - verifyTotalDuration passed!
-[INFO ] 2024-02-06 12:19:04.905 [TestNG-test=AllSongsTests-1] Log - verifyTotalSongTracks started!
-[INFO ] 2024-02-06 12:19:05.349 [TestNG-test=AllSongsTests-1] Log - verifyTotalSongTracks passed!
-[INFO ] 2024-02-06 12:19:05.474 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 12:19:05.655 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 12:19:08.024 [TestNG-test=AlbumsTest-1] Log - albumsAreDisplayed started!
-[INFO ] 2024-02-06 12:19:08.201 [TestNG-test=AlbumsTest-1] Log - albumsAreDisplayed passed!
-[INFO ] 2024-02-06 12:19:10.695 [TestNG-test=AlbumsTest-1] Log - checkAlbumArtist started!
-[INFO ] 2024-02-06 12:19:13.000 [TestNG-test=AlbumsTest-1] Log - checkAlbumArtist passed!
-[INFO ] 2024-02-06 12:19:15.544 [TestNG-test=AlbumsTest-1] Log - checkAlbumCoverImages started!
-[INFO ] 2024-02-06 12:19:17.233 [TestNG-test=AlbumsTest-1] Log - checkAlbumCoverImages passed!
-[INFO ] 2024-02-06 12:19:19.795 [TestNG-test=AlbumsTest-1] Log - checkAlbumSongDurtation started!
-[INFO ] 2024-02-06 12:19:21.975 [TestNG-test=AlbumsTest-1] Log - checkAlbumSongDurtation passed!
-[INFO ] 2024-02-06 12:19:24.389 [TestNG-test=AlbumsTest-1] Log - checkAlbumSongTrackTotal started!
-[INFO ] 2024-02-06 12:19:26.463 [TestNG-test=AlbumsTest-1] Log - checkAlbumSongTrackTotal passed!
-[INFO ] 2024-02-06 12:19:28.983 [TestNG-test=AlbumsTest-1] Log - checkAlbumTitles started!
-[INFO ] 2024-02-06 12:19:31.074 [TestNG-test=AlbumsTest-1] Log - checkAlbumTitles passed!
-[INFO ] 2024-02-06 12:19:33.491 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton started!
-[INFO ] 2024-02-06 12:19:45.810 [TestNG-test=AlbumsTest-1] Log - checkDownloadButton passed!
-[INFO ] 2024-02-06 12:19:48.334 [TestNG-test=AlbumsTest-1] Log - checkShuffleButton started!
-[INFO ] 2024-02-06 12:20:00.432 [TestNG-test=AlbumsTest-1] Log - checkShuffleButton passed!
-[INFO ] 2024-02-06 12:20:00.540 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
-[INFO ] 2024-02-06 12:20:00.570 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
-[INFO ] 2024-02-06 12:20:02.554 [TestNG-test=PlaylistTests-1] Log - createBlankPlaylistName started!
-[INFO ] 2024-02-06 12:20:03.492 [TestNG-test=PlaylistTests-1] Log - createBlankPlaylistName passed!
-[INFO ] 2024-02-06 12:20:05.479 [TestNG-test=PlaylistTests-1] Log - createLongPlaylistName started!
-[INFO ] 2024-02-06 12:20:06.792 [TestNG-test=PlaylistTests-1] Log - createLongPlaylistName passed!
-[INFO ] 2024-02-06 12:20:08.801 [TestNG-test=PlaylistTests-1] Log - createOneCharacterPlaylistName started!
-[INFO ] 2024-02-06 12:20:10.098 [TestNG-test=PlaylistTests-1] Log - createOneCharacterPlaylistName passed!
-[INFO ] 2024-02-06 12:20:12.139 [TestNG-test=PlaylistTests-1] Log - createPlaylist started!
-[INFO ] 2024-02-06 12:20:13.147 [TestNG-test=PlaylistTests-1] Log - createPlaylist passed!
-[INFO ] 2024-02-06 12:20:15.068 [TestNG-test=PlaylistTests-2] Log - addSongToPlaylist started!
-[INFO ] 2024-02-06 12:20:16.700 [TestNG-test=PlaylistTests-2] Log - addSongToPlaylist passed!
-[INFO ] 2024-02-06 12:20:18.618 [TestNG-test=PlaylistTests-2] Log - createPlaylistDuplicateName started!
-[INFO ] 2024-02-06 12:20:19.866 [TestNG-test=PlaylistTests-2] Log - createPlaylistDuplicateName passed!
-[INFO ] 2024-02-06 12:20:21.784 [TestNG-test=PlaylistTests-3] Log - deleteAllPlaylists started!
-[INFO ] 2024-02-06 12:20:43.831 [TestNG-test=PlaylistTests-3] Log - deleteAllPlaylists passed!
-[INFO ] 2024-02-06 12:20:43.939 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 12:02:42.785 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 12:02:42.790 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 12:02:42.917 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 12:02:42.917 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 12:02:42.922 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 12:02:53.017 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylist started!
+[FATAL] 2024-02-07 12:02:58.990 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[INFO ] 2024-02-07 12:03:03.937 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylist passed!
+[INFO ] 2024-02-07 12:03:04.112 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 12:04:05.637 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 12:04:05.640 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 12:04:05.764 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 12:04:05.764 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 12:04:05.769 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 12:04:08.208 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylist started!
+[FATAL] 2024-02-07 12:04:14.204 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[FATAL] 2024-02-07 12:04:19.216 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[FATAL] 2024-02-07 12:04:24.485 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[WARN ] 2024-02-07 12:04:24.804 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylist skipped
+[INFO ] 2024-02-07 12:04:26.827 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylist started!
+[INFO ] 2024-02-07 12:04:29.083 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylist passed!
+[INFO ] 2024-02-07 12:04:29.198 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 12:07:51.652 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 12:07:51.655 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 12:07:51.780 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 12:07:51.780 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 12:07:51.785 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 12:07:54.215 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylist started!
+[FATAL] 2024-02-07 12:08:02.166 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[FATAL] 2024-02-07 12:08:07.218 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[FATAL] 2024-02-07 12:08:12.531 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[WARN ] 2024-02-07 12:08:16.837 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylist skipped
+[INFO ] 2024-02-07 12:08:18.809 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylist started!
+[FATAL] 2024-02-07 12:08:26.677 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[FATAL] 2024-02-07 12:08:31.734 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[FATAL] 2024-02-07 12:08:37.008 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[INFO ] 2024-02-07 12:11:27.769 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 12:11:27.772 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 12:11:27.903 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 12:11:27.903 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 12:11:27.908 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 12:11:30.779 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylist started!
+[INFO ] 2024-02-07 12:11:32.035 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylist passed!
+[INFO ] 2024-02-07 12:11:32.172 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 12:13:01.672 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 12:13:01.675 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 12:13:01.795 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 12:13:01.795 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 12:13:01.799 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 12:13:04.153 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylist started!
+[INFO ] 2024-02-07 12:13:05.286 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylist passed!
+[INFO ] 2024-02-07 12:13:05.399 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 12:13:43.943 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 12:13:43.946 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 12:13:44.076 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 12:13:44.077 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 12:13:44.085 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 12:13:46.602 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylist started!
+[FATAL] 2024-02-07 12:13:52.758 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[WARN ] 2024-02-07 12:13:52.762 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylist skipped
+[INFO ] 2024-02-07 12:13:54.763 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylist started!
+[FATAL] 2024-02-07 12:14:00.956 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[ERROR] 2024-02-07 12:14:00.957 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylist failed!
+[INFO ] 2024-02-07 12:14:01.194 [TestNG-test=PlaylistTests-1] Log - screen shot taken for failed test createSmartPlaylist
+[INFO ] 2024-02-07 12:14:01.306 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 12:25:49.759 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 12:25:49.762 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 12:25:49.888 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 12:25:49.889 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 12:25:49.893 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[FATAL] 2024-02-07 12:25:57.403 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[FATAL] 2024-02-07 12:26:02.444 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[FATAL] 2024-02-07 12:26:07.743 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[INFO ] 2024-02-07 12:26:07.749 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylist started!
+[WARN ] 2024-02-07 12:26:07.754 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylist skipped
+[INFO ] 2024-02-07 12:26:07.760 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 12:28:07.632 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 12:28:07.635 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 12:28:07.754 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 12:28:07.754 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 12:28:07.760 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 12:28:10.437 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylist started!
+[FATAL] 2024-02-07 12:28:16.757 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[WARN ] 2024-02-07 12:28:16.762 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylist skipped
+[INFO ] 2024-02-07 12:28:18.613 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylist started!
+[FATAL] 2024-02-07 12:28:24.745 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[ERROR] 2024-02-07 12:28:24.746 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylist failed!
+[INFO ] 2024-02-07 12:28:24.981 [TestNG-test=PlaylistTests-1] Log - screen shot taken for failed test createSmartPlaylist
+[INFO ] 2024-02-07 12:28:25.107 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 12:31:04.239 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 12:31:04.242 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 12:31:04.371 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 12:31:04.372 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 12:31:04.377 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 12:31:06.878 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylist started!
+[FATAL] 2024-02-07 12:31:13.072 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[WARN ] 2024-02-07 12:31:13.077 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylist skipped
+[INFO ] 2024-02-07 12:31:14.932 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylist started!
+[FATAL] 2024-02-07 12:31:21.022 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[ERROR] 2024-02-07 12:31:21.023 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylist failed!
+[INFO ] 2024-02-07 12:31:21.250 [TestNG-test=PlaylistTests-1] Log - screen shot taken for failed test createSmartPlaylist
+[INFO ] 2024-02-07 12:31:21.371 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 12:32:24.748 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 12:32:24.751 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 12:32:24.880 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 12:32:24.881 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 12:32:24.888 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 12:32:27.540 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylist started!
+[FATAL] 2024-02-07 12:32:33.824 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[WARN ] 2024-02-07 12:32:33.828 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylist skipped
+[INFO ] 2024-02-07 12:32:35.940 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylist started!
+[FATAL] 2024-02-07 12:32:42.339 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[ERROR] 2024-02-07 12:32:42.340 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylist failed!
+[INFO ] 2024-02-07 12:32:42.588 [TestNG-test=PlaylistTests-1] Log - screen shot taken for failed test createSmartPlaylist
+[INFO ] 2024-02-07 12:32:42.698 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 12:33:00.940 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 12:33:00.944 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 12:33:01.075 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 12:33:01.076 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 12:33:01.081 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 12:33:03.802 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylist started!
+[INFO ] 2024-02-07 12:33:05.219 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylist passed!
+[INFO ] 2024-02-07 12:33:05.332 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 12:58:26.554 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 12:58:26.558 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 12:58:26.684 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 12:58:26.684 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 12:58:26.689 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 12:58:29.519 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylistNoMatches started!
+[INFO ] 2024-02-07 12:58:30.863 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylistNoMatches passed!
+[INFO ] 2024-02-07 12:58:30.978 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:12:50.141 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 13:12:50.145 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:12:50.270 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 13:12:50.270 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:12:50.276 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 13:12:53.123 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylistGroupRules started!
+[INFO ] 2024-02-07 13:12:54.227 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylistGroupRules passed!
+[INFO ] 2024-02-07 13:12:54.341 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:14:39.102 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 13:14:39.106 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:14:39.252 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 13:14:39.252 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:14:39.258 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 13:14:42.120 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylistGroupRules started!
+[FATAL] 2024-02-07 13:14:48.528 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[WARN ] 2024-02-07 13:14:48.533 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylistGroupRules skipped
+[INFO ] 2024-02-07 13:14:50.907 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylistGroupRules started!
+[FATAL] 2024-02-07 13:14:57.135 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[ERROR] 2024-02-07 13:14:57.136 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylistGroupRules failed!
+[INFO ] 2024-02-07 13:14:57.436 [TestNG-test=PlaylistTests-1] Log - screen shot taken for failed test createSmartPlaylistGroupRules
+[INFO ] 2024-02-07 13:14:57.542 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:15:23.883 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 13:15:23.887 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:15:24.010 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 13:15:24.011 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:15:24.016 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 13:15:26.594 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylistGroupRules started!
+[WARN ] 2024-02-07 13:15:27.733 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylistGroupRules skipped
+[INFO ] 2024-02-07 13:15:29.786 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylistGroupRules started!
+[ERROR] 2024-02-07 13:15:31.158 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylistGroupRules failed!
+[INFO ] 2024-02-07 13:15:31.374 [TestNG-test=PlaylistTests-1] Log - screen shot taken for failed test createSmartPlaylistGroupRules
+[INFO ] 2024-02-07 13:15:31.485 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:15:56.782 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 13:15:56.785 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:15:56.914 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 13:15:56.914 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:15:56.920 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 13:15:59.246 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylistGroupRules started!
+[INFO ] 2024-02-07 13:16:00.579 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylistGroupRules passed!
+[INFO ] 2024-02-07 13:16:00.707 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:17:01.948 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 13:17:01.951 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:17:02.075 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 13:17:02.075 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:17:02.081 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 13:17:04.410 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylistGroupRules started!
+[INFO ] 2024-02-07 13:17:05.671 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylistGroupRules passed!
+[INFO ] 2024-02-07 13:17:05.785 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:23:42.311 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 13:23:42.314 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:23:42.438 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 13:23:42.438 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:23:42.443 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[ERROR] 2024-02-07 13:23:42.452 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylistByPlays failed!
+[INFO ] 2024-02-07 13:23:42.460 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:24:01.854 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 13:24:01.857 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:24:01.981 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 13:24:01.982 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:24:01.988 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[ERROR] 2024-02-07 13:24:01.998 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylistByPlays failed!
+[INFO ] 2024-02-07 13:24:02.005 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:25:12.228 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 13:25:12.231 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:25:12.355 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 13:25:12.355 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:25:12.361 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 13:25:14.730 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylistGroupRules started!
+[INFO ] 2024-02-07 13:25:15.918 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylistGroupRules passed!
+[INFO ] 2024-02-07 13:25:16.033 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:25:47.455 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 13:25:47.457 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:25:47.579 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 13:25:47.579 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:25:47.584 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[ERROR] 2024-02-07 13:25:47.594 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylistByPlays failed!
+[INFO ] 2024-02-07 13:25:47.602 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:26:36.279 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 13:26:36.282 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:26:36.402 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 13:26:36.403 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:26:36.410 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[ERROR] 2024-02-07 13:26:36.421 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylistByPlay failed!
+[INFO ] 2024-02-07 13:26:36.430 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:27:21.448 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 13:27:21.451 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:27:21.575 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 13:27:21.575 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:27:21.580 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 13:27:24.399 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylistByPlay started!
+[INFO ] 2024-02-07 13:27:25.585 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylistByPlay passed!
+[INFO ] 2024-02-07 13:27:25.699 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:31:19.957 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 13:31:19.961 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:31:20.090 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 13:31:20.090 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:31:20.095 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 13:31:22.481 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylistShortName started!
+[INFO ] 2024-02-07 13:31:23.768 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylistShortName passed!
+[INFO ] 2024-02-07 13:31:23.900 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:33:11.894 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 13:33:11.898 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:33:12.036 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 13:33:12.036 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:33:12.042 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 13:33:14.579 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylistLongName started!
+[INFO ] 2024-02-07 13:33:15.833 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylistLongName passed!
+[INFO ] 2024-02-07 13:33:15.981 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:39:28.740 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 13:39:28.743 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:39:28.873 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 13:39:28.873 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:39:28.877 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[ERROR] 2024-02-07 13:39:28.885 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylistByDateAdded failed!
+[INFO ] 2024-02-07 13:39:28.891 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:39:57.183 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 13:39:57.185 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:39:57.303 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 13:39:57.303 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:39:57.307 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 13:39:59.852 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylistByDateAdded started!
+[FATAL] 2024-02-07 13:40:05.894 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[INFO ] 2024-02-07 13:41:34.817 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 13:41:34.820 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:41:34.940 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 13:41:34.941 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:41:34.945 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 13:41:37.663 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylistByDateAdded started!
+[INFO ] 2024-02-07 13:41:38.899 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylistByDateAdded passed!
+[INFO ] 2024-02-07 13:41:39.016 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:46:11.447 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 13:46:11.451 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:46:11.574 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 13:46:11.574 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:46:11.579 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 13:46:14.031 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylist started!
+[FATAL] 2024-02-07 13:46:20.236 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[FATAL] 2024-02-07 13:46:25.280 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[INFO ] 2024-02-07 13:50:30.421 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 13:50:30.426 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:50:30.555 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 13:50:30.556 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 13:50:30.560 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 13:50:33.225 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylist started!
+[INFO ] 2024-02-07 13:50:34.601 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylist passed!
+[INFO ] 2024-02-07 13:50:34.732 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 14:03:26.999 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 14:03:27.002 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 14:03:27.125 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 14:03:27.125 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 14:03:27.129 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 14:03:29.638 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylistNoMatches started!
+[WARN ] 2024-02-07 14:03:29.645 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylistNoMatches skipped
+[INFO ] 2024-02-07 14:03:31.568 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylistNoMatches started!
+[ERROR] 2024-02-07 14:03:31.568 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylistNoMatches failed!
+[INFO ] 2024-02-07 14:03:31.810 [TestNG-test=PlaylistTests-1] Log - screen shot taken for failed test createSmartPlaylistNoMatches
+[INFO ] 2024-02-07 14:03:31.920 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 14:04:11.101 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 14:04:11.104 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 14:04:11.225 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 14:04:11.225 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 14:04:11.229 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 14:04:13.687 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylistNoMatches started!
+[INFO ] 2024-02-07 14:04:15.008 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylistNoMatches passed!
+[INFO ] 2024-02-07 14:04:15.126 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 14:14:27.615 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 14:14:27.618 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 14:14:27.744 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 14:14:27.745 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 14:14:27.751 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 14:14:30.514 [TestNG-test=PlaylistTests-1] Log - testCancelButton started!
+[INFO ] 2024-02-07 14:14:31.516 [TestNG-test=PlaylistTests-1] Log - testCancelButton passed!
+[INFO ] 2024-02-07 14:14:31.630 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 14:27:20.494 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 14:27:20.497 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 14:27:20.620 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 14:27:20.620 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 14:27:20.625 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 14:27:23.109 [TestNG-test=PlaylistTests-1] Log - titleEndsWith started!
+[INFO ] 2024-02-07 14:27:24.416 [TestNG-test=PlaylistTests-1] Log - titleEndsWith passed!
+[INFO ] 2024-02-07 14:27:24.526 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 14:42:55.011 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 14:42:55.014 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 14:42:55.138 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 14:42:55.139 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 14:42:55.143 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 14:42:57.738 [TestNG-test=PlaylistTests-1] Log - playsIsBetween started!
+[INFO ] 2024-02-07 14:43:57.465 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 14:43:57.468 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 14:43:57.597 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 14:43:57.598 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 14:43:57.602 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 14:44:00.037 [TestNG-test=PlaylistTests-1] Log - playsIsBetween started!
+[INFO ] 2024-02-07 14:44:01.485 [TestNG-test=PlaylistTests-1] Log - playsIsBetween passed!
+[INFO ] 2024-02-07 14:44:01.606 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 15:48:11.237 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 15:48:11.240 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 15:48:11.377 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 15:48:11.377 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 15:48:11.382 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 15:48:14.619 [TestNG-test=PlaylistTests-1] Log - blankPlaylistName started!
+[INFO ] 2024-02-07 15:48:15.642 [TestNG-test=PlaylistTests-1] Log - blankPlaylistName passed!
+[INFO ] 2024-02-07 15:48:15.761 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 15:51:12.803 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 15:51:12.806 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 15:51:12.941 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 15:51:12.941 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 15:51:12.946 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 15:51:15.781 [TestNG-test=PlaylistTests-1] Log - blankRuleCriteria started!
+[FATAL] 2024-02-07 15:51:21.802 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[FATAL] 2024-02-07 15:51:26.814 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[FATAL] 2024-02-07 15:51:32.086 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[WARN ] 2024-02-07 15:51:32.093 [TestNG-test=PlaylistTests-1] Log - blankRuleCriteria skipped
+[INFO ] 2024-02-07 15:52:04.291 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 15:52:04.294 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 15:52:04.430 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 15:52:04.430 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 15:52:04.435 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 15:52:07.135 [TestNG-test=PlaylistTests-1] Log - blankRuleCriteria started!
+[INFO ] 2024-02-07 15:52:08.199 [TestNG-test=PlaylistTests-1] Log - blankRuleCriteria passed!
+[INFO ] 2024-02-07 15:52:08.315 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:01:23.377 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:01:23.380 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:01:23.514 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:01:23.515 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:01:23.520 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:01:26.296 [TestNG-test=PlaylistTests-1] Log - negativeNumberCriteria started!
+[INFO ] 2024-02-07 16:01:27.632 [TestNG-test=PlaylistTests-1] Log - negativeNumberCriteria passed!
+[INFO ] 2024-02-07 16:01:27.751 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:06:33.701 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:06:33.704 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:06:33.830 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:06:33.831 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:06:33.835 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:06:36.585 [TestNG-test=PlaylistTests-1] Log - inTheLastCriteria started!
+[INFO ] 2024-02-07 16:06:37.924 [TestNG-test=PlaylistTests-1] Log - inTheLastCriteria passed!
+[INFO ] 2024-02-07 16:06:38.050 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:07:37.221 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:07:37.224 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:07:37.354 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:07:37.355 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:07:37.359 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:07:40.109 [TestNG-test=PlaylistTests-1] Log - notInTheLastCriteria started!
+[INFO ] 2024-02-07 16:07:41.471 [TestNG-test=PlaylistTests-1] Log - notInTheLastCriteria passed!
+[INFO ] 2024-02-07 16:07:41.609 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:41:09.408 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:41:09.411 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:41:09.537 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:41:09.537 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:41:09.541 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:41:13.703 [TestNG-test=PlaylistTests-1] Log - editListName started!
+[FATAL] 2024-02-07 16:41:19.690 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[FATAL] 2024-02-07 16:41:24.735 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[INFO ] 2024-02-07 16:41:52.958 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:41:52.961 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:41:53.086 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:41:53.086 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:41:53.091 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:41:55.732 [TestNG-test=PlaylistTests-1] Log - editListName started!
+[FATAL] 2024-02-07 16:42:01.571 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[FATAL] 2024-02-07 16:42:06.605 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[INFO ] 2024-02-07 16:44:14.122 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:44:14.126 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:44:14.258 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:44:14.259 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:44:14.264 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:44:17.169 [TestNG-test=PlaylistTests-1] Log - editListName started!
+[FATAL] 2024-02-07 16:44:23.353 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[WARN ] 2024-02-07 16:44:23.359 [TestNG-test=PlaylistTests-1] Log - editListName skipped
+[INFO ] 2024-02-07 16:44:25.461 [TestNG-test=PlaylistTests-1] Log - editListName started!
+[FATAL] 2024-02-07 16:44:31.495 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[ERROR] 2024-02-07 16:44:31.497 [TestNG-test=PlaylistTests-1] Log - editListName failed!
+[INFO ] 2024-02-07 16:44:31.752 [TestNG-test=PlaylistTests-1] Log - screen shot taken for failed test editListName
+[INFO ] 2024-02-07 16:44:31.872 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:44:54.179 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:44:54.182 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:44:54.308 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:44:54.309 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:44:54.313 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:44:56.864 [TestNG-test=PlaylistTests-1] Log - editListName started!
+[WARN ] 2024-02-07 16:44:57.993 [TestNG-test=PlaylistTests-1] Log - editListName skipped
+[INFO ] 2024-02-07 16:45:00.153 [TestNG-test=PlaylistTests-1] Log - editListName started!
+[ERROR] 2024-02-07 16:45:01.196 [TestNG-test=PlaylistTests-1] Log - editListName failed!
+[INFO ] 2024-02-07 16:45:01.436 [TestNG-test=PlaylistTests-1] Log - screen shot taken for failed test editListName
+[INFO ] 2024-02-07 16:45:01.587 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:45:38.860 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:45:38.864 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:45:38.993 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:45:38.993 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:45:38.998 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:45:41.627 [TestNG-test=PlaylistTests-1] Log - editListName started!
+[FATAL] 2024-02-07 16:45:47.719 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[WARN ] 2024-02-07 16:45:47.725 [TestNG-test=PlaylistTests-1] Log - editListName skipped
+[INFO ] 2024-02-07 16:45:49.853 [TestNG-test=PlaylistTests-1] Log - editListName started!
+[FATAL] 2024-02-07 16:45:55.854 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[ERROR] 2024-02-07 16:45:55.855 [TestNG-test=PlaylistTests-1] Log - editListName failed!
+[INFO ] 2024-02-07 16:45:56.080 [TestNG-test=PlaylistTests-1] Log - screen shot taken for failed test editListName
+[INFO ] 2024-02-07 16:45:56.251 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:46:23.275 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:46:23.279 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:46:23.411 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:46:23.411 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:46:23.415 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:46:25.945 [TestNG-test=PlaylistTests-1] Log - editListName started!
+[FATAL] 2024-02-07 16:46:32.011 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[WARN ] 2024-02-07 16:46:32.017 [TestNG-test=PlaylistTests-1] Log - editListName skipped
+[INFO ] 2024-02-07 16:46:34.260 [TestNG-test=PlaylistTests-1] Log - editListName started!
+[FATAL] 2024-02-07 16:46:40.230 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[ERROR] 2024-02-07 16:46:40.232 [TestNG-test=PlaylistTests-1] Log - editListName failed!
+[INFO ] 2024-02-07 16:46:40.473 [TestNG-test=PlaylistTests-1] Log - screen shot taken for failed test editListName
+[INFO ] 2024-02-07 16:46:40.625 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:48:49.426 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:48:49.429 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:48:49.556 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:48:49.556 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:48:49.560 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:48:52.422 [TestNG-test=PlaylistTests-1] Log - editListName started!
+[FATAL] 2024-02-07 16:48:58.477 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[WARN ] 2024-02-07 16:48:58.482 [TestNG-test=PlaylistTests-1] Log - editListName skipped
+[INFO ] 2024-02-07 16:49:00.503 [TestNG-test=PlaylistTests-1] Log - editListName started!
+[FATAL] 2024-02-07 16:49:06.569 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[ERROR] 2024-02-07 16:49:06.572 [TestNG-test=PlaylistTests-1] Log - editListName failed!
+[INFO ] 2024-02-07 16:49:06.835 [TestNG-test=PlaylistTests-1] Log - screen shot taken for failed test editListName
+[INFO ] 2024-02-07 16:49:06.971 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:51:36.945 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:51:36.948 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:51:37.078 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:51:37.079 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:51:37.083 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:51:39.792 [TestNG-test=PlaylistTests-1] Log - editListName started!
+[WARN ] 2024-02-07 16:51:40.881 [TestNG-test=PlaylistTests-1] Log - editListName skipped
+[INFO ] 2024-02-07 16:51:42.940 [TestNG-test=PlaylistTests-1] Log - editListName started!
+[ERROR] 2024-02-07 16:51:44.022 [TestNG-test=PlaylistTests-1] Log - editListName failed!
+[INFO ] 2024-02-07 16:51:44.270 [TestNG-test=PlaylistTests-1] Log - screen shot taken for failed test editListName
+[INFO ] 2024-02-07 16:51:44.380 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:52:24.044 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:52:24.048 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:52:24.181 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:52:24.182 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:52:24.186 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:52:26.589 [TestNG-test=PlaylistTests-1] Log - editListName started!
+[INFO ] 2024-02-07 16:52:27.756 [TestNG-test=PlaylistTests-1] Log - editListName passed!
+[INFO ] 2024-02-07 16:52:27.894 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:54:24.883 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:54:24.886 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:54:25.009 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:54:25.009 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:54:25.013 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:54:27.615 [TestNG-test=PlaylistTests-1] Log - editListName started!
+[WARN ] 2024-02-07 16:54:28.680 [TestNG-test=PlaylistTests-1] Log - editListName skipped
+[INFO ] 2024-02-07 16:54:30.736 [TestNG-test=PlaylistTests-1] Log - editListName started!
+[ERROR] 2024-02-07 16:54:31.782 [TestNG-test=PlaylistTests-1] Log - editListName failed!
+[INFO ] 2024-02-07 16:54:32.030 [TestNG-test=PlaylistTests-1] Log - screen shot taken for failed test editListName
+[INFO ] 2024-02-07 16:54:32.194 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:55:13.848 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:55:13.852 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:55:14.030 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:55:14.030 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:55:14.039 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:55:18.790 [TestNG-test=PlaylistTests-1] Log - editListName started!
+[FATAL] 2024-02-07 16:55:25.372 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[WARN ] 2024-02-07 16:55:25.377 [TestNG-test=PlaylistTests-1] Log - editListName skipped
+[INFO ] 2024-02-07 16:55:28.517 [TestNG-test=PlaylistTests-1] Log - editListName started!
+[FATAL] 2024-02-07 16:55:34.640 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[ERROR] 2024-02-07 16:55:34.641 [TestNG-test=PlaylistTests-1] Log - editListName failed!
+[INFO ] 2024-02-07 16:55:34.881 [TestNG-test=PlaylistTests-1] Log - screen shot taken for failed test editListName
+[INFO ] 2024-02-07 16:55:34.992 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:56:34.844 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:56:34.848 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:56:34.979 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:56:34.979 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:56:34.984 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:56:37.486 [TestNG-test=PlaylistTests-1] Log - editListName started!
+[WARN ] 2024-02-07 16:56:38.608 [TestNG-test=PlaylistTests-1] Log - editListName skipped
+[INFO ] 2024-02-07 16:56:40.736 [TestNG-test=PlaylistTests-1] Log - editListName started!
+[ERROR] 2024-02-07 16:56:41.778 [TestNG-test=PlaylistTests-1] Log - editListName failed!
+[INFO ] 2024-02-07 16:56:42.026 [TestNG-test=PlaylistTests-1] Log - screen shot taken for failed test editListName
+[INFO ] 2024-02-07 16:56:42.181 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:57:19.865 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:57:19.868 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:57:19.990 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:57:19.991 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:57:19.995 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:57:22.512 [TestNG-test=PlaylistTests-1] Log - editListName started!
+[WARN ] 2024-02-07 16:57:23.609 [TestNG-test=PlaylistTests-1] Log - editListName skipped
+[INFO ] 2024-02-07 16:57:25.673 [TestNG-test=PlaylistTests-1] Log - editListName started!
+[ERROR] 2024-02-07 16:57:26.760 [TestNG-test=PlaylistTests-1] Log - editListName failed!
+[INFO ] 2024-02-07 16:57:26.986 [TestNG-test=PlaylistTests-1] Log - screen shot taken for failed test editListName
+[INFO ] 2024-02-07 16:57:27.132 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:57:42.102 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:57:42.106 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:57:42.239 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:57:42.239 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:57:42.243 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:57:44.660 [TestNG-test=PlaylistTests-1] Log - editListName started!
+[WARN ] 2024-02-07 16:57:45.810 [TestNG-test=PlaylistTests-1] Log - editListName skipped
+[INFO ] 2024-02-07 16:57:47.855 [TestNG-test=PlaylistTests-1] Log - editListName started!
+[ERROR] 2024-02-07 16:57:48.907 [TestNG-test=PlaylistTests-1] Log - editListName failed!
+[INFO ] 2024-02-07 16:57:49.134 [TestNG-test=PlaylistTests-1] Log - screen shot taken for failed test editListName
+[INFO ] 2024-02-07 16:57:49.243 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:58:56.422 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:58:56.426 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:58:56.548 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:58:56.549 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:58:56.552 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:58:59.521 [TestNG-test=PlaylistTests-1] Log - editListName started!
+[WARN ] 2024-02-07 16:59:00.642 [TestNG-test=PlaylistTests-1] Log - editListName skipped
+[INFO ] 2024-02-07 16:59:02.708 [TestNG-test=PlaylistTests-1] Log - editListName started!
+[ERROR] 2024-02-07 16:59:03.734 [TestNG-test=PlaylistTests-1] Log - editListName failed!
+[INFO ] 2024-02-07 16:59:03.982 [TestNG-test=PlaylistTests-1] Log - screen shot taken for failed test editListName
+[INFO ] 2024-02-07 16:59:04.116 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:59:55.696 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:59:55.701 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:59:55.837 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:59:55.837 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 16:59:55.841 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 16:59:58.295 [TestNG-test=PlaylistTests-1] Log - editListName started!
+[WARN ] 2024-02-07 17:00:00.423 [TestNG-test=PlaylistTests-1] Log - editListName skipped
+[INFO ] 2024-02-07 17:00:02.369 [TestNG-test=PlaylistTests-1] Log - editListName started!
+[ERROR] 2024-02-07 17:00:04.392 [TestNG-test=PlaylistTests-1] Log - editListName failed!
+[INFO ] 2024-02-07 17:00:04.621 [TestNG-test=PlaylistTests-1] Log - screen shot taken for failed test editListName
+[INFO ] 2024-02-07 17:00:04.734 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 17:00:50.951 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 17:00:50.954 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 17:00:51.076 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 17:00:51.076 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 17:00:51.080 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 17:00:53.541 [TestNG-test=PlaylistTests-1] Log - editListName started!
+[WARN ] 2024-02-07 17:00:54.616 [TestNG-test=PlaylistTests-1] Log - editListName skipped
+[INFO ] 2024-02-07 17:00:56.686 [TestNG-test=PlaylistTests-1] Log - editListName started!
+[ERROR] 2024-02-07 17:00:57.702 [TestNG-test=PlaylistTests-1] Log - editListName failed!
+[INFO ] 2024-02-07 17:00:57.938 [TestNG-test=PlaylistTests-1] Log - screen shot taken for failed test editListName
+[INFO ] 2024-02-07 17:00:58.046 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 17:01:23.418 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 17:01:23.421 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 17:01:23.546 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 17:01:23.546 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 17:01:23.550 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 17:01:25.899 [TestNG-test=PlaylistTests-1] Log - editListName started!
+[WARN ] 2024-02-07 17:01:26.978 [TestNG-test=PlaylistTests-1] Log - editListName skipped
+[INFO ] 2024-02-07 17:01:28.953 [TestNG-test=PlaylistTests-1] Log - editListName started!
+[ERROR] 2024-02-07 17:01:29.994 [TestNG-test=PlaylistTests-1] Log - editListName failed!
+[INFO ] 2024-02-07 17:01:30.229 [TestNG-test=PlaylistTests-1] Log - screen shot taken for failed test editListName
+[INFO ] 2024-02-07 17:01:30.338 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 17:02:13.662 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 17:02:13.665 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 17:02:13.797 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 17:02:13.797 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 17:02:13.802 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 17:02:16.286 [TestNG-test=PlaylistTests-1] Log - editListName started!
+[INFO ] 2024-02-07 17:02:19.387 [TestNG-test=PlaylistTests-1] Log - editListName passed!
+[INFO ] 2024-02-07 17:02:19.598 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 17:02:28.328 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 17:02:28.332 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 17:02:28.462 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 17:02:28.463 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 17:02:28.467 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 17:02:30.859 [TestNG-test=PlaylistTests-1] Log - editListName started!
+[INFO ] 2024-02-07 17:02:32.940 [TestNG-test=PlaylistTests-1] Log - editListName passed!
+[INFO ] 2024-02-07 17:02:33.104 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 17:03:27.781 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 17:03:27.784 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 17:03:27.906 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 17:03:27.906 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 17:03:27.910 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 17:03:30.622 [TestNG-test=PlaylistTests-1] Log - editListName started!
+[INFO ] 2024-02-07 17:03:32.827 [TestNG-test=PlaylistTests-1] Log - editListName passed!
+[INFO ] 2024-02-07 17:03:32.971 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 21:03:29.847 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 21:03:29.851 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 21:03:29.981 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 21:03:33.919 [TestNG-test=PlaylistTests-1] Log - deleteAllSmartPl started!
+[FATAL] 2024-02-07 21:03:39.859 [Forwarding actions on session 726fdfb8abd7a56f475d619a8ad95211 to remote] Log - Error while calling method: findElement - null
+[FATAL] 2024-02-07 21:03:44.897 [Forwarding actions on session 726fdfb8abd7a56f475d619a8ad95211 to remote] Log - Error while calling method: findElement - null
+[INFO ] 2024-02-07 21:04:14.595 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 21:04:14.599 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 21:04:14.723 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 21:04:17.590 [TestNG-test=PlaylistTests-1] Log - deleteAllSmartPl started!
+[WARN ] 2024-02-07 21:05:09.154 [TestNG-test=PlaylistTests-1] Log - deleteAllSmartPl skipped
+[INFO ] 2024-02-07 21:05:11.571 [TestNG-test=PlaylistTests-1] Log - deleteAllSmartPl started!
+[INFO ] 2024-02-07 21:05:18.603 [TestNG-test=PlaylistTests-1] Log - deleteAllSmartPl passed!
+[INFO ] 2024-02-07 21:05:18.715 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 21:06:32.671 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 21:06:32.674 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 21:06:32.816 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 21:06:35.744 [TestNG-test=PlaylistTests-1] Log - blankPlaylistName started!
+[INFO ] 2024-02-07 21:06:37.934 [TestNG-test=PlaylistTests-1] Log - blankPlaylistName passed!
+[INFO ] 2024-02-07 21:06:40.199 [TestNG-test=PlaylistTests-1] Log - blankRuleCriteria started!
+[FATAL] 2024-02-07 21:06:47.469 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[FATAL] 2024-02-07 21:06:52.483 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[FATAL] 2024-02-07 21:06:57.791 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[WARN ] 2024-02-07 21:06:57.794 [TestNG-test=PlaylistTests-1] Log - blankRuleCriteria skipped
+[INFO ] 2024-02-07 21:07:00.237 [TestNG-test=PlaylistTests-1] Log - blankRuleCriteria started!
+[FATAL] 2024-02-07 21:07:07.379 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[FATAL] 2024-02-07 21:07:12.388 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[INFO ] 2024-02-07 21:11:26.693 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 21:11:26.698 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 21:11:26.851 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 21:11:30.065 [TestNG-test=PlaylistTests-1] Log - blankRuleCriteria started!
+[FATAL] 2024-02-07 21:11:37.353 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[INFO ] 2024-02-07 21:11:39.042 [TestNG-test=PlaylistTests-1] Log - blankRuleCriteria passed!
+[INFO ] 2024-02-07 21:11:39.172 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 21:15:10.007 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 21:15:10.011 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 21:15:10.164 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 21:15:13.740 [TestNG-test=PlaylistTests-1] Log - blankPlaylistName started!
+[INFO ] 2024-02-07 21:15:15.975 [TestNG-test=PlaylistTests-1] Log - blankPlaylistName passed!
+[INFO ] 2024-02-07 21:15:18.624 [TestNG-test=PlaylistTests-1] Log - blankRuleCriteria started!
+[FATAL] 2024-02-07 21:15:25.949 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[FATAL] 2024-02-07 21:15:30.972 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[FATAL] 2024-02-07 21:15:36.233 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[WARN ] 2024-02-07 21:15:36.235 [TestNG-test=PlaylistTests-1] Log - blankRuleCriteria skipped
+[INFO ] 2024-02-07 21:15:38.467 [TestNG-test=PlaylistTests-1] Log - blankRuleCriteria started!
+[FATAL] 2024-02-07 21:15:45.799 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[FATAL] 2024-02-07 21:15:50.851 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[FATAL] 2024-02-07 21:15:56.109 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[ERROR] 2024-02-07 21:15:56.111 [TestNG-test=PlaylistTests-1] Log - blankRuleCriteria failed!
+[INFO ] 2024-02-07 21:15:56.412 [TestNG-test=PlaylistTests-1] Log - screen shot taken for failed test blankRuleCriteria
+[INFO ] 2024-02-07 21:15:59.123 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylist started!
+[FATAL] 2024-02-07 21:16:04.908 [Forwarding actions on session 3c0987af99ff3266c94354e5fe75e5ff to remote] Log - Error while calling method: findElement - null
+[FATAL] 2024-02-07 21:16:09.923 [Forwarding actions on session 3c0987af99ff3266c94354e5fe75e5ff to remote] Log - Error while calling method: findElement - null
+[FATAL] 2024-02-07 21:16:15.206 [Forwarding actions on session 3c0987af99ff3266c94354e5fe75e5ff to remote] Log - Error while calling method: findElement - null
+[FATAL] 2024-02-07 21:16:15.206 [TestNG-test=PlaylistTests-1] Log - Error while calling method: perform - null
+[WARN ] 2024-02-07 21:16:15.207 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylist skipped
+[INFO ] 2024-02-07 21:16:17.607 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylist started!
+[INFO ] 2024-02-07 21:16:20.002 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylist passed!
+[INFO ] 2024-02-07 21:16:22.413 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylistByDateAdded started!
+[INFO ] 2024-02-07 21:16:24.801 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylistByDateAdded passed!
+[INFO ] 2024-02-07 21:16:27.014 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylistByPlay started!
+[INFO ] 2024-02-07 21:16:29.421 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylistByPlay passed!
+[INFO ] 2024-02-07 21:16:31.812 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylistGroupRules started!
+[INFO ] 2024-02-07 21:16:34.181 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylistGroupRules passed!
+[INFO ] 2024-02-07 21:16:36.738 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylistLongName started!
+[INFO ] 2024-02-07 21:16:39.129 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylistLongName passed!
+[INFO ] 2024-02-07 21:16:42.017 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylistNoMatches started!
+[INFO ] 2024-02-07 21:16:44.386 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylistNoMatches passed!
+[INFO ] 2024-02-07 21:16:47.015 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylistShortName started!
+[INFO ] 2024-02-07 21:16:49.339 [TestNG-test=PlaylistTests-1] Log - createSmartPlaylistShortName passed!
+[INFO ] 2024-02-07 21:16:51.712 [TestNG-test=PlaylistTests-1] Log - deleteAllSmartPl started!
+[WARN ] 2024-02-07 21:17:54.754 [TestNG-test=PlaylistTests-1] Log - deleteAllSmartPl skipped
+[INFO ] 2024-02-07 21:17:57.325 [TestNG-test=PlaylistTests-1] Log - deleteAllSmartPl started!
+[INFO ] 2024-02-07 21:18:04.393 [TestNG-test=PlaylistTests-1] Log - deleteAllSmartPl passed!
+[INFO ] 2024-02-07 21:18:06.751 [TestNG-test=PlaylistTests-1] Log - editListName started!
+[INFO ] 2024-02-07 21:21:44.542 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 21:21:44.547 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 21:21:44.701 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 21:21:48.026 [TestNG-test=PlaylistTests-1] Log - blankRuleCriteria started!
+[FATAL] 2024-02-07 21:21:55.169 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[FATAL] 2024-02-07 21:22:00.228 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[FATAL] 2024-02-07 21:22:05.495 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[INFO ] 2024-02-07 21:22:05.552 [TestNG-test=PlaylistTests-1] Log - blankRuleCriteria passed!
+[INFO ] 2024-02-07 21:22:05.671 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 21:22:54.411 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 21:22:54.416 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 21:22:54.566 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 21:22:57.977 [TestNG-test=PlaylistTests-1] Log - blankRuleCriteria started!
+[FATAL] 2024-02-07 21:23:05.066 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[FATAL] 2024-02-07 21:23:10.094 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[FATAL] 2024-02-07 21:23:15.401 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[INFO ] 2024-02-07 21:23:17.473 [TestNG-test=PlaylistTests-1] Log - blankRuleCriteria passed!
+[INFO ] 2024-02-07 21:23:17.595 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 21:29:44.287 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 21:29:44.291 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
+[INFO ] 2024-02-07 21:29:44.454 [Test worker] Log - Extent Reports for Koel Automation Test Suite started!
+[INFO ] 2024-02-07 21:29:47.766 [TestNG-test=PlaylistTests-1] Log - blankRuleCriteria started!
+[FATAL] 2024-02-07 21:29:54.859 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[FATAL] 2024-02-07 21:29:59.879 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[FATAL] 2024-02-07 21:30:05.256 [TestNG-test=PlaylistTests-1] Log - Error while calling method: findElement - null
+[INFO ] 2024-02-07 21:30:05.500 [TestNG-test=PlaylistTests-1] Log - blankRuleCriteria passed!
+[INFO ] 2024-02-07 21:30:05.621 [Test worker] Log - Extent Reports for Koel Automation Test Suite ending!
