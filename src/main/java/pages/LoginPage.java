@@ -4,7 +4,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class LoginPage extends BasePage{
 
@@ -18,9 +17,6 @@ public class LoginPage extends BasePage{
     @CacheLookup
     @FindBy(css = "[type='password']")
     private WebElement passwordField;
-    @FindBy(xpath = "//form[@data-testid='login-form']//a[@href='registration']")
-    private WebElement registrationLinkLocator;
-
 
     public LoginPage(WebDriver givenDriver) {
         super(givenDriver);
