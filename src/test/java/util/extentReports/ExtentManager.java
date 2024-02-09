@@ -4,10 +4,7 @@ import base.BaseTest;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
-import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.Platform;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.io.File;
 
@@ -27,13 +24,12 @@ public class ExtentManager extends BaseTest{
 
     public static void createInstance() {
         platform = getCurrentPlatform();
-//        System.getProperties().list(System.out);
         String fileName = getReportFileLocation(platform);
         ExtentSparkReporter htmlReporter = new ExtentSparkReporter(fileName);
         htmlReporter.config().setTheme(Theme.DARK);
         htmlReporter.config().setDocumentTitle("Extent Report");
         htmlReporter.config().setEncoding("utf-8");
-        htmlReporter.config().setReportName("Koel Automation Tests For Sprint-6");
+        htmlReporter.config().setReportName(System.getProperty("reportName"));
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
         extent.setSystemInfo("Environment", "TEST");

@@ -49,7 +49,8 @@ public class ArtistsPage extends BasePage{
             String artistName = findElement(artist).getAttribute("title");
             names.add(artistName);
         }
-        //return names.stream().map(String::valueOf).collect(Collectors.joining(", "));
+        //return a single string instead of List
+        //return names.stream().map(String::valueOf).collect(Collectors.joining(", ", "(", ")"));
         return names;
     }
 }

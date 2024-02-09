@@ -34,5 +34,6 @@ test {
         systemProperty "dbPassword", "pa\$\$11"
         systemProperty "baseURL", "https://qa.koel.app/"
         systemProperty "Jira Issues", "CLONED BY INTERNSHIP-83449, INTERNSHIP-83417, INTERNSHIP-83469"
+        systemProperty "reportName", "Koel Automation Tests For Sprint-6"
     }
 }

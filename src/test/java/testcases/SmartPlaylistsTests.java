@@ -356,7 +356,9 @@ public class SmartPlaylistsTests extends BaseTest {
     public void checkDbForEditedPl() throws SQLException, ClassNotFoundException {
         String editedPlId = getSmartPlInfo("p.id", System.getProperty("koelUser"), dataMap.get("editedName"));
         String oldPlId = dataMap.get("oldId");
-        TestListener.logAssertionDetails("Smart playlist Id's match before/after name being updated: " + oldPlId.equals(editedPlId));
+        TestListener.logRsDetails("Smart playlist id before editing name: " + oldPlId);
+        TestListener.logRsDetails("Smart playlist id after editing name: " + editedPlId);
+        TestListener.logAssertionDetails("Smart playlist id's match before/after name being updated: " + oldPlId.equals(editedPlId));
         Assert.assertEquals(oldPlId, editedPlId);
         dataMap.clear();
     }

@@ -2,21 +2,14 @@ package pages;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.CacheLookup;
-import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
-import org.testng.Reporter;
-
 import java.util.List;
-import java.util.Timer;
-import java.util.concurrent.TimeoutException;
 
 
 public class HomePage extends BasePage {
-
+    @CacheLookup
     @FindBy(css = "#playlists i.fa.fa-plus-circle.create")
     private WebElement createNewPlaylistBtn;
     @FindBy(xpath="//section[@id='playlists']//ul/li[@class='playlist playlist smart']//li[text()[contains(.,'Delete')]]")
@@ -25,7 +18,6 @@ public class HomePage extends BasePage {
     private WebElement plEditBtn;
     @FindBy(xpath = "//div[@class='alertify']//nav/button[@class='ok']")
     private WebElement ok;
-
     @FindBy(xpath = "//section[@id='playlists']/ul/li")
     private List<WebElement> playlistsSection;
     @FindBy(xpath = "//nav[@class='menu playlist-menu']//li[@data-testid='playlist-context-menu-create-smart']")
@@ -117,9 +109,8 @@ public class HomePage extends BasePage {
         if (!ele2.isEmpty()) {
             wait.until(ExpectedConditions.elementToBeClickable(findElement(ok)));
             actions.moveToElement(ok).click().pause(2).perform();
-
         } else {
-//            pause(1);
+            pause(1);
             deleteAllPlaylists();
         }
     }
@@ -132,13 +123,7 @@ public class HomePage extends BasePage {
                 actions.moveToElement(plSection).pause(1).perform();
                 contextClick(plSection);
 //                contextClick(playlistsSection.get(i));
-                actions.moveToElement(plDeleteBtn).click().pause(2).perform();
-                count++;
-                if (playlistsSection.size() - count == 3) {
-                    actions.moveToElement(findElement(playlistsSection.get(2))).perform();
-                    contextClick(playlistsSection.get(2));
-                    actions.moveToElement(plDeleteBtn).click().perform();
-                }
+                actions.moveToElement(plDeleteBtn).click().pause(3).perform();
                 checkOkModal();
             }
         } catch (StaleElementReferenceException e) {

@@ -52,11 +52,13 @@ public class ArtistsTests extends BaseTest {
     public void searchArtist() {
         String search = "dark";
         artistsPage.searchArtist(search);
+        TestListener.logAssertionDetails("Artist shows up from search: " + searchPage.artistExists());
         Assert.assertTrue(searchPage.artistExists());
     }
     @Test(description = "Verify user can play songs from selected artist")
     public void playArtistSongs() {
         artistsPage.clickArtistPlay();
+        TestListener.logAssertionDetails("User can play song from artist: " + artistsPage.songIsPlaying());
         Assert.assertTrue(artistsPage.songIsPlaying());
     }
     @Test(description = "Check artists that are displayed in app and compare with artists displayed in db")

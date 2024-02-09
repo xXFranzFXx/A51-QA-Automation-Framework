@@ -1,5 +1,4 @@
 package db;
-import base.BaseTest;
 import org.mariadb.jdbc.Connection;
 import java.lang.reflect.InvocationTargetException;
 import java.sql.DriverManager;

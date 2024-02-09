@@ -3,8 +3,6 @@ package util.listeners;
 import com.aventstack.extentreports.Status;
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
-import util.TestUtil;
-import util.extentReports.ExtentManager;
 
 import java.io.IOException;
 
