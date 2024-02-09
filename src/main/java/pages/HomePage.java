@@ -117,16 +117,28 @@ public class HomePage extends BasePage {
         if (!ele2.isEmpty()) {
             wait.until(ExpectedConditions.elementToBeClickable(findElement(ok)));
             actions.moveToElement(ok).click().pause(2).perform();
+
         } else {
-            pause(1);
+//            pause(1);
             deleteAllPlaylists();
         }
     }
     public HomePage deleteAllPlaylists() {
+        int count = 0;
         try {
+            System.out.println(playlistsSection.size());
             for (int i = 2; i < playlistsSection.size(); i ++) {
-                contextClick(findElement(playlistsSection.get(i)));
+                WebElement plSection = wait.until(ExpectedConditions.elementToBeClickable(playlistsSection.get(i)));
+                actions.moveToElement(plSection).pause(1).perform();
+                contextClick(plSection);
+//                contextClick(playlistsSection.get(i));
                 actions.moveToElement(plDeleteBtn).click().pause(2).perform();
+                count++;
+                if (playlistsSection.size() - count == 3) {
+                    actions.moveToElement(findElement(playlistsSection.get(2))).perform();
+                    contextClick(playlistsSection.get(2));
+                    actions.moveToElement(plDeleteBtn).click().perform();
+                }
                 checkOkModal();
             }
         } catch (StaleElementReferenceException e) {
