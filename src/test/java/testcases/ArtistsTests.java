@@ -73,12 +73,10 @@ public class ArtistsTests extends BaseTest {
         differences.removeAll(names);
         TestListener.logInfoDetails("Artist names found in app: " + names);
         TestListener.logInfoDetails("Artist names found in db: " + dataList);
-        TestListener.logRsDetails("Database contains some artists that are not shown in app: " + differences);
+        TestListener.logRsDetails("Database contains some artists that are not shown in app: " + !differences.isEmpty());
         TestListener.logAssertionDetails("Artists names are stored correctly: " + (names.size()==dataList.size()));
         Assert.assertNotEquals(names, dataList);
         dataList.clear();
         KoelDbBase.closeDatabaseConnection();
-
     }
-
 }
