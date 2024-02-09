@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Sprint-5"  parallel="classes" thread-count="3" verbose="1">
+<suite name="Sprint-6"  parallel="classes" thread-count="2" verbose="1">
     <listeners>
         <listener class-name="util.listeners.TestListener"/>
         <listener class-name="util.listeners.AnnotationTransformer"/>
     </listeners>
-    <test name="AlbumsTest">
-        <classes>
-            <class name="testcases.AlbumsTests"/>
-        </classes>
-    </test>
     <test name="PlaylistTests">
-        <parameter name="song" value="dark"/>
         <classes>
             <class name="testcases.SmartPlaylistsTests"/>
+        </classes>
+    </test>
+    <test name="ArtistsTests">
+        <classes>
+            <class name="testcases.ArtistsTests"/>
         </classes>
     </test>
 </suite>

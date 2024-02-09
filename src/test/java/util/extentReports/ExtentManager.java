@@ -33,7 +33,7 @@ public class ExtentManager extends BaseTest{
         htmlReporter.config().setTheme(Theme.DARK);
         htmlReporter.config().setDocumentTitle("Extent Report");
         htmlReporter.config().setEncoding("utf-8");
-        htmlReporter.config().setReportName("Koel Automation Tests For Sprint-5");
+        htmlReporter.config().setReportName("Koel Automation Tests For Sprint-6");
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
         extent.setSystemInfo("Environment", "TEST");
@@ -42,7 +42,7 @@ public class ExtentManager extends BaseTest{
         extent.setSystemInfo("Java Version", System.getProperty("java.version"));
         extent.setSystemInfo("Application Url: ", System.getProperty("baseURL"));
         extent.setSystemInfo("Database: ", System.getProperty("dbUrl"));
-        extent.setSystemInfo("Features Tested", "Albums Page, All Songs Page, Playlists");
+        extent.setSystemInfo("Jira Issues", System.getProperty("Jira Issues"));
 
     }
     //Select the extent report file location based on platform

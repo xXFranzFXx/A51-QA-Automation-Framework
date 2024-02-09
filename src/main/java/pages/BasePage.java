@@ -30,8 +30,8 @@ public class BasePage {
     @FindBy(xpath = "//nav[@id='sidebar']//a[@class='songs']")
     @CacheLookup
     private WebElement allSongsLocator;
-    @FindBy(xpath = "//nav[@id='sidebar']//a[@class='albums']")
-    private WebElement albumsLocator;
+    @FindBy(xpath = "//nav[@id='sidebar']//a[@class='artists']")
+    private WebElement artistsLocator;
     @FindBy(xpath = "//section[@id='playlists']//li[@class='playlist favorites']/a")
     @CacheLookup
     private WebElement favoritesLocator;
@@ -79,16 +79,11 @@ public class BasePage {
         return soundBarVisualizer.isDisplayed();
     }
 
-    public AllSongsPage navigateToAllSongsPage() {
-        actions.moveToElement(allSongsLocator).perform();
-        clickElement(allSongsLocator);
-        return new AllSongsPage(driver);
-    }
 
-    public AlbumsPage navigateToAlbumsPage() {
-        actions.moveToElement(albumsLocator).perform();
-        clickElement(albumsLocator);
-        return new AlbumsPage(driver);
+    public ArtistsPage navigateToArtistsPage() {
+        actions.moveToElement(artistsLocator).perform();
+        clickElement(artistsLocator);
+        return new ArtistsPage(driver);
     }
     public void pause(int seconds) {
         actions.pause(Duration.ofSeconds(seconds)).perform();

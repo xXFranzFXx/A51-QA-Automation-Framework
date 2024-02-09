@@ -17,31 +17,21 @@ import java.util.concurrent.TimeoutException;
 
 public class HomePage extends BasePage {
 
-    @FindBy(xpath = "//section[@id='playlists']//h1")
-    private WebElement createNewPlaylistBtnLocator;
-    @FindBy(xpath = "//section[@id='playlists']//i[@data-testid='sidebar-create-playlist-btn']")
+    @FindBy(css = "#playlists i.fa.fa-plus-circle.create")
     private WebElement createNewPlaylistBtn;
-    @FindBy(css = "input[name='name']")
-    private WebElement newPlaylistInput;
-    @FindBy(xpath = "//section[@id='playlists']//ul/li[3]/a")
-    private WebElement playlistsMenuFirstPl;
-    @FindBy(xpath = "//section[@id='playlists']//li[@class='playlist playlist']/a")
-    private List<WebElement> allPlaylists ;
     @FindBy(xpath="//section[@id='playlists']//ul/li[@class='playlist playlist smart']//li[text()[contains(.,'Delete')]]")
     private WebElement plDeleteBtn;
     @FindBy(xpath="//section[@id='playlists']//ul/li[@class='playlist playlist smart']//li[text()[contains(.,'Edit')]]")
     private WebElement plEditBtn;
     @FindBy(xpath = "//div[@class='alertify']//nav/button[@class='ok']")
     private WebElement ok;
-    private By okBtn = By.xpath( "//div[@class='alertify']//nav/button[@class='ok']");
+
     @FindBy(xpath = "//section[@id='playlists']/ul/li")
     private List<WebElement> playlistsSection;
     @FindBy(xpath = "//nav[@class='menu playlist-menu']//li[@data-testid='playlist-context-menu-create-smart']")
     private WebElement contextMenuNewSmartlst;
     @FindBy(xpath = "//form[@data-testid='create-smart-playlist-form']")
     private WebElement smartListModal;
-    @FindBy(css = ".rule-group .btn-add-rule .fa.fa-plus")
-    private WebElement smartListAddRuleBtn;
     @FindBy(css = ".btn-add-group .fa.fa-plus")
     private WebElement smartListAddGroupBtn;
     @FindBy(xpath = "//span[@class='value-wrapper']/input[@type='text']")
@@ -54,8 +44,6 @@ public class HomePage extends BasePage {
     private WebElement smartListCriteriaDateInput;
     @FindBy(xpath = "//span[@class='value-wrapper']/input[@type='text']")
     private List<WebElement> smartListCriteriaInputGroup;
-    @FindBy(css = "li.smart")
-    private List<WebElement> sideMenuSmartPlaylists;
     @FindBy(css = "#playlists li.smart a")
     private List<WebElement> sideMenuSmartPlaylistName;
     @FindBy(xpath = "//form[@data-testid='create-smart-playlist-form']//input[@name='name']")
@@ -66,8 +54,6 @@ public class HomePage extends BasePage {
     private WebElement smartListSaveButton;
     @FindBy(xpath = "//button[text()='Cancel']")
     private WebElement smartListCancelButton;
-    @FindBy(xpath = "//section[@id='playlists']/ul/li[@class='playlist playlist smart']/a")
-    private List<WebElement> allSmartPlaylists;
     @FindBy(xpath = "//div[@data-test='smart-playlist-rule-row']//select[@name='model[]']")
     private WebElement smartListModelSelectMenu;
     @FindBy(xpath = "//div[@data-test='smart-playlist-rule-row']//select[@name='operator[]']")
@@ -78,7 +64,7 @@ public class HomePage extends BasePage {
     private List<WebElement> smartPlaylistSongs;
     @FindBy(css = "#playlistWrapper .text")
     private WebElement emptySmartListText;
-
+    private By okBtn = By.xpath( "//div[@class='alertify']//nav/button[@class='ok']");
 
 
     public HomePage(WebDriver givenDriver) {
@@ -98,8 +84,9 @@ public class HomePage extends BasePage {
         return findElement(smartListCriteriaTextInput).getAttribute("validationMessage");
     }
     public HomePage clickCreateNewPlaylist() {
-        actions.moveToElement(createNewPlaylistBtnLocator).perform();
-        createNewPlaylistBtn.click();
+        pause(2);
+        WebElement plusButton = wait.until(ExpectedConditions.elementToBeClickable(createNewPlaylistBtn));
+       findElement(plusButton).click();
         return this;
     }
     public HomePage selectOperatorOption(String option){
@@ -121,6 +108,7 @@ public class HomePage extends BasePage {
     }
 
     public boolean playlistsEmpty() {
+        pause(2);
         return (playlistsSection.size() == 2);
     }
 
@@ -128,17 +116,17 @@ public class HomePage extends BasePage {
         List<WebElement> ele2 = driver.findElements(okBtn);
         if (!ele2.isEmpty()) {
             wait.until(ExpectedConditions.elementToBeClickable(findElement(ok)));
-            actions.moveToElement(ok).click().pause(1000).perform();
+            actions.moveToElement(ok).click().pause(2).perform();
         } else {
+            pause(1);
             deleteAllPlaylists();
         }
     }
     public HomePage deleteAllPlaylists() {
         try {
             for (int i = 2; i < playlistsSection.size(); i ++) {
-//                clickElement(playlistsSection.get(i));
                 contextClick(findElement(playlistsSection.get(i)));
-                actions.moveToElement(plDeleteBtn).click().pause(1000).perform();
+                actions.moveToElement(plDeleteBtn).click().pause(2).perform();
                 checkOkModal();
             }
         } catch (StaleElementReferenceException e) {
@@ -153,9 +141,7 @@ public class HomePage extends BasePage {
         pause(1);
         return this;
     }
-    public boolean smartListModalVisible() {
-        return findElement(smartListModal).isDisplayed();
-    }
+
     public HomePage enterSmartListName(String smartList) {
         WebElement input = findElement(smartListFormNameInput);
         input.sendKeys(smartList);
@@ -177,8 +163,7 @@ public class HomePage extends BasePage {
     }
     public HomePage clickSaveSmartList() {
         findElement(smartListSaveButton).click();
-        wait.until(ExpectedConditions.invisibilityOf(ok));
-//        pause(1);
+        pause(2);
         return this;
     }
     public HomePage clickGroupRuleBtn() {
@@ -206,14 +191,22 @@ public class HomePage extends BasePage {
         findElement(plEditBtn).click();
         return this;
     }
+
     public String getFirstSmartPlName() {
         return sideMenuSmartPlaylistName.get(0).getText();
     }
     public HomePage editSmartPlName(String playlist){
+        if(!isEditModalVisible()) pause(2);
         WebElement input = findElement(editSmartListFormNameInput);
-        input.click();
+        actions.moveToElement(input).doubleClick(input).perform();
+        input.sendKeys(Keys.SPACE);
+        pause(2);
         input.sendKeys(playlist);
         return this;
+    }
+    public boolean isEditModalVisible() {
+        WebElement editModal = find(By.cssSelector(".smart-playlist-form form"));
+        return  editModal.isDisplayed();
     }
 }
 

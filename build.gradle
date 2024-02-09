@@ -24,7 +24,7 @@ dependencies {
 
 test {
     useTestNG() {
-        suites "src/test/resources/config/Sprint-5.xml"
+        suites "src/test/resources/config/Sprint-6.xml"
         systemProperty "author", "Franz Fernando"
         systemProperty "browser", System.getProperty("browser")
         systemProperty "koelUser", "franz.fernando+1@testpro.io"
@@ -33,6 +33,6 @@ test {
         systemProperty "dbUser", "dbuser11"
         systemProperty "dbPassword", "pa\$\$11"
         systemProperty "baseURL", "https://qa.koel.app/"
-        systemProperty "Jira Issues", "INTERNSHIP-82853, INTERNSHIP-82779, INTERNSHIP-82825"
+        systemProperty "Jira Issues", "CLONED BY INTERNSHIP-83449, INTERNSHIP-83417, INTERNSHIP-83469"
     }
 }
