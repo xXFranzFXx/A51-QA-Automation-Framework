@@ -48,8 +48,9 @@ public class SmartPlaylistsTests extends BaseTest {
     Map<String, String> dataMap = new HashMap<>();
 
     @BeforeMethod
-    public void setup() throws MalformedURLException {
-        setupBrowser(System.getProperty("baseURL"));
+    @Parameters({"baseURL"})
+    public void setup(String baseURL) throws MalformedURLException {
+        setupBrowser(baseURL);
         loginPage = new LoginPage(getDriver());
         loginPage.loginValidCredentials();
     }

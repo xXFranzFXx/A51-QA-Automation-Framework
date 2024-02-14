@@ -64,14 +64,10 @@ public class TestListener  implements ITestListener, WebDriverListener {
     @Override
     public synchronized void onTestFailure(ITestResult result) {
         Log.error(result.getMethod().getMethodName() + " failed!");
-        try {
-            TestUtil.takeScreenshotAtEndOfTest(result.getMethod().getMethodName());
-            test.get().log(Status.FAIL, "fail ❌").addScreenCaptureFromPath("/reports/extent-reports/screenshots/" + result.getMethod().getMethodName() + ".png");
-            Log.info("screen shot taken for failed test " + result.getMethod().getMethodName());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-            test.get().fail(result.getThrowable());
+        //            TestUtil.takeScreenshotAtEndOfTest(result.getMethod().getMethodName());
+        test.get().log(Status.FAIL, "fail ❌").addScreenCaptureFromPath("/reports/extent-reports/screenshots/" + result.getMethod().getMethodName() + ".png");
+        Log.info("screen shot taken for failed test " + result.getMethod().getMethodName());
+        test.get().fail(result.getThrowable());
     }
     @Override
     public synchronized void onTestSkipped(ITestResult result) {

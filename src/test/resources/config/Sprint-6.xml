@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Sprint-6"  parallel="classes" thread-count="2" verbose="1">
+<suite name="Sprint-6"  parallel="tests" thread-count="2" verbose="1">
     <listeners>
         <listener class-name="util.listeners.TestListener"/>
         <listener class-name="util.listeners.AnnotationTransformer"/>
     </listeners>
+    <parameter name="baseURL" value="https://qa.koel.app"/>
     <test name="PlaylistTests">
         <classes>
             <class name="testcases.SmartPlaylistsTests"/>

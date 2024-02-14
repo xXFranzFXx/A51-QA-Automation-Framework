@@ -5,6 +5,7 @@ import db.KoelDbActions;
 import db.KoelDbBase;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pages.ArtistsPage;
 import pages.HomePage;
@@ -35,8 +36,9 @@ public class ArtistsTests extends BaseTest {
     ResultSet rs;
     List<String> dataList = new ArrayList<>();
     @BeforeMethod
-    public void setUp() throws MalformedURLException {
-        setupBrowser(System.getProperty("baseURL"));
+    @Parameters({"baseURL"})
+    public void setUp(String baseURL) throws MalformedURLException {
+        setupBrowser(baseURL);
         loginPage = new LoginPage(getDriver());
         artistsPage = new ArtistsPage(getDriver());
         searchPage = new SearchPage(getDriver());

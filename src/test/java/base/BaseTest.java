@@ -25,24 +25,24 @@ import java.time.Duration;
 import java.util.HashMap;
 
 public class BaseTest{
-    public static WebDriver driver;
-    private static final ThreadLocal <WebDriver> threadDriver = new ThreadLocal<>();
-    public static WebDriver getDriver() {
+    public  WebDriver driver;
+    private  static final ThreadLocal <WebDriver> threadDriver = new ThreadLocal<>();
+    public  static WebDriver getDriver() {
         return threadDriver.get();
     }
 
-    public static void navigateTo(String baseURL) {
+    public  void navigateTo(String baseURL) {
         getDriver().get(baseURL);
     }
 
-    public static void setupBrowser(String baseURL) throws MalformedURLException {
+    public  void setupBrowser(String baseURL) throws MalformedURLException {
         threadDriver.set(pickBrowser(System.getProperty("browser")));
         Reporter.log("browser is: " + System.getProperty("browser"));
         getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         getDriver().manage().deleteAllCookies();
         navigateTo(baseURL);
     }
-    public static  WebDriver pickBrowser(String browser) throws MalformedURLException {
+    public   WebDriver pickBrowser(String browser) throws MalformedURLException {
         DesiredCapabilities caps = new DesiredCapabilities();
         String gridURL = "http://192.168.0.224:4444";
         switch (browser) {
@@ -78,7 +78,7 @@ public class BaseTest{
                return setupDefaultBrowser();
         }
     }
-    public static WebDriver lambdaTest() throws MalformedURLException {
+    public  WebDriver lambdaTest() throws MalformedURLException {
         String username = System.getProperty("lambdaTestUser");
         String authKey = System.getProperty("lambdaTestKey");
         String hub = "@hub.lambdatest.com/wd/hub";
@@ -93,7 +93,7 @@ public class BaseTest{
         return new RemoteWebDriver(new URL("https://" + username + ":" + authKey + hub), caps);
     }
 
-    private static WebDriver setupDefaultBrowser() {
+    private  WebDriver setupDefaultBrowser() {
         WebDriverManager.chromedriver().setup();
         ChromeDriverService service = new ChromeDriverService.Builder().usingAnyFreePort().build();
         ChromeOptions options = new ChromeOptions();
@@ -108,24 +108,24 @@ public class BaseTest{
         EventFiringDecorator<WebDriver> decorator = new EventFiringDecorator<>(eventListener);
         return decorator.decorate(driver);
     }
-    public static HashMap<String, Object> setDownloadDir() {
+    public  HashMap<String, Object> setDownloadDir() {
         HashMap<String, Object> chromePref = new HashMap<>();
         chromePref.put("profile.default_content_settings.popups", 0);
         chromePref.put("download.default_directory", System.getProperty("java.io.tmpdir"));
         return chromePref;
     }
 
-    public static void loadEnv() {
+    public  void loadEnv() {
         Dotenv dotenv = Dotenv.configure().directory("./src/test/resources").load();
         dotenv.entries().forEach(e -> System.setProperty(e.getKey(), e.getValue()));
     }
     @AfterMethod
-    public static void closeBrowser() {
+    public  static void closeBrowser() {
         if (getDriver() == null) {
-            threadDriver.get().close();
-            threadDriver.remove();
-        }
             threadDriver.get().quit();
+        }
+        threadDriver.get().close();
+        threadDriver.remove();
     }
 }
 
