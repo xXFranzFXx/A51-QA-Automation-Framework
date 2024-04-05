@@ -27,11 +27,11 @@ dependencies {
 
 test {
     useTestNG() {
-        suites "src/test/resources/Sprint-9.xml"
-//        suites "src/test/resources/${suite}.xml"   //This is for testing with Jenkins
+//        suites "src/test/resources/Sprint-9.xml"
+        suites "src/test/resources/${suite}.xml"   //This is for testing with Jenkins
 //        suites "src/test/resources/SmokeTests.xml"
 //        suites "src/test/resources/RegressionTests.xml"
-        suites "src/test/resources/TestNG.xml"
+//        suites "src/test/resources/TestNG.xml"
         systemProperty "browser", System.getProperty("browser")
     }
 }
