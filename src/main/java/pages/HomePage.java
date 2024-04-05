@@ -48,7 +48,7 @@ public class HomePage extends BasePage {
 
 
     @FindBy(css = "button[data-test='view-all-songs-btn']")
-    private By viewAllBtnLocator;
+    private WebElement viewAllBtnLocator;
 
     //AddTo dropdown menu choice in the context menu when right-clicking a song
     @FindBy(xpath = "//*[@id=\"app\"]/nav/ul/li[4]")
@@ -186,7 +186,7 @@ public class HomePage extends BasePage {
         return this;
     }
     public HomePage clickViewAllButton() {
-        click(viewAllBtnLocator);
+        click(By.cssSelector("button[data-test='view-all-songs-btn']"));
         return this;
     }
     public HomePage clickFirstSearchResult() {
